@@ -86,13 +86,13 @@ Nessa primeira entrada, o servidor o desconectará imediatamente depois da troca
 
 ![Terminal](images/terminal_screenshot.png)
 
-You can open several Terminal windows at once. This is often helpful.
+Você pode manter abertas varias janelas desse terminal. Isso geralmente é útil.
 
 
-You will be using the Terminal application a lot, so I suggest that you drag its icon into the shortcuts bar at the bottom of your screen.
+Durante a disciplina vamos usar muito esse terminal.
 
 
-#### OK. I've Logged in.  What Now?
+#### OK. Entrei no servidor. E agora?
 
 
 The terminal window is running **shell** called "bash." The shell is a loop that:
