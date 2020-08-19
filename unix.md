@@ -1,39 +1,42 @@
-# Programming For Biology 2019
-[programmingforbiology.org](http://programmingforbiology.org)
+# Introdução a programação de computadores aplicada a ciências biológicas - CEN0336 2020-20
+Tradução e modificação do material associado a [programmingforbiology.org](http://programmingforbiology.org)
 
-__Instructors__  
+__Criador e Instrutor da versão em Português__
+Diego M. Riaño-Pachón
+
+__Criadores do material na versão em Inglês__  
 Simon Prochnik  
 Sofia Robb     
 
-# Big Picture
+# Panorama geral
 
-## Why?
+## Por que?
 
-Why is it important for **biologists** to learn to program?
+Por que é importante para profissionais das ciências da vida aprender a programar?
 
-You might already know the answer to this question since you are here.   
+Possivelmente você já tem a resposta a essa pergunta, a final das contas, você está aqui!
 
-We firmly believe that knowing how to program is just as essential as knowing how to run a gel or set up a PCR reaction. The data we now get from a single experiment can be overwhelming. This data often needs to be reformatted, filtered, and analyzed in unique ways. Programming allows you to perform these tasks in an **efficient** and **reproducible** way.
-
-
-## Helpful Tips
-
-What are our tips for having a successful programming course?
+Estmaos convencidos que saber programar é tão essencial quanto fazer uma electroforese em gel o preparar uma reação de PCR. Os dados que hoje podemos obter de um só experimento podem ser esmagadores. i Esse dados muitas vezes precisam ser reformatados, filtrados e analizados de formas únicas. A programação de computadores permitirá que você execute essas taferas de uma maneira **eficiente** e **reproducivel**.
 
 
-1. Practice, practice, practice. Please spend as much time as possible actually coding.
+## Dicas úteis
 
-2. Write only a line or two of code, then test it. If you write too many lines, it becomes more difficult to debug if there is an error.
+Algumas dicas para cursar uma disciplina de programação com sucesso
 
-3. Errors are not failures. Every error you get is a learning opportunity. Every single error you debug is a major success. Fixing errors is how you will cement what you have learned.
 
-4. Don't spend too much time trying to figure out a problem. While it's a great learning experience to try to solve an issue on your own, it's not fun getting frustrated or spending a lot of time stuck. We are here to help you, so please ask us whenever you need help.
+1. Pratica, pratica, pratica. Por favor, invista tnato tempo como seja possivel escrevendo código.
 
-5. Lectures are important, but the practice is more important.
+2. Limite-se a escrever uma linha ou duas de codigo, e teste-las. Se você escreve muitas linhas, será mais dificil corregir os erros (debug), caso tiver.
 
-6. Review sessions are important, but practice is more important.
+3. Os erros não são fracassos. Cada erro é uma oportunidade de aprendizagem. Cada erro que você pesca e corrige (debug) e um grande sucesso. Corregir erros é como você cimenta seu aprendizado.
 
-7. Our key goal is to slowly, but surely, teach you how to solve problems on your own.
+4. Não gaste muito tempo tentando descifrar um problema. Claro, é uma experiencia de aprendizado resolver os problemas você mesmo, mas a frustração e o bloqueio não são. Estamos aqui para ajuda-los, pergunte cada vez que precisar.
+
+5. As palestras são importantes, mas a pratica e muito mais importante.
+
+6. Sessões de revisão são importantes, mas a pratica e muito mais importante.
+
+7. Nosso principal objetivo é ensinar-les a resolver problemas vocês mesmo, devagar mas com segurança.
 
 ---
 
@@ -41,39 +44,47 @@ What are our tips for having a successful programming course?
 
 ## Unix 1
 
-### Unix Overview
+### Panorama de Unix
 
-#### What is the Command-Line?
+#### O que é a linha de comandos?
 
-Underlying the pretty Mac OSX Graphical User Interface (GUI) is a powerful command-line operating system (OS). The command-line gives you access to the internals of the OS, and is also a convenient way to write custom software and scripts.  
+Subjacente a qualsquer interface gráfica (GUI) existe um poderoso sistema operacional (SO) de linha de comandos. A linha de comandos oferece acesso ao interior do SO, e é também uma forma conveniente de escrever software e scripts personalizados.
 
+Muitas das ferramentas bioinformáticas são desenvolvidas para ser executadas na linha de comando e não ter uma GUI. Em muitos casos, uma ferramenta na linha de comandos e mais versatil que uma ferramente gráfica, já que você pode combinar facilmente diversas ferramentas de linha de comandos para criar scripts que realizem tarefas sem a intervenção de um humano.
 
-Many bioinformatics tools are written to run on the command-line and have no Graphical User Interface. In many cases, a command-line tool is more versatile than a graphical tool, because you can easily combine command-line tools into automated scripts that accomplish tasks without human intervention.  
+Nesta disciplinas, vocês escreverão scripts na linguagem Python e os executarão exclusivamente desde uma linha de comandos.
 
+### O básico
 
-In this course, we will be writing Python scripts and running them exclusively from the command-line based.
+#### Detalhes para entrar (logging) no seu ambiente de trabalho
 
-### The Basics
+Nesta disciplina, neste semestre, usaremos um servidor Linux com CenOS 7, o endereço (IP), e porta de acesso, do servidor serão informados durante um dos encontros com o professor, por favor tome nota dessa informação e mantenha-la para uso rápido.
 
-#### Logging into Your Workstation
+Para entrar no servidor, você tem que fornecer seu nome de usuário e a senha. Seu nome de usuário será a primeira letra do seu nome e as três primeiras letras do seu sobrenome. No sistema e-Disciplinas da USP tem uma tabela com os nomes de usuários de todos os alunos. A senha é C3NA0E36
 
+Por exemplo, para o Prof. Diego Riano, o nome de usuário é: dria.
 
-Your workstation is an iMac. To log into it, provide your user name and password. Your username will be the first letter of your first name and two first letters of your last. You can check your username [here](usernames.md).
+_Your username:_ dria
 
-For example, for Sofia Robb her username will be sro. The password is cshl.
+_Your password:_ C3NA0E36
 
-_Your username:_ sro
+#### Conectando-se ao servidor
 
-_Your password:_ cshl
+Para conectar ao servidor precisarão de um cliente de SSH (Secure shell). 
 
-#### Bringing up the Command-Line 
+Os usuários de windows podem descarregar os software [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
+Os usuários de Linux ou de MacOS, já tem um cliente de ssh no sistema operacional, só tem que iniciar o aplicativo Terminal.
 
-To bring up the command-line, use the Finder to navigate to _Applications->Utilities_ and double-click on the _Terminal_ application. This will bring up a window like the following:
+Detalhes para usar o cliente de SSH serão mostrados no encontro com o professor.
 
-![OSX Terminal](images/terminal_screenshot.png)
+Na sua primeira entrada no servidor, terá que trocar sua senha. Por favor escolha uma senha dificil de adivinhar. O servidor pedirá usa senha original duas vezes, e depois você terá que digitar sua nova senha duas vezes. Será recebido por uma janela semelhante a seguinte:
 
+![Primeira entrada no servidor](images/terminal_screenshot_first.png)
 
+Nessa primeira entrada, o servidor o desconectará imediatamente depois da troca da senha. Tem que se conectar de novo, desta vez usando a nova senha que escolheu no passo anterior. Estará numa janela semelhante a seguinte:
+
+![Terminal](images/terminal_screenshot.png)
 
 You can open several Terminal windows at once. This is often helpful.
 
