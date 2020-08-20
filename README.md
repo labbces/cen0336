@@ -21,7 +21,7 @@ Sofia Robb
             * [OK. Entrei no servidor. E agora?](unix.md/#ok-entrei-no-servidor-e-agora)
             * [Prompt da linha de comandos](unix.md/#prompt-da-linha-de-comandos)
             * [Executando comandos](unix.md/#executando-comandos)
-            * [Command-Line Editing](unix.md/#command-line-editing)
+            * [Edição da linha de comandos](unix.md/#edição-da-linha-de-comandos)
             * [Wildcards](unix.md/#wildcards)
             * [Home Sweet Home](unix.md/#home-sweet-home)
             * [Getting Around](unix.md/#getting-around)
