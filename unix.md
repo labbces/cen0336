@@ -160,9 +160,10 @@ Alguns programas podem demorar muito tempo para rodar. Depois que você executa 
 (~) 54% long_running_application &
 (~) 55%
 ```
-> The command will now run in the background until it is finished. If it has any output, the output will be printed to the terminal window. You may wish to capture the output in a file (called redirection). We'll describe this later.
+> Assim o comando vai rodar no segundo plano até terminar. Se ele gerar alguma saida, ela vai aparecer na tela. Seria bom você capturar a saida num arquivo (isso é chamado de redirecionamento). Depois vamos descrever como fazer isso.
 
-#### Command-Line Editing
+
+#### Edição da linha de comandos
 
 Most shells offer command-line editing.  Up until the comment you press \<Enter\>, you can go back over the command-line and edit it using the keyboard.  Here are the most useful keystrokes:
 
