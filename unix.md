@@ -176,14 +176,14 @@ A maioria das shells permite editar a linha de comandos.  Até o momento em que 
 - _control-y (^y)_: Colar o conteúdo do "kill buffer" na linha de comandos, no ponto onde estiver o cursor.  y=yank.
 - _zata acima_, _zeta abaixo_: Move o cursor para acima e para abaixo na historia de comandos.  Muito útil para rodar comandos que já foram rodados, possivelmente depois de modificá-los.
 
-There are also some useful shell commands you can issue:  
+Tem também algun comando úteis da shell que você pode usar:
 
-- `history` Show all the commands that you have issued recently, nicely numbered.
-- `!<number>` Reissue an old command, based on its number (which you can get from `history`).
-- `!!` Reissue the immediate previous command.
-- `!<partial command string>`: Reissue the previous command that began with the indicated letters.  For example, `!l` (the letter el, not a number 1) would reissue the`ls -F` command from the earlier example.
+- `history` Mostra todos os comandos que você usour recentemente, numerados.
+- `!<number>` Executar novamente um comando, baseado no seu número na historia (Você pode obter o número com o comando `history`).
+- `!!` Executar novamente o comando imediatamente anterior.
+- `!<piedaço de um comando>`: Executar novamente um comando anterior que comeãba como as letras indicadas.  Por exemplo, `!l` (a letra 'ele', não o número 1) executará novamente o comando `ls -F` que usamos no inicio deste capítulo.
 
-**bash** offers automatic command completion and spelling correction.  If you type part of a command and then the tab key, it will prompt you with all the possible completions of the command.  For example:
+A shell **bash** oferece as os serviçoes de auto-completar e correção ortográfica. Se você escreve parte de um comando e usa a tecla de tabulação, a shell mostrará para você todas as formas possiveis de completar o comando.  Por exemplo:
 
 ```
 (~) 51% fd<tab><tab>
@@ -191,9 +191,9 @@ There are also some useful shell commands you can issue:
 fd2ps    fdesign  fdformat fdlist   fdmount  fdmountd fdrawcmd fdumount
 (~) 51%
 ```
-> If you hit tab after typing a command, but before pressing \<Enter\>, **bash** will prompt you with a list of file names. This is because many commands operate on files.
+> Se você teclear tab após escrever um comando, mas antes de pressionar a tecla \<Enter\>, **bash** mostratá un lista de nomes de arquivos. Isto acontece por que muito comandos operam em arquivos.
 
-#### Wildcards
+#### Curingas
 
 You can use wildcards when referring to files.  `*` stands for zero or more characters.  `?` stands for any single character.  For example, to list all files with the extension ".txt", run `ls` with the wildcard pattern "*.txt"
 

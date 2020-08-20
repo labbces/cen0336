@@ -22,7 +22,7 @@ Sofia Robb
             * [Prompt da linha de comandos](unix.md/#prompt-da-linha-de-comandos)
             * [Executando comandos](unix.md/#executando-comandos)
             * [Edição da linha de comandos](unix.md/#edição-da-linha-de-comandos)
-            * [Wildcards](unix.md/#wildcards)
+            * [Curingas](unix.md/#curingas)
             * [Home Sweet Home](unix.md/#home-sweet-home)
             * [Getting Around](unix.md/#getting-around)
             * [Essential Unix Commands](unix.md/#essential-unix-commands)
