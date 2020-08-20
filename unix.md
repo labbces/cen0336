@@ -60,13 +60,13 @@ Nesta disciplinas, vocês escreverão scripts na linguagem Python e os executar�
 
 Nesta disciplina, neste semestre, usaremos um servidor Linux com CenOS 7, o endereço (IP), e porta de acesso, do servidor serão informados durante um dos encontros com o professor, por favor tome nota dessa informação e mantenha-la para uso rápido.
 
-Para entrar no servidor, você tem que fornecer seu nome de usuário e a senha. Seu nome de usuário será a primeira letra do seu nome e as três primeiras letras do seu sobrenome. No sistema e-Disciplinas da USP tem uma tabela com os nomes de usuários de todos os alunos. A senha é C3NA0E36
+Para entrar no servidor, você tem que fornecer seu nome de usuário e a senha. Seu nome de usuário será a primeira letra do seu nome e as três primeiras letras do seu sobrenome. No sistema e-Disciplinas da USP tem uma tabela com os nomes de usuários de todos os alunos. A senha é CEN0336XXX, onde XXX são os três ultimos digitos do seu número USP.
 
 Por exemplo, para o Prof. Diego Riano, o nome de usuário é: dria.
 
 _Your username:_ dria
 
-_Your password:_ C3NA0E36
+_Your password:_ CEN0336XXX
 
 #### Conectando-se ao servidor
 
@@ -88,12 +88,9 @@ Nessa primeira entrada, o servidor o desconectará imediatamente depois da troca
 
 Você pode manter abertas varias janelas desse terminal. Isso geralmente é útil.
 
-
 Durante a disciplina vamos usar muito esse terminal.
 
-
 #### OK. Entrei no servidor. E agora?
-
 
 The terminal window is running **shell** called "bash." The shell is a loop that:
 1. Prints a prompt
