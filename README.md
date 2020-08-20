@@ -16,7 +16,7 @@ Sofia Robb
          * [Panorama de Unix](unix.md/#panorama-de-Unix)
             * [O que é a linha de comandos?](unix.md/#o-que-é-a-linha-de-comandos)
          * [O básico](unix.md/#o-básico)
-            * [Detalhes para entrar no seu ambiente de trabalho](unix.md/#detalhes-para-entrar-no-seu ambiente-de-trabalho)
+            * [Detalhes para entrar no seu ambiente de trabalho](unix.md/#detalhes-para-entrar-no-seu-ambiente-de-trabalho)
             * [Bringing up the Command-Line](unix.md/#bringing-up-the-command-line)
             * [OK. I've Logged in.  What Now?](unix.md/#ok-ive-logged-in--what-now)
             * [Command-Line Prompt](unix.md/#command-line-prompt)
