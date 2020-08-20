@@ -130,13 +130,12 @@ dria@cen0336 1:12PM>
 
 O que você vai ter como prompt depende de como o administrador do sistema fez a configuração. Mas, você pode mudá-lo, [claro depois de saber como!](https://linuxconfig.org/bash-prompt-basics).
 
+O prompt indica à shell que está pronto para aceitar comandos. Quando um programa esta rodando, o prompt não aparece até que o sistema estiver pronto para lidar com uma nova solicitação.
 
-The prompt tells you the shell is ready to accept a command.  When a long-running command is going, the prompt will not reappear until the system is ready to deal with your next request.
-
-#### Issuing Commands
+#### Executando comandos
 
 
-Type in a command and press the &lt;Enter&gt; key.  If the command has output, it will appear on the screen.  Example:
+Escreva um comando e pressione a tecla &lt;Enter&gt;.  Se o comando produz alguma saida, esta aparecerá na tela.  Por exemplo:
 
 ```
 (~) 53% ls -F
@@ -152,10 +151,10 @@ ccod/
 (~) 54%
 ```
 
-The command here is `ls -F`, which produces a listing of files and directories in the current directory (more on that later).  Below its output, the command prompt appears again.
+O comando aqui é `ls -F`, que gera uma lista dos arquivos e pastas dentro da pasta atual (já falaremos disso). Abaixo do comando aparece sua saída, é o prompt aparece novamente.
 
 
-Some programs will take a long time to run. After you issue their command names, you won't recover the shell prompt until they're done. You can either launch a new shell (from Terminal's File menu), or run the command in the background by adding an ampersand after the command
+Alguns programas podem demorar muito tempo para rodar. Depois que você executa eles, não recuperará o prompt da shell até eles terminarem a tarefa que les foi encomendada. Nesse caso você poderia abrir um novo terminal par acontinuar seus trabalhos, ou rodar o comando no segundo plano adicionando o simbolo "&" após o comando, no final da linha.
 
 ```
 (~) 54% long_running_application &
