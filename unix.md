@@ -92,43 +92,43 @@ Durante a disciplina vamos usar muito esse terminal.
 
 #### OK. Entrei no servidor. E agora?
 
-The terminal window is running **shell** called "bash." The shell is a loop that:
-1. Prints a prompt
-2. Reads a line of input from the keyboard
-3. Parses the line into one or more commands
-4. Executes the commands (which usually print some output to the terminal)
-5. Go back step 1.
+A janela da terminal está executando uma **shell** chamada de "bash." A shell é um loop (ciclo) que:  
+1. Imprime o prompt
+2. Lê uma linha de entrada do teclado
+3. Analisa a linha em um ou mais comandos
+4. Executa os comandos (geralmente imprimindo algum tipo de daida na terminal)
+5. Volta ao passo 1.
 
 
-There are many different shells with bizarre names like **bash**, **sh**, **csh**, **tcsh**, **ksh**, and **zsh**.  The "sh" part means shell.  Each shell has different and somewhat confusing features. We have set up your accounts to use **bash**.  Stay with **bash** and you'll get used to it, eventually.
+Existem muitas shells diferentes, com nomes bizarros como **bash**, **sh**, **csh**, **tcsh**, **ksh**, e **zsh**.  A particula "sh" no nome, significa shell.  Cada shell é sutilmente diferente e algumas vezes confusa. suas contas no servidor estão configuradas para usar a shell **bash**.
 
 
-#### Command-Line Prompt
+#### Prompt da linha de comandos
 
 
-Most of bioinformatics is done by running command-line software in a shell, so you should take some time to learn to use the shell effectively.
+A maior parte da bioinformática é feita executando software numa shell da linha de comandos, por isso é importante aprender a usar a shell de forma efetiva.
 
 
-This is a command-line prompt:
+Este é um exemplo de prompt na linha de comandos:
 
 ```
-bush202>
+cen0336>
 ```
 
 
-This is another:
+Aqui tem outro:
 
 ```
 (~) 51%
 ```
 
-This is another:
+Mais um:
 
 ```
-srobb@bush202 1:12PM>
+dria@cen0336 1:12PM>
 ```
 
-What you get depends on how the system administrator has customized your login.  You can customize it yourself when you know how.
+O que você vai ter como prompt depende de como o administrador do sistema fez a configuração. Mas, você pode mudá-lo, [claro depois de saber como!](https://linuxconfig.org/bash-prompt-basics).
 
 
 The prompt tells you the shell is ready to accept a command.  When a long-running command is going, the prompt will not reappear until the system is ready to deal with your next request.
