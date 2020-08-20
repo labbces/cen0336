@@ -56,7 +56,7 @@ Nesta disciplinas, vocês escreverão scripts na linguagem Python e os executar�
 
 ### O básico
 
-#### Detalhes para entrar (logging) no seu ambiente de trabalho
+#### Detalhes para entrar no seu ambiente de trabalho
 
 Nesta disciplina, neste semestre, usaremos um servidor Linux com CenOS 7, o endereço (IP), e porta de acesso, do servidor serão informados durante um dos encontros com o professor, por favor tome nota dessa informação e mantenha-la para uso rápido.
 
