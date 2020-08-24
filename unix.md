@@ -210,16 +210,17 @@ There are several more advanced types of wildcard patterns that you can read abo
 final_exam_questions.txt  genebridge.txt            genomics_problem.txt
 ```
 
-#### Home Sweet Home
+#### Lar doce lar
 
 
-When you first log in, you'll be placed in a part of the system that is your personal directory, called the _home directory_.  You are free to do with this area what you will: in particular you can create and delete files and other directories.  In general, you cannot create files elsewhere in the system.
+Quando você entra no servidor, chegará numa parte do sistema que é sua pasta pessoal, chamada de _home directory_.  Você pode fazer oque você quiser nessa area: pode criar e apagar arquivos e outras pastas. De forma geral, você não pode criar arquivos em outras pastas do sistema.
 
-Your home directory lives somewhere in the filesystem.  On our iMacs, it is a directory with the same name as your login name, located in `/Users`.  The full directory path is therefore `/Users/username`.  Since this is a pain to write, the shell allows you to abbreviate it as `~username` (where "username" is your user name), or simply as `~`.  The weird character (called "tilde" or "twiddle") is usually hidden at the upper left corner of your keyboard.
+Sua pasta home está localizada dentro sistema de arquivos do servidor. Neste servidor, como na maioria dos sistemas Linux e muitos Unixes, esta pasta tem seu nome de usuário, e eatá localizada em `/home`. A rota completa é `/home/usuário`.  A shell permite abreviá-lo como `~usuário` (onde usuário é seu nome de usuário no sistema), ou simplesmente como `~`. Esse caractere bizarro é chamado de "til" ou "twiddle".
 
-To see what is in your home directory, issue the command `ls -F`:
+Para ver o que vovê tem na sua pasta home, execute os comandos:
 
 ```
+(~) % cd ~/
 (~) % ls -F
 INBOX         Mail/         News/         nsmail/       public_html/
 ```

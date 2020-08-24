@@ -23,7 +23,7 @@ Sofia Robb
             * [Executando comandos](unix.md/#executando-comandos)
             * [Edição da linha de comandos](unix.md/#edição-da-linha-de-comandos)
             * [Curingas](unix.md/#curingas)
-            * [Home Sweet Home](unix.md/#home-sweet-home)
+            * [Lar doce lar](unix.md/#lar-doce-lar)
             * [Getting Around](unix.md/#getting-around)
             * [Essential Unix Commands](unix.md/#essential-unix-commands)
             * [Getting Information About Commands](unix.md/#getting-information-about-commands)
