@@ -24,7 +24,7 @@ Sofia Robb
             * [Edição da linha de comandos](unix.md/#edição-da-linha-de-comandos)
             * [Curingas](unix.md/#curingas)
             * [Lar doce lar](unix.md/#lar-doce-lar)
-            * [Getting Around](unix.md/#getting-around)
+            * [Conhecendo o sistema de arquivos](unix.md/#conhecendo-o-sistema-de-arquivos)
             * [Essential Unix Commands](unix.md/#essential-unix-commands)
             * [Getting Information About Commands](unix.md/#getting-information-about-commands)
             * [Finding Out What Commands are on Your Computer](unix.md/#finding-out-what-commands-are-on-your-computer)

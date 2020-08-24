@@ -244,13 +244,13 @@ Algumas pastas podem ter arquivos e outras pasta que não apracem quando executa
 .bash_profile     .less             .xsession-errors
 .bashrc           .lessrc           INBOX
 ```
-> Whoa!   Tem um monte de coisas lá. Pero por favor não vai apagar eses aquivos ponto. Muitos deles são esenciais para a configuração de outros programas. lot of hidden stuff there.  But don't go deleting dot files.  Many of them are essential configuration files for commands and other programs.  For example, the `.profile` file contains configuration information for the **bash** shell.  You can peek into it and see all of **bash**'s many options.  You can edit it (when you know what you're doing) in order to change things like the command prompt and command search path.
+> Whoa!   Tem um monte de coisas lá. Pero por favor não vai apagar eses aquivos ponto. Muitos deles são esenciais para a configuração de outros programas. Por exemplo o artuivo `.profile` contem as informações para a configuração da shell **bash**. Você pode dar uma olhadinha nele para ver algumas das muitas opções de **bash**. Você pode também editá-lo (claro quando você saiba o que está fazendo) para modificar o comportamento da shell, como por exemplo o typo de prompt que você tem, o as rotas de busca de comandos.
 
 
-#### Getting Around
+#### Conhecendo o sistema de arquivos
 
 
-You can move around from directory to directory using the `cd` command.  Give the name of the directory you want to move to, or give no name to move back to your home directory.  Use the `pwd` command to see where you are (or rely on the prompt, if configured):
+Você pode se deslocar de uma pasta para outra usando o comando `cd`. Você só tem que dar o nome da pasta para onde você quer ir. Pode usar o comando  `pwd`para saber onde vocês está. Em algumas configurações o prompt também informa o nome da pasta onde você está.
 
 ```
 (~/docs/grad_course/i) 56% cd
@@ -260,11 +260,11 @@ bin/         dosc/        gmon.out     mnt/         sbin/
 boot/        etc/         home@        net/         tmp/
 cdrom/       fastboot     lib/         proc/        usr/
 dev/         floppy/      lost+found/  root/        var/
-(/) 59% cd ~/docs/
-(~/docs) 60% pwd
-/usr/home/lstein/docs
-(~/docs) 62% cd ../projects/
-(~/projects) 63% ls
+(/) 59% cd ~/Mail/
+(~/Mail) 60% pwd
+/home/dria/Mail
+(~/Mail) 62% cd ../News/
+(~/News) 63% ls
 Ace-browser/               bass.patch
 Ace-perl/                  cgi/
 Foo/                       cgi3/
@@ -280,7 +280,7 @@ ace/                       sbox-1.00/
 atir/                      sbox-1.00.tgz
 bass-1.30a/                zhmapper.tar.gz
 bass-1.30a.tar.gz
-(~/projects) 64%
+(~/News) 64%
 ```
 > Each directory contains two special hidden directories named `.` and `..`. The first, `.` refers always to the current directory. `..` refers to the parent directory.  This lets you move upward in the directory hierarchy like this:
 
