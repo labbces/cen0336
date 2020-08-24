@@ -1,5 +1,5 @@
 # Introdução a programação de computadores aplicada a ciências biológicas - CEN0336 2020-20
-Tradução e modificação do material associado a [programmingforbiology.org](http://programmingforbiology.org)
+Tradução e modificação do material associado a [programmingforbiology.org](http://programmingforbiology.org), associado a disciplina ["CEN0336 - Introdução a Programação de Computadores Aplicada a Ciências Biológicas"](https://uspdigital.usp.br/jupiterweb/obterDisciplina?sgldis=CEN0336&codcur=11061&codhab=4)
 
 __Criador e Instrutor da versão em Português__
 Diego M. Riaño-Pachón
@@ -223,12 +223,17 @@ Para ver o que vovê tem na sua pasta home, execute os comandos:
 (~) % cd ~/
 (~) % ls -F
 INBOX         Mail/         News/         nsmail/       public_html/
+(~) % ls 
+INBOX         Mail         News         nsmail       public_html
+
 ```
 
-This shows one file "INBOX" and four directories ("Mail", "News") and so on.  (The `-F` in the command turns on fancy mode, which appends special characters to directory listings to tell you more about what you're seeing.  `/` at the end of a filename means that file is a directory.)
+Qual é a difereça entre os comandos `ls -F` e `ls`?
+
+Este comando mostra um arquivo "INBOX" e quatro pasta adicionais ("Mail", "News").  (A particula `-F` no comando liga a opção para saida sofisticada ('fancy'), que acrescente alguna caracteres especiais nas listas de pastas, para ajudá-lo na identificação do que está observando.  O simbolo `/` no final do nome de um arquivo indica que o arquivo é uma pasta.
 
 
-In addition to the files and directories shown with `ls -F`, there may be one or more hidden files.  These are files and directories whose names start with a `.` (called the "dot" character).  To see these hidden files, add an `a` to the options sent to the `ls` command:
+Algumas pastas podem ter arquivos e outras pasta que não apracem quando executa o comando `ls -F`, eles estão ocultos. Os nomes desses aquivos e pastas ocultos iniciam com um `.` ("ponto") . Para conseguir ver esses arquivos e pastas, tem que acrescentar uma `a` nas opções do comando `ls`:
 
 ```
 (~) % ls -aF
@@ -239,7 +244,7 @@ In addition to the files and directories shown with `ls -F`, there may be one or
 .bash_profile     .less             .xsession-errors
 .bashrc           .lessrc           INBOX
 ```
-> Whoa!  There's a lot of hidden stuff there.  But don't go deleting dot files.  Many of them are essential configuration files for commands and other programs.  For example, the `.profile` file contains configuration information for the **bash** shell.  You can peek into it and see all of **bash**'s many options.  You can edit it (when you know what you're doing) in order to change things like the command prompt and command search path.
+> Whoa!   Tem um monte de coisas lá. Pero por favor não vai apagar eses aquivos ponto. Muitos deles são esenciais para a configuração de outros programas. lot of hidden stuff there.  But don't go deleting dot files.  Many of them are essential configuration files for commands and other programs.  For example, the `.profile` file contains configuration information for the **bash** shell.  You can peek into it and see all of **bash**'s many options.  You can edit it (when you know what you're doing) in order to change things like the command prompt and command search path.
 
 
 #### Getting Around
