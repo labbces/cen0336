@@ -282,28 +282,28 @@ bass-1.30a/                zhmapper.tar.gz
 bass-1.30a.tar.gz
 (~/News) 64%
 ```
-> Each directory contains two special hidden directories named `.` and `..`. The first, `.` refers always to the current directory. `..` refers to the parent directory.  This lets you move upward in the directory hierarchy like this:
+> Cada pasta tem duas pastas especiais chamadas de `.` e `..`. A primeira, `.` refere-se sempre ao diretório atual. `..` refere-se ao diretorio pai.  Desta forma você pode se deslocar para cima na hierarquia de diretórios:
 
 ```
-(~/docs) 64% cd ..
+(~/Mail) 64% cd ..
 ```
 
-and to do arbitrarily weird things like this:
+e pode fazer coisas arbitrariamente bizarras como esta:
 
 ```
-(~/docs) 65% cd ../../lstein/docs
+(~/Mail) 65% cd ../../dria/Mail
 ```
-> The latter command moves upward two levels, and then into a directory named `docs` inside a directory called `lstein`.
+> O ultimo comando sobe dois niveis, e logo vai na pasta Mail que está dentro da pasta chamada `dria`.
 
 
-If you get lost, the `pwd` command prints out the full path to the current directory:
+Se você ficar perdido no sistema de arquivos, o comando `pwd` imprimira a rota completa da pasta onde você está:
 
 ```
 (~) 56% pwd
-/Users/lstein
+/home/dria
 ```
 
-#### Essential Unix Commands
+#### Comandos essenciais de Unix
 
 
 With the exception of a few commands that are built directly into the shell, all Unix commands are standalone executable programs.  When you type the name of a command, the shell will search through all the directories listed in the PATH environment variable for an executable of the same name.  If found, the shell will execute the command. Otherwise, it will give a "command not found" error.

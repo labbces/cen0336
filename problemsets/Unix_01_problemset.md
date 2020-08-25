@@ -1,6 +1,6 @@
-# Unix Basics Quick Review and Problem Set
+# Revisão rápida das bases de Unix e conjunto de problemas
 
-useful commands
+comandos úteis
 =========================
 
 | command         | description                              |
@@ -28,20 +28,21 @@ useful commands
 
 
 
-### Try these examples
+### Execute os seguintes comandos
 
-**The files you need later in this review are in our [github repository](https://github.com/prog4biol/pfb2019). There will be direction on how to retrieve them**
+**Os arquivos que você vai usar nesta revisão estão no nosso [repositório github](https://github.com/labbces/cen0336). Haverá instruções sobre como recuperá-los mas para diante**
 
-Let's go to a directory with a lot of files in it and list those files
+Vamos num diretório com muitos arquivos e faza uma lista desses arquivos
+
 
 ```bash
 cd /bin/
 ls
 ```
 
-__What's the difference between these two commands?__
+__Qual é a diferença entre esses dois comandos?__
 
-Try them both!!
+Teste executando os dois!!
 ```
 ls -l
 ls -lt
