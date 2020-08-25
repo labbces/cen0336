@@ -51,27 +51,27 @@ ls -lt
 
 __Pipes__ 
 
-You can string more than one command together with a pipe `|` , such that the standard output of the first command is 'piped' into the standard input of the second command.
+Você pode encadear mais de um comando usando uma tubulação `|` , assim a saída padrão do primeiro comando é enviada por uma tubulação ('piped') na entrada padrão do segundo comando.
 
-Try it!!
+Teste!!
 ```
 ls -lt | head
 ```
 
 
 
-__Semicolons__
+__Ponto e vírgula__
 
-You can string more than one command together by putting a semi-colon `;` after the each command. Here, the commands will be run sequentially, but any output does not get passed from one command to the next.
+Você pode encadear mais de um comando usando um ponto e vírgula `;` depois de cada comando. Desta forma, os comando serão executados de forma sequencial, e a saída de um comando NÃO é passada para o próximo.
 
-Try it!!
+Teste!!
 ```
 date ; sleep 2 ; date
 ```
-> If you want to know more about `sleep` type `man sleep`
+> Se você tem interesse em conhecer mais do comando `sleep`, execute `man sleep`
 
 
-__Download a file__. 
+__Descarregando arquivos__. 
 
 Change directory to your home directory. You likely have permissions to write to your home directory. Now use `wget` or `curl` to download files. On some systems only one of these may be available
 ```
