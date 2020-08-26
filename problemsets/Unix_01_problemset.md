@@ -171,22 +171,19 @@ Problemas
       - Quantos caracteres?    (Dica: confera as opções do comando wc)
       - Qual é a primeira linha no arquivo?    (Dica: Leia a página de manual do comando head)
       - Quais são as últimas três linhas?    (Dica: Leia a página de manual do comando tail)
-      - Quantas sequências em formato fasta tem o arquivo?    (Dica: use grep) (Nota: The start of a sequence is indicated by a `>` character.)    
+      - Quantas sequências em formato fasta tem o arquivo?    (Dica: use grep) (Nota: O inicio de cada sequência é indicado pelo caractere `>`.)    
 
-8. Rename `sequences.nt.fa` to `cancer_genes.fasta`. (Hint: read the man page for mv)
+8. Renomeie o arquivo `sequences.nt.fa` como `cancer_genes.fasta`. (Dica: Leia a página de manual do comando mv)
 
-9. Copy this remote file, cuffdiff.txt, to your problemset directory. Here is the url you can use: <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt>
+9. Descarrege o arquivo remoto, cuffdiff.txt, na sua pasta problemsets. Aquí está a URL para descarregar: <https://raw.githubusercontent.com/labbces/cen0336/master/files/cuffdiff.txt>
 
-Use `wget` to copy <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/cuffdiff.txt> from the web into your problemsets directory. If `wget` is not available on your system, use `curl -O` as an alternative.
+Use o comando `wget` para descarregar uma copia do aquivo <https://raw.githubusercontent.com/labbces/cen0336/master/files/cuffdiff.txt> entro do diretório problemsets. Se `wget` não está disponivel no sistema, pode usar `curl -O` como alternativa.
 
-
-
-
-10. Do the following to `cuffdiff.txt`. The descriptions of each column in the file are in the table below.
-    - Look at the first few lines of the file
-    - Sort the file by log fold change 'log2(fold_change)', from highest to lowest, and save in a new file in your directory called sorted.cuffdiff.out
-    - Sort the file (log fold change highest to lowest) then print out only the first 100 lines. Save in a file called `top100.sorted.cuffdiff.out`.
-    - Sort the file by log fold change, print out the top 100, print only first column. This will be a list of the top 100 genes with the largest change in expression. Make sure your list is sorted by gene name and is unique. Save this curated list in a file called `differentially.expressed.genes.txt`.
+10. Faça o seguinte para o arquivo `cuffdiff.txt`. Una descrição do conteúdo de cada coluna aparece na tabela que está no final.
+    - Observe as primeiras linhas do arquivo.
+    - Classifique o arquivo pela coluna 'log2(fold_change)', do valor mais alto para o mais baixo, salve na sua pasta problemsets num novo aquivo chamad `sorted.cuffdiff.out`.
+    - Classifique o arquivo pela coluna 'log2(fold_change)', do valor mais alto para o mais baixo, imprima só as primeiras 100 linhas, e salve num arquivo chamado `top100.sorted.cuffdiff.out`.
+    - lassifique o arquivo pela coluna 'log2(fold_change)', do valor mais alto para o mais baixo, imprima só as primeiras 100 linhas, e imprima só a primeira coluna. Assim terá uma lista dos 100 principais genes com as maiores mudanças de expressão. Certifique-se que sua lista esteja classificada pelo nome do gene, e que os nomes sejam únicos (que apareçam só uma vez na lista). Salve esta lista selecionada (curada) num arquivo chamado `differentially.expressed.genes.txt`.
 
 
 
