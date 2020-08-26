@@ -89,9 +89,9 @@ grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
 
 
 
-__Append STDOUT to the end of a file that already exists__
+__Acrescentar a STDOUT no final de um arquivo que já existe__
 
-You can append the output of a command to a file
+Você pode pegar a saída de um comando, que normalmente apareceria na tela, e enviar para um arquivo que já existe
 
 ```
 grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
@@ -99,45 +99,44 @@ grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
 
 
 
-__Redirect STDERR__  
+__Redirecionar a STDERR__  
 
-You can redirect STDERR to a file.
+Você pode redirecionar a STDERR num arqiovo.
 
-Let's review what STDERR actually is.
+Vamos lembrar o que a STDERR é na verdaade.
 ```
 cat blablabla.txt
 ```
-> file blablabla.txt does not exist so we get `cat: blablabla.txt: No such file or directory` printed to the terminal. This message is labeled by the operating system as an error message or STDERR. 
+> O arquivo blablabla.txt não existe, então na sua tela vai aparecer `cat: blablabla.txt: No such file or directory`. Esta mensagem é uma mensagem de erro, e assim será interpretada pelo sistema operacional. As mensagems de erro aparecerão num dispositivo de saída chamado STDERR, que normalmente é a tela do monitor. 
 
-STDERR is a labeled type of output we can redirect
+Podemos redirecionar a saída STDERR, para que ela não fique na tela mas num arquivo: 
 
 ```
 cat blablabla.txt 2> errors.txt
 ```
-> We can redirect the error messages, A.K.A. STDERR, to a new file called anything we want
+> Podemos redirecionar as messagems de erro, A.K.A. STDERR, a um novo arquivo, nomeado segundo nossa escolha
 
 
-What happens when you try to redirect STDOUT?
+O que acontece quando tenta redirecionar a STDOUT?
 ```
 cat blablabla.txt > errors.txt
 ```
-> `cat: blablabla.txt: No such file or directory` still gets printed to the screen because we only redirect STDOUT to our file. There is no STDOUT in this case and our file will be empty. How would you verify this?
+> `cat: blablabla.txt: No such file or directory` aparece ainda na tela, por que a gente só redirecionou a STDOUT num arquivo, não a STDERR. Neste caso especifico não temos nada impresso na STDOUT e nosso arquivo estará vazio. Como você pode conferir isso?
 
 
 
+__Redirecionando STDOUT e STDERR__
 
-__Redirect STDOUT and STDERR__
-
-You can redirect both STDOUT and STDERR to **two separate** files in one command.
+Voce pode redireciona a duas saídas STDOUT e STDERR em **dois arquivos separados** usando só um comando.
 
 ```
-# just print it to the terminal first
+# Primeiro vamos imprimir na tela do terminal
 cat fav_chr_cuffdiff.txt blablabla.file
 
-# redirect to two files, STDOUT to out.txt, STDERR to err.txt 
+# Redirecionando em dois arquivos, STDOUT no arquivo out.txt, e STDERR no arquivo err.txt 
 cat fav_chr_cuffdiff.txt blablabla.file 1> out.txt 2> err.txt
 
-# this does the same, do you see the difference?
+# O seguinte comando faz a mesma coisa, vê a diferença?
 cat fav_chr_cuffdiff.txt blablabla.file > out.txt 2> err.txt
 
 ```
