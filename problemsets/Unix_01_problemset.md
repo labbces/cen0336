@@ -187,9 +187,9 @@ Use o comando `wget` para descarregar uma copia do aquivo <https://raw.githubuse
 
 
 
-__Cuffdiff file format__
+__Formato do arquivo Cuffdiff__
 
-| Column number | Column name       | Example              | Description                              |
+| Número da Coluna | Nome da coluna       | Exemplo              | Descrição                        |
 | ------------- | ----------------- | -------------------- | ---------------------------------------- |
 | 1             | Tested id         | XLOC_000001          | A unique identifier describing the transcipt, gene, primary transcript, or CDS being tested |
 | 2             | Tested id         | XLOC_000001          | A unique identifier describing the transcipt, gene, primary transcript, or CDS being tested |
