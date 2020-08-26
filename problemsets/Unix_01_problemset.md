@@ -73,14 +73,15 @@ date ; sleep 2 ; date
 
 __Descarregando arquivos__. 
 
-Change directory to your home directory. You likely have permissions to write to your home directory. Now use `wget` or `curl` to download files. On some systems only one of these may be available
+Mude para seu diretório home. Nessa pasta, geralmente, você tem permissões para escrever. Agora use o comando `wget` ou `curl` para descarregar arquivos. Em alguns sistemas só tem um desses comandos disponiveis
 ```
 cd ~
 curl -O https://raw.githubusercontent.com/labbces/cen0336/master/files/cuffdiff.txt
 ```
 
-__Redirect STDOUT__  
-You can redirect the output of a command into a file. 
+__Redirecionando STDOUT__  
+
+Você pode redirecionar a saída de um comando para um arquivo. 
 ```
 cd ~
 grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
