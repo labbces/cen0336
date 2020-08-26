@@ -140,38 +140,38 @@ cat fav_chr_cuffdiff.txt blablabla.file 1> out.txt 2> err.txt
 cat fav_chr_cuffdiff.txt blablabla.file > out.txt 2> err.txt
 
 ```
-> Examine the contents of `out.txt` and `err.txt`
+> Confera o conteúdo dos arquivos `out.txt` e `err.txt`
 
-You can also redirect both STDOUT and STDERR to **the same** file.
+Você tembém pode redirecionar as duas saídas STDOUT e STDERR para **o mesmo** arquivo.
 ```
 cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt 
 ```
-> Check out what is in the `all_out_err.txt`
+> Verifique o que está no arquivo `all_out_err.txt`
 
-Problem Set
+Problemas
 ===========
 
-1. Log into your machine. 
+1. Entre no servidor o na sua máquina com Linux. 
 
-2. What is the full path to your home directory?
+2. Qual é a rota completa (absoluta) de seu diretório home?
 
-3. Go up one directory?
-    - How many files does it contain?
-    - How many directories?
+3. Desloquese um diretorio para cima
+    - Quantos arquivos tem esse diretorio?
+    - Quantos diretórios?
 
-4. Make a directory called `problemsets` in your home directory.
+4. No seu diretório home crie uma pasta chamada `problemsets`.
 
-5. Navigate into this new directory called problemsets. Verify that you are in the correct directory by using `pwd`.
+5. Vai na pasta problemsets. Verifique que está no diretório certo usando o comando `pwd`.
 
-6. Use `wget` to copy <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa> from the web into your problemsets directory. If `wget` is not available on your system, use `curl -O` as an alternative.
+6. Use o comando `wget` para descarregar uma copia do aquivo <https://raw.githubusercontent.com/labbces/cen0336/master/files/sequences.nt.fa> dentro do diretório problemsets. Se `wget` não está disponivel no sistema, pode usar `curl -O` como alternativa.
 
-7. Without using a text editor use unix commands to find these qualities for the file `sequences.nt.fa`.
-  This file can be found here <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa>
-      - How many lines does this file contain?   
-      - How many characters?    (Hint: check out the options of wc)
-      - What is the first line of this file?    (Hint: read the man page of head)
-      - What are the last 3 lines?    (Hint: read the man page of tail)
-      - How many sequences are in the file?    (Hint: use grep) (Note: The start of a sequence is indicated by a `>` character.)    
+7. Sem usar um editor de texto use comandos de unix para achar as seguintes caracteristicas do arquivo `sequences.nt.fa`.
+  É o mesmo arquivo descarregado no passo anterior <https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/sequences.nt.fa>
+      - Quantas linhas tem o arquivo?   
+      - Quantos caracteres?    (Dica: confera as opções do comando wc)
+      - Qual é a primeira linha no arquivo?    (Dica: Leia a página de manual do comando head)
+      - Quais são as últimas três linhas?    (Dica: Leia a página de manual do comando tail)
+      - Quantas sequências em formato fasta tem o arquivo?    (Dica: use grep) (Nota: The start of a sequence is indicated by a `>` character.)    
 
 8. Rename `sequences.nt.fa` to `cancer_genes.fasta`. (Hint: read the man page for mv)
 
