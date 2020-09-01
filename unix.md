@@ -641,6 +641,56 @@ Here are a few more advanced Unix commands that are very useful, and when you ha
 
 It is often necessary to create and write to a file while using the terminal. This makes it essential to use a terminal text editor. There are many text editors out there. Some of our favorite are Emacs and vim. We are going to start you out with a simple text editor called  `vi`
 
+### Introdução ao nano
+
+Na próxima seção você conhecerá o editor de texto **vi**, que é um editor muito poderoso. Encorajamos você a aprender a usar o **vi**. as entendemos que o **vi** pode ser um pouco dificil de usar no inicio, por isso vamos a apresentar um editor muito mais simples, sem as características avanzadas que tem o **vi**. Esse editor é o **nano**
+
+Como o **vi**, **nano** é um editor de texto da lihna de comandos, e assim, você não tem uma interface do mouse para interagir com o editor, tudo é feito com convinações de teclas.
+
+#### Usando nano
+
+
+__Abrindo um arquivo__
+
+Na linha de comando pode escrever `nano` seguido do nome do arquivo que você quer abrir.
+
+```bash
+dria% nano <file>
+```
+
+Vamos tentar:
+
+```bash
+dria% nano primeiro_arquivo_nano.txt
+```
+
+Seu terminar aparecerá como segue:
+
+```
+  GNU nano 2.3.1               File: primeiro_arquivo_nano.txt                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help     ^O WriteOut     ^R Read File    ^Y Prev Page    ^K Cut Text     ^C Cur Pos
+^X Exit         ^J Justify	^W Where Is     ^V Next Page    ^U UnCut Text   ^T To Spell
+
+```
 ### Introduction to vi
 
 What is **vi**?
