@@ -664,7 +664,7 @@ Vamos tentar:
 dria% nano primeiro_arquivo_nano.txt
 ```
 
-Seu terminar aparecerá como segue:
+Seu terminal aparecerá como segue:
 
 ```
   GNU nano 2.3.1               File: primeiro_arquivo_nano.txt                                    
@@ -689,8 +689,16 @@ Seu terminar aparecerá como segue:
 
 ^G Get Help     ^O WriteOut     ^R Read File    ^Y Prev Page    ^K Cut Text     ^C Cur Pos
 ^X Exit         ^J Justify	^W Where Is     ^V Next Page    ^U UnCut Text   ^T To Spell
+```
+
+Note que o nome do arquivo aparece na primeira linha. Se você iniciar o `nano` sem in dicar um nome de arquivo, na primeria linha aparecerá:
 
 ```
+  GNU nano 2.3.1                      New Buffer                                                  
+```
+
+Nas ultimas dois linhas da sua tela tem varias combinações de teclas com diversas funções. O simbolo `^` indica que você tem que usar a tecla `control` na combinação. Por exemplo `^O`, significa que tem que usar as teclas `control` + `O` para escrever seu arquivo em disco.
+
 ### Introduction to vi
 
 What is **vi**?
