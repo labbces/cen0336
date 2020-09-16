@@ -51,4 +51,9 @@ GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 
 13. Write a new script that does all the testing in 7-11, but gets the value being tested from the command line and stores it in a variable. Add in a print statement that reminds the user what number is being tested. [Remember `sys` in the notes](pfb2019#command-line-parameters-a-special-built-in-list). 
 
-13. ADD/COMMIT/PUSH
+14. ADD/COMMIT/PUSH
+
+15. Write a new script that test whether a year is a leap year. According to Wikipedia a leap year is a special yeat htat has an extra day (366 days in a year). A year can be a leap year if it is exactly divisible by 4 but not divisible by 100. A year is also leap if it is exactly divisible by 400.
+
+16. ADD/COMMIT/PUSH
+
