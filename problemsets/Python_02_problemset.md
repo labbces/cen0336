@@ -53,7 +53,7 @@ GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 
 14. ADD/COMMIT/PUSH
 
-15. Write a new script that test whether a year is a leap year. According to Wikipedia a leap year is a special yeat htat has an extra day (366 days in a year). A year can be a leap year if it is exactly divisible by 4 but not divisible by 100. A year is also leap if it is exactly divisible by 400.
+15. Write a new script that test whether a year is a leap year. According to [Wikipedia](https://en.wikipedia.org/wiki/Leap_year) a leap year is a special yeat htat has an extra day (366 days in a year). A year can be a leap year if it is exactly divisible by 4 but not divisible by 100. A year is also leap if it is exactly divisible by 400.
 
 16. ADD/COMMIT/PUSH
 
