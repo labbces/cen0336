@@ -306,15 +306,14 @@ Se você ficar perdido no sistema de arquivos, o comando `pwd` imprimira a rota 
 #### Comandos essenciais de Unix
 
 
-Com exceção de poucos comando que estão construidos diretamente na shell, todos os comandos de linux são programas executaveis autónomos. Quando você escreve um comando, a shell buscará em todas as pastas listada no variavel de ambiente PATH por um executavel com o mesmo nome. Se acha-lo, então a shell o executará. Se não, imprimirá o erro "command not found".
+Com exceção de poucos comandos que estão construidos diretamente na shell, todos os comandos de linux são programas executaveis autónomos. Quando você escreve um comando, a shell buscará em todas as pastas listadas na variavel de ambiente PATH por um executavel com o mesmo nome. Se acha-lo, então a shell o executará. Se não, imprimirá o erro "command not found".
+
+A maioria dos comandos estão em `/bin`, `/usr/bin`, ou `/usr/local/bin`.
+
+#### Obtendo informação dos comandos
 
 
-Most commands live in `/bin`, `/usr/bin`, or `/usr/local/bin`.
-
-#### Getting Information About Commands
-
-
-The `man` command will give a brief synopsis of a command. Let's get information about the command `wc`
+O comando `man` le dará uma breve sinopsis do comando. Vamos obter informação do comando `wc`
 
 ```
 (~) 76% man wc
