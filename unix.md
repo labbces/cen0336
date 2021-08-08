@@ -306,7 +306,7 @@ Se você ficar perdido no sistema de arquivos, o comando `pwd` imprimira a rota 
 #### Comandos essenciais de Unix
 
 
-With the exception of a few commands that are built directly into the shell, all Unix commands are standalone executable programs.  When you type the name of a command, the shell will search through all the directories listed in the PATH environment variable for an executable of the same name.  If found, the shell will execute the command. Otherwise, it will give a "command not found" error.
+Com exceção de poucos comando que estão construidos diretamente na shell, todos os comandos de linux são programas executaveis autónomos. Quando você escreve um comando, a shell buscará em todas as pastas listada no variavel de ambiente PATH por um executavel com o mesmo nome. Se acha-lo, então a shell o executará. Se não, imprimirá o erro "command not found".
 
 
 Most commands live in `/bin`, `/usr/bin`, or `/usr/local/bin`.
