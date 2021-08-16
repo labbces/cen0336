@@ -1,13 +1,11 @@
-# Introdução a programação de computadores aplicada a ciências biológicas - CEN0336
+# Introdução a programação de computadores aplicada a ciências biológicas - CEN0336 
 Tradução e modificação do material associado a [programmingforbiology.org](http://programmingforbiology.org), associado a disciplina ["CEN0336 - Introdução a Programação de Computadores Aplicada a Ciências Biológicas"](https://uspdigital.usp.br/jupiterweb/obterDisciplina?sgldis=CEN0336&codcur=11061&codhab=4)
 
 __Criador e Instrutor da versão em Português__
 Diego M. Riaño-Pachón
 
-__Criadores do material na versão em Inglês__  
-Simon Prochnik  
-Sofia Robb     
-
+__Criadores do material na versão em Inglês__
+Simon Prochnik
    * [Panorama geral](unix.md/#panorama-geral)
       * [Por que?](unix.md/#por-que)
       * [Dicas úteis](unix.md/#dicas-úteis)
@@ -26,9 +24,9 @@ Sofia Robb
             * [Lar doce lar](unix.md/#lar-doce-lar)
             * [Conhecendo o sistema de arquivos](unix.md/#conhecendo-o-sistema-de-arquivos)
             * [Comandos essenciais de Unix](unix.md/#comandos-essenciais-de-unix)
-            * [Getting Information About Commands](unix.md/#getting-information-about-commands)
-            * [Finding Out What Commands are on Your Computer](unix.md/#finding-out-what-commands-are-on-your-computer)
-            * [Arguments and Command Line Switches](unix.md/#arguments-and-command-line-switches)
+            * [Obtendo informação dos comandos](unix.md/#obtendo-informação-dos-comandos)
+            * [Encontrando quais comandos estão disponiveís no seu computador](unix.md/#encontrando-quais-comandos-estão-disponiveís-no-seu-computador)
+            * [Argumentos e switches na linha de comando](unix.md/#argumentos-e-switches-na-linha-de-comando)
             * [Spaces and Funny Characters](unix.md/#spaces-and-funny-characters)
             * [Useful Commands](unix.md/#useful-commands)
             * [Manipulating Directories](unix.md/#manipulating-directories)
