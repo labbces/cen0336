@@ -333,9 +333,9 @@ DESCRIPTION
 ...
 ```
 
-#### Finding Out What Commands are on Your Computer
+#### Encontrando quais comandos estão disponiveís no seu computador
 
-The `apropos` command will search for commands matching a keyword or phrase. Here's an example that looks for commands related to 'column'
+O comando `apropos` procurará comando que batem com uma palavra shave ou uma frase. Aqui tem um exemplo usando a palavra chave 'column'
 
 ```
 (~) 100% apropos column
@@ -347,7 +347,7 @@ modes
 ```
 
 
-#### Arguments and Command Line Switches 
+#### Argumentos e switches na linha de comando
 
 
 Many commands take arguments.  Arguments are often the names of one or more files to operate on.  Most commands also take command-line "switches" or "options", which fine-tune what the command does.  Some commands recognize "short switches" that consist of a minus sign `-` followed by a single character, while others recognize "long switches" consisting of two minus signs `--` followed by a whole word.
