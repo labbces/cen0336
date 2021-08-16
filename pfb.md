@@ -1,10 +1,12 @@
-# Programming For Biology 2019
-[programmingforbiology.org](http://programmingforbiology.org)
+# Introdução a programação de computadores aplicada a ciências biológicas - CEN0336 2020-20
+Tradução e modificação do material associado a [programmingforbiology.org](http://programmingforbiology.org), associado a disciplina ["CEN0336 - Introdução a Programação de Computadores Aplicada a Ciências Biológicas"](https://uspdigital.usp.br/jupiterweb/obterDisciplina?sgldis=CEN0336&codcur=11061&codhab=4)
 
-__Instructors__  
-Simon Prochnik  
-Sofia Robb     
+__Criador e Instrutor da versão em Português__
+Diego M. Riaño-Pachón
 
+__Criadores do material na versão em Inglês__
+Simon Prochnik
+Sofia Robb
 
 # Python Lectures
 
