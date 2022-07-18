@@ -233,7 +233,7 @@ Qual é a difereça entre os comandos `ls -F` e `ls`?
 Este comando mostra um arquivo "INBOX" e quatro pasta adicionais ("Mail", "News").  (A particula `-F` no comando liga a opção para saida sofisticada ('fancy'), que acrescente alguna caracteres especiais nas listas de pastas, para ajudá-lo na identificação do que está observando.  O simbolo `/` no final do nome de um arquivo indica que o arquivo é uma pasta.
 
 
-Algumas pastas podem ter arquivos e outras pasta que não apracem quando executa o comando `ls -F`, eles estão ocultos. Os nomes desses aquivos e pastas ocultos iniciam com um `.` ("ponto") . Para conseguir ver esses arquivos e pastas, tem que acrescentar uma `a` nas opções do comando `ls`:
+Algumas pastas podem ter arquivos e outras pastas que não aparacem quando executa o comando `ls -F`, eles estão ocultos. Os nomes desses aquivos e pastas ocultos iniciam com um `.` ("ponto") . Para conseguir ver esses arquivos e pastas, tem que acrescentar uma `a` nas opções do comando `ls`:
 
 ```
 (~) % ls -aF
@@ -244,7 +244,7 @@ Algumas pastas podem ter arquivos e outras pasta que não apracem quando executa
 .bash_profile     .less             .xsession-errors
 .bashrc           .lessrc           INBOX
 ```
-> Whoa!   Tem um monte de coisas lá. Pero por favor não vai apagar eses aquivos ponto. Muitos deles são esenciais para a configuração de outros programas. Por exemplo o artuivo `.profile` contem as informações para a configuração da shell **bash**. Você pode dar uma olhadinha nele para ver algumas das muitas opções de **bash**. Você pode também editá-lo (claro quando você saiba o que está fazendo) para modificar o comportamento da shell, como por exemplo o typo de prompt que você tem, o as rotas de busca de comandos.
+> Whoa!   Tem um monte de coisas lá. Pero por favor não vai apagar eses aquivos. Muitos deles são esenciais para a configuração de outros programas. Por exemplo o artuivo `.profile` contem as informações para a configuração da shell **bash**. Você pode dar uma olhadinha nele para ver algumas das muitas opções de **bash**. Você pode também editá-lo (claro quando você saiba o que está fazendo) para modificar o comportamento da shell, como por exemplo o typo de prompt que você tem, o as rotas de busca de comandos.
 
 
 #### Conhecendo o sistema de arquivos
@@ -350,10 +350,10 @@ modes
 #### Argumentos e switches na linha de comando
 
 
-Muitos comandos aceitam argumentos.  Frequentemente os argumentos são os nomes de um ou mais arquivos nos quais o comando fará alguma operação. Muitos comandos também aceitam "switches"ou 'opções' na linha de comandos, que podem ajustar de forma fina o que o comando faz.  Alguns comandos reconhecem "switches' curtos, isto é, que consistem de um sinal de menos `-` seguido de um único caracter, enquanto outros reconhecem 'switches' longos, que consistem de dois sinais de menos `--` seguidos de uma palavra inteira.
+Muitos comandos aceitam argumentos.  Frequentemente os argumentos são os nomes de um ou mais arquivos nos quais o comando fará alguma operação. Muitos comandos também aceitam "switches" ou 'opções' na linha de comandos, que podem ajustar de forma fina o que o comando faz.  Alguns comandos reconhecem "switches' curtos, isto é, que consistem de um sinal de menos `-` seguido de um único caracter, enquanto outros reconhecem 'switches' longos, que consistem de dois sinais de menos `--` seguidos de uma palavra inteira.
 
 
-The `wc` (word count) program is an example of a command that recognizes both long and short options.  You can pass it the `-c`,  `-w` and/or `-l` options to count the characters, words, and lines in a text file, respectively.  Or you can use the longer but more readable `--chars`,  `--words` or `--lines` options.  Both these examples count the number of characters and lines in the text file `/var/log/messages`:
+O programa `wc` (word count) é um exemplo de comando que reconhece tanto opções longas como curtas. Você pode pasar as opções `-c`,  `-w` e/ou `-l` para contar caracteres, palavras e linhas num arquivo de texto, respectivamente. Ou você podde usar o formato mais longo das opções, mais facil de ler, `--chars`,  `--words` ou `--lines` .  Os proximos dois exemplos contam o número de caracteres e de linhas no arquivo de texto  `/var/log/messages`:
 
 ```
 (~) 102% wc -c -l /var/log/messages
@@ -362,35 +362,35 @@ The `wc` (word count) program is an example of a command that recognizes both lo
      23     941 /var/log/messages
 ```
 
-You can cluster short switches by concatenating them together, as shown in this example:
+Você pode agrupar switches curtos, concatenando-lhes, como se mostra neste exemplo:
 
 ```
 (~) 104% wc -cl /var/log/messages
      23     941 /var/log/messages
 ```
 
-Many commands will give a brief usage summary when you call them with the `-h` or `--help` switch.
+Muitos comandos mostrarão um pequeno resumo da forma de uso quando você chamar com as opções -h` ou `--help.
 
-#### Spaces and Funny Characters
+#### Espaços e caracteres extranhos
 
-The shell uses whitespace (spaces, tabs, and other non-printing characters) to separate arguments.  If you want to embed whitespace in an argument, put single quotes around it.  For example:
+A shell usa espaços em branco (espaços, tabs, e outros catacteres não imprimíveis) para separar argumentos.  Se você deseja usar espeçoes em branco em um argumento, tem que usar aspas simples ao redor dele. For Exemplo: 
 
 ```
-mail -s 'An important message' 'Bob Ghost <bob@ghost.org>'
+mail -s 'Uma mensagem importante' 'Bob Ghost <bob@ghost.org>'
 ```
-This will send an e-mail to the fictitious person Bob Ghost.  The `-s` switch takes an argument, which is the subject line for the e-mail.  Because the desired subject contains spaces, it has to have quotes around it. Likewise, my name and e-mail address, which contain embedded spaces, must also be quoted in this way.
+Esse comando enviará uma mensage de e-mail para a pessoa fictisia Bob Ghost.  O switch `-s` aceita um argumento, que será o tema do e-mail.  Já que o tema desejado pode conter espaçoes, tem que usar aspas ao redor. De forma semelantes, meu nome e endereço de e-mail, que poden ter espeçoes, tem que usar aspas da mesma forma. 
 
 
-Certain special non-printing characters have _escape codes_ associated with them:
+Alguns caracteres especiais não imprimíveis têm _códigos de escape_ associados
 
 
-| Escape Code | Description                              |
-| ----------- | ---------------------------------------- |
-| \\n         | new line character                       |
-| \\t         | tab character                            |
-| \\r         | carriage return character                |
-| \\a         | bell character (ding! ding!)             |
-| \\nnn       | the character whose ASCII code is **nnn** |
+| Código de Escape | Descrição                               |
+| ----------- | -------------------------------------------- |
+| \\n         | Caracter de linha nova                       |
+| \\t         | Caracter tabulação (TAB)                     |
+| \\r         | Caracter de retorno de carro                 |
+| \\a         | Caracter de campainha (ding! ding!)          |
+| \\nnn       | O caracter que tem cõdigo ASCII **nnn**      |
 
 
 #### Useful Commands
