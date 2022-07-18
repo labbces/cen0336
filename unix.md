@@ -393,31 +393,31 @@ Alguns caracteres especiais não imprimíveis têm _códigos de escape_ associad
 | \\nnn       | O caracter que tem cõdigo ASCII **nnn**      |
 
 
-#### Useful Commands
+#### Comandos úteis
 
-Here are some commands that are used extremely frequently.  Use `man` to learn more about them.  Some of these commands may be useful for solving the problem set ;-)
+Aqui tem alguns comandos que são usados com muita frequência.  Pode usar o comando  `man` para parender mais deles.  Alguns desses comandos podem ser de muita utilidade para resolver alguns dos exercicios ;-)
 
-#### Manipulating Directories
+#### Manipulando pastas
 
-| Command | Description                              |
+| Comando | Descripção                              |
 | ------- | ---------------------------------------- |
-| `ls`    | Directory listing.  Most frequently used as `ls -F` (decorated listing), `ls -l` (long listing), `ls -a` (list all files). |
-| `mv`    | Rename or move a file or directory.      |
-| `cp`    | Copy a file.                             |
-| `rm`    | Remove (delete) a file.                  |
-| `mkdir` | Make a directory.                         |
-| `rmdir` | Remove a directory.                       |
-| `ln`    | Create a symbolic or hard link.          |
-| `chmod` | Change the permissions of a file or directory. |
+| `ls`    | Mostrar em forma de lista o conteúdo de uma pasta. O uso mais frequente é como  `ls -F` (lista decorada), `ls -l` (lista larga), `ls -a` (listar todos os arquivos). |
+| `mv`    | Renomear ou mover um arquivo ou pasta.      |
+| `cp`    | Copiar um arquivo.                             |
+| `rm`    | Apagar um arquivo.                  |
+| `mkdir` | Criar uma pasta.                         |
+| `rmdir` | Apagar uma pasta.                       |
+| `ln`    | Criar um vínculo simbólico ou rigido.          |
+| `chmod` | Mudar as permisões de um arquivo ou uma pasta. |
 
 
 | Command           | Description                              |
 | ----------------- | ---------------------------------------- |
-| `cat`             | Concatenate program.  Can be used to concatenate multiple files together into a single file, or, much more frequently, to view the contents of a file or files in the terminal. |
-| `echo`            | print a copy of some text to the screen. E.g. `echo 'Hello World!'` |
-| `more`            | Scroll through a file page by page.  Very useful when viewing large files.  Works even with files that are too big to be opened by a text editor. |
-| `less`            | A version of `more` with more features.  |
-| `head`            | View the first few lines of a file.  You can control how many lines to view. |
+| `cat`             | Programa para concatenar.  Pode ser usado para concatenar multiplos arquivos em um único arquivo, ou, com maior frequencia, para visualizar o conteúdo de um ou varios arquivo no terminal.|
+| `echo`            | Imprime na tela uma copia de algum texto. E.g. `echo 'Hola Mundo!'` |
+| `more`            | Navegar num arquivo pagina a pagina; Muito útil para visualizar o conteúdo de arquivos grandes. Funciona inclusive com arquivos que nem sequer podem ser visualizados num editor de texto. |
+| `less`            | É uma versão do comando more, com ainda mais recursos..  |
+| `head`            | Visualizar as primeiras linhas de um arquivo. Você pode controlar quantas linhas visualizar. |
 | `tail`            | View the end of a file.  You can control how many lines to view.  You can also use `tail -f` to view a file that you are writing to. |
 | `wc`              | Count words, lines and/or characters in one or more files. |
 | `tr`              | Substitute one character for another.  Also useful for deleting characters. |
