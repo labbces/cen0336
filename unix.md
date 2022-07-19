@@ -203,7 +203,7 @@ final_exam_questions.txt  genomics_problem.txt
 genebridge.txt            mapping_run.txt
 ```
 
-There are several more advanced types of wildcard patterns that you can read about in the **tcsh** manual page.  For example, if you want to match files that begin with the characters "f" or "g" and end with ".txt", you can use a range of characters inside square brackets `[f-g]` as part of the wildcard pattern. Here's an example
+Existem padr"oes mais avanzados de curingas, poder ler sobre eles na página de manual do **tcsh**.  Por exemplo, se você quer selecionar os arquivos que comencam com os caracteres  "f" ou "g" e que terminam com  ".txt", pode usar uma faixa de caracteres dentro de colchetes `[f-g]` como parte de seu curinga. Aqui tem um exemplo
 
 ```
 (~) 57% ls -F [f-g]*.txt
@@ -418,13 +418,13 @@ Aqui tem alguns comandos que são usados com muita frequência.  Pode usar o com
 | `more`            | Navegar num arquivo pagina a pagina; Muito útil para visualizar o conteúdo de arquivos grandes. Funciona inclusive com arquivos que nem sequer podem ser visualizados num editor de texto. |
 | `less`            | É uma versão do comando more, com ainda mais recursos..  |
 | `head`            | Visualizar as primeiras linhas de um arquivo. Você pode controlar quantas linhas visualizar. |
-| `tail`            | View the end of a file.  You can control how many lines to view.  You can also use `tail -f` to view a file that you are writing to. |
-| `wc`              | Count words, lines and/or characters in one or more files. |
-| `tr`              | Substitute one character for another.  Also useful for deleting characters. |
-| `sort`            | Sort the lines in a file alphabetically or numerically. |
-| `uniq`            | Remove duplicated lines in a file.       |
-| `cut`             | Remove columns from each line of a file or files. |
-| `fold`            | Wrap each input line to fit in a specified width. |
+| `tail`            | Vizualizar o final de um arquivo.  Você pode controlar quantas linhas visualizar.  Pode usar  `tail -f` para visualizar um arquivo onde está escrevendo. |
+| `wc`              | contar palavras, linhas e/ou characteres em um ou mais arquivos. |
+| `tr`              | Substituir um caracater por outro.  também é útil para apagar caracteres. |
+| `sort`            | Ordenar as linhas de um arquivo de forma alfabetica ou numérica. |
+| `uniq`            | Apagar linhas duplicada num arquivo.       |
+| `cut`             | Apagar colunas de cada linha de um ou mais arquivos. |
+| `fold`            | Ajustar o comprimento de linha a um maximo especificado. |
 | `grep`            | Filter a file for lines matching a specified pattern.  Can also be reversed to print out lines that don't match the specified pattern. |
 | `gzip` (`gunzip`) | Compress (uncompress) a file.            |
 | `tar`             | Archive or unarchive an entire directory into a single file. |
