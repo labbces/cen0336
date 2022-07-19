@@ -425,36 +425,36 @@ Aqui tem alguns comandos que são usados com muita frequência.  Pode usar o com
 | `uniq`            | Apagar linhas duplicada num arquivo.       |
 | `cut`             | Apagar colunas de cada linha de um ou mais arquivos. |
 | `fold`            | Ajustar o comprimento de linha a um maximo especificado. |
-| `grep`            | Filter a file for lines matching a specified pattern.  Can also be reversed to print out lines that don't match the specified pattern. |
-| `gzip` (`gunzip`) | Compress (uncompress) a file.            |
-| `tar`             | Archive or unarchive an entire directory into a single file. |
-| `emacs`           | Run the Emacs text editor (good for experts). |
-| `vi`              | Run the vi text editor (better for experts). |
+| `grep`            | Filtrar as linhas de um arquivo selecionando aquelas que tem um padrão especificado.  Pode faver o contrário, e mostrar as linhas que nõ tem o padrão especificado. |
+| `gzip` (`gunzip`) | Comprimir (descomprimit) um arquivo.            |
+| `tar`             | Arquivar (ou desarquivar) um pasta interia em um arquivo único. |
+| `emacs`           | O editor de textos Emacs (bom para expertos). |
+| `vi`              | O editor de textos vi  (melhor para expertos). |
 
 
-#### Networking
+#### Rede
 
 | Command                | Description                              |
 | ---------------------- | ---------------------------------------- |
-| `ssh`                  | A secure (encrypted) way to log into machines. |
-| `scp`                  | A secure way to copy (cp) files to and from remote machines. |
-| `ping`                 | See if a remote host is up.              |
-| `ftp`/ `sftp` (secure) | Transfer files using the File Transfer Protocol. |
+| `ssh`                  | Uma forma segura (encriptada) de entrar em seridores remotos. |
+| `scp`                  | Uma forma segura de copiar arquivos de e até servidores remotors. |
+| `ping`                 | Conferir se um servidor remoto está ligado.              |
+| `ftp`/ `sftp` (secure) | Transferir arquivos com o protocolo de transferencia de arquivos (File Transfer Protocol). |
 
-#### Standard I/O and Redirection
-
-
-Unix commands communicate via the command-line interface.  They can print information out to the terminal for you to see, and accept input from the keyboard (that is, from _you_!)
+#### Entrada/Salida (E/S) padrão e redirecionamento
 
 
-Every Unix program starts out with three connections to the outside world.  These connections are called "streams", because they act like a stream of information (metaphorically speaking):
+Os comandos de Unix se comumicam via a interfaz de linha de comandos.  eles podem imprimir informacão no terminal para voc^visualizar, e também podem aceitar entradas desde o teclado (o seja, de  _você_!)
 
 
-| Stream Type     | Description                              |
+Cada programa de Unix inicia com três conexoes ao mundo exterior.  Essas conexões são chamadas de "correntes" ou "streams", porque agem como se fosem uma corrente de informacão(metaforicamente falando):
+
+
+| Tipo de Corrente     | Descripcão                              |
 | --------------- | ---------------------------------------- |
-| standard input  | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in. |
-| standard output | This stream is initially attached to the terminal. Anything the program prints to this channel appears in your terminal window. |
-| standard error  | This stream is also initially attached to the terminal. It is a separate channel intended for printing error messages. |
+| Entrada padrão  | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in. |
+| saída padrão | This stream is initially attached to the terminal. Anything the program prints to this channel appears in your terminal window. |
+| Erro padrão  | This stream is also initially attached to the terminal. It is a separate channel intended for printing error messages. |
 
 The word "initially" might lead you to think that standard input, output, and error can somehow be detached from their starting places and reattached somewhere else.  And you'd be right.  You can attach
 one or more of these three streams to a file, a device, or even to another program.  This sounds esoteric, but it is actually very useful.
@@ -1170,4 +1170,3 @@ You will KNOW if you need to use these features of git.
 ### [Link To Unix 2 Problem Set](problemsets/Unix_02_problemset.md)
 
 ---
-
