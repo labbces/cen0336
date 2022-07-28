@@ -452,17 +452,16 @@ Cada programa de Unix inicia com três conexoes ao mundo exterior.  Essas conex�
 
 | Tipo de Corrente     | Descripcão                              |
 | --------------- | ---------------------------------------- |
-| Entrada padrão  | This is a communications stream initially attached to the keyboard.  When the program reads from standard input, it reads whatever text you type in. |
-| saída padrão | This stream is initially attached to the terminal. Anything the program prints to this channel appears in your terminal window. |
-| Erro padrão  | This stream is also initially attached to the terminal. It is a separate channel intended for printing error messages. |
+| Entrada padrão  | É uma corrente de comunicacões inicialmente atrelada ao teclado. Quando o programa lê da entrada padrão, ele lê qualquer cosa que você digitar. |
+| saída padrão | Esta corrente está inicialmente atrelada ao terminal. Qualquer coisa que o programa imprimir nesta cenal aparecerá na sua janela do terminal. |
+| Erro padrão  | Esta corrente est;a, também, inicialmente atrelada ao terminal. É um canal separado com o intuito de imprimir messages de erro. |
 
-The word "initially" might lead you to think that standard input, output, and error can somehow be detached from their starting places and reattached somewhere else.  And you'd be right.  You can attach
-one or more of these three streams to a file, a device, or even to another program.  This sounds esoteric, but it is actually very useful.
+La palavra "inicialmente" tem que levar a pensar que os padrões de entradas, saida e de erro, podem de alguma forma ser desatrelados de seus locais de inicio, e atrelados a algum outro. Isso é correto! Você pode atrelar uma o mais dessas correntes a um arquivo, ou incluso a um outro programa.  Isso pode parecer esoterico, mas é na verdade muito útil.
 
-#### A Simple Example
+#### Um exemplo simples
 
 
-The `wc` program counts lines, characters, and words in data sent to its standard input.  You can use it interactively like this:
+O programa  `wc` conta linhas, caracteres e palavras nos dados enviados a usa entrada padrão.  Você pode usear ele de forma interactiva assim::
 
 ```
 (~) 62% wc
@@ -472,10 +471,10 @@ little lamb.
 
 Mary had a little lamb,
 whose fleece was white as snow.
-^d * NOTE - this needs to be typed but will not be show up in terminal window
+^d * NOTE - Precisa digitar isto, mas não será impresso no terminal (O sinal `^` corresponde a tecla `control`)
       6      20     107
 ```
-In this example, I ran the `wc` program.  It waited for me to type in a little poem.  When I was done, I typed the END-OF-FILE character, control-d (^d for short).  `wc` then printed out three numbers indicating the number of lines, words, and characters in the input.
+En este exemplo, executei o programa `wc` .  Ele aguardou para eu escrever um pequeno poema. Quando terminei, usei o character FIM-DE-ARQUIVO (END-OF-FILE), control-d (^d ).  Então `wc` imprimiu três números, que representam o número de linhas, palavras e caracteres na entrada.
 
 More often, you'll want to count the number of lines in a big file; say a file filled with DNA sequences.  You can do this by _redirecting_ the contents of a file to the standard input of  `wc`. This uses
 the `<`  symbol:
