@@ -1,89 +1,89 @@
-# Unix 2 Problem Set
+# Conjunto de problemas Unix 2
 
 
-1. If you have not already done so, follow [Steps 1-3 in Unix: GIT for Beginners](https://github.com/prog4biol/pfb2019#git-for-beginners). Here is a **summary** of those steps, **Please go to lecture for detailed steps**:
-   NOTE: Don't create a repository inside of another repostitory.
-   - Create a GitHub Account and Click "New" to create a new repository.
-   - Add info about your repository
-   - Please see the lecture notes for more detailed steps. In summary you will be doing the following: Create a local (your machine) directory with `mkdir <dirname>`, move into the new directory with `cd <dirname>` and set it up as a repository with `git init`. Now link it to your remote repository with `git remote add`.
+1. Se você ainda não o fez, siga [Steps 1-3 in Unix: GIT for Beginners](https://github.com/prog4biol/pfb2019#git-for-beginners). Aqui está um **sumário** destas etapas, **Por favor vá até a aula para ter o detalhamento**:
+   NOTA: Não crie um repositório dentro de outro repositório.
+   - Crie uma conta GitHub e clique em "Novo" para criar um novo repositório.
+   - Adicione informação sobre seu repositório.
+   - Por favor veja as notas de aula para passos mais detalhados. No sumário vocÊ fará o seguinte: Crie um diretório local (em sua máquina) com `mkdir <dirname>`, mova para um novo diretório com `cd <dirname>` e configure como um repositório com `git init`. Agora conecte-o em seu repositório remoto com `git remote add`.
    
    
-   Don't `git init` in your home directory. Make a new directory (something like pfb_problemsets or problemsets or problem_sets), change directory into the new directory, then `git init` 
+   Não faça `git init` em seu diretório base. Faça um novo diretório (algo como pfb_problemsets ou problemsets ou problem_sets), mude o diretorio para o seu novo diretório, depois `git init` 
 
-2. Move any files you created in Unix_01 Problem set to your local problemset git repository.
+2. Mova quaisquer arquivos que você criou no conjunto de problemas Unix_01 para o seu repositório git de conjunto de problemas local.
 
-3. Add all the new files in your local repository to your remote repository
-   - `git status` to see all the files you need to add
-   - `git add <filename>`  or  `git add <filename1> <filename2> <filename3> ...`  
+3. Adicione todos os novos arquivos do seu repositório local para o seu repositório remoto
+   - `git status` para ver todos os arquivos que você precisa adicionar 
+   - `git add <filename>`  ou  `git add <filename1> <filename2> <filename3> ...`  
    - `git commit -m 'adding previous problem set files'`
    - `git push`
-   - Visit the your GitHub repository website (on github.com) and see the files from your local repository that you just pushed up to your remote repository.
+   - Visite o site do seu repositório Github (em github.com) e veja os arquivps do seu repositório local que você acabou de empurrar para o seu repositório remoto.
 
-4. If you are tired of typing your github username and password create and add an ssh key to your github account. Information can be found [here](https://help.github.com/articles/connecting-to-github-with-ssh/) on github.com. Follow the instructions for these two steps in the turorial.
-   - [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 
-   - [Adding a new SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account)
+4. Se você está cansado de ficar digitando seu nome de usuário e senha github, crie e adicione um ssh key para sua conta github. Informação pode ser encontrada [Aqui](https://help.github.com/articles/connecting-to-github-with-ssh/) em github.com. Siga as intruções para esses dois passos no tutorial.
+   - [Gerando uma nova SSH key e adicionando ao ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 
+   - [Adicionando uma nova SSH key a sua conta GitHub](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account)
 
-5. Create a directory call `files` in your ProblemSets directory. 
+5. Crie um diretório chamado `arquivos` no seu diretório de conjunto de problemas. 
 
-6. Move the file you renamed from `sequences.nt.fa` to `cancer_genes.fasta` to your `files` directory
+6. Mova o arquivo que você renomeou de `sequences.nt.fa` para `cancer_genes.fasta` ao seu diretório `arquivos`
 
-7. ADD/COMMIT/PUSH `cancer_genes.fasta` to your remote repository
+7. ADD/COMMIT/PUSH `cancer_genes.fasta` para seu repositório remoto
   - `git add files/cancer_genes.fasta`
   - `git commit -m 'adding cancer_genes.fasta'`
   - `git push`
-  - Visit the your GitHub repository website (on github.com) and see the file from your local repository that you just pushed up to your remote repository.
+  - Visite o site seu repositório GitHub (em github.com) e veja o arquivo do seu repositório local que você acabou de transferir para o seu repositório remoto.
 
-8. Using your vi text editor create a fasta file and name it `mysequences.txt`. Make sure it ends up in your problem sets files directory.
+8. Usando seu editor de texto vi crie um arquivo fasta e dê o nome `mysequences.txt`. Se assegure de que ele acabe em seu diretório de arquivos para conjuntos de problemas.
 
-This is fasta file format:
+Esse é o formato do arquivo fasta:
 ```
 >seqName description
 ATGGCGTCTTGGCCTTAAAAGCTC
 GGCGTCTTGGCCTTAAAAGCTCAT
 ATTCTTGGCCTTAAATTGGCCTTG
 ```
-  - add 10 lines of sequence
-  - delete a line
-  - insert a new line at line 4
-  - Copy line 5
-  - Paste this line above line 2
-  - set to view line numbers
-  - Cut line 3 and paste below line 6
-  - Go to line 4
-  - delete a line
-  - undo your last delete
-  - search for `CTT`
-  - find next occurance of `CTT`
-  - Save and exit
+  - Adicione 10 linhas de sequência 
+  - Delete uma linha
+  - Insira uma nova linha na linha 4
+  - Copie a linha 5
+  - Cole essa linha acima da linha 2
+  - Configure para ver números de linha 
+  - Corte a linha 3 e cole abaixo da linha 6
+  - Vá até a linha 4
+  - Delete a linha
+  - Desfaça seu último delete
+  - Pesquise por `CTT`
+  - Encontre a próxima ocorrÊncia de `CTT`
+  - Salve e saia
 
 
-9. ADD/COMMIT/PUSH `mysequences.txt` to your remote.
+9. ADD/COMMIT/PUSH `mysequences.txt` em seu remoto.
 
 
-10. Create a directory called `fastas`.     (Hint: use mkdir)
-11. Copy the fasta file that you renamed to `cancer_genes.fasta` to the fasta directory.
-12. Verify that the file is within the fasta directory.  
-13. Delete the the original file that you used for copying.  
-14. Sync your remote repo with your local repo. Make sure to add each file you changed or use `git add <filename>`. Don't forget to commit and push.
-15. Practice with `git rm`
-  - Create a file named `oops` and add a few characters of content.
-  - Save and Exit. 
-  - Add/Commit/Push this file 
+10. Crie um diretório chamado `fastas`. (Dica: use mkdir)
+11. Copie o arquivo fasta que você renomeou para `cancer_genes.fasta` ao diretório fasta.
+12. Verifique que o arquivo está dentro do diretório fasta.  
+13. Delete o arquivo original que você usou para copiar.  
+14. Sincronize seu repositório remoto com o local. Se assegure de adicionar cada arquivo que você mudou ou usou `git add <filename>`. Não se esqueça do commit e push.
+15. Pratique com `git rm`
+  - Crie um arquivo chamado `oops` e adicione alguns caracteres de conteúdo.
+  - Salve e saia. 
+  - Add/Commit/Push esse arquivo
   - `git rm oops` 
   - `git commit -m 'removing oops'`
   - `git push`
-16. Practice with `rm`. Can you spot the little difference from `git rm`
-  - Create a file named `oops2`. add some content. save and exit
-  - Add/Commit/Push this file
+16. Pratique com `rm`. Você pode identificar a pequena diferença do `git rm`
+  - Crie um arquivo chamado `oops2`. adicione algum conteúdo. salve e saia
+  - Add/Commit/Push esse arquivo
   - `rm oops2`
   - `git add oops2`
   - `git commit -m 'removing oops2'`
   - `git push`
-17. Imagine this: You created a file, `git add` it, but then realize you don't want to commit it. What do you do? [from google search](https://stackoverflow.com/questions/348170/how-do-i-undo-git-add-before-commit)
-  - Create a file named `never`. 
+17. Imagine isso: Você criou um arquivo, `git add`, mas percebeu que você não quer cometê-lo (commit). O que você faz? [da pesquisa do google](https://stackoverflow.com/questions/348170/how-do-i-undo-git-add-before-commit)
+  - Crie um arquivo chamado `never`. 
   - `git add never`
   - `git reset never`
-18. Read the man page for `rm` and `cp` to find out how to remove and copy a directory.
-19. Print out your history and redirect it to a file called `unixBasics.history.txt`
-20. Open your history file with your text editor and delete any lines you do not want to keep. See this [google search](https://www.google.com/search?rlz=1C5CHFA_enUS596US596&q=vi+delete+entire+line&oq=vi+delete+entire+line&gs_l=psy-ab.3..0j0i5i30k1.28765.29854.0.30351.7.6.0.0.0.0.186.526.0j3.3.0....0...1.1.64.psy-ab..5.2.362...0i13k1j0i7i5i30k1.0.Ub2zfH_lp_o) for info on deleting entire lines in vi.
-21. Make sure all your files are synced with your remote repository. (`git status`)
+18. Leia a página para `rm` e `cp` para descobrir como remover e copiar um diretório.
+19. Imprima seu histórico e redirecione ele ao arquivo chamado `unixBasics.history.txt`
+20. Abra seu arquivo de histórico com seu editor de texto e delete quaisquer linhas que não queira manter. Veja isso [pesquisa no google](https://www.google.com/search?rlz=1C5CHFA_enUS596US596&q=vi+delete+entire+line&oq=vi+delete+entire+line&gs_l=psy-ab.3..0j0i5i30k1.28765.29854.0.30351.7.6.0.0.0.0.186.526.0j3.3.0....0...1.1.64.psy-ab..5.2.362...0i13k1j0i7i5i30k1.0.Ub2zfH_lp_o) para informações sobre deletar linhas inteiras no vi.
+21. Se assegure de que todos os seus arquivos estão sincronizados com seu repositório remoto. (`git status`)
