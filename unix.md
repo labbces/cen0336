@@ -527,7 +527,7 @@ Ambos usam `grep` para pesquisar pela corda "gatttgc" no arquivo `big_file.fasta
 Esse exemplo pesquisa por "gatttgc" em três lugares.  Primeiro olha no arquivo `big_file.fasta`, depois no `bigger_file.fasta`, e por úlitmo na entrada padrão (que, desde que não seja redirecionad, virá do teclado).
 
 
-#### Padrão I/O e Tubos
+#### E/S Padrão e Tubos
 
 
 A coisa mais legal de Unix shell é a possibilidades de acorrentar comandos juntos em tubulações.  Aqui um exemplo:
@@ -541,7 +541,7 @@ Três são dois comandos aqui. `grep` pesquisa pelo arquivo ou entrada padrão p
 
 O que o cano faz?  ele imprime o número de linhas em que a corda "gatttgc" aparece no arquivo `big_file.fasta`.
 
-#### Mais idiomas de cano
+#### Mais Exemplos de Encadeamento de Comandos (Pipes)
 
 Canos são muito poderosos. Aqui estão alguns idiomas de linhas de comando comuns.
 
