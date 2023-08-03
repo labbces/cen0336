@@ -27,7 +27,7 @@ Simon Prochnik
             * [Obtendo informação dos comandos](unix.md/#obtendo-informação-dos-comandos)
             * [Encontrando quais comandos estão disponiveís no seu computador](unix.md/#encontrando-quais-comandos-estão-disponiveís-no-seu-computador)
             * [Argumentos e switches na linha de comando](unix.md/#argumentos-e-switches-na-linha-de-comando)
-            * [Spaces and Funny Characters](unix.md/#spaces-and-funny-characters)
+            * [Espaços e caracteres estranhos](unix.md/#espaços-e-caracteres-estranhos)
             * [Useful Commands](unix.md/#useful-commands)
             * [Manipulating Directories](unix.md/#manipulating-directories)
             * [Networking](unix.md/#networking)
