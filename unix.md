@@ -431,7 +431,7 @@ Aqui tem alguns comandos que são usados com muita frequência.  Pode usar o com
 | `ping`                 | Conferir se um servidor remoto está ligado.              |
 | `ftp`/ `sftp` (secure) | Transferir arquivos com o protocolo de transferencia de arquivos (File Transfer Protocol). |
 
-#### Entrada/Saída (E/S) padrão e redirecionamento
+#### E/S padrão e redirecionamento
 
 
 Os comandos de Unix se comumicam via a interface de linha de comandos. Eles podem imprimir informacão no terminal para você visualizar e também podem aceitar entradas desde o teclado (o seja, de  _você_!)
