@@ -101,9 +101,9 @@ grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
 
 __Redirecionar a STDERR__  
 
-Você pode redirecionar a STDERR num arqiovo.
+Você pode redirecionar a STDERR num arquivo.
 
-Vamos lembrar o que a STDERR é na verdaade.
+Vamos lembrar o que a STDERR é na verdade.
 ```
 cat blablabla.txt
 ```
@@ -183,7 +183,7 @@ Use o comando `wget` para descarregar uma copia do aquivo <https://raw.githubuse
     - Observe as primeiras linhas do arquivo.
     - Classifique o arquivo pela coluna 'log2(fold_change)', do valor mais alto para o mais baixo, salve na sua pasta problemsets num novo aquivo chamad `sorted.cuffdiff.out`.
     - Classifique o arquivo pela coluna 'log2(fold_change)', do valor mais alto para o mais baixo, imprima só as primeiras 100 linhas, e salve num arquivo chamado `top100.sorted.cuffdiff.out`.
-    - lassifique o arquivo pela coluna 'log2(fold_change)', do valor mais alto para o mais baixo, imprima só as primeiras 100 linhas, e imprima só a primeira coluna. Assim terá uma lista dos 100 principais genes com as maiores mudanças de expressão. Certifique-se que sua lista esteja classificada pelo nome do gene, e que os nomes sejam únicos (que apareçam só uma vez na lista). Salve esta lista selecionada (curada) num arquivo chamado `differentially.expressed.genes.txt`.
+    - Classifique o arquivo pela coluna 'log2(fold_change)', do valor mais alto para o mais baixo, imprima só as primeiras 100 linhas, e imprima só a primeira coluna. Assim terá uma lista dos 100 principais genes com as maiores mudanças de expressão. Certifique-se que sua lista esteja classificada pelo nome do gene, e que os nomes sejam únicos (que apareçam só uma vez na lista). Salve esta lista selecionada (curada) num arquivo chamado `differentially.expressed.genes.txt`.
 
 
 
