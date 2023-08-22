@@ -1021,7 +1021,7 @@ cat ~/.ssh/id_ed25519.pub
 
 Repare de substituir "your_email@example.com", pelo e-mail que usou para se cadastrar no github.
 
-O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteudo desse arquivo.
+O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteúdo deste arquivo.
 
 4. Agora, em seu navegador web, acesse a sua conta do GitHub.
 	
