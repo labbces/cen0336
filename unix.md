@@ -1003,8 +1003,6 @@ Um repositório é um projeto que contém todos os arquivos do projeto, e guarda
 
 Siga os passo 1 e 2 para criar o __repositório remoto__.   
 
-Siga o passo 3 para criar seu __repositório local__ e **conectá-lo** ao __repositório remoto__.   
-
 
 1. Navegue para GitHub --> Create Account / Log In --> Vá para Repositories --> Clique 'New'  
 
@@ -1014,13 +1012,29 @@ Siga o passo 3 para criar seu __repositório local__ e **conectá-lo** ao __repo
 
   ![Fill in the form and click the 'Create Repository Button'](images/github-newRepoForm.png)  
 
+3. Agora, vamos criar uma cópia local (no seu computador) do seu repositório. Vai no seu HOME, no terminal de linux. Primeiro temos que criar um par de chaves de identificacão, uma publica e uma privada, a chave publica iremos compartilhar com o github para ele reconhece-ló. Execute os seguintes comando no terminal:
 
-3. Crie um diretório em seu computador, navegue dentro dele, depois siga as instruções fornecidas.  
+``````
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cat ~/.ssh/id_ed25519.pub
+``````
 
-  ![Create a directory on your computer and follow these instructions.](images/github-newRepoInstructions.png)  
-    
+Repare de substituir "your_email@example.com", pelo e-mail que usou para se cadastrar no github.
 
-    
+O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteudo desse arquivo.
+
+4. Agora, no seu navegador web, vai até sua conta de github.
+	
+	A) No seu avatar da click no menu "Settings"
+	B) click em "SSH and GPG keys"
+	C) click em "New SSH keys"
+        D) Colar o conteudo do arquivo ~/.ssh/id_ed25519.pub
+
+5. Volte na página web do seu repositório, click em "<> Code" e copie o endereco SSH dele.
+
+  ![Endereco SSH do repositório](images/github-cloneSSHCode.png)
+
+6. Voltando no seu terminal, agora iremos fazer a copia local do seu repositorio.
 
 
 O novo repositório local consiste em três "árvores" mantidas por git. A primeira é seu "Working Directory" que mantém os arquivos atuais. O segundo é o "Index" que atua como área de preparação e finalmente a "HEAD" que aponta para o úlitmo envio que você fez.
