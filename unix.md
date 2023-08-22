@@ -1030,16 +1030,18 @@ O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteudo desse a
 	C) click em "New SSH keys"
         D) Colar o conteudo do arquivo ~/.ssh/id_ed25519.pub
 
-5. Volte na página web do seu repositório, click em "<> Code" e copie o endereco SSH dele.
+5. Retorne à página web do seu repositório e clique em "<> Code" para acessar o código. Em seguida, copie o endereço SSH do repositório.
 
   ![Endereco SSH do repositório](images/github-cloneSSHCode.png)
 
-6. Voltando no seu terminal, agora iremos fazer a copia local do seu repositorio. Execute o seguinte comando no seu HOME, repare em substituir o "endereco_repositorio" pelo endereco copiado no paso anterior.
+6. Retornando ao seu terminal, agora vamos criar uma cópia local do seu repositório. Execute o comando a seguir em seu diretório HOME, lembrando de substituir "endereco_repositorio" pelo endereço que você copiou no passo anterior.
 
 
 ``````
 git clone endereco_repositorio
 ``````
+
+Essa cópia local está conectada à cópia remota no GitHub. Você poder ter varias copias locais, em computadores diferentes. As alterações que você realizar podem ser sincronizadas com todas as cópias do seu repositório.
 
 O novo repositório local consiste em três "árvores" mantidas por git. A primeira é seu "Working Directory" que mantém os arquivos atuais. O segundo é o "Index" que atua como área de preparação e finalmente a "HEAD" que aponta para o úlitmo envio que você fez.
 
@@ -1062,8 +1064,6 @@ __Revendo os Comandos__
 
 | comando                                 | descrição                              |
 | --------------------------------------- | ---------------------------------------- |
-| `git init`                              | Cria seu novo repositório local com as três árvores (máquina local) |
-| `git remote add remote-name URL`        | Conecta seu repositório local para um repositório __remoto__ que é chamado de _origin_ e é encontrado na URL dada |
 | `git add filename`                      | Propõe mudanças e adiciona arquivo(s) com mudanças para o index ou área de preparação (máquina local) |
 | `git commit -m 'message'`               | Confirma ou envia que você realmente quer adicionar suas mudanças para o HEAD (máquina local) |
 | `git push -u remote-name remote-branch` | Envia suas mudanças confirmadas na HEAD para o repositório remoto especificado e o ramo específico |
