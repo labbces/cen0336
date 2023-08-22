@@ -1012,7 +1012,7 @@ Siga os passo 1 e 2 para criar o __repositório remoto__.
 
   ![Fill in the form and click the 'Create Repository Button'](images/github-newRepoForm.png)  
 
-3. Agora, vamos criar uma cópia local (no seu computador) do seu repositório. Vai no seu HOME, no terminal de linux. Primeiro temos que criar um par de chaves de identificacão, uma publica e uma privada, a chave publica iremos compartilhar com o github para ele reconhece-ló. Execute os seguintes comando no terminal:
+3. Nos próximos passos, vamos criar uma cópia local do seu repositório no seu computador. Abra o terminal no diretório HOME do seu sistema Linux. Inicialmente, vamos criar um par de chaves de identificação, uma pública e outra privada. A chave pública será compartilhada com o GitHub para que ele possa reconhecê-lo. Execute os seguintes comandos no terminal:
 
 ``````
 ssh-keygen -t ed25519 -C "your_email@example.com"
