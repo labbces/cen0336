@@ -1034,8 +1034,12 @@ O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteudo desse a
 
   ![Endereco SSH do repositório](images/github-cloneSSHCode.png)
 
-6. Voltando no seu terminal, agora iremos fazer a copia local do seu repositorio.
+6. Voltando no seu terminal, agora iremos fazer a copia local do seu repositorio. Execute o seguinte comando no seu HOME, repare em substituir o "endereco_repositorio" pelo endereco copiado no paso anterior.
 
+
+``````
+git clone endereco_repositorio
+``````
 
 O novo repositório local consiste em três "árvores" mantidas por git. A primeira é seu "Working Directory" que mantém os arquivos atuais. O segundo é o "Index" que atua como área de preparação e finalmente a "HEAD" que aponta para o úlitmo envio que você fez.
 
