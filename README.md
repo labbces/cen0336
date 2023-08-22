@@ -66,7 +66,7 @@ Sofia Robb
          * [Clonando um Repositório](unix.md/#clonando-um-repositório)
             * [Trazendo mudanças do repositório remoto para o local](unix.md/#trazendo-mudanças-do-repositório-remoto-para-o-local)
             * [Links para tópicos <em>levemente</em> menos básicos](unix.md/#links-para-tópicos-levemente-menos-básicos)
-         * [<a href="problemsets/Unix_02_problemset.md">Link para o conjunto de problemas Unix 2</a>](unix.md/#link-para-o-conjunto-de-problemas-unix-2)}
+         * [<a href="problemsets/Unix_02_problemset.md">Link para o conjunto de problemas Unix 2</a>](unix.md/#link-para-o-conjunto-de-problemas-unix-2)
    * [Aulas de Python](pfb.md/#aulas-de-python)
       * [Python 1](pfb.md/#python-1)
          * [Visão geral de Python](pfb.md/#visão-geral-de-python)
@@ -263,7 +263,7 @@ Sofia Robb
             * [Using class methods](pfb.md/#using-class-methods)
             * [Getting data into a new instance of our class](pfb.md/#getting-data-into-a-new-instance-of-our-class)
                * [<strong>init</strong>](pfb.md/#init)
-         * [<a href="problemsets/Python_11_problemset.md">Link to Python 11 Problem Set</a>](pfb.md/#link-to-python-11-problem-set)}
+         * [<a href="problemsets/Python_11_problemset.md">Link to Python 11 Problem Set</a>](pfb.md/#link-to-python-11-problem-set)
    * [Workshops](workshops.md/#workshops)
       * [BioPython  -- Sofia Robb](workshops.md/#biopython-----sofia-robb)
       * [NGS -- Anoja Perera](workshops.md/#ngs----anoja-perera)
@@ -275,4 +275,4 @@ Sofia Robb
       * [Ethics and Responsibility in Bioinformatics -- Simon Prochnik](workshops.md/#ethics-and-responsibility-in-bioinformatics----simon-prochnik)
       * [GMOD -- Scott Cain](workshops.md/#gmod----scott-cain)
       * [Protein Function -- Huaiyu Mi](workshops.md/#protein-function----huaiyu-mi)
-      * [Structural Variation -- Tomas Marques](workshops.md/#structural-variation----tomas-marques)}
+      * [Structural Variation -- Tomas Marques](workshops.md/#structural-variation----tomas-marques)
