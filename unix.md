@@ -1023,7 +1023,7 @@ Repare de substituir "your_email@example.com", pelo e-mail que usou para se cada
 
 O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteudo desse arquivo.
 
-4. Agora, no seu navegador web, vai até sua conta de github.
+4. Agora, em seu navegador web, acesse a sua conta do GitHub.
 	
 	A) No seu avatar da click no menu "Settings"
 	B) click em "SSH and GPG keys"
