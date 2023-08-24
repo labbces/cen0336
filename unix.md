@@ -1134,12 +1134,12 @@ Vamos clonar o material do curso.
 
 Vamos lá!
 
-1. Vá para nosso [PFB GitHub Repository](https://github.com/prog4biol/pfb2019)
+1. Vá para nosso [PFB GitHub Repository](https://github.com/labbces/cen0336)
 2. Clique no botão de 'Clone or Download'
 3. Copie o URL
   ~[Clone PFB2019](images/github-clone.png)
 4. _Clone_ o repositório para sua máquina local
-   `git clone https://github.com/prog4biol/pfb2019.git`
+   `git clone https://github.com/labbces/cen0336.git`
 
 Agora você tem uma cópia do material do curso no seu computador!
 
