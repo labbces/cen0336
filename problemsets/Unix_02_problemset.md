@@ -4,11 +4,8 @@
 1. Se você ainda não o fez, siga [Steps 1-3 in Unix: GIT for Beginners](https://github.com/prog4biol/pfb2019#git-for-beginners). Aqui está um **sumário** destas etapas, **Por favor vá até a aula para ter o detalhamento**:
    NOTA: Não crie um repositório dentro de outro repositório.
    - Crie uma conta GitHub e clique em "Novo" para criar um novo repositório.
-   - Adicione informação sobre seu repositório.
-   - Por favor veja as notas de aula para passos mais detalhados. No sumário vocÊ fará o seguinte: Crie um diretório local (em sua máquina) com `mkdir <dirname>`, mova para um novo diretório com `cd <dirname>` e configure como um repositório com `git init`. Agora conecte-o em seu repositório remoto com `git remote add`.
-   
-   
-   Não faça `git init` em seu diretório base. Faça um novo diretório (algo como pfb_problemsets ou problemsets ou problem_sets), mude o diretorio para o seu novo diretório, depois `git init` 
+   - Adicione informação sobre seu repositório. Asegurese de selecionar a opcao de criar um arquivo README de forma automática.
+   - Agora na sua máquina, clone seu repositorio.
 
 2. Mova quaisquer arquivos que você criou no conjunto de problemas Unix_01 para o seu repositório git de conjunto de problemas local.
 
