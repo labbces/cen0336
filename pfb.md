@@ -235,7 +235,7 @@ mensagem = "Bem-vindo ao interpretador de Python" # isso é uma string
 
 `10`, `2.531`, e `"Bem-vindo ao interpretador de Python"` são peças de dados singulares (escalares) e cada um é armazenado em sua própria variável.
 
-Coleções de dados podem também ser armazenados em tipos de dados especiais, i.e., tuplas, listas, sets, e dicionários. Você pode sempre tentar armazenar semelhantes com semelhantes, então cada elemento da coleção pode ser do mesmo tipo de dado, como um valor de expressão de RNA-seq ou uma contagem de quantos exons estão em um gene ou uma sequência de leitura. Para o quê você imagina que isso deve ser?
+Coleções de dados podem também ser armazenados em tipos de dados especiais, i.e., tuplas, listas, sets, e dicionários. Você deveria sempre tentar armazenar semelhantes com semelhantes, de forma tal que cada elemento da coleção deveria ser do mesmo tipo de dado, como um valor de expressão de RNA-seq ou uma contagem de quantos exons estão em um gene ou uma sequência de leitura. Para o quê você imagina que isso deve ser?
 
 #### Listas
 
@@ -306,9 +306,9 @@ Coleções de dados podem também ser armazenados em tipos de dados especiais, i
 
 
 
-#### Parâmetros de linha de comando: uma lista especial de par
+#### Parâmetros de linha de comando: uma lista especial de parâmetros
 
-Parâmetros de linha de comando são colocados após o nome do script ou programa. Antes do primeiro parâmetro e entre parâmetros adicioansi há espaçamento.
+Parâmetros de linha de comando são colocados após o nome do script ou programa. Antes do primeiro parâmetro e entre parâmetros adicionais há espaçamento.
 Os parâmetros permitem ao usuário fornecer informação ao script quando ele está sendo executado. Python armazena cada trecho do comando em uma lista especial chamada `sys.argv`.
 
 Você precisará importar o módulo chamado `sys` no início do seu script desta forma:
