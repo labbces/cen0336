@@ -233,7 +233,7 @@ média = 2.531      # este é um número de ponto flutuante
 mensagem = "Bem-vindo ao interpretador de Python" # isso é uma string
 ```
 
-`10`, `2.531`, and `"Welcome to Python"` are singular (scalar) pieces of data, and each is stored in its own variable.
+`10`, `2.531`, e `"Bem-vindo ao interpretador de Python"` são peças de dados singulares (escalares) e cada um é armazenado em sua própria variável.
 
 Coleções de dados podem também ser armazenados em tipos de dados especiais, i.e., tuplas, listas, sets, e dicionários. Você pode sempre tentar armazenar semelhantes com semelhantes, então cada elemento da coleção pode ser do mesmo tipo de dado, como um valor de expressão de RNA-seq ou uma contagem de quantos exons estão em um gene ou uma sequência de leitura. Para o quê você imagina que isso deve ser?
 
