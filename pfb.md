@@ -100,22 +100,22 @@ Você pode verificar as permissões assim:
 -rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 ola.py
 ```
 
-Os primiros 10 caracteres que ver na tela possuem significados especiais. O primeiro (`-`) diz a você qual tipo de arquivo `hello.py` é. `-` significa um arquivo normal, 'd' um diretório, '1' um link. Os próximos nove caracteres aparecem em três sets de três. O primeiro set se refere às suas permissões, o segundo as permissões do grupo, e o último de quaisquer outros. Cada set de trÊs caracteres mostra em ordem 'rwx' para leitura, escrita, execução. Se alguém não tem uma permissão, um `-` é mostrado ao invés de uma letra. Os três caracteres 'x' significam que qualquer um pode executar ou rodar o script.  
+Os primiros 10 caracteres que ver na tela possuem significados especiais. O primeiro (`-`) diz a você qual tipo de arquivo `ola.py` é. `-` significa um arquivo normal, 'd' um diretório, '1' um link. Os próximos nove caracteres aparecem em três sets de três. O primeiro set se refere às suas permissões, o segundo as permissões do grupo, e o último de quaisquer outros. Cada set de trÊs caracteres mostra em ordem 'rwx' para leitura, escrita, execução. Se alguém não tem uma permissão, um `-` é mostrado ao invés de uma letra. Os três caracteres 'x' significam que qualquer um pode executar ou rodar o script.  
 
 Nós também precisamos adicionar uma linha no começo do script que pede para o python3 interpretar o script. Essa linha começa com `#`, então aparece como um comentário para o python. O '!' é importante como o espaço entre `env` e `python3`. O programa `/usr/bin/env` procura por onde `python3` está instalado e roda o script com `python3`. Os detalhes podem parecer um pouco complexos, mas você pode apenas copiar e colar essa linha 'mágica'.
 
-Esse arquivo hello.py agora se parece com isso
+Esse arquivo ola.py agora se parece com isso
 
 ```python
 #!/usr/bin/env python3
-print("Hello, PFB2019!")
+print("Olá, turma 2022!")
 ```
 
 Agora você pode simplesmente digitar o símbolo para o diretório atual `.` seguido por um `/` e o nome do script para rodá-lo. Como isso: 
 
 ```
-% ./hello.py
-Hello, PFB2019!
+% ./ola.py
+Olá, turma 2022!
 ```
 
 
