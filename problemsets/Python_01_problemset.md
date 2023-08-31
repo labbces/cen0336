@@ -1,11 +1,11 @@
 Python 1 Problem Set
 ==================
- 
 
-1. Start up the Python Interactive Interpreter. 
-    - Print out "Hello New York"
-    - Store your name in a variable
-    - Print the contents of this variable.
+
+1. Inicie o interpretador interativo do Python.
+    - Imprima "Olá Piracicaba".
+    - Armazene o seu nome em uma variável.
+    - Imprima o conteúdo dessa variável.
     
 2. Working with a text editor. Use vi to write a script. 
    - Make sure to include `#!/usr/bin/env python3` at the top!! 
