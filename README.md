@@ -87,7 +87,7 @@ Sofia Robb
             * [Listas](pfb.md/#listas)
             * [Tuplas](pfb.md/#tuplas)
             * [Dicionário](pfb.md/#dicionário)
-            * [Parâmetros de linha de comando: uma lista especial de par](pfb.md/#parâmetros-de-linha-de-comando-uma-lista-especial-de-par)
+            * [Parâmetros de linha de comando: uma lista especial de parâmetros](pfb.md/#parâmetros-de-linha-de-comando-uma-lista-especial-de-parâmetros)
             * [Com que tipo de objeto estou trabalhando?](pfb.md/#com-que-tipo-de-objeto-estou-trabalhando)
          * [<a href="problemsets/Python_01_problemset.md">Link to Python 1 Problem Set</a>](pfb.md/#link-to-python-1-problem-set)
       * [Python 2](pfb.md/#python-2)
