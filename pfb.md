@@ -470,12 +470,12 @@ Operadores lógicos permitem combinar dois ou mais conjuntos de comparações. V
 
 #### Operadores de filiação   
 
-Você pode testar para ver se o valor é incluído em uma corda, tupla ou lista. Você pode também testar que o valor não está incluso na corda, tupla ou lista. 
+Você pode testar para ver se o valor é incluído em uma string, tupla ou lista. Você pode também testar que o valor não está incluso na string, tupla ou lista. 
 
 | Operador | Descrição                                |
 | -------- | ---------------------------------------- |
-| `in`     | Verdadeiro se o valor é incluso em uma lista, tupla ou corda |
-| `not in` | Verdadeiro se o valor é ausente em uma lista, tupla ou corda |
+| `in`     | Verdadeiro se o valor é incluso em uma lista, tupla ou string |
+| `not in` | Verdadeiro se o valor é ausente em uma lista, tupla ou string |
 
 Por Exemplo:  
 ```python
@@ -533,7 +533,7 @@ Tudo é verdade, exceto por:
 | `0`                     | FALSO      |
 | `None`                  | FALSO      |
 | `False`                 | FALSO      |
-| `''` (corda vazia)      | FALSO      |
+| `''` (string vazia)      | FALSO      |
 | `[]` (lista vazia)      | FALSO      |
 | `()` (tupla vazia)      | FALSO      |
 | `{}` (dicionário vazio) | FALSO      |
@@ -547,7 +547,7 @@ O que significa que estes são verdade:
 | `'None'`                          | VERDADEIRO |
 | `'False'`                         | VERDADEIRO |
 | `'True'`                          | VERDADEIRO |
-| `' '` (corda de um espaço vazio)  | VERDADEIRO |
+| `' '` (string de um espaço vazio)  | VERDADEIRO |
 
 
 
@@ -898,14 +898,14 @@ Ele retorna três diferentes valores dependendo do x e do y
 
 ### Sequências
 
-Na próxima seção, nós iremos aprender sobre as cordas, tuplas, e listas. Todos estes são exemplos de sequências em python. uma sequência de caracteres `'ACGTGA'`, uma tupla `(0.23, 9.74, -8.17, 3.24, 0.16)`, e uma lista `['dog', 'cat', 'bird']` são sequências de diferentes tipos de dados. Veremos mais detalhes em breve.
+Na próxima seção, nós iremos aprender sobre as strings, tuplas, e listas. Todos estes são exemplos de sequências em python. uma sequência de caracteres `'ACGTGA'`, uma tupla `(0.23, 9.74, -8.17, 3.24, 0.16)`, e uma lista `['dog', 'cat', 'bird']` são sequências de diferentes tipos de dados. Veremos mais detalhes em breve.
 
-Em Python, um tipo de objeto consegue operações que pertencem àquele tipo. Sequências tem operações sequenciais então as cordas podem também usar operações sequenciais. Cordas também possuem suas próprias operações específicas.
+Em Python, um tipo de objeto consegue operações que pertencem àquele tipo. Sequências tem operações sequenciais então as strings podem também usar operações sequenciais. Strings também possuem suas próprias operações específicas.
 
 Você pode perguntar qual a extensão de qualquer sequência
 
 ```python
->>>len('ACGTGA') # extensão de uma corda
+>>>len('ACGTGA') # extensão de uma string
 6
 >>>len( (0.23, 9.74, -8.17, 3.24, 0.16) )   # extensão de uma tupla, precisa de dois parênteses (( ))
 5
@@ -913,7 +913,7 @@ Você pode perguntar qual a extensão de qualquer sequência
 3
 ```
 
-Você pode também usar funções de cordas específicas, mas não em listas e vice versa. Nós vamos aprender mais sobre isso posteriormente. `rstrip()` é um método de corda ou função. Você obtém um erro se você tentar usar isso em uma lista.
+Você pode também usar funções de strings específicas, mas não em listas e vice versa. Nós vamos aprender mais sobre isso posteriormente. `rstrip()` é um método de string ou função. Você obtém um erro se você tentar usar isso em uma lista.
 
 ```python
 >>> 'ACGTGA'.rstrip('A')
@@ -926,7 +926,7 @@ AttributeError: 'list' object has no attribute 'rstrip'
 
 ### Quais funções vão com meu objeto?
 
-Como descobrir quais funções servem com um objeto? Existe uma função prática `dir()`. Como um exemplo quais funções você pode acionar em sua corda `'ACGTGA'`?
+Como descobrir quais funções servem com um objeto? Existe uma função prática `dir()`. Como um exemplo quais funções você pode acionar em sua string `'ACGTGA'`?
 
 ```python
 >>> dir('ACGTGA')
@@ -935,11 +935,11 @@ Como descobrir quais funções servem com um objeto? Existe uma função prátic
 `dir()` irá retornar todos os atributos de um objeto, dentre eles estão funções. Tecnicamente, funções pertencentes a uma classe específica (tipo de objeto) são chamadas de métodos.
 Você pode chamar `dir()` em qualquer objeto, mais comumente, você usará isso na esfera interativa do Python.
 
-### Cordas
+### Strings
 
 
-- Uma corda é uma série de caracteres começando e terminando com marcas de aspas únicas ou duplas.
-- Cordas são um exemplo de uma sequência de Python. Uma sequência é definida como um grupo ordenado posicionalmente. Isso significa que cada elemento no grupo tem uma posição, começando com zero, i.e. 0,1,2,3 e assim até você chegar no final da corda. 
+- Uma string é uma série de caracteres começando e terminando com marcas de aspas únicas ou duplas.
+- Strings são um exemplo de uma sequência de Python. Uma sequência é definida como um grupo ordenado posicionalmente. Isso significa que cada elemento no grupo tem uma posição, começando com zero, i.e. 0,1,2,3 e assim até você chegar no final da string. 
 
 #### Aspas  
 
@@ -950,8 +950,8 @@ Você pode chamar `dir()` em qualquer objeto, mais comumente, você usará isso 
 Notas sobre as aspas:  
 
 - Aspas únicas e duplas são equivalentes.  
-- O nome de uma variável dentro das sentenças é apenas o identificador da corda, não o valor armazenado dentro da variável. `format()` é útil para interpolação de variáveis em python
-- Sentenças triplas (únicas ou dobradas) são usadas antes e depois de uma corda que abrange múltiplas linhas. 
+- O nome de uma variável dentro das sentenças é apenas o identificador da string, não o valor armazenado dentro da variável. `format()` é útil para interpolação de variáveis em python
+- Sentenças triplas (únicas ou dobradas) são usadas antes e depois de uma string que abrange múltiplas linhas. 
 
 Uso de exemplos das aspas:  
 
@@ -963,17 +963,17 @@ E assim vai.
 """
 ```
 
-#### Cordas e a função `print()` 
+#### Strings e a função `print()` 
 
 Nós vimos exemplos de `print()` antes. Vamos conversar sobre isso um pouco mais. `print()` é uma função que assume um ou mais argumentos separados por vírgulas.
 
-Vamos usar a função `print()` para imprimir uma corda.  
+Vamos usar a função `print()` para imprimir uma string.  
 ```python
 >>>print("ATG")  
 ATG
 ```
 
-Vamos atribuir uma corda a uma variável e imprimir a variável.
+Vamos atribuir uma string a uma variável e imprimir a variável.
 ```python
 >>>dna = 'ATG'
 ATG
@@ -988,16 +988,16 @@ ATG
 >>> print("dna")
 dna
 ```
-> A corda literal 'dna' é impressa na tela, não os conteúdos 'ATG'
+> A string literal 'dna' é impressa na tela, não os conteúdos 'ATG'
 
-Vamos ver o que acontece quando nós demos `print()` em duas cordas literais como argumentos.  
+Vamos ver o que acontece quando nós demos `print()` em duas strings literais como argumentos.  
 ```python
 >>> print("ATG","GGTCTAC")
 ATG GGTCTAC
 ```
-> Nós conseguimos as duas cordas literais impressas na tela separadas por um espaço
+> Nós conseguimos as duas strings literais impressas na tela separadas por um espaço
 
-E se vocÊ não quiser suas cordas separadas por um espaço? use o operador concatenação para concatenar as duas cordas antes ou dentro da função `print()`. 
+E se vocÊ não quiser suas strings separadas por um espaço? use o operador concatenação para concatenar as duas strings antes ou dentro da função `print()`. 
 ```python
 >>> print("ATG"+"GGTCTAC")
 ATGGGTCTAC
@@ -1006,21 +1006,21 @@ ATGGGTCTAC
 >>> print(combined_string)
 ATGGGTCTAC
 ```
-> Nós conseguimos duas cordas impressas na tela sem ser separadas por um espaço.
+> Nós conseguimos duas strings impressas na tela sem ser separadas por um espaço.
 > Você pode também usar isso
 ```python
 >>> print('ATG','GGTCTAC',sep='')
 ATGGGTCTAC
 ```
 
-Agora, vamos imprimir uma variável e uma corda literal.
+Agora, vamos imprimir uma variável e uma string literal.
 ```python
 >>>dna = 'ATG'
 ATG
 >>> print(dna,'GGTCTAC')
 ATG GGTCTAC
 ```
-> Nós conseguimos o valor da variável e a corda literal impressa na tela separada por um espaço
+> Nós conseguimos o valor da variável e a string literal impressa na tela separada por um espaço
 
 Como poderíamos imprimir os dois sem um espaço?
 ```python
@@ -1057,14 +1057,14 @@ SyntaxError: EOL while scanning string literal
 ```
 > Nós obtemos um'SyntaxError' se a sentença de encerramento não for usada.
 
-O que acontecerá se você se esquecer de incluir uma corda que você quer imprimir nas sentenças?
+O que acontecerá se você se esquecer de incluir uma string que você quer imprimir nas sentenças?
 ```python
 >>> print(GGTCTAC)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'GGTCTAC' is not defined
 ```
-> Nós obtemos um 'NameError' quando a corda literal não for inclusa nas sentenças porque o Python está procurando uma variável com o nome GGTCTAC
+> Nós obtemos um 'NameError' quando a string literal não for inclusa nas sentenças porque o Python está procurando uma variável com o nome GGTCTAC
 
 ```python
 >>> print "boo"
@@ -1077,7 +1077,7 @@ Em python2, o comando era `print`, mas isso mudou para `print()` em python3, ent
 
 #### Caracteres especiais e de escape
 
-Como você incluiria uma nova linha, retorno de transporte, ou tab em sua corda?  
+Como você incluiria uma nova linha, retorno de transporte, ou tab em sua string?  
 
 | Caractere de escape | Descrição     |
 | ---------------- | --------------- |
@@ -1086,7 +1086,7 @@ Como você incluiria uma nova linha, retorno de transporte, ou tab em sua corda?
 | \\t              | Tab             |
 
 
-Vamos incluir alguns caracteres de escape em suas cordas e funções `print()`.
+Vamos incluir alguns caracteres de escape em suas strings e funções `print()`.
 ```python
 >>> string_with_newline = 'this sting has a new line\nthis is the second line'
 >>> print(string_with_newline)
@@ -1098,7 +1098,7 @@ this is the second line
 `print()` adiciona espaços entre argumentos e uma nova linha ao final. Você pode mudar isso com `sep=` e `end=`. Aqui está um exemplo:
 `print('one line', 'second line' , 'third line', sep='\n', end = '')`
 
-Uma forma mais limpa para fazer isso é expressar uma corda de múltiplas linhas inclusa em aspas triplas (""").
+Uma forma mais limpa para fazer isso é expressar uma string de múltiplas linhas inclusa em aspas triplas (""").
 ```python
 >>> print("""this string has a new line
 ... this is the second line""")
@@ -1124,7 +1124,7 @@ this is a 'word'
 ```
 > Em ambos os casos a sentença atual única é impressa na tela 
 
-Se você quiser todos caracteres em sua corda para permanecer exatamente como são, declare sua corda uma corda crua literal com 'r' antes da primeira sentença. Isso parece feio, mas funciona.
+Se você quiser todos caracteres em sua string para permanecer exatamente como são, declare sua string uma string crua literal com 'r' antes da primeira sentença. Isso parece feio, mas funciona.
 ```python
 >>> line = r"value1\tvalue2\tvalue3"
 >>> print(line)
@@ -1134,7 +1134,7 @@ value1\tvalue2\tvalue3
 
 #### Concatenação
 
-Para concatenar cordas use o operador de concatenação '+'  
+Para concatenar strings use o operador de concatenação '+'  
 
 ```python
 >>> promoter= 'TATAAA'
@@ -1144,9 +1144,9 @@ Para concatenar cordas use o operador de concatenação '+'
 >>> print(dna)
 TAGCTATATAAAATCATAAT
 ```
-> O operador de concatenação pode ser usado para combinar cordas. A nova combinação de cordas pode ser armazenada em uma variável. 
+> O operador de concatenação pode ser usado para combinar strings. A nova combinação de strings pode ser armazenada em uma variável. 
 
-#### A diferença entre a corda + e o integrador +
+#### A diferença entre a string + e o integrador +
 
 O que acontece se você usar `+` com números (estes são inteiros ou ints)?
 
@@ -1156,18 +1156,18 @@ O que acontece se você usar `+` com números (estes são inteiros ou ints)?
 
 ```
 
-Para cordas, `+` concatena; para inteiros, `+` soma.
+Para strings, `+` concatena; para inteiros, `+` soma.
 
-Você precisa converter os números para cordas antes de poder concatená-las
+Você precisa converter os números para strings antes de poder concatená-las
 
 ```python
 >>> str(4) + str(3)
 '43'
 ```
 
-#### Determinar a extensão de uma corda
+#### Determinar a extensão de uma string
 
-Use a função `len()` para calcular a extensão de uma corda. Essa função assume a sequência como um argumento e retorna uma int
+Use a função `len()` para calcular a extensão de uma string. Essa função assume a sequência como um argumento e retorna uma int
 
 
 ```python
@@ -1176,7 +1176,7 @@ TAGCTATATAAAATCATAAT
 >>> len(dna)
 20
 ```
-> A extensão de uma corda, incluindo espaços, é calculada e apresentada. 
+> A extensão de uma string, incluindo espaços, é calculada e apresentada. 
 
 O valor que `len()` retorna pode ser armazenado em uma variável.  
 ```python
@@ -1184,7 +1184,7 @@ O valor que `len()` retorna pode ser armazenado em uma variável.
 >>> print(dna_length)
 20
 ```
-Você pode misturar cordas e ints em `print()`, mas não em concatenação.
+Você pode misturar strings e ints em `print()`, mas não em concatenação.
 
 ```python
 >>> print("The lenth of the DNA sequence:" , dna , "is" , dna_length)
@@ -1194,17 +1194,17 @@ The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 
 
 
-#### Alterando o caso da corda
+#### Alterando o caso da string
 
-Alterando o caso da corda é um pouco distinto do que você pode esperar inicialmente. Por exemplo, para diminuir uma corda precisamos utilizar um método. Um método é uma função específica para um objeto. Quando nós assumimos uma corda a uma variável estamos criando uma instância de um objeto de corda. Esse objeto tem uma série de métodos que funcionarão nos dados que estão armazenados no objeto. Lembre-se que `dir()` irá te dizer todos os métodos que estão disponíveis para um objeto. A função `lower()` é um método de corda. 
+Alterando o caso da string é um pouco distinto do que você pode esperar inicialmente. Por exemplo, para diminuir uma string precisamos utilizar um método. Um método é uma função específica para um objeto. Quando nós assumimos uma string a uma variável estamos criando uma instância de um objeto de string. Esse objeto tem uma série de métodos que funcionarão nos dados que estão armazenados no objeto. Lembre-se que `dir()` irá te dizer todos os métodos que estão disponíveis para um objeto. A função `lower()` é um método de string. 
 
-Vamos criar um novo objeto de corda.    
+Vamos criar um novo objeto de string.    
 ```python
 dna = "ATGCTTG"
 ```
 > Parece familiar?
 
-Agora que nós temos um objeto de corda nós podemos usar os métodos de corda. A forma que você utiliza um método consiste em inserir um '.' entre o objeto e o nome do método.
+Agora que nós temos um objeto de string nós podemos usar os métodos de string. A forma que você utiliza um método consiste em inserir um '.' entre o objeto e o nome do método.
 ```python
 >>> dna = "ATGCTTG"
 >>> dna.lower()
@@ -1212,7 +1212,7 @@ Agora que nós temos um objeto de corda nós podemos usar os métodos de corda. 
 ```
 > o método lower() retorna os conteúdos armazenados na variável 'dna' em letra minúscula. 
 
-Os conteúdos da variável 'dna' não se alteraram. Cordas são imutáveis. Se você quiser manter a versão minúscula de uma corda, armazene ela em uma nova variável.
+Os conteúdos da variável 'dna' não se alteraram. Strings são imutáveis. Se você quiser manter a versão minúscula de uma string, armazene ela em uma nova variável.
 ```python
 >>> print(dna)
 ATGCTTG
@@ -1222,7 +1222,7 @@ ATGCTTG
 >>> print(dna_lowercase)
 atgcttg
 ```
-O método de corda pode ser guardado dentro de outras funções.
+O método de string pode ser guardado dentro de outras funções.
 ```python
 >>> dna = "ATGCTTG"
 >>> print(dna.lower())
@@ -1230,7 +1230,7 @@ atgcttg
 ```
 > Os conteúdos de 'dna' são transformados em minúsculos e trasnportados para a função `print()`.
 
-Se você tentar usar um método de corda em um objeto que não é uma corda você receberá um erro. 
+Se você tentar usar um método de string em um objeto que não é uma string você receberá um erro. 
 
 ```python
 >>> nt_count = 6
@@ -1241,7 +1241,7 @@ AttributeError: 'int' object has no attribute 'lower'
 ```
 > Você obtém um AttributeError quando você usa um método em um tipo de objeto incorreto. Nós recebemos que o objeto int (um int é retornado por `len()`) não tem uma função chamada inferior.
 
-Vamos tornar uma corda maiúscula agora.
+Vamos tornar uma string maiúscula agora.
 
 ```python
 >>> dna = 'attgct'
@@ -1254,8 +1254,8 @@ attgct
 
 #### Encontrar e contar
 
-O índice posicional de uma corda exata em uma corda maior pode ser encontrado e retornado com o método de corda 
-`find()`. Uma corda exata é dada como um argumento e o índice de sua primeira ocorrência é retornado. -1 é retornado se nada for encontrado.
+O índice posicional de uma string exata em uma string maior pode ser encontrado e retornado com o método de string 
+`find()`. Uma string exata é dada como um argumento e o índice de sua primeira ocorrência é retornado. -1 é retornado se nada for encontrado.
 
 ```python
 >>> dna = 'ATTAAAGGGCCC'
@@ -1265,19 +1265,19 @@ O índice posicional de uma corda exata em uma corda maior pode ser encontrado e
 -1
 ```
 
-> O subtermo 'T' é encontrado pela primeira vez no índice 1 na corda 'dna' então 1 é retornado. O subtermo 'N' não foi encontrado, então -1 é retornado. `count(str)` retorna o número (como um int) que se encaixa exatamente com a corda que encontrou
+> O subtermo 'T' é encontrado pela primeira vez no índice 1 na string 'dna' então 1 é retornado. O subtermo 'N' não foi encontrado, então -1 é retornado. `count(str)` retorna o número (como um int) que se encaixa exatamente com a string que encontrou
 
 ```python
 >>> dna = 'ATGCTGCATT'
 >>> dna.count('T')
 4
 ```
-> O número de vezes que 'T' for encontrado é retornado. A corda armazenada em 'dna' não é alterada.
+> O número de vezes que 'T' for encontrado é retornado. A string armazenada em 'dna' não é alterada.
 
 
-#### Substituir uma corda com outra
+#### Substituir uma string com outra
 
-`replace(str1,str2)` retorna uma nova corda com todas as combinações de `str1` em uma corda substituída com `str2`. 
+`replace(str1,str2)` retorna uma nova string com todas as combinações de `str1` em uma string substituída com `str2`. 
 
 
 ```python
@@ -1290,17 +1290,17 @@ ATGCTGCATT
 >>> print(rna)
 AUGCUGCAUU
 ```
-> Todos as ocorrências de T são substitupidas por U. A nova corda é retornada. A corda original não foi de fato alterada. Se você quiser reutilizar a nova corda, armazene ela em uma variável.
+> Todos as ocorrências de T são substitupidas por U. A nova string é retornada. A string original não foi de fato alterada. Se você quiser reutilizar a nova string, armazene ela em uma variável.
 
 
 
 #### Extraindo um subtermo, ou separando
 
-Partes de uma corda podem ser localizadas baseadas na posição e retornadas. Isso é porque uma corda é uma sequência. Coordenadas começam em 0. Você adiciona a coordenada em colchetes depois do nome da corda. 
+Partes de uma string podem ser localizadas baseadas na posição e retornadas. Isso é porque uma string é uma sequência. Coordenadas começam em 0. Você adiciona a coordenada em colchetes depois do nome da string. 
 
-Você pode chegar a qualquer parte da corda com a seguinte sentença [start : end : step].  
+Você pode chegar a qualquer parte da string com a seguinte sentença [start : end : step].  
 
-Essa corda 'ATTAAAGGGCCC' é feita da seguinte sequência de caracteres, e posições (começando em zero).
+Essa string 'ATTAAAGGGCCC' é feita da seguinte sequência de caracteres, e posições (começando em zero).
 
 
 
@@ -1345,7 +1345,7 @@ ATTAAA
 ```
 > Todo caractere começando no índice 0 e acima mas não incluindo o de índice 6 são retornados. Esse é o mesmo que dna[:6]
 
-Vamos retornar todos os caracteres do índice 6 até o fim da corda.
+Vamos retornar todos os caracteres do índice 6 até o fim da string.
 ```python
 >>> dna = 'ATTAAAGGGCCC'
 >>> sub_dna = dna[6:]
@@ -1360,13 +1360,13 @@ Vamos retornar os últimos 3 caracteres.
 >>> print(sub_dna)
 CCC
 ```
-> Quando o segundo argumento é deixado em branco e o primeiro argumento é negativo (-X), X caracteres do final da corda são retornados.
+> Quando o segundo argumento é deixado em branco e o primeiro argumento é negativo (-X), X caracteres do final da string são retornados.
 
-#### Reverter uma corda ou uma lista
+#### Reverter uma string ou uma lista
 
  Não existe função de reverso, você precisa usar uma fatia com patamar -1 e início e fim vazios.
 
-Para uma corda, se parece com isso
+Para uma string, se parece com isso
 
 ```python
 >>> dna='GATGAA'
@@ -1375,25 +1375,25 @@ Para uma corda, se parece com isso
 ```
 
 
-#### Outros métodos de corda
+#### Outros métodos de string
 
 Desde que estes são métodos, se certifique de utilizar na sentença `string.method()`.
 
 | função                         | Descrição                                |
 | ------------------------------ | ---------------------------------------- |
-| `s.strip()`                    | retorna uma corda com o espaço em branco removido do começo e fim |
-| `s.isalpha()`                  | testa se todos caracteres da corda são alfabéticos. Retorna verdadeiro ou falso. |
-| `s.isdigit()`                  | testa se todos caracteres da corda são nnuméricos. Retorna verdadeiro ou falso. |
-| `s.startswith('other_string')` | testa se a corda começa com a corda fornecida como argumento. Retorna verdadeiro ou falso. |
-| `s.endswith('other_string')`   | testa se a corda termina com a corda fornecida como argumento. Retorna verdadeiro ou falso. |
-| `s.split('delim')`             | separa a corda no delimitador exato fornecido. Retorna a lista de subtermos. Se o argumento é fornecido, a corda será separada no espaço em branco. |
-| `s.join(list)`                 | O oposto de `split()`. Os elementos de uma lista serão concatenados juntos usando a corda armazenada em 's' como um delimitadoras. |
+| `s.strip()`                    | retorna uma string com o espaço em branco removido do começo e fim |
+| `s.isalpha()`                  | testa se todos caracteres da string são alfabéticos. Retorna verdadeiro ou falso. |
+| `s.isdigit()`                  | testa se todos caracteres da string são nnuméricos. Retorna verdadeiro ou falso. |
+| `s.startswith('other_string')` | testa se a string começa com a string fornecida como argumento. Retorna verdadeiro ou falso. |
+| `s.endswith('other_string')`   | testa se a string termina com a string fornecida como argumento. Retorna verdadeiro ou falso. |
+| `s.split('delim')`             | separa a string no delimitador exato fornecido. Retorna a lista de subtermos. Se o argumento é fornecido, a string será separada no espaço em branco. |
+| `s.join(list)`                 | O oposto de `split()`. Os elementos de uma lista serão concatenados juntos usando a string armazenada em 's' como um delimitadoras. |
 
 
 __split__
-`split` é um método ou forma de partir uma corda em um grupo de caracteres. O que é retornado é uma lista de elementos com caracteres que são usados para partir removidos. Iremos através das listas em mais detalhes na próxima sessão. Não se preocupe com isso.
+`split` é um método ou forma de partir uma string em um grupo de caracteres. O que é retornado é uma lista de elementos com caracteres que são usados para partir removidos. Iremos através das listas em mais detalhes na próxima sessão. Não se preocupe com isso.
 
-Vamos olhar para essa corda:
+Vamos olhar para essa string:
 ```
 00000xx000xx000000000000xx0xx00
 ```
@@ -1412,7 +1412,7 @@ Vamos tentar isso:
 >>> print(zero_parts)
 ['00000', '000', '000000000000', '0', '00']
 ```
-> Nós começamos com uma corda e agora temos uma lista com todos os delimitadores removidos
+> Nós começamos com uma string e agora temos uma lista com todos os delimitadores removidos
 
 Aqui está outro exemplo. Vamos dividir em tabs para obter uma lista dos números em colunas separadas tab.   
 ```python
@@ -1425,10 +1425,10 @@ Aqui está outro exemplo. Vamos dividir em tabs para obter uma lista dos número
 
 
 __join__
-`join` é um método ou uma forma de pegar uma lista de elementos, de coisas, e transformar em uma corda com algo posto entre cada elemento. A lista será coberta na próxima seção com mais detalhes.
+`join` é um método ou uma forma de pegar uma lista de elementos, de coisas, e transformar em uma string com algo posto entre cada elemento. A lista será coberta na próxima seção com mais detalhes.
 
 
-Vamos aplicar em uma lista de Ns `list_of_Ns = ['NNNNN', 'NNN', 'N', 'NNNNNNNNNNNNNNN', 'NN']` em 'xx' para obter essa corda:
+Vamos aplicar em uma lista de Ns `list_of_Ns = ['NNNNN', 'NNN', 'N', 'NNNNNNNNNNNNNNN', 'NN']` em 'xx' para obter essa string:
 ```
 NNNNNxxNNNxxNxxNNNNNNNNNNNNNNNxxNN
 ```
@@ -1447,10 +1447,10 @@ O que é a 'list' em `s.join(list)` ?
 >>> string_of_elements_with_xx
 'NNNNNxxNNNxxNxxNNNNNNNNNNNNNNNxxNN'
 ```
-> Nós começamos com uma lista e agora temos todos os elementos em uma corda com o delimitador adicionado entre cada elemento.
+> Nós começamos com uma lista e agora temos todos os elementos em uma string com o delimitador adicionado entre cada elemento.
 
 
-Vamos pegar uma lista de valores de expressão e criar uma corda delimitada tab que abrirá bem em uma planilha com cada valor em sua própria coluna:
+Vamos pegar uma lista de valores de expressão e criar uma string delimitada tab que abrirá bem em uma planilha com cada valor em sua própria coluna:
 ```python
 >>> expression_values = ['4.73', '7.91', '3.65']
 >>>expression_values
@@ -1463,9 +1463,9 @@ Vamos pegar uma lista de valores de expressão e criar uma corda delimitada tab 
 
 
 
-### Formatação de corda
+### Formatação de string
 
-Cordas podem ser formatadas usando a função `format()`. Bem intuitivo, mas espere até ver os detalhes! Por exemplo, se você quiser incluir cordas literais e variáveis em seu testamento de impressão e não quer concatenar ou usar múltiplos argumentos na função `print()` você pode usar formatação de corda.  
+Strings podem ser formatadas usando a função `format()`. Bem intuitivo, mas espere até ver os detalhes! Por exemplo, se você quiser incluir strings literais e variáveis em sua declaração de impressão e não quer concatenar ou usar múltiplos argumentos na função `print()` você pode usar formatação de string.  
 
 ```python
 >>> string = "This sequence: {} is {} nucleotides long and is found in {}."
@@ -1477,9 +1477,9 @@ This sequence: {} is {} nucleotides long and is found in {}.
 >>> print(new_string)
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-Nós colocamos juntamente três variáveis e cordas literais em uma corda única usando a função `format()`. A corda original não é alterada, uma nova corda é retornada e incorpora os argumentos. Você pode salvar o valor retornado em uma nova variável. Cada `{}` é um espaço reservado para a corda que precisa ser inserida.  
+Nós colocamos juntamente três variáveis e strings literais em uma string única usando a função `format()`. A string original não é alterada, uma nova string é retornada e incorpora os argumentos. Você pode salvar o valor retornado em uma nova variável. Cada `{}` é um espaço reservado para a string que precisa ser inserida.  
 
-Algo legal sobre `format()` é que você pode imprimir int e tipos variáveis de corda sem converter primeiramente.
+Algo legal sobre `format()` é que você pode imprimir int e tipos variáveis de string sem converter primeiramente.
 
 Você pode também chamar diretamente `format()` dentro de uma função `print()`. Aqui estão dois exemplos
 
@@ -1488,14 +1488,14 @@ Você pode também chamar diretamente `format()` dentro de uma função `print()
 >>> print(string.format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
-Ou use a função `format()` em uma corda literal:
+Ou use a função `format()` em uma string literal:
 ```python
 >>> print( "This sequence: {} is {} nucleotides long and is found in {}.".format(dna,dna_len,gene_name))
 This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
 ```
 #### A mini-linguagem `format()` 
 
-Até agora, nós usamos apenas `{}` para mostrar onde inserir o valor de uma variável em uma corda. Você pode adicionar caracteres especiais dentro de `{}` para mudar a forma que a variável é formatada quando é inserida dentro da corda. 
+Até agora, nós usamos apenas `{}` para mostrar onde inserir o valor de uma variável em uma string. Você pode adicionar caracteres especiais dentro de `{}` para mudar a forma que a variável é formatada quando é inserida dentro da string. 
 
 > Você pode numerar estes, não necessariamente em ordem.
 
@@ -1506,7 +1506,7 @@ Até agora, nós usamos apenas `{}` para mostrar onde inserir o valor de uma var
 'c, b, a'
 ```
 
-Para mudar o espaçamento das cordas e a forma que os números são formatados, você adiciona `:` e outros caracteres especiais como isso `{:>5}` para corrigir uma corda em um campo de cinco caracteres
+Para mudar o espaçamento das strings e a forma que os números são formatados, você adiciona `:` e outros caracteres especiais como isso `{:>5}` para corrigir uma string em um campo de cinco caracteres
 
 Vamos corrigir justificando alguns números.  
 
@@ -1565,7 +1565,7 @@ __Aqui estão algumas das opções de ALINHAMENTO:__
 > preencher com `x`   
 > justificamento à esquerda `<`  
 > `10` um campo com dez caracteres 
-> `s` uma corda
+> `s` uma string
 
 
 __Tipos comuns__
@@ -1578,7 +1578,7 @@ __Tipos comuns__
 | E    | expoente, usa `E`                        |
 | f    | ponto de flutuação, precisão padrão é 6 (também F) |
 | g    | número genérico, flutua para valores próximos de 0, expoente para outros; também G |
-| s    | corda, tipo padrão (conforme exemplo acima) |
+| s    | string, tipo padrão (conforme exemplo acima) |
 | x    | converte para hexadecimal, também X        |
 | %    | converte para % multiplicando por 100      |
 
@@ -1721,7 +1721,7 @@ IndexError: list assignment index out of range
 
 #### Extraindo um subconjunto de uma lista, ou Recortando
 
-Isso funciona da mesma forma com as listas como com as cordas. Isso é porque ambos são sequências, ou cooleções ordenadas de dados com informação posicional. Lembre-se que Python conta as divisões entre os elementos, começando com 0.
+Isso funciona da mesma forma com as listas como com as strings. Isso é porque ambos são sequências, ou cooleções ordenadas de dados com informação posicional. Lembre-se que Python conta as divisões entre os elementos, começando com 0.
 
 | Índice | Valor |
 | ----- | ----- |
@@ -1944,7 +1944,7 @@ print('Finished the loop')
 
 #### For Loops
 
-Um for loop é um loop que executa o bloco de códigos for para qualquer membro de uma sequência, por exemplo os elementos de uma lista ou as letras de uma corda.
+Um for loop é um loop que executa o bloco de códigos for para qualquer membro de uma sequência, por exemplo os elementos de uma lista ou as letras de uma string.
 
 #### For Loop Syntaxe
 
@@ -1975,7 +1975,7 @@ três
 quatro
 ```
 
-Esse próximo exemplo é utilizando um for loop para interagir em uma corda. Lembre-se que uma corda é uma sequência como uma lista. Cada caractere possui uma posição. Olhe novamente em "Extraindo uma subcorda, ou Recortando" na seção [Cordas](#strings) para ver outras formas em que cordas podem ser tratadas como listas.
+Esse próximo exemplo é utilizando um for loop para interagir em uma string. Lembre-se que uma string é uma sequência como uma lista. Cada caractere possui uma posição. Olhe novamente em "Extraindo uma substring, ou Recortando" na seção [Strings](#strings) para ver outras formas em que strings podem ser tratadas como listas.
 
 Código:
 ```python
@@ -1999,7 +1999,7 @@ T
 ...
 ...
 ```
-> Essa é uma forma fácil de acessar cada caractere em uma corda. É especialmente bom para sequências de DNA.
+> Essa é uma forma fácil de acessar cada caractere em uma string. É especialmente bom para sequências de DNA.
 
 
 Outro exemplo de interagir em uma lista de variáveis, estes números de tempo.
