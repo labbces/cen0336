@@ -120,20 +120,38 @@ gh_toc_grab() {
     # find strings that corresponds to template
     grep -E -o '<a.*id="user-content-[^"]*".*</h[1-6]' |
     # remove code tags
-    sed 's/<code>//' | sed 's/<\/code>//' |
+    sed 's/<code>//' | sed 's/<\/code>//' #|
     # now all rows are like:
     #   <a id="user-content-..." href="..."><span ...></span></a> ... </h1
     # format result line
     #   * $0 — whole string
-    echo -e "$(awk -v "gh_url=$1" '{
-    print sprintf("%*s", substr($0, length($0), 1)*3, " ") "* [" substr($0, match($0, /a>.*<\/h/)+2, RLENGTH-5)"](" gh_url substr($0, match($0, "href=\"#[^$]+?\" ")+6, RLENGTH-8) ")"}' |sed 'y/+/ /; s/%/\\x/g')"} |
+#    echo -e "$(awk -v "gh_url=$1" '{
+#         print sprintf("%*s", substr($0, length($0), 1)*3, " ") "* [" substr($0, match($0, /a>.*<\/h/)+2, RLENGTH-5)"](" gh_url substr($0, match($0, "href=\"[^\"]+?\" ")+6, RLENGTH-8) ")"}' | sed 'y/+/ /; s/%/\\x/g')"
+#    print sprintf("%*s", substr($0, length($0), 1)*3, " ") "* [" substr($0, match($0, /a>.*<\/h/)+2, RLENGTH-5)"](" gh_url substr($0, match($0, "href=\"#[^$]+?\" ")+6, RLENGTH-8) ")"}' |sed 'y/+/ /; s/%/\\x/g')"} |
 #    print sprintf("%*s", substr($0, length($0), 1)*3, " ") "* [" substr($0, match($0, /a>.*<\/h/)+2, RLENGTH-5)"](" gh_url substr($0, match($0, "href=\"[^\"]+?\" ")+6, RLENGTH-8) ")"}' | sed 'y/+/ /; s/%/\\x/g')"
-    sed -r 's/"><span aria-hidden="true//'
+#    sed -r 's/"><span aria-hidden="true//'
 }
 
 #
 # Returns filename only from full path or url
 #
+
+gh_toc_grab2() {
+	sed -e ':a' -e 'N' -e '$!ba' -e 's/\n<\/h/<\/h/g' |
+	grep -E -o '<h[1-6].*id="user-content-[^"]*".*</h[1-6]' | 
+	sed 's/<code>//' | sed 's/<\/code>//' | 
+	sed -E 's/<span aria-hidden=.*<\/span>//' | 
+	sed 's/class="heading-link" //' |
+	sed -E 's/ id="user-content-.*"><a/><a/' |
+	sed 's/class="heading-link" //' |
+	sed -E 's/ id="user-content-.*"><a/><a/' | 
+	sed 's/<span aria-hidden="true" class="octicon octicon-link">//' |
+	sed 's/<\/span>//' | 
+	sed 's/<strong>//'|
+	sed 's/<\/strong>//'| 
+	perl -e 'while(<>){if(/<h([0-9])><a href="(#[a-zZ-Z0-9-]*)"><\/a>(<a href="problemsets\/.*">.*<\/a>)<\/h/){print " "  x $1; print "* [$3]($2)\n" } else{if(/<h([0-9])><a href="(#[a-zZ-Z-0-9]*)">(.*)<\/a><\/h/){print " "  x $1; print "* [$3]($2)\n" }}}'
+}
+
 gh_toc_get_filename() {
     echo "${1##*/}"
 }
@@ -171,7 +189,8 @@ gh_toc_app() {
         while read input; do
             echo "$input" >> "$gh_tmp_md"
         done
-        gh_toc_md2html "$gh_tmp_md" | gh_toc_grab ""
+        #gh_toc_md2html "$gh_tmp_md" | gh_toc_grab ""
+        gh_toc_md2html "$gh_tmp_md" | gh_toc_grab2 ""
         #gh_toc_md2html "$gh_tmp_md" 
         return
     fi
