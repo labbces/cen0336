@@ -8,6 +8,7 @@ Diego M. Riaño-Pachón
 __Criadores do material na versão em Inglês__
 Simon Prochnik
 Sofia Robb
+
  * [Panorama geral](unix.md/#panorama-geral)
   * [Por que?](unix.md/#por-que)
  * [Unix](unix.md/#unix)
