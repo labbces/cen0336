@@ -1636,7 +1636,7 @@ Listas são tipos de dados que armazenam uma coleção de dados.
 ( 'Jan' , 'Fev' , 'Mar' , 'Abr' , 'Mai' , 'Jun' , 'Jul' , 'Ago' , 'Set' , 'Out' , 'Nov' , 'Dez' )
 ```
 
-Muitas funções e métodos retornam tuplas como `math.modf(x)`. Essa função retorna as parter fracionais e inteiras de `x` em uma tupla de dois itens. Aqui não existe motivos para mudar a sequência.
+Muitas funções e métodos retornam tuplas como `math.modf(x)`. Essa função retorna as partes fracionais e inteiras de `x` em uma tupla de dois itens. Aqui não existe motivos para mudar a sequência.
 
 ```python
 >>> math.modf(2.6)
@@ -1667,7 +1667,7 @@ Vamos acessar o valor de índice 0. Você vai precisar de um número de índice 
 >>> codons[0]
 'atg'
 ```
-O valor pode ser salvo para depois através do armazenamento em ua variável.
+O valor pode ser salvo em uma variável, e ser usado depois.
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> first_codon = codons[0]
