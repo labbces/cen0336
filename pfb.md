@@ -1848,7 +1848,7 @@ Existem dois tipos de loops:
 
 O while loop vai continuar a executar um bloco de código enquanto a expressão de teste apresentar `Verdadeiro`. 
 
-#### While Loop Syntaxe
+#### Sintaxe de Loop While
 
 ```python
 while expression:
@@ -1860,17 +1860,17 @@ while expression:
 rest_of_code_goes_here
 more_code
 ```
-> A condição é a expressão. O bloco de código while loop é uma coleção de declarações recuadas seguindo a expressão.
+> A condição é a expressão. O bloco de código while loop é uma coleção de declarações recuadas/indentadas seguindo a expressão.
 
 
 Código: 
 ```python
 #!/usr/bin/env python3
 
-count = 0
-while count < 5:
-  print("count:" , count)
-  count+=1
+contagem = 0
+while contagem < 5:
+  print("contagem:" , contagem)
+  contagem+=1
 print("Done") 
 ```
 
@@ -1878,11 +1878,11 @@ print("Done")
 Saída:
 ```
 $ python while.py
-count: 0
-count: 1
-count: 2
-count: 3
-count: 4
+contagem: 0
+contagem: 1
+contagem: 2
+contagem: 3
+contagem: 4
 Done
 ```
 > A condição while foi verdadeira 5 vezes e o bloco de código while foi executado 5 vezes.
@@ -1904,23 +1904,23 @@ Um loop infinito ocorre quando um condição while é sempre verdadeira. Aqui es
 ```python
 #!/usr/bin/env python3
 
-count = 0
-while count < 5:            # isso é normalmente um bug!!
-  print("count:" , count)   # esqueça de incrementar contagem no loop!!
+contagem = 0
+while contagem < 5:            # isso é normalmente um bug!!
+  print("contagem:" , contagem)   # esqueça de incrementar contagem no loop!!
 print("Done") 
 ```
 
 Saída:
 ```
 $ python infinite.py
-count: 0
-count: 0
-count: 0
-count: 0
-count: 0
-count: 0
-count: 0
-count: 0
+contagem: 0
+contagem: 0
+contagem: 0
+contagem: 0
+contagem: 0
+contagem: 0
+contagem: 0
+contagemcontagem: 0
 ...
 ...
 ```
