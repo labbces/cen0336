@@ -2031,7 +2031,7 @@ range(0, 5)
 [0, 1, 2, 3, 4]
 ```
 
-A função `range()` pode ser utilizada em conjunto com um for loop para interar em um alcance de números. Alcance também começa com 0 e pensa sobre os espaços entre os números.  
+A função `range()` pode ser utilizada em conjunto com um for loop para interar em um faixa de números. AlcaA faixa (range) também começa com 0 e opera sobre os espaços entre os números.  
 
 Código:
 ```python
