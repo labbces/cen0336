@@ -2079,7 +2079,7 @@ As declarações de controle de loop permitem alteração no fluxo normal de exe
 
 | Declaração de controle | Descrição                             |
 | ----------------- | ---------------------------------------- |
-| `break`           | Um loop é terminado quando uma declaração break é executada. Todas as linhas de código após o break, mas dentro do bloco de loop não são executadas. Sem mais interações do loop performando |
+| `break`           | Um loop é terminado quando uma declaração break é executada. Todas as linhas de código após o break, mas dentro do bloco de loop não são executadas. Sem mais interações do loop sendo executadas |
 | `continue`        | Uma única interação de uma loop é terminada quando a declaração continue é executada. A próxima interação vai proceder normalmente. |
 
 
