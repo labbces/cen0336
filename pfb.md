@@ -2142,7 +2142,7 @@ Done
 
 #### Iteradores
 
-Um iterável é qualquer tipo de dado que pode ser interado, ou pode ser usado em uma interação. Um interável pode ser transformado em um interador com a função `iter()`. Isso significa que você pode utilizar a função `next()`.
+Um iterável é qualquer tipo de dado que pode ser iterado, ou pode ser usado em uma interação. Um interável pode ser transformado em um iterador com a função `iter()`. Isso significa que você pode utilizar a função `next()`.
 
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
@@ -2158,9 +2158,9 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 StopIteration
 ```
-> Um interador permite que você obtenha o próximo elemento no interador até que não existam mais elementos. Se você quer ir através de cada elemento novamente, você precisará redefinir o interador.
+> Um iterador permite que você obtenha o próximo elemento no iterador até que não existam mais elementos. Se você quer ir através de cada elemento novamente, você precisará redefinir o iterador.
 
-Exemplo de utilização de um interador em um for loop:
+Exemplo de utilização de um iterador em um for loop:
 ```python
 codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> codons_it = iter(codons)
@@ -2171,7 +2171,7 @@ atg
 aaa
 agg
 ```
-> Isso é bom se você tem uma lista muito larga que você não deseja manter na memória. Um interador permite que você vá através de cada elemento mas sem manter a lista completa na memória. Sem interadores toda a lista permanece na memória.
+> Isso é bom se você tem uma lista muito larga que você não deseja manter na memória. Um iterador permite que você vá através de cada elemento mas sem manter a lista completa na memória. Sem iteradores toda a lista permanece na memória.
 
 
 #### Compreensão de lista
