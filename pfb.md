@@ -1927,15 +1927,15 @@ contagemcontagem: 0
 > O que fez com que a condição seja sempre `Verdadeira`? 
 > A condição que incrementa a contagem está faltando, então sempre será inferior a 5. Para impedir o código de imprimir para sempre utilize ctrl+c. Um comportamento como esse é quase sempre devido a um bug no código.
 
-Uma forma melhro de escrever um loop infinito é com `True`. Você precisará incluir algo como `if ...: break` 
+Uma forma melhor de escrever um loop infinito é com `True`. Você precisará incluir algo como `if ...: break` 
 
 ```python
 #!/usr/bin/env python3
-count=0
+contagem=0
 while True:
-  print("count:",count)
-  # you probably want to add if...: break 
-  # so you can get out of the infinite loop
+  print("contagem:",contagem)
+  # Provavelmente você precisará adicionar um "if...: break"
+  # para poder sair do loop infinito
 print('Finished the loop')
 ```
 
