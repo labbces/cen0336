@@ -1,59 +1,57 @@
-Python 2 Problem Set -- Operators, Truth, Logic
+Python 2 Problem Set -- Operadores, Verdadeiro/Falso, Lógica 
 ===================
 
-1. Use the Interactive Interpretor to test to see if you can find an ['ATG' in](https://github.com/prog4biol/pfb2019#membership-operators) the following DNA string:
+1. Use o Interpretador Interativo para testar se você pode achar um ['ATG'](https://github.com/prog4biol/pfb2019#membership-operators) na seguinte fita simples de DNA:
 
 ```
 GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 ```
 
-2. How about 'TTT'?
+2. E que tal 'TTT'?
 
-3. If you didn't already save the DNA string to a variable, do that now and redo [1 and 2](https://github.com/prog4biol/pfb2019#membership-operators).
+3. Se você ainda não salvou a cadeia de DNA em uma variável, faça isso e refaça os [passos 1 e 2](https://github.com/prog4biol/pfb2019#membership-operators).
 
-4. In the interpretor use `bool` to test a variety of values like '', 0, 0.0, FALSE, false, True, true, 'True', 'False' to see if they evalue to True or False.
+4. No interpretador, utilize bool para testar uma variedade de valores como '', 0, 0.0, FALSE, false, True, true, 'True', 'False' para ver se eles avaliam como True ou False.
 
-5. Using a text editor, write a script that 
-    - Assigns a value to a variable
-    - Has a [if/else statment](https://github.com/prog4biol/pfb2019#logic-control-statements) in which:
-       - It prints out a confirmation of truth if the value is true
-       - It prints out "Not True" if the value is not true. 
+5. Usando um editor de texto, escreva um código que:
+    - Atribua um valor a uma variável;
+    - Possua uma instrução [if/else](https://github.com/prog4biol/pfb2019#logic-control-statements) na qual:
+       - Print uma confirmação de verdade se o valor for verdadeiro.
+       - Print "Not True" se o valor não for verdadeiro 
 
-6. Make sure to commit your changes along the way. You can wait until the end to push them to your remote repo, if you like, or you can do it now. 
+6. Certifique-se de fazer commit das suas alterações ao longo do caminho. Você pode esperar até o final para enviá-las para o repositório remoto, se preferir, ou pode fazê-lo agora.
 
+7. Crie um script que tenha a instrução [if/else](https://github.com/prog4biol/pfb2019#if-statement) que (lembre-se de escrever um pouco de cada vez e testar)
+    - Teste para ver se um número é positivo e negativo
+    - Print "positivo" se for positivo
+    - Print "negativo" se for negativo
+    - Salve e execute.
+8. Adicione um [elif](https://github.com/prog4biol/pfb2019#ifelif) para testar se o número é igual a 0. Salve e execute.
 
-
-7. Create a script that has a [if/else statement](https://github.com/prog4biol/pfb2019#if-statement) that (remember to write a little bit at a time and test it)
-    - Test to see if a number is positive or negative
-    - print "positive" if it is positive
-    - print "negative" if it is negative
-    - save it and run it.
-8. Add an [elif](https://github.com/prog4biol/pfb2019#ifelif) to test if the number is equal to 0. Save it and run it.
-
-9. Add nested tests to your last script
-    - if it is positive, in addition to printing "positive"
-    - test if it is smaller than 50
-    - save it and run it    
+9. Adicione testes aninhados ao seu último scrpit:
+    - Se for positivo, além de imprimir "positivo"
+    - Teste se é menor que 50
+    - Salve e execute 
             
-10. Add more nested tests to your script.
-    - if it is smaller than 50
-    - test if the number is even
-    - if it is smaller than 50 and even, print "it is an even number that is smaller than 50"
-    - save it and run it
+10. Adicione mais testes aninhados ao seu scrpit:.
+    - Se for menor que 50
+    - Teste se o número é par
+    - Se for menor que 50 e par, imprima "é um número par menor que 50"
+    - Salve e execute
          
-11. Add more nested tests.  
-    -  if it is larger than 50,  
-    -  test if the number is divisible by 3  
-    -  if the number is larger than 50 and divisible by 3, print "it is larger than 50 and divisible by 3"  
-    -  save it and run it
+11. Adicione mais testes aninhados.  
+    -  Se for maior que 50,  
+    -  Teste se o número é divisível por 3  
+    -  Se o número for maior que 50 e divisível por 3, imprima "é maior que 50 e divisível por 3" 
+    -  Salve e execute
 
-12. In your previous nested loops, test the number 50. What prints to the screen? Is it the correct response? If not, you have a semantic error and need to alter your code to be correct with any number.  
+12. Nos seus loops aninhados anteriores, teste o número 50. O que é impresso na tela? É a resposta correta? Se não, você tem um erro semântico e precisa alterar seu código para estar correto com qualquer número.  
 
-13. Write a new script that does all the testing in 7-11, but gets the value being tested from the command line and stores it in a variable. Add in a print statement that reminds the user what number is being tested. [Remember `sys` in the notes](pfb2019#command-line-parameters-a-special-built-in-list). 
+13. Escreva um novo script que realiza todos os testes de 7 a 11, mas obtém o valor a ser testado a partir da linha de comando e o armazena em uma variável. Adicione uma instrução de impressão que lembra ao usuário qual número está sendo testado. [Lembre-se de 'sys' nas notas](pfb2019#command-line-parameters-a-special-built-in-list). 
 
 14. ADD/COMMIT/PUSH
 
-15. Write a new script that test whether a year is a leap year. According to [Wikipedia](https://en.wikipedia.org/wiki/Leap_year) a leap year is a special yeat htat has an extra day (366 days in a year). A year can be a leap year if it is exactly divisible by 4 but not divisible by 100. A year is also leap if it is exactly divisible by 400.
+15. Escreva um novo script que teste se um ano é bissexto. De acordo com a [Wikipedia](https://en.wikipedia.org/wiki/Leap_year), um ano bissexto é um ano especial que tem um dia extra (366 dias em um ano). Um ano pode ser bissexto se for exatamente divisível por 4, mas não divisível por 100. Um ano também é bissexto se for exatamente divisível por 400.
 
 16. ADD/COMMIT/PUSH
 
