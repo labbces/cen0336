@@ -1,70 +1,70 @@
-Python 5 - Dictionaries and Sets - Problem Set
+Python 5 - Dicionários e Conjuntos - Conjunto de Problemas
 ===================
 
-1.  Write a script in which you construct a dictionary of your favorite things.
+1.  Escreva um script no qual você construa um dicionário de suas coisas favoritas.
 
-> Some of my favorites:
+> Alguma das minhas:
 >
-> | Type | Favorite                                 |
-> | ---- | ---------------------------------------- |
-> | book | [Jitterbug Perfume](https://en.wikipedia.org/wiki/Jitterbug_Perfume) |
-> | song | [Tom Petty - I Won't Back Down](https://www.youtube.com/watch?v=nvlTJrNJ5lA) |
-> | tree | [Cedar](https://sciencing.com/cedar-trees-5432718.html) |
+> | Tipo   | Favorita                                 |
+> | ------ | ---------------------------------------- |
+> | livro  | [Jitterbug Perfume](https://en.wikipedia.org/wiki/Jitterbug_Perfume) |
+> | som    | [Tom Petty - I Won't Back Down](https://www.youtube.com/watch?v=nvlTJrNJ5lA) |
+> | árvore | [Cedar](https://sciencing.com/cedar-trees-5432718.html) |
 
 
-2. Print out your favorite book.
+2. Print o seu livro favorito.
 ```python
 print(fav_dict['book'])
 ```
 
-3. Print out your favorite book but use a variable in the key.
+3. Imprima o seu livro favorito, mas use uma variável na chave.
 ``` python
 fav_thing = 'book'
 print(fav_dict[fav_thing])
 ```
 
-4. Now print your favorite tree.
+4. Agora imprima a sua árvore favorita.
 
-5. Add your favorite 'organism' to the dictionary. Make organism the new value of `fav_thing`
+5. Adicione o seu "organismo" favorito ao dicionário. Faça com que "organismo" seja o novo valor da chave `fav_thing`.
 ```python
 fav_thing = 'organism'
 print(fav_dict[fav_thing])
 ```
 
-6. Take a value from the command line for `fav_thing` and print the value of that item from the dictionary. Maybe you want to print out all the keys to the user so that they know what to pick from. Check out `input()`. Here is a <a href="https://www.tutorialspoint.com/python/python_files_io.htm">link</a>.
+6. Obtenha um valor da linha de comando para `fav_thing` e imprima o valor desse item do dicionário. Talvez você queira imprimir todas as chaves para o usuário, para que eles saibam o que escolher. Dê uma olhada em `input()`. Aqui está um [link](https://www.tutorialspoint.com/python/python_files_io.htm).
 
-7. Change the value of your favorite organism.
+7. Altere o valor do seu organismo favorito.
 
-8. Get the `fav_thing` from the command line and a new value for that key. Change the value with the user inputted value.
+8. Obtenha `fav_thing` da linha de comando e um novo valor para essa chave. Altere o valor com o valor inserido pelo usuário.
 
-9. Use a `for` loop to print out each key and value of the dictionary.
+9. Use um loop `for` para imprimir cada chave e valor do dicionário.
 
-10.  Make a set using the two different syntaxes for creating a set `myset = set()` and `myset2 = {}`. What is the difference? Does it matter how you make it?
+10.  Crie um conjunto usando as duas sintaxes diferentes para criar um conjunto, `myset = set()` e `myset2 = {}`. Qual é a diferença? Importa como você cria o conjunto?
 
 ```
 mySet = set('ATGTGGG')
 mySet2 = {'ATGCCT'}
 ```
 
-11. Write a script to find the intersection, difference, union, and symetrical difference between these two sets.
+11. Escreva um script para encontrar a interseção, diferença, união e diferença simétrica entre esses dois conjuntos.
 
 ```
 Set A = 3 14 15 9 26 5 35 9
 Set B = 60 22 14 0 9
 ```
 
-12. If you create a set using a DNA sequence, what will you get back? Try it with this sequence:
+12. Se você criar um conjunto usando uma sequência de DNA, o que você obterá? Tente com esta sequência:
 ```
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATTCGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGACAGAAACACTTTTCGTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATTCGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGAC
 ```
 
-13.  Nucleotide Composition. Write a script that:
-  - determines the unique characters in this sequence
+13.  Composição de Nucleotídeos. Escreva um script que:
+  - determine os caracteres únicos nesta sequência
   ```
   GAACTCCAAAAATGAAAACATAGTAGCAATCAAAGCATCCCACTATTTTTTGTCTCTCGTTTCATTAGCGTTGTAAATTACTGATACCCTACTATACCTCTACAAGGCCTTTGTCATCTTTTTACTCAAGTGTGAAATCATCACTTATTGTATGAAGGATGAGCTTTCCGTTCGCTAGTTTGCTGAAAAGGCCTTCTGCAATAAGCTCTCTATTATCTTTAAAAAAACCTGGTTCCTGGTCTTCCATTCTGCTAAAAGCTGTAGGGGTTTTATCACGAGATTCCCGTTGGCATTCTGACTTATTAAAAATGCTTACAGAAGAAATGGATTCTTTAAATGGTCAAATTAATACGTGGACAGATAATAATCCTTTATTAGATGAAATTACGAAGCCATACAGAAAATCTTCAACTCGTTTTTTTCATCCGCTTCTTGTACTTCTAATGTCTAGAGCATCAGTAAATGGGGATCCACCGAGTCAGCAACTATTTCAAAGGTACAAACAACTTGCCCGTGTAACAGAATTGATTCATGCTGCCAATATAATTCATATTAATATTGGAGAAGAACAAAGCAACGAACAGATTAAACTTGCAACGTTGGTTGGAGATTATTTACTCGGAAAGGCGTCTGTTGATTTAGCACATTTAGAAAACAACGCTATTACAGAAATTATGGCTTCTGTTATTGCAAACTTAGTTGAAGGGCACTTCGGAAGCCGACAAAATGGCTCTGTTGGTTTGTCAAACGAACGAACCATCCTTCTGCAATCAGCCTTTATGCCAGCAAAGGCATGTTTATGCGCAAGCATATTGAATAACTCATCACAATACATTAATGATGCGTGTTTCAATTATGGAAAATTTCTAGGCTTATCGCTGCAACTGGCCCATAAGCCTGTATCTCCTGACGCCCAAGTTTTGCAAAAGAATAATGACATTTTGAAAACATATGTTGAGAATGCCAAGAGCTCATTGTCTGTTTTCCCCGATATAGAGGCTAAGCAAGCTCTCATGGAAATCGCTAATAGTGTTTCGAAGTAATCGACAGGTATTGTATCCTGGATTAATATTAGGGTGGCTCATGCATGCTCGTGCAATCGTAACAAATATGTCTTTCTTTTACGAATTTTAACGCTTCAATATAAATCATATTTTTCCTCA
   ```
-  - iterate over each unique character and count the number found in the sequence
-  - store each count in a dictionary. example: `nt_comp['A']=2`
-  - when you are done counting each character calculate and report the nucleotide composition and the GC content.
+  - itere sobre cada caractere único e conte o número encontrado na sequência
+  - armazene cada contagem em um dicionário. Exemplo: `nt_comp['A'] = 2`
+  - quando terminar de contar cada caractere, calcule e relate a composição de nucleotídeos e o conteúdo de GC.
 
- 14. Are you still committing your work?
+ 14. Você ainda está fazendo commits do seu trabalho?
