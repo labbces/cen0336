@@ -17,13 +17,13 @@ Python 5 - Dicionários e Conjuntos - Conjunto de Problemas
 print(fav_dict['book'])
 ```
 
-3. Imprima o seu livro favorito, mas use uma variável na chave.
+3. print o seu livro favorito, mas use uma variável na chave.
 ``` python
 fav_thing = 'book'
 print(fav_dict[fav_thing])
 ```
 
-4. Agora imprima a sua árvore favorita.
+4. Agora print a sua árvore favorita.
 
 5. Adicione o seu "organismo" favorito ao dicionário. Faça com que "organismo" seja o novo valor da chave `fav_thing`.
 ```python
@@ -31,7 +31,7 @@ fav_thing = 'organism'
 print(fav_dict[fav_thing])
 ```
 
-6. Obtenha um valor da linha de comando para `fav_thing` e imprima o valor desse item do dicionário. Talvez você queira imprimir todas as chaves para o usuário, para que eles saibam o que escolher. Dê uma olhada em `input()`. Aqui está um [link](https://www.tutorialspoint.com/python/python_files_io.htm).
+6. Obtenha um valor da linha de comando para `fav_thing` e print o valor desse item do dicionário. Talvez você queira imprimir todas as chaves para o usuário, para que eles saibam o que escolher. Dê uma olhada em `input()`. Aqui está um [link](https://www.tutorialspoint.com/python/python_files_io.htm).
 
 7. Altere o valor do seu organismo favorito.
 
