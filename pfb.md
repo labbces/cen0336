@@ -2508,7 +2508,7 @@ União, interseção, diferença e diferença simétrica podem ser feitas com co
 ```
 > Conjuntos contêm elementos únicos; portanto, mesmo que elementos duplicados sejam fornecidos, eles serão removidos..
 
-#### Conjunto de Operadores
+#### Operadores de Conjuntos
 
 **Diferença**
 
