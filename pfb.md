@@ -2225,29 +2225,29 @@ Aqui está um exemplo de utilização de operadores matemáticos para gerar uma 
 ## Python 5
 
 
-### Dictionaries
+### Dicionário
 
 
-Dictionaries are another iterable, like a string and list. Unlike strings and lists, dictionaries are not a sequence, or in other words, they are __unordered__ and the position is not important. 
+Dicionários são outra estrutura iterável, semelhante a uma string e uma lista. Ao contrário de strings e listas, os dicionários não são uma sequência, ou em outras palavras, eles são __não ordenados__ e a posição não é importante.
 
-Dictionaries are a collection of key/value pairs. In Python, each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: `{}`
+Dicionários são uma coleção de pares chave/valor. Em Python, cada chave é separada de seu valor por dois pontos (:), os itens são separados por vírgulas, e tudo é envolto por chaves. Um dicionário vazio sem itens é escrito apenas com duas chaves, assim: `{}`
 
-Each key in a dictionary is unique, while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
+Cada chave em um dicionário é única, enquanto os valores podem não ser. Os valores de um dicionário podem ser de qualquer tipo, mas as chaves devem ser de um tipo de dado imutável, como strings, números ou tuplas.
 
-Data that is appropriate for dictionaries are two pieces of information that naturally go together, like gene name and sequence. 
+Dados apropriados para dicionários são duas informações que naturalmente estão relacionadas, como o nome de um gene e sua sequência.
 
-| Key   | Value                                    |
+| Chave | Valor                                    |
 | ----- | ---------------------------------------- |
 | TP53  | GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC |
 | BRCA1 | GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA |
 
-#### Creating a Dictionary
+#### Criando um dicionário
 
 ```python
 genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
 ```
 
-Breaking up the key/value pairs over multiple lines make them easier to read.
+Dividir os pares chave/valor em várias linhas facilita a leitura.
 ```python
 genes = { 
            'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 
@@ -2255,9 +2255,9 @@ genes = {
          }
 ```
 
-#### Accessing Values in Dictionaries
+#### Acessando os valores do dicionário
 
-To retrieve a single value in a dictionary use the value's key in this format `dict[key]`. This will return the value at the specified key. 
+Para recuperar um único valor em um dicionário, use a chave do valor neste formato `dict[chave]`. Isso retornará o valor na chave especificada.
 
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
@@ -2265,9 +2265,9 @@ To retrieve a single value in a dictionary use the value's key in this format `d
 >>> genes['TP53']
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
-> The sequence of the gene TP53 is stored as a value of the key 'TP53'. We can access the sequence by using the key in this format dict[key]
+> A sequência do gene TP53 está armazenada como um valor da chave 'TP53'. Podemos acessar a sequência usando a chave neste formato dict[chave].
 
-The value can be accessed and passed directly to a function or stored in a variable.
+O valor pode ser acessado e passado diretamente para uma função ou armazenado em uma variável.
 ```python
 >>> print(genes['TP53'])
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
@@ -2278,9 +2278,9 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
 
 
-#### Changing Values in a Dictionary
+#### Mudando os valores de um dicionário
 
-Individual values can be changed by using the key and the assignment operator.
+Valores individuais podem ser alterados usando a chave e o operador de atribuição.
 
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
@@ -2293,9 +2293,9 @@ Individual values can be changed by using the key and the assignment operator.
 >>> print(genes)
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'atg'}
 ```
-> The contents of the dictionary have changed.
+> O conteúdo do dicionário foi alterado.
 
-Other assignment operators can also be used to change a value of a dictionary key. 
+Outros operadores de atribuição também podem ser usados para alterar um valor de uma chave de dicionário.
 ```python
 >>> genes = { 'TP53' : 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC' , 'BRCA1' : 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA' }
 >>>
@@ -2304,13 +2304,13 @@ Other assignment operators can also be used to change a value of a dictionary ke
 >>> print(genes)
 {'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'}
 ```
-> Here we have used the '+=' concatenation assignment operator. This is equivalent to  `genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'`.
+> Aqui, usamos o operador de atribuição de concatenação '+='. Isso é equivalente a  `genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'`.
 
-#### Accessing Each Dictionary Key/Value
+#### Acessando cada chave/valor do dicionário
 
-Since a dictionary is an iterable object, we can iterate through its contents.
+Já que um dicionário é um objeto iterável, podemos percorrer os seus conteúdos.
 
-A for loop can be used to retrieve each key of a dictionary one a time:
+Um loop for pode ser usado para recuperar cada chave de um dicionário de cada vez:
 ```python
 >>> for gene in genes:
 ...   print(gene)
@@ -2319,7 +2319,7 @@ TP53
 BRCA1
 ```
 
-Once you have the key you can retrieve the value:
+Depois de obter a chave, você pode recuperar o valor:
 ```python
 >>> for gene in genes:
 ...   seq = genes[gene]
@@ -2329,10 +2329,9 @@ TP53 GATGGGATTG
 BRCA1 GTACCTTGAT
 ```
 
-#### Building a Dictionary one Key/Value at a Time
+#### Construir um dicionário uma chave/valor de cada vez
 
-Building a dictionary one key/value at a time is akin to what we just saw when we change a key's value.
-Normally you won't do this. We'll talk about ways to build a dictionary from a file in a later lecture.
+Construir um dicionário uma chave/valor de cada vez é semelhante ao que acabamos de ver quando alteramos o valor de uma chave. Normalmente, você não fará isso. Falaremos sobre maneiras de construir um dicionário a partir de um arquivo em uma palestra posterior.
 
 ```python
 >>> genes = {}
@@ -2343,13 +2342,13 @@ Normally you won't do this. We'll talk about ways to build a dictionary from a f
 >>> print(genes)
 {'Brca1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA', 'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC'}
 ```
-> We start by creating an empty dictionary. Then we add each key/value pair using the same syntax as when we change a value.  
+> Começamos criando um dicionário vazio. Em seguida, adicionamos cada par chave/valor usando a mesma sintaxe que usamos ao alterar um valor.  
 > dict[key] = new_value  
 
 
-#### Checking That Dictionary Keys Exist
+#### Verificar se as Chaves do Dicionário Existem
 
-Python generates an error (NameError) if you try to access a key that does not exist.  
+Python gera um erro (NameError) se você tentar acessar uma chave que não existe. 
 
 ```python
 >>> print(genes['HDAC'])
@@ -2358,16 +2357,16 @@ Traceback (most recent call last):
 NameError: name 'HDAC' is not defined
 ```
 
-#### Dictionary Operators
+#### Operadores de dicionário
 
-| Operator | Description                              |
+| Operador | Descrição                             |
 | -------- | ---------------------------------------- |
-| `in`     | `key in dict` returns True if the key exists in the dictionary |
-| `not in` | `key not in dict` returns True if the key does not exist in the dictionary |
+| `in`     | `key in dict` retorna True se a chave existe no dicionário |
+| `not in` | `key not in dict` retorna True se a chave não existe no dicionário |
 
-Because Python generates a NameError if you try to use a key that doesn't exist in the dictionary, you need to check whether a key exists before trying to use it.
+Como o Python gera um NameError se você tentar usar uma chave que não existe no dicionário, é necessário verificar se uma chave existe antes de tentar usá-la.
 
-The best way to check whether a key exists is to use `in`
+A melhor maneira de verificar se uma chave existe é usando `in`.
 
 ```python
 >>> gene = 'TP53'
@@ -2384,38 +2383,37 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
 
 
-#### Building a Dictionary one Key/Value at a Time using a loop
+#### Construindo um Dicionário um Par de Chave/Valor de Cada Vez Usando um Loop
 
-Now we have all the tools to build a dictionary one key/value using a for loop. This is how you will be building dictionaries more often in real life.
+Agora temos todas as ferramentas para construir um dicionário um par de chave/valor usando um loop for. Isso é como você construirá dicionários com mais frequência na vida real.
 
-
-Here we are going to count and store nucleotide counts:  
+Aqui, vamos contar e armazenar contagens de nucleotídeos:  
 
 ```python
 #!/usr/bin/env python3
 
-# create a new empty dictionary
+# cria um dicionário vazio
 nt_count={}
 
-# loop example from loops lecture
+# exemplo de loop
 dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
 for nt in dna:
 
-  # is this nt in our dictionary?
+  # 'nt' está no dicionário?
   if nt in nt_count:
-    # if it is, lets increment our count
+    # se sim, aumentamos a contagem
     previous_count = nt_count[nt]
     new_count = previous_count + 1
     nt_count[nt] = new_count
   else:
-    # if not, lets add this nt to our dictionary and make count = 1
+    # senão, adcionamos e contamos 1
     nt_count[nt] = 1;
 
 print(nt_count)
 ```
 > {'G': 20, 'T': 21, 'A': 13, 'C': 16}
 
-What is another way we could increment our count?
+Qual outra maneira podemos contar?
 
 ```python
 nt_count={}
@@ -2429,95 +2427,94 @@ for nt in dna:
 
 print(nt_count)
 ```
-> remember that `count=count+1` is the same as `count+=1`
+> lembre-se que `count=count+1` é o mesmo que `count+=1`
 
 
 
-#### Sorting Dictionary Keys
+#### Ordenando chavesd de dicionários
 
-If you want to print the contents of a dictionary, you should sort the keys then iterate over the keys with a for loop. Why do you want to sort the keys?
+Se você deseja imprimir o conteúdo de um dicionário, deve classificar as chaves e, em seguida, iterar sobre as chaves com um loop for. Por que você gostaria de classificar as chaves?
 
 ```python
-for gene_key in sorted(genes): # python allows you to use this shortcut in a for loop
-                               # you don't have to write genes.keys() in a for loop
-                               # to iterate over the keys
+for gene_key in sorted(genes): # python permite que voce use atalhos em um "for loop"
+                               # você não precisa escrever genes.keys() em um for loop
+                               # para iterar sobre as chaves
   print(gene_key, '=>' , genes[gene_key])
 ```
-> This will print keys in the same order every time you run your script. Dictionaries are unordered, so without sorting, you'll get a different order every time you run the script, which could be confusing.
+> Isso imprimirá as chaves na mesma ordem toda vez que você executar seu script. Dicionários são desordenados, então sem ordenação, você obterá uma ordem diferente cada vez que executar o script, o que pode ser confuso.
 
+#### Função do dicionário
 
-#### Dictionary Functions
-
-| Function         | Description                              |
+| Função           | Descrição                              |
 | ---------------- | ---------------------------------------- |
-| `len(dict)`      | returns the total number of key/value pairs |
-| `str(dict)`      | returns a string representation of the dictionary |
-| `type(variable)` | Returns the type or class of the variable passed to the function. If the variable is dictionary, then it would return a dictionary type. |
+| `len(dict)`      | retorna o número total de pares chave/valor |
+| `str(dict)`      | retorna uma representação em string do dicionário |
+| `type(variable)` | Retorna o tipo ou classe da variável passada para a função. Se a variável for um dicionário, ela retornará o tipo "dicionário". |
 
-These functions work on several other data types too!
+Essas funções também funcionam com vários outros tipos de dados!
 
-#### Dictionary Methods
+#### Métodos de dicionário
 
-| Method                                 | Description                              |
+| Métodos                                | Descrição                                |
 | -------------------------------------- | ---------------------------------------- |
-| `dict.clear()`                         | Removes all elements of dictionary dict  |
-| `dict.copy()`                          | Returns a shallow copy of dictionary dict. [Shallow vs. deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) copying only matters in multidimensional data structures. |
-| `dict.fromkeys(seq,value)`             | Create a new dictionary with keys from seq (Python sequence type) and values set to value. |
-| `dict.items()`                         | Returns a list of (key, value) tuple pairs |
-| `dict.pop(key)`                        | Removes the key:value pair and returns the value |
-| `dict.keys()`                          | Returns list of keys                     |
-| `dict.get(key, default = None)`        | get value from dict[key], use default if not present |
-| `dict.setdefault(key, default = None)` | Similar to get(), but will set dict[key] = default if key is not already in dict |
-| `dict.update(dict2)`                   | Adds dictionary dict2's key-values pairs to dict |
-| `dict.values()`                        | Returns list of dictionary dict's values |
+| `dict.clear()`                         | Remove todos os elementos do dicionário `dict`.  |
+| `dict.copy()`                          | Retorna uma cópia rasa (shallow copy) do dicionário. [Shallow vs. deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) A cópia só é relevante em estruturas de dados multidimensionais. |
+| `dict.fromkeys(seq,value)`             | Crie um novo dicionário com chaves de seq (tipo de sequência Python) e valores definidos como valor. |
+| `dict.items()`                         | Retorna uma lista de tuplas (chave, valor). |
+| `dict.pop(key)`                        | Remove o par chave: valor e retorna o valor. |
+| `dict.keys()`                          | Retorna uma lista de chaves                     |
+| `dict.get(key, default = None)`        | Obtenha o valor de dict[key], use o padrão se não estiver presente. |
+| `dict.setdefault(key, default = None)` | Semelhante a get(), mas definirá dict[key] = default se a chave ainda não estiver em dict. |
+| `dict.update(dict2)`                   | Adiciona os pares chave-valor do dicionário dict2 ao dicionário dict. |
+| `dict.values()`                        | Retorna uma lista dos valores do dicionário `dict`. |
 
 
-### Sets
+### Conjuntos
 
 
-A set is another Python data type. It is essentially a dictionary with keys but no values.
+Um conjunto é outro tipo de dado em Python. Essencialmente, é um dicionário com chaves, mas sem valores.
 
-- A set is unordered 
-- A set is a collection of data with no duplicate elements. 
-- Common uses include looking for differences and eliminating duplicates in data sets. 
+- Um conjunto é não ordenado.
+- Um conjunto é uma coleção de dados sem elementos duplicados.
+- Usos comuns incluem buscar diferenças e eliminar duplicatas em conjuntos de dados.
 
-Curly braces `{}` or the `set()` function can be used to create sets. 
+Chaves `{}` ou a função `set()` podem ser usadas para criar conjuntos.
 
-> Note: to create an empty set you have to use `set()`, not `{}` the latter creates an empty dictionary.
+> Observação: para criar um conjunto vazio, você precisa usar `set()`, não `{}`, este último cria um dicionário vazio.
 
 ```python
 >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
 >>> print(basket)                     
 {'orange', 'banana', 'pear', 'apple'}
 ```
-> Look, duplicates have been removed
+> Veja, os duplicados foram removidos.
 
-Test to see if an value is in the set
+Testar se um valor está no conjunto.
 ```python
 >>> 'orange' in basket                 
 True
 >>> 'crabgrass' in basket
 False
 ```
-> The in operator works the same with sets as it does with lists and dictionaries
+> O operador `in` funciona da mesma forma com conjuntos como funciona com listas e dicionários.
 
 
-Union, intersection, difference and symmetric difference can be done with sets
+União, interseção, diferença e diferença simétrica podem ser feitas com conjuntos.
 ```python
 >>> a = set('abracadabra')
 >>> b = set('alacazam')
 >>> a                                 
 {'a', 'r', 'b', 'c', 'd'}
 ```
-> Sets contain unique elements, therefore, even if duplicate elements are provided they will be removed.
+> Conjuntos contêm elementos únicos; portanto, mesmo que elementos duplicados sejam fornecidos, eles serão removidos..
 
-#### Set Operators
+#### Conjunto de Operadores
 
-**Difference**
+**Diferença**
 
-The difference between two sets are the elements that are unique to the set to the left of the `-` operator, with duplicates removed.
+A diferença entre dois conjuntos são os elementos que são exclusivos do conjunto à esquerda do operador `-`, com duplicatas removidas..
 
-![Set Difference](images/set_difference.png)
+![Diferença de Conjunto](images/set_difference.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -2525,13 +2522,13 @@ The difference between two sets are the elements that are unique to the set to t
 >>> a - b                             
 {'r', 'd', 'b'}
 ```
-> This results the letters that are in a but not in b
+> Isso resulta nas letras que estão em "a", mas não em "b".
 
-**Union**
+**União**
 
-The union between two sets is a sequence of the all the elements of the first and second sets combined, with duplicates removed.
+A união entre dois conjuntos é uma sequência de todos os elementos dos conjuntos primeiro e segundo combinados, com duplicatas removidas.
 
-![Set Union](images/set_union.png)
+![União de Conjunto](images/set_union.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -2539,13 +2536,13 @@ The union between two sets is a sequence of the all the elements of the first an
 >>> a | b                          
 {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
 ```
-> This returns letters that are in a or b both
+> Isso retorna as letras que estão em ambos os conjuntos a e b.
 
-**Intersection**
+**Interseção**
 
-The intersection between two sets is a sequence of the elements which are in both sets, with duplicates removed.
+A interseção entre dois conjuntos é uma sequência dos elementos que estão em ambos os conjuntos, com duplicatas removidas.
 
-![Set Intersection](images/set_intersection.png)
+![Interseção do Conjunto](images/set_intersection.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -2553,14 +2550,14 @@ The intersection between two sets is a sequence of the elements which are in bot
 >>> a & b                            
 {'a', 'c'}
 ```
-> This returns letters that are in both a and b
+> Isso retorna as letras que estão em ambos os conjuntos `a` e `b`.
 
 
-**Symmetric Difference**
+**Diferença simétrica**
 
-The symmetric difference is the elements that are only in the first set plus the elements that are only in the second set, with duplicates removed.
+A diferença simétrica é composta pelos elementos que estão apenas no primeiro conjunto, mais os elementos que estão apenas no segundo conjunto, com duplicatas removidas.
 
-![Set Symmetric Difference](images/set_symmetric_difference.png)
+![Diferença simétrica de conjunto](images/set_symmetric_difference.png)
 
 ```python
 >>> a = set('abracadabra')
@@ -2568,75 +2565,75 @@ The symmetric difference is the elements that are only in the first set plus the
 >>> a ^ b                             
 {'r', 'd', 'b', 'm', 'z', 'l'}
 ```
-> This returns the letters that are in a or b but not in both (also known as exclusive or)
+> Isso retorna as letras que estão em `a` ou `b`, mas não em ambos (também conhecido como ou exclusivo).
 
-#### Set Functions
+#### Funções de Conjunto
 
-| Function      | Description                              |
+| Funções       | Descrição                              |
 | ------------- | ---------------------------------------- |
-| `all()`       | returns True if all elements of the set are true (or if the set is empty). |
-| `any()`       | returns True if any element of the set is true. If the set is empty, return False. |
-| `enumerate()` | returns an enumerate object. It contains the index and value of all the items of set as a pair. |
-| `len()`       | returns the number of items in the set.  |
-| `max()`       | returns the largest item in the set.     |
-| `min()`       | returns the smallest item in the set.    |
-| `sorted()`    | returns a new sorted list from elements in the set (does not alter the original set). |
-| `sum()`       | returns the sum of all elements in the set. |
+| `all()`       | retorna `True` se todos os elementos do conjunto forem `True` (ou se o conjunto estiver vazio). |
+| `any()`       | retorna `True` se algum elemento do conjunto for `True`. Se o conjunto estiver vazio, retorna `False`. |
+| `enumerate()` | retorna um objeto `enumerate`. Ele contém o índice e o valor de todos os itens do conjunto como um par. |
+| `len()`       | retorna o número de itens no conjunto.  |
+| `max()`       | retorna o maior item no conjunto.     |
+| `min()`       | retorna o menor item no conjunto.    |
+| `sorted()`    | retorna uma nova lista ordenada a partir dos elementos no conjunto (não altera o conjunto original). |
+| `sum()`       | retorna a soma de todos os elementos no conjunto. |
 
 
 
-#### Set Methods
+#### Métodos de conjunto
 
-| Method                                  | Description                              |
+| Métodos                                 | Descrição                              |
 | --------------------------------------- | ---------------------------------------- |
-| `set.add(new)`                          | adds a new element                       |
-| `set.clear()`                           | remove all elements                      |
-| `set.copy()`                            | returns a shallow copy of a set          |
-| `set.difference(set2)`                  | returns the difference of set and set2   |
-| `set.difference_update(set2)`           | removes all elements of another set from this set |
-| `set.discard(element)`                  | removes an element from set if it is found in set. (Do nothing if the element is not in set) |
-| `set.intersection(sets)`                | return the intersection of set and the other provided sets |
-| `set.intersection_update(sets)`         | updates set with the intersection of set and the other provided sets |
-| `set.isdisjoint(set2)`                  | returns True if set and set2 have no intersection |
-| `set.issubset(set2)`                    | returns True if set2 contains set        |
-| `set.issuperset(set2)`                  | returns True if set contains set2        |
-| `set.pop()`                             | removes and returns an arbitrary element of set. |
-| `set.remove(element)`                   | removes element from a set.              |
-| `set.symmetric_difference(set2)`        | returns the symmetric difference of set and set2 |
-| `set.symmetric_difference_update(set2)` | updates set with the symmetric difference of set and set2 |
-| `set.union(sets)`                       | returns the union of set and the other provided sets |
-| `set.update(set2)`                      | update set with the union of set and set2 |
+| `set.add(new)`                          | adiciona novos elementos                       |
+| `set.clear()`                           | remove todos elementos                 |
+| `set.copy()`                            | retorna uma cópia rasa de um conjunto          |
+| `set.difference(set2)`                  | retorna a diferença entre o conjunto e o conjunto2   |
+| `set.difference_update(set2)`           | remove todos os elementos de outro conjunto deste conjunto |
+| `set.discard(element)`                  | remove um elemento do conjunto se ele for encontrado no conjunto. (Não faz nada se o elemento não estiver no conjunto) |
+| `set.intersection(sets)`                | retorna a interseção do conjunto com outros conjuntos fornecidos |
+| `set.intersection_update(sets)`         | atualiza o conjunto com a interseção do conjunto e os outros conjuntos fornecidos. |
+| `set.isdisjoint(set2)`                  | retorna Verdadeiro se o set e o set2 não têm interseção. |
+| `set.issubset(set2)`                    | retorna Verdadeiro se o set2 contém o conjunto.        |
+| `set.issuperset(set2)`                  | retorna Verdadeiro se o set contém o set2.       |
+| `set.pop()`                             | remove e retorna um elemento arbitrário do conjunto. |
+| `set.remove(element)`                   | remove um elemento de um conjunto.              |
+| `set.symmetric_difference(set2)`        | retorna a diferença simétrica entre o conjunto e o conjunto2. |
+| `set.symmetric_difference_update(set2)` | atualiza o conjunto com a diferença simétrica entre o conjunto e o conjunto2 |
+| `set.union(sets)`                       | retorna a união do conjunto e dos outros conjuntos fornecidos. |
+| `set.update(set2)`                      | atualiza o conjunto com a união do conjunto e o conjunto2. |
 
 
 
 
 
-#### Build a dictionary of NT counts using a set and loops
+#### Construa um dicionário de contagens de NT usando um conjunto e loops.
 
-Let us put a twist on our nt count script. Let's use a set to find all the unique nts, then use the string `count()` method to count the nucleotide instead if incrementing the count as we did earlier.
+Vamos dar uma reviravolta no nosso script de contagem de NT. Vamos usar um conjunto para encontrar todos os NTs únicos e, em seguida, usar o método `count()` da string para contar o nucleotídeo, em vez de incrementar a contagem como fizemos anteriormente.
 
-Code:  
+Código:  
 
 
 ```python
 #!/usr/bin/env python3
 
-# create a new empty dictionary
+# crie um novo dicionário
 nt_count = {}
 
-# get a set of unique characters in our DNA string
+# obtenha um conjunto de caracteres únicos em nossa sequência de DNA.
 
 dna = 'GTACCNTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
 unique = set(dna)
 
 print('unique nt: ', unique) ## {'C', 'A', 'G', 'T', 'N'}
 
-# iterate through each unique nucleotide
+# Itere através de cada nucleotídeo único.
 for nt in unique:
-  # count the number of this unique nt in dna
+  # Conte o número deste nucleotídeo único no DNA.
   count = dna.count(nt)
 
-  # add our count to our dict
+  # Adicione nossa contagem ao nosso dicionário.
   nt_count[nt] = count
 
 
@@ -2653,12 +2650,11 @@ unique nt:  {'N', 'C', 'T', 'G', 'A'}
 nt count: {'G': 20, 'T': 21, 'A': 13, 'C': 16, 'N': 1}
 
 ```
-> We have the count for all NTs even ones we might not expect.
+> Temos a contagem para todos os NTs, até mesmo aqueles que talvez não esperássemos.
 
 ---
 
-### [Link to Python 5 Problem Set](problemsets/Python_05_problemset.md)
-
+### [Link para o Python 5 Problem Set](problemsets/Python_05_problemset.md)
 
 
 ---

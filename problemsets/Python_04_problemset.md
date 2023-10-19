@@ -1,75 +1,74 @@
-Python 4 Problem Set -- Lists and Loops
+Python 4 Problem Set -- Listas e Loops
 ===================
 
-1. For the next series of tasks about lists use the interpreter:  
-	a.  Create a list of 5 of your favorite things.  
-	b.  Use the `print()` function to print your list.  
-	c.  Use the `print()` function to print out the middle element.  
-	d.  Now replace the middle element with a different item, your favorite song, or song bird.  
-	e.  Use the same print statement from b. to print your new list. Check out the differences.   
-	f.  Add a new element to the end. [Read about append()](https://www.tutorialspoint.com/python/list_append.htm).  
-	g.  Add a new element to the beginning. [Read about insert()](https://www.tutorialspoint.com/python/list_insert.htm).  
-        h.  Add a new element somewhere other than the beginning or the end.  
-        i.  Remove an element from the end. [Read about pop()](https://www.tutorialspoint.com/python/list_pop.htm).  
-        j.  Remove an element from the beginning.  
-        k.  Remove an element from somewhere other than the beginning or the end.  
-	l.  Use `join` to create a string. Join the elements on ', ' 
+1. Para as próximas tarefas sobre listas, utilize o interpretador:
+	a.  Crie uma lista com 5 coisas que você gosta.
+	b.  Utilize a função `print()` para imprimir sua lista.
+	c.  Utilize a função `print()` para imprimir o elemento do meio.
+	d.  Agora, substitua o elemento do meio por outro item, como sua música favorita ou um pássaro cantor.
+	e.  Utilize a mesma instrução de impressão de b. para imprimir sua nova lista. Verifique as diferenças.   
+	f.  Adicione um novo elemento no final. [Leia sobre append()](https://www.tutorialspoint.com/python/list_append.htm).  
+	g.  Adicione um novo elemento no começo. [Leia sobre insert()](https://www.tutorialspoint.com/python/list_insert.htm).  
+	h.  Adicione um novo elemento em algum lugar que não seja no início ou no final.
+        i.  Remova um elemento do final. [Leia sobre pop()](https://www.tutorialspoint.com/python/list_pop.htm).  
+        j.  Remova um elemento do começo.  
+	k.  Remova um elemento de algum lugar que não seja no início ou no final. 
+	l.  Use join para criar uma string. Junte os elementos com ', '. 
 	
-2. Write a script that splits a string into a list. In your script: 
-	- Save the string `sapiens, erectus, neanderthalensis` as a variable named `taxa`.
+2. Escreva um script que divida uma string em uma lista. No seu script:
+	- Salve a string `sapiens, erectus, neanderthalensis` como uma variável chamada `taxa`.
 	- Print `taxa`.
-	- Print `taxa[1]`, what do you get?
-	- Print `type(taxa)`. What is it's type?
-	- Split `taxa` into individual words and print the result of the split. (Think about the ', '.)
-	- Store the result of `split` in a new variable named `species`.
+	- Print `taxa[1]`, o que você obtém?
+	- Print `type(taxa)`. Qual é o tipo?
+	- Divida `taxa` em palavras individuais e print o resultado da divisão. (Pense em ', '.)
+	- Armazene o resultado do `split` em uma nova variável chamada `species`.
 	- Print `species`.
-	- Print the `species[1]`, What do you get?
-	- Print `type(species)`. What is it's type?
-	- Sort the list alphabetically and print (hint: lookup the function `sorted()`). 
-	- Sort the list by length of each string and print. (The shortest string should be first). [Check out documentation of the key argument](https://www.programiz.com/python-programming/methods/built-in/sorted).
+	- Print the `species[1]`, o que você obtém?
+	- Print `type(species)`. Qual é o tipo?
+	- Ordene a lista em ordem alfabética e print (dica: pesquise a função `sorted()`). 
+	- Ordene a lista pelo comprimento de cada string e print. (A string mais curta deve vir primeiro). [Confira a documentação do argumento key](https://www.programiz.com/python-programming/methods/built-in/sorted).
 
-3. Using the Python interpreter, interrogate the difference between these two ways to copy a list. Careful! One of these is NOT what you might expect. 
-   - Method 1
-     - Create a list. For example: `my_list = ['a', 'bb', 'ccc']`
-     - Make a copy using the `=` assignment operator:  `list_copy = my_list`
-     - Print the original list `print(my_list)`
-     - Alter the `list_copy` by adding a new element using `append()`
-     - Print the original list again `print(my_list)`
-   - Method 2  
-     - Create a list. For example: `my_list2 = ['a', 'bb', 'ccc']`  
-     - Make a copy with the copy() method `list_copy2 = my_list2.copy()`  
-     - Print the original list `print(my_list2)`
-     - Alter the `list_copy2` by adding a new element using `append()`   
-     - Print the original list again `print(my_list2)`   
+3. Usando o interpretador Python, investigue a diferença entre essas duas maneiras de copiar uma lista. Cuidado! Uma delas pode NÃO ser o que você espera. 
+   - Método 1:
+     - Crie uma lista. Exemplo: `my_list = ['a', 'bb', 'ccc']`
+     - Faça uma cópia usando o operador de atribuição `=`:  `list_copy = my_list`
+     - Print a lista original `print(my_list)`
+     - Altere a `list_copy` adicionando um novo elemento usando `append()`
+     - print a lista original novamente `print(my_list)`
+   - Método 2:  
+     - Crie uma lista. Exemplo: `my_list2 = ['a', 'bb', 'ccc']`  
+     - Faça uma cópia com o método `copy()`: `list_copy2 = my_list2.copy()`  
+     - Print a lista original `print(my_list2)`
+     - Altere a `list_copy2` adicionando um novo elemento usando `append()`   
+     - print a lista original novamente `print(my_list2)`   
 
-4. Write a script that uses a `while` loop to print out the numbers 1 to 100.
+4. Escreva um script que use um loop `while` para imprimir os números de 1 a 100.
 
-5. Write a script that uses a `while` loop to calculate the [factorial](https://en.wikipedia.org/wiki/Factorial) of 1000. 
+5. Escreva um script que use um loop while para calcular o [fatorial](https://en.wikipedia.org/wiki/Factorial) de 1000. 
 
-6. Iterate through each element of this list using a `for` loop: [101,2,15,22,95,33,2,27,72,15,52]
-   - Print out only the values that are even (hint: use the modulus operator).
-   
-7. Sort the elements of the above list, then iterate through each element using a `for` loop and:
-   - Print each element.
-   - Calculate two cumulative sums, one of all the even values and one of all the odd values. 
-   - Print only the final two sums. The output from your script should be:
+6. Itere por cada elemento desta lista usando um loop `for`: [101,2,15,22,95,33,2,27,72,15,52]
+	- print apenas os valores que são pares (dica: use o operador módulo).   
+7. Ordene os elementos da lista acima e, em seguida, itere por cada elemento usando um loop `for` e:
+   - print cada elemento.
+   - Calcule duas somas acumulativas, uma de todos os valores pares e outra de todos os valores ímpares.
+   - print apenas as duas somas finais. A saída do seu script deve ser:
    
    ```
-   Sum of even numbers: 150 
-   Sum of odds: 286
+   Soma dos números pares: 150 
+   Soma dos números ímpares: 286
    ```
    
-8. Write a script that uses `range()` in a `for` loop to print out every number between 0 and 99  
-      - Modify your loop to print out every number between 1 and 100.
+8. Escreva um script que use `range()` em um loop `for` para imprimir todos os números de 0 a 99. 
+      - Modifique seu loop para imprimir todos os números de 1 a 100.
       
-9. Create a new script that uses list comprehension to do the same thing as problem 8. (Use `range()` to print out every number between 1 and 100.)
+9. Crie um novo script que use a compreensão de lista para fazer o mesmo que o problema 8. (Use `range()` para imprimir todos os números de 1 a 100.)
 
-10. Write a new script that takes the start and end values from the command line. If you call your script like this `count.py 3 10` it will print the numbers from 3 to 10.
-      - Modify your script so that it will only print the number if it is odd.
+10. Escreva um novo script que receba os valores de início e fim pela linha de comando. Se você chamar seu script assim `count.py 3 10`, ele imprimirá os números de 3 a 10.
+      - Modifique seu script para imprimir apenas o número se ele for ímpar.
       
-11. Write a new script to create a list with the following data  `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use a `for` loop to iterate through each element of this list and:
-   - Print out each element.
-   - Print out the length and the sequence, separated by a tab. The output should look like:
+11. Escreva um novo script para criar uma lista com os seguintes dados `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use um loop `for` para iterar por cada elemento desta lista e:
+   - Print cada elemento.
+   - Print o comprimento e a sequência, separados por uma guia. A saída deve se parecer com:
    
    ```
    14	ATGCCCGGCCCGGC
@@ -78,39 +77,39 @@ Python 4 Problem Set -- Lists and Loops
    8	ATGGGCCC
    ```
    
-12. Use list comprehension to generate a list of tuples. The tuples should contain sequences and lengths from the previous problem. Print out the length and the sequence (i.e., "4\\tATGC\\n").  A list of tuples looks like this [(4,'ATGC'),(2,'GC')].
+12. Use a compreensão de lista para gerar uma lista de tuplas. As tuplas devem conter sequências e comprimentos do problema anterior. Print o comprimento e a sequência (ou seja, "4\tATGC\n"). Uma lista de tuplas se parece com isso [(4,'ATGC'),(2,'GC')].
 
-13. Modify the script from #11 so that you also print out the number (postion in the list) of each sequence (i.e., "1\\t4\\tACGT\\n")
+13. Modifique o script do #11 para que você também imprima o número (posição na lista) de cada sequência (ou seja, "1\t4\tACGT\n").
 
-14. Have you been commiting you work?
+14. Você tem commitado seu trabalho?
 
-## Fun challenge problems! These are real scripts you might use in real life. You have already learned all you need to know to do each. If you don't have enough time in this session to complete, come back and try later.
+## Problemas desafiadores e divertidos! Estes são scripts reais que você pode usar na vida real. Você já aprendeu tudo o que precisa para fazer cada um deles. Se você não tiver tempo suficiente nesta sessão para completar, volte e tente mais tarde.
 
-1. Create a shuffled sequence ([Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
-    - Use a `for` loop to perform the following procedure N times (N = length of seq)
-    - Select a random position A with `randrange()`
-    - Select a random position B with `randrange()`
-    - Exchange the letters at list indices A and B
-    - Print the final shuffled sequence
-    - Remember to test your code with test data. 
+1. Criar uma sequência embaralhada ([Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle))
+    - Use um loop `for` para realizar o seguinte procedimento N vezes (N = comprimento da sequência)
+    - Selecione uma posição aleatória A com `randrange()`
+    - Selecione uma posição aleatória B com `randrange()`
+    - Troque as letras nos índices da lista A e B
+    - Print a sequência final embaralhada
+    - Lembre-se de testar seu código com dados de teste.
 
-2. Calculate sequence identity: Start with 2 very similar DNA sequences. Use your favorites or use [Python_04.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_04.fasta)
-    - Align with ClustalW, TCoffee, or some other web alignment application. 
-    - Output should be in FASTA format.
-    - Store (copy and paste) each aligned sequence, including dashes, as two separate string variables. 
-    - Get rid of newlines (if any). Newline characters are not part of sequence!
-    - Use a `for` loop with `range()` to compare each index for nucleotide differences.
-    - Report percent identity of the two sequences.
+2. Calcular identidade de sequência: Comece com 2 sequências de DNA muito semelhantes. Use as suas favoritas ou use [Python_04.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_04.fasta)
+    - Alinhe com ClustalW, TCoffee, ou alguma outra aplicação web de alinhamento.
+    - A saída deve estar no formato FASTA.
+    - Armazene (copie e cole) cada sequência alinhada, incluindo traços, como duas variáveis de string separadas.
+    -Remova as quebras de linha (se houver). Caracteres de nova linha não fazem parte da sequência!
+    - Use um loop `for` com `range()` para comparar cada índice para diferenças de nucleotídeos.
+    - Relate a identidade percentual das duas sequências.
 
-3. A new Restriction Fragments script:
-   - Find [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) in this DNA sequence
+3. Um novo script de Fragmentos de Restrição:
+   - Encontre [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) nesta sequência de DNA
 ```
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATTCGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGACAGAAACACTTTTCGTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATTCGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGAC
 ```
-   - replace the EcoRI site 'GAATTC' with this 'G^AATTC'
-   - split the new formatted sequence on the cut sites, store the resulting fragments in a list
-   - iterate over each fragment and report
-      - the start position in the original sequence
-      - the end postion in the orginal sequence
-      - the length of each fragemnt
-   - sort the fragments by length and print out as they would appear on a agrose gel. (big to little)
+   - substitua o site EcoRI 'GAATTC' por 'G^AATTC'
+   - divida a nova sequência formatada nos locais de corte, armazene os fragmentos resultantes em uma lista
+   - itere sobre cada fragmento e relate
+	- a posição de início na sequência original
+	- a posição final na sequência original
+	- o comprimento de cada fragmento
+   - ordene os fragmentos por comprimento e imprima como apareceriam em um gel de agarose. (do maior para o menor)
