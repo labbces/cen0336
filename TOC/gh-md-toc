@@ -149,7 +149,8 @@ gh_toc_grab2() {
 	sed 's/<\/span>//' | 
 	sed 's/<strong>//'|
 	sed 's/<\/strong>//'| 
-	perl -e 'while(<>){if(/<h([0-9]+)><a href="(#[a-zZ-Z0-9-]*)"><\/a>(<a href="problemsets\/.*">.*<\/a>)<\/h/){print " "  x $1; print "* [$3]($2)\n" } else{if(/<h([0-9]+)><a href="(#[a-zZ-Z-0-9]*)">(.*)<\/a><\/h/){ $newline="   "  x $1; $newline.= "* [$3]($2)\n"; print $newline; }}}'
+#	perl -e 'while(<>){if(/<h([0-9]+)><a href="(#[a-zA-Z0-9-]*)"><\/a>(<a href="problemsets\/.*">.*<\/a>)<\/h/){print " "  x $1; print "* [$3]($2)\n" } else{if(/<h([0-9]+)><a href="(#[a-zA-Z0-9-]*)">(.*)<\/a><\/h/){ $newline="   "  x $1; $newline.= "* [$3]($2)\n"; print $newline; }}}'
+	perl -e 'while(<>){if(/<h([0-9]+)><a href="(#[a-zA-Z0-9-]*)"><\/a>(<a href="problemsets\/.*">.*<\/a>)<\/h/){print " "  x $1; print "* [$3]($2)\n" } else{if(/<h([0-9]+)><a href="(#.*)">(.*)<\/a><\/h/){ $newline="   "  x $1; $newline.= "* [$3]($2)\n"; print $newline; }}}'
 }
 
 gh_toc_get_filename() {
