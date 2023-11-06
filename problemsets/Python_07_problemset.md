@@ -1,18 +1,18 @@
-Python 7 - Regular Expressions - Problem Set
+Python 7 - Expressões Regulares - Conjunto de Problemas
 ===================
 
-1. In the file [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_nobody.txt) find every occurrence of 'Nobody' and print out the position.
+1. No arquivo [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_nobody.txt), encontre todas as ocorrências de 'Nobody' e imprima a posição.
 
-2. In the file [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_nobody.txt) substitute every occurrence of 'Nobody' with your favorite name and write an output file with that person's name (ex. Michael.txt).
+2. No arquivo [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_nobody.txt), substitua todas as ocorrências de 'Nobody' pelo seu nome favorito e escreva um arquivo de saída com o nome dessa pessoa (ex. Michael.txt).
 
-3. Using pattern matching, find all the header lines in [Python_07.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07.fasta). Note that the format for a header in a fasta file is a line that starts with a greater than symbol and is followed by some text (e.g. `>seqName description` where seqName is the sequence name or identifier. The identifier cannot have spaces in it. The description that follows it can have spaces.)
+3. Usando correspondência de padrões, encontre todas as linhas de cabeçalho em [Python_07.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07.fasta). Observe que o formato de um cabeçalho em um arquivo FASTA é uma linha que começa com um símbolo maior que e é seguido por algum texto (por exemplo, `>seqName descrição`, onde seqName é o nome ou identificador da sequência. O identificador não pode ter espaços nele. A descrição que o segue pode ter espaços.)
 
-4. If a line matches the format of a FASTA header, extract the sequence name and description using sub patterns (groups). 
-	- Print lines something like this `id:"extracted seq name" desc:"extracted description"`
+4. Se uma linha corresponder ao formato de um cabeçalho FASTA, extraia o nome da sequência e a descrição usando subpadrões (grupos).
+   - Imprima linhas parecidas com esta `id:"nome da sequência extraído" desc:"descrição extraída"`
 
-5. Create a FASTA parser, or modify your FASTA parser from the previous problem set, to use regular expressions. Also make sure your parser can deal with a sequence that is split over many lines.
+5. Crie um analisador de FASTA ou modifique seu analisador de FASTA do conjunto de problemas anterior para usar expressões regulares. Certifique-se também de que seu analisador possa lidar com uma sequência que está dividida em várias linhas.
 
-6. The enzyme ApoI has a restriction site: R^AATTY where R and Y are degenerate nucleotideides. See the IUPAC table to identify the nucleotide possibilities for the R and Y. Write a regular expression to find and print all occurrences of the site in the following sequence [Python_07_ApoI.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_ApoI.fasta). 
+6. A enzima ApoI possui um local de restrição: R^AATTY onde R e Y são nucleotídeos degenerados. Consulte a tabela IUPAC para identificar as possibilidades de nucleotídeos para R e Y. Escreva uma expressão regular para encontrar e imprimir todas as ocorrências do local na seguinte sequência [Python_07_ApoI.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_ApoI.fasta).
 
 ```
 >seq1
@@ -34,41 +34,41 @@ ACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
 ```
 
 
-7. Determine the site(s) of the physical cut(s) by ApoI in the above sequence. Print out the sequence with "^" at the cut site.
+7. Determine o(s) local(is) de corte físico(s) pelo ApoI na sequência acima. Imprima a sequência com "^" no local de corte.
 
-  Hints:  
-   - Use `sub()`  
-   - Use subpatterns (parentheses and `group()` ) to find the cut site within the pattern.
-   - Example: if the pattern is GACGT^CT the following sequence
+   Dicas:  
+   - Use `sub()`
+   - Use subpadrões (parênteses e `group()`) para encontrar o local de corte dentro do padrão.
+   - Exemplo: se o padrão for GACGT^CT a sequência a seguir
 
 ```
 AAAAAAAAGACGTCTTTTTTTAAAAAAAAGACGTCTTTTTTT
 ```
-we want to display the cut site like this:
+   queremos exibir o local de corte assim:
 
 ```
 AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
 ```
 
-8. Now that you've done your restriction digest, determine the lengths of your fragments and sort them by length (in the same order they would separate on an electrophoresis gel).
+8. Agora que você fez sua digestão de restrição, determine os comprimentos de seus fragmentos e os ordene por comprimento (na mesma ordem em que seriam separados em um gel de eletroforese).
 
-Hint: Convert this string:
+   Dica: Converta esta string:
 
 ```
 AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
 ```
 
-Into this list:
+   Para esta lista:
 
 ```
 ["AAAAAAAAGACGT","CTTTTTTTAAAAAAAAGACGT","CTTTTTTT"]
 ```
 
-9. Download this file: ftp://ftp.neb.com/pub/rebase/bionet.txt of enzymes and their cut sites to fill a dictionary of enzymes paired with their recognition patterns. Skip the top 10 header lines and be aware of how the columns are delimited. You'll modify this script in the next question.
+9. Baixe este arquivo: ftp://ftp.neb.com/pub/rebase/bionet.txt de enzimas e seus locais de corte para preencher um dicionário de enzimas associadas a seus padrões de reconhecimento. Pule as 10 primeiras linhas de cabeçalho e esteja ciente de como as colunas estão delimitadas. Você vai modificar este script na próxima pergunta.
 
-10. Write a script which takes two command line arguments: the name of an enzyme and a fasta file with a sequence to be cut. Load a dictionary of enzyme names and cut sites from the code you developed in question 9.
-   If the enzyme is present in the dictionary, and can cut the sequence, print out:
-     - the sequence, annotated with cut sites
-     - the number of fragments
-     - the fragments in their natural order (unsorted)
-     - the fragments in sorted order (largest to smallest)
+10. Escreva um script que receba dois argumentos da linha de comando: o nome de uma enzima e um arquivo fasta com uma sequência a ser cortada. Carregue um dicionário de nomes de enzimas e locais de corte do código que você desenvolveu na pergunta 9.
+    Se a enzima estiver presente no dicionário e puder cortar a sequência, imprima:
+      - a sequência, anotada com os locais de corte
+      - o número de fragmentos
+      - os fragmentos em sua ordem natural (não ordenada)
+      - os fragmentos em ordem ordenada (do maior para o menor)
