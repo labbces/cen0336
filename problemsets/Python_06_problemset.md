@@ -1,34 +1,34 @@
-Python 6 - IO - Problem Set
+Python 6 - IO - Conjunto de Problemas
 ===================
 
-1. Write a script to do the following to [Python_06.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.txt)
-   - Open and read the contents.  
-   - Uppercase each line
-   - Print each line to the STDOUT
+1. Escreva um script para fazer o seguinte com [Python_06.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.txt)
+   - Abrir e ler o conteúdo.  
+   - Converter para maiúsculas cada linha
+   - Imprimir cada linha no STDOUT
 
 
-2. Modifiy the script in the previous problem to write the contents to a new file called "Python_06_uc.txt"
+2. Modifique o script do problema anterior para escrever o conteúdo em um novo arquivo chamado "Python_06_uc.txt"
 
 
-3. Open and print the reverse complement of each sequence in [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt). Each line is the following format:    `seqName\tsequence\n.` Make sure to print the output in fasta format including the sequence name and a note in the description that this is the reverse complement. Print to STDOUT and capture the output into a file with a command line redirect '>'. 
-   - **Remember is is always a good idea to start with a test set for which you know the correct output.**
+3. Abra e imprima o complemento reverso de cada sequência em [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt). Cada linha está no seguinte formato:    `seqName\tsequence\n`. Certifique-se de imprimir a saída no formato fasta, incluindo o nome da sequência e uma observação na descrição de que este é o complemento reverso. Imprima no STDOUT e capture a saída em um arquivo com redirecionamento de linha de comando '>'. 
+   - **Lembre-se de que é sempre uma boa ideia começar com um conjunto de teste para o qual você conhece a saída correta.**
 
-4. Open the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) file [Python_06.fastq](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.fastq) and go through each line of the file. Count the number of lines and the number of characters per line. Have your program report the:  
-    - total number of lines  
-    - total number of characters  
-    - average line length   
+4. Abra o arquivo [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) [Python_06.fastq](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.fastq) e percorra cada linha do arquivo. Conte o número de linhas e o número de caracteres por linha. Faça com que seu programa relate o:  
+    - número total de linhas  
+    - número total de caracteres  
+    - comprimento médio da linha     
 
-5. Write your first FASTA parser. This is a script that reads in a FASTA file and stores each FASTA record separately for easy access for future analysis.
+5. Escreva o seu primeiro parser FASTA. Este é um script que lê um arquivo FASTA e armazena cada registro FASTA separadamente para fácil acesso para análises futuras.
 
-Things to keep in mind:
-   - open your file
-   - read each line
-   - is your line a header line? is it a sequence line?
-   - does a single FASTA record have one line of sequence or multiple lines of sequence?
+Coisas a serem lembradas:
+   - abra seu arquivo
+   - leia cada linha
+   - sua linha é uma linha de cabeçalho? é uma linha de sequência?
+   - um único registro FASTA tem uma linha de sequência ou várias linhas de sequência?
    
-   HINTS: use file I/O, if statements and dictionaries to write your first FASTA parser. Some other useful functions and methods are find, split, string concatenation.
+   DICAS: use I/O de arquivo, instruções if e dicionários para escrever o seu primeiro parser FASTA. Algumas outras funções e métodos úteis são find, split e concatenação de string.
    
-   At the end, your script should return the following:
+   No final, seu script deve retornar o seguinte:
    
    fastaDict = {
       'seq1' : 'AAGAGCAGCTCGCGCTAATGTGATAGATGGCGGTAAAGTAAATGTCCTATGGGCCACCAATTATGGTGTATGAGTGAATCTCTGGTCCGAGATTCACTGAGTAACTGCTGTACACAGTAGTAACACGTGGAGATCCCATAAGCTTCACGTGTGGTCCAATAAAACACTCCGTTGGTCAAC' ,
@@ -39,72 +39,72 @@ Things to keep in mind:
 
 
 
-6. You are going to generate a couple of gene list that are saved in files, add their contents to sets, and compare them. 
+6. Você vai gerar algumas listas de genes que são salvos em arquivos, adicionar seus conteúdos a conjuntos e compará-los. 
 
-__Generate Gene Lists:__
-
-
-_Get all genes:_
-
-1. Go to [Ensembl Biomart](http://useast.ensembl.org/biomart/martview/4b8fb1941e75e7763e8c4ccf1ffcd9c5).
-2. In dropdown box, select "Ensembl Genes 98"  (or most current version)
-3. In dropdown box, select "Alpaca Genes" 
-4. On the left, click Attributes
-5. Expand GENE:
-6. Deselect "transcript stable ID".
-7. Click Results (top left)
-8. Export all results to "File" "TSV" --> GO
-9. Rename the file to "alpaca_all_genes.tsv"
-
-_In the same Ensembl window, follow the steps below to get genes that have been labeled with Gene Ontology term "stem cell proliferation". For extra information on stem cell proliferation, check out  [stem cell proliferation](http://purl.obolibrary.org/obo/GO_0072089)_
-
-10. Click "Filters"
-11. Under "Gene Ontology", check "Go term name" and enter "stem cell proliferation"
-12. Click Results (top left)
-13. Export all results to "File" "TSV" --> GO
-14. Rename the file to "alpaca_stemcellproliferation_genes.tsv"
-
-_In the same Ensembl window, follow the steps below to get genes that have been labeled with Gene Ontology term "pigmentation". For extra information on pigmentation, check out [pigmentation](http://purl.obolibrary.org/obo/GO_0043473)_
+__Gerar Listas de Genes:__
 
 
-15. Click "Filters"
-16. Under "Gene Ontology", check "Go term name" and enter "pigmentation"
-17. Click Results (top left)
-18. Export all results to "File" "TSV" --> GO
-19. Rename the file to "alpaca_pigmentation_genes.tsv"
+_Obter todos os genes:_
+
+1. Acesse o [Ensembl Biomart](http://useast.ensembl.org/biomart/martview/4b8fb1941e75e7763e8c4ccf1ffcd9c5).
+2. No menu suspenso, selecione "Ensembl Genes 98" (ou a versão mais atual)
+3. No menu suspenso, selecione "Alpaca Genes" 
+4. No lado esquerdo, clique em Atributos
+5. Expanda GENE:
+6. Desmarque "transcript stable ID".
+7. Clique em Resultados (canto superior esquerdo)
+8. Exporte todos os resultados para "Arquivo" "TSV" --> GO
+9. Renomeie o arquivo para "alpaca_all_genes.tsv"
+
+_Na mesma janela do Ensembl, siga os passos abaixo para obter genes que foram rotulados com o termo de Gene Ontology "proliferação de células-tronco". Para obter informações adicionais sobre a proliferação de células-tronco, verifique [proliferação de células-tronco](http://purl.obolibrary.org/obo/GO_0072089)_
+
+10. Clique em "Filtros"
+11. Em "Gene Ontology", marque "Nome do termo Go" e insira "proliferação de células-tronco"
+12. Clique em Resultados (canto superior esquerdo)
+13. Exporte todos os resultados para "Arquivo" "TSV" --> GO
+14. Renomeie o arquivo para "alpaca_stemcellproliferation_genes.tsv"
+
+_Na mesma janela do Ensembl, siga os passos abaixo para obter genes que foram rotulados com o termo de Gene Ontology "pigmentação". Para obter informações adicionais sobre pigmentação, verifique [pigmentação](http://purl.obolibrary.org/obo/GO_0043473)_
 
 
-__Open each of the three files and add the geneIDs to a Set. One Set per file.__
+15. Clique em "Filtros"
+16. Em "Gene Ontology", marque "Nome do termo Go" e insira "pigmentação"
+17. Clique em Resultados (canto superior esquerdo)
+18. Exporte todos os resultados para "Arquivo" "TSV" --> GO
+19. Renomeie o arquivo para "alpaca_pigmentation_genes.tsv"
 
-A. Find all the genes that are not cell proliferation genes.  
-B. Find all genes that are both stem cell proliferation genes and pigment genes.  
-*Note* Make sure to NOT add the header to your set.  
 
-__Now, let do it again with transciption factors.__
+__Abra cada um dos três arquivos e adicione os IDs de gene a um conjunto. Um conjunto por arquivo.__
+
+A. Encontre todos os genes que não são genes de proliferação celular.  
+B. Encontre todos os genes que são genes de proliferação de células-tronco e genes de pigmentação.  
+*Nota* Certifique-se de NÃO adicionar o cabeçalho ao conjunto.  
+
+__Agora, vamos fazer isso novamente com fatores de transcrição.__
  
-1. Go back to your Ensembl Biomart window
-2. Deselect the "GO Term Name"
-3. Select "GO Term Accession"
-4. Enter these two accessions IDs which in most organisms will be all the transcription factors
-   - GO:0006355 is "regulation of transcription, DNA-dependent”. 
-   - GO:0003677 is "DNA binding"
-5.  Click Results (top left)
-6. Export all results to "File" "TSV" --> GO
-7. Rename the file to "alpaca_transcriptionFactors.tsv"
+1. Volte para a janela do Ensembl Biomart
+2. Desmarque o "Nome do Termo GO"
+3. Selecione "Acesso ao Termo GO"
+4. Insira esses dois IDs de acesso que, na maioria dos organismos, serão todos os fatores de transcrição
+   - GO:0006355 é "regulação da transcrição dependente de DNA”. 
+   - GO:0003677 é "ligação ao DNA"
+5.  Clique em Resultados (canto superior esquerdo)
+6. Exporte todos os resultados para "Arquivo" "TSV" --> GO
+7. Renomeie o arquivo para "alpaca_transcriptionFactors.tsv"
 
-__Open these two files: 1) the transcription factor gene list file and 2) the cell proliferation gene list file. Add each to a Set, One Set per file__
+__Abra esses dois arquivos: 1) o arquivo de lista de genes de fatores de transcrição e 2) o arquivo de lista de genes de proliferação celular. Adicione cada um a um conjunto, Um conjunto por arquivo__
 
-A. Find all the genes that are transcription factors for cell proliferation
-
-
-__Now do the same on the command line with `comm` command. You might need to `sort` each file first.__
+A. Encontre todos os genes que são fatores de transcrição para a proliferação celular
 
 
-## Extra: Expand on an exercise from ProblemSet 5 on nucleotide composition
-  - get the raw file [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt)
-  - in a script, open this file
-  - iterate over each line in this file (seqName\tsequence\n)
-     - for each sequence:
-         - calculate and store the count of each unique nucleotide character in a dictionary
-         - report the name, total of each nucleotide count, and the GC content 
+__Agora faça o mesmo na linha de comando com o comando `comm`. Talvez seja necessário `ordenar` cada arquivo primeiro.__
+
+
+## Extra: Expandindo um exercício do Conjunto de Problemas 5 sobre composição de nucleotídeos
+  - obtenha o arquivo bruto [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt)
+  - em um script, abra este arquivo
+  - itere sobre cada linha neste arquivo (seqName\tsequence\n)
+     - para cada sequência:
+         - calcule e armazene a contagem de cada caractere de nucleotídeo único em um dicionário
+         - relate o nome, o total de cada contagem de nucleotídeos e o conteúdo de GC
 
