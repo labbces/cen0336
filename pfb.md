@@ -2661,56 +2661,56 @@ nt count: {'G': 20, 'T': 21, 'A': 13, 'C': 16, 'N': 1}
 ## Python 6
 
 
-### I/O and Files
+### I/O e Arquivos
 
 
-I/O stands for input/output. The in and out refer to getting data into and out of your script. It might be a little surprising at first, but writing to the screen, reading from the keyboard, reading from a file, and writing to a file are all examples of I/O.
+I/O significa input/output. O "in" e "out" referem-se a obter dados dentro e fora do seu script. Pode ser um pouco surpreendente no início, mas escrever na tela, ler do teclado, ler de um arquivo e escrever em um arquivo são todos exemplos de I/O.
 
 
-#### Writing to the Screen
+#### Escrevendo na tela
 
-You should be well versed in writing to the screen. We have been using the `print()` function to do this.  
+Você deve estar bem familiarizado com a escrita na tela. Temos usado a função `print()` para isso.  
 
 
 ```python
->>> print ("Hello, PFB2019!")
-Hello, PFB2019!
+>>> print ("Olá, PFB2019!")
+Olá, PFB2019!
 ```
-> Remember this example from one of our first lessons?
+> Lembra-se desse exemplo de uma das nossas primeiras lições?
 
-#### Reading input from the keyboard
+#### Lendo a entrada do teclado
 
-This is something new. There is a function which prints a message to the screen and waits for input from the keyboard. This input can be stored in a variable. It always starts as a string. Convert to an int or float if you want a number. When you are done entering text, press the enter key to end the input. A newline character is not included in the input.
+Isso é algo novo. Há uma função que imprime uma mensagem na tela e espera uma entrada do teclado. Essa entrada pode ser armazenada em uma variável. Ela sempre começa como uma string. Converta para int ou float se quiser um número. Quando terminar de digitar o texto, pressione a tecla Enter para encerrar a entrada. Um caractere de nova linha não está incluído na entrada.
 
-```python 
->>> user_input = input("Type Something Now: ")
-Type Something Now: Hi
+```python
+>>> user_input = input("Digite algo agora: ")
+Digite algo agora: Oi
 >>> print(user_input)
-Hi
+Oi
 >>> type(user_input)
 <class 'str'>
 ```
-#### Reading from a File
+#### Lendo de um arquivo
 
-Most of the data we will be dealing with will be contained in files. 
+A maioria dos dados com os quais lidaremos estará contida em arquivos.
 
-The first thing to do with a file is open it. We can do this with the `open()` function. The `open()` function takes the file name and access mode as arguments and returns a file object.
+O primeiro passo com um arquivo é abri-lo. Podemos fazer isso com a função `open()`. A função `open()` leva o nome do arquivo e o modo de acesso como argumentos e retorna um objeto de arquivo.
 
-The most common access modes are read (r) and write (w).
+Os modos de acesso mais comuns são leitura (r) e escrita (w).
 
-#### Open a File
+#### Abrir um arquivo
 
 ```python
->>> file_object = open("seq.nt.txt","r")
+>>> objeto_arquivo = open("seq.nt.txt", "r")
 ```
-> 'file_object' is a name of a variable. This can be anything, but make it a helpful name that describes what kind of file you are opening.
+> 'objeto_arquivo' é o nome de uma variável. Pode ser qualquer coisa, mas faça um nome útil que descreva que tipo de arquivo você está abrindo.
 
 
-#### Reading the contents of a file
+#### Lendo o conteúdo de um arquivo
 
-Now that we have opened a file and created a file object we can do things with it, like read it. Let's read all the contents at once.  
+Agora que abrimos um arquivo e criamos um objeto de arquivo, podemos fazer coisas com ele, como ler. Vamos ler todo o conteúdo de uma vez.
 
-Let's go to the command line and  `cat` the contents of the file to see what's in it first.
+Vamos para a linha de comando e use `cat` para ver o conteúdo do arquivo primeiro.
 
 ```bash
 $ cat seq.nt.txt
@@ -2719,27 +2719,28 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 $ 
 ```
 
-Note the new lines. Now, lets print the contents to the screen with Python. We will use `read()` to read the entire contents of the file into a variable. 
+Observe as novas linhas. Agora, vamos imprimir o conteúdo na tela com Python. Vamos usar `read()` para ler todo o conteúdo do arquivo em uma variável.
+
 ```python
->>> file = open("seq.nt.txt","r")
->>> contents = file.read()
->>> print(contents)  # note newline characters are part of the file!
+>>> arquivo = open("seq.nt.txt", "r")
+>>> conteudo = arquivo.read()
+>>> print(conteudo)  # observe que os caracteres de nova linha fazem parte do arquivo!
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
->>> file.close()
+>>> arquivo.close()
 ```
-> The complete contents can be retrieved with the `read()` method. Notice the newlines are maintained when `contents` is printed to the screen. `print()` adds another new line when it is finished printing.
-> It is good practice to close your file. Use the `close()` method. 
+> O conteúdo completo pode ser obtido com o método `read()`. Observe que as novas linhas são mantidas quando o `conteudo` é impresso na tela. `print()` adiciona outra nova linha quando termina de imprimir.
+> É uma boa prática fechar seu arquivo. Use o método `close()`.
 
+Aqui está outra maneira de ler dados de um arquivo. Um loop `for` pode ser usado para iterar pelo arquivo uma linha de cada vez.
 
-Here's another way to read data in from a file. A `for` loop can be used to iterate through the file one line at a time.
 ```python
 #!/usr/bin/env python3
 
-file = open("seq.nt.txt","r")
-for line in file: # Python magic: reads in a line from file
-  print(line)
+arquivo = open("seq.nt.txt", "r")
+for linha in arquivo: # Magia do Python: lê uma linha do arquivo
+  print(linha)
 ```
 
 Output:
@@ -2750,19 +2751,20 @@ ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 ```
-> Notice the blank line at after each line we print. `print()` adds a newline and we have a newline at the end of each line in our file. Use `rstrip()` method to remove the newline from each line.
+> Observe a linha em branco após cada linha que imprimimos. `print()` adiciona uma nova linha e temos uma nova linha no final de cada linha em nosso arquivo. Use o método `rstrip()` para remover a nova linha de cada linha.
 
-Let's use `rstrip()` method to remove the newline from our file input.
+Vamos usar o método `rstrip()` para remover a nova linha da entrada do nosso arquivo.
+
 ```python
-$ cat file_for_rstrip.py
+$ cat arquivo_for_rstrip.py
 #!/usr/bin/env python3
 
-file_object = open("seq.nt.txt","r")
-for line in file_object:
-  line = line.rstrip()
-  print(line)
+arquivo_objeto = open("seq.nt.txt", "r")
+for linha in arquivo_objeto:
+  linha = linha.rstrip()
+  print(linha)
 ```
-> `rstrip()` without any parameters returns a string with whitespace removed from the end.
+> `rstrip()` sem nenhum parâmetro retorna uma string com espaços em branco removidos do final.
 
 Output:
 ```
@@ -2771,69 +2773,71 @@ ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
 ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 ```
 
-> Where do the newlines in the above output come from?
+> De onde vêm as novas linhas na saída acima?
 
-#### Opening a file with `with open() as fh:`
+#### Abrindo um arquivo com `with open() as fh:`
 
-Many people add this, because it closes the file for you automatically. Good programming practice. Your code will clean up as it runs. For more advanced coding, `with ... as ...` saves limited resources like filehandles and database connections. For now, we just need to know that the `with ... as ...:` does the same as `fh = open(...) ... fh.close()`. So here's what the adapted code looks like
+Muitas pessoas adicionam isso porque ele fecha o arquivo automaticamente para você. Boa prática de programação. Seu código limpará conforme ele é executado. Para codificação mais avançada, `with ... as ...` economiza recursos limitados, como identificadores de arquivo e conexões de banco de dados. Por enquanto, só precisamos saber que `with ... as ...:` faz o mesmo que `fh = open(...) ... fh.close()`. Portanto, aqui está como o código adaptado se parece:
 
 ```python
 #!/usr/bin/env python3
 
-with open("seq.nt.txt","r") as file_object: #cleans up after exiting 
-                                            # the 'with' block
-  for line in file_object:
-    line = line.rstrip()
-  	print(line)
-#file gets closed for you here.
+with open("seq.nt.txt", "r") as objeto_arquivo: # limpa após sair do bloco 'with'
+  for linha in objeto_arquivo:
+    linha = linha.rstrip()
+    print(linha)
+# o arquivo é fechado para você aqui.
 ```
 
-#### Writing to a File
+#### Escrevendo em um Arquivo
 
-Writing to a file just required opening a file for writing then using the `write()` method.  
+Escrever em um arquivo requer apenas abrir um arquivo para escrita e depois usar o método `write()`.
 
-The `write()` method is like the `print()` function. The biggest difference is that it writes to your file object instead of the screen. Unlike `print()`, it does not add a newline by default.  `write()` takes a single string argument. 
+O método `write()` é como a função `print()`. A maior diferença é que ele escreve no objeto do seu arquivo em vez da tela. Ao contrário do `print()`, ele não adiciona uma nova linha por padrão. `write()` recebe um único argumento de string.
 
-Let's write a few lines to a file named "writing.txt".  
+Vamos escrever algumas linhas em um arquivo chamado "writing.txt".
+
 ```python
 #!/usr/bin/env python3
 
-fo = open("writing.txt" , "w")
-fo.write("One line.\n")
-fo.write("2nd line.\n")
-fo.write("3rd line" + " has extra text\n")
-some_var = 5
-fo.write("4th line has " + str(some_var) + " words\n")
+fo = open("writing.txt", "w")
+fo.write("Uma linha.\n")
+fo.write("Segunda linha.\n")
+fo.write("Terceira linha" + " tem texto adicional\n")
+alguma_var = 5
+fo.write("Quarta linha tem " + str(alguma_var) + " palavras\n")
 fo.close()
-print("Wrote to file 'writing.txt'") # it's nice to tell the user you wrote a file
+print("Escrito no arquivo 'writing.txt'") # é legal informar ao usuário que você escreveu um arquivo
 ```
 
 Output:
 ```
 $ python3 file_write.py
-Wrote to file 'writing.txt'
+Escrito no arquivo 'writing.txt'
 $ cat writing.txt
-One line.
-2nd line.
-3rd line has extra text
-4th line has 5 words
+Uma linha.
+Segunda linha.
+Terceira linha tem texto adicional
+Quarta linha tem 5 palavras
 ```
-Now, let's get crazy! Lets read from one file a line at a time. Do something to each line and write the results to a new file.
+
+Agora, vamos ficar loucos! Vamos ler de um arquivo uma linha de cada vez. Faça algo com cada linha e escreva os resultados em um novo arquivo.
+
 ```python
 #!/usr/bin/env python3
 
 total_nts = 0
-# open two file objects, one for reading, one for writing
-with open("seq.nt.txt","r") as seq_read, open("nt.counts.txt","w") as seq_write:
-  for line in seq_read:
-    line = line.rstrip()
-    nt_count = len(line)
-    total_nts += nt_count
-    seq_write.write(str(nt_count) + "\n")
+# abre dois objetos de arquivo, um para leitura e outro para escrita
+with open("seq.nt.txt", "r") as seq_read, open("nt.counts.txt", "w") as seq_write:
+  for linha in seq_read:
+    linha = linha.rstrip()
+    contagem_nt = len(linha)
+    total_nts += contagem_nt
+    seq_write.write(str(contagem_nt) + "\n")
 
-  seq_write.write("Total: " + str(total_nts) +"\n")
+  seq_write.write("Total: " + str(total_nts) + "\n")
 
-print("Wrote 'nt.counts.txt'")
+print("Escrito 'nt.counts.txt'")
 ```
 
 Output:
@@ -2844,36 +2848,36 @@ $ cat nt.counts.txt
 71
 Total: 142
 ```
-> The file we are reading from is named, "seq.nt.txt"  
-> The file we are writing to is named, "nt.counts.txt"  
-> We read each line, calculate the length of each line, and print the length  
-> We also create a variable to keep track of the total nt count  
-> At the end, we print out the total count of nts  
-> Finally, we close each of the files  
+> O arquivo do qual estamos lendo é chamado de "seq.nt.txt"
+> O arquivo para o qual estamos escrevendo é chamado de "nt.counts.txt"
+> Leemos cada linha, calculamos o comprimento de cada linha e imprimimos o comprimento
+> Também criamos uma variável para acompanhar a contagem total de nt
+> No final, imprimimos o total de nt
+> Finalmente, fechamos cada um dos arquivos 
 
 
 
-#### Building a Dictionary from a File
+#### Construindo um dicionário a partir de um arquivo
 
-This is a very common task. It will use a loop, file I/O, and a dictionary.
+Esta é uma tarefa muito comum. Ela usará um loop, E/S de arquivo e um dicionário.
 
-Assume we have a file called "sequence_data.txt" that contains tab-delimited gene names and sequences that looks something like this
+Suponha que temos um arquivo chamado "sequence_data.txt" que contém nomes de genes e sequências delimitadas por tabulação, que se parece com isto:
 
 ```
 TP53    GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 BRCA1   GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA
 ```
 
-How can we read this whole file in to a dictionary? 
+Como podemos ler todo este arquivo em um dicionário?
 
 ```python
 #!/usr/bin/env python3
 
 genes = {}
-with open("sequence_data.txt","r") as seq_read:
-  for line in seq_read:
-    line = line.rstrip()
-    gene_id,seq = line.split() #split on whitespace
+with open("sequence_data.txt", "r") as seq_read:
+  for linha in seq_read:
+    linha = linha.rstrip()
+    gene_id, seq = linha.split() # dividir no espaço em branco
     genes[gene_id] = seq
 print(genes)
 ```
@@ -2887,22 +2891,22 @@ Output:
 
 
 
-### [Link to Python 6 Problem Set](problemsets/Python_06_problemset.md)
+### [Link para Python 6 Conjunto de Problemas](problemsets/Python_06_problemset.md)
 
 
 
 ---
 ## Python 7
 
-### Regular Expressions
+### Expressões Regulares
 
-Regular Expressions is a language for pattern matching. Many different computer languages incorporate regular expressions, as do some unix commands, like grep and sed. So far we have seen a few functions for finding exact matches in strings, but this is not always sufficient.  
+Expressões regulares são uma linguagem para correspondência de padrões. Muitas linguagens de programação diferentes incorporam expressões regulares, assim como alguns comandos Unix, como grep e sed. Até agora, vimos algumas funções para encontrar correspondências exatas em strings, mas isso nem sempre é suficiente.
 
-Functions that utilize regular expressions allow for non-exact pattern matching.  
+Funções que utilizam expressões regulares permitem a correspondência de padrões não exatos.
 
-These specialized functions are not included in the core of Python. We need to import them by typing
+Essas funções especializadas não estão incluídas no núcleo do Python. Precisamos importá-las digitando
 `import re`
-at the top of your script
+no topo do seu script
 
 ```python 
 #!/usr/bin/env python3
@@ -2910,9 +2914,9 @@ at the top of your script
 import re
 ```
 
-First we will go over a few examples then go into the mechanics in more detail.  
+Primeiro, veremos alguns exemplos e depois entraremos nos detalhes mecânicos com mais detalhes.
 
-Let's start simple and find an exact match for the EcoRI restriction site in a string.
+Vamos começar com algo simples e encontrar uma correspondência exata para o site de restrição EcoRI em uma string.
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> if re.search(r"GAATTC",dna):
@@ -2921,30 +2925,29 @@ Let's start simple and find an exact match for the EcoRI restriction site in a s
 Found an EcoRI site!
 >>>
 ```
-> Since we can search for control characters like a tab (\t), it is good to get in the habit of using the raw string function 
+> Como podemos pesquisar por caracteres de controle como um tab (\t), é bom criar o hábito de usar a função de string raw 
 > `r`
->  when defining patterns.
+> ao definir padrões.
 
-> Here we used the `search()` function with two arguments, 1) our pattern and 2) the string we want to search. 
+> Aqui usamos a função `search()` com dois argumentos, 1) nosso padrão e 2) a string que queremos pesquisar.
 
-
-Let's find out what is returned by the `search()` function. 
+Vamos descobrir o que é retornado pela função `search()`.
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> found=re.search(r"GAATTC",dna)
 >>> print(found)
 <_sre.SRE_Match object; span=(70, 76), match='GAATTC'>
 ```
->Information about the first match is returned
+> As informações sobre a primeira correspondência são retornadas
 
 
-How about a non-exact match. Let's search for a methylation site that has to match the following criteria:  
-- G or A 
-- followed by C
-- followed by one of anything or nothing
-- followed by a G 
+E uma correspondência não exata. Vamos procurar por um site de metilação que deve corresponder aos seguintes critérios:
+- G ou A
+- seguido por C
+- seguido por qualquer coisa ou nada
+- seguido por um G
 
-This could match any of these:  
+Isso pode corresponder a qualquer um destes: 
 - GCAG  
 - GCTG  
 - GCGG  
@@ -2956,18 +2959,18 @@ This could match any of these:
 - ACCG  
 - ACG  
 
-We could test for each of these, or use regular expressions. This is exactly what regular expressions can do for us.  
+Podemos testar cada um desses ou usar expressões regulares. É exatamente isso que as expressões regulares podem fazer por nós.
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> found=re.search(r"[GA]C.?G",dna)
 >>> print(found)
 <_sre.SRE_Match object; span=(7, 10), match='ACG'>
 ```
-> Here you can see in the returned information that ACG starts at string postion 7 (nt 8). 
+> Aqui você pode ver nas informações retornadas que ACG começa na posição da string 7 (nt 8).
 >
-> The first position following the end of the match is at string postion 10 (nt 11).
+> A primeira posição após o final da correspondência está na posição da string 10 (nt 11).
 
-What about other potential matches in our DNA string? We can use `findall()` function to find all matches.
+E outras correspondências potenciais em nossa string de DNA? Podemos usar a função `findall()` para encontrar todas as correspondências.
 
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
@@ -2975,276 +2978,271 @@ What about other potential matches in our DNA string? We can use `findall()` fun
 >>> print(found)
 ['ACG', 'GCTG', 'ACTG', 'ACCG', 'ACAG', 'ACCG', 'ACAG']
 ```
-> `findall()` returns a list of all the pieces of the string that match the regex.
+> `findall()` retorna uma lista de todas as partes da string que correspondem à regex.
 
-A quick count of all the matching sites can be done by counting the length of the returned list.
+Uma contagem rápida de todos os sites correspondentes pode ser feita contando o comprimento da lista retornada.
 
 ```python
 >>> len (re.findall(r"[GA]C.?G",dna))
 7
 ```
 
-> There are 7 methylation sites.
+> Existem 7 sites de metilação.
 >
-> Here we have another example of nesting. 
+> Aqui temos outro exemplo de aninhamento.
 >
-> We call the `findall()` function, searching for all the matches of a methylation site. 
+> Chamamos a função `findall()`, procurando todas as correspondências de um site de metilação.
 >
-> This function returns a list, the list is past to the `len()` function, which in turn returns the number of elements in the list.
+> Esta função retorna uma lista, a lista é passada para a função `len()`, que por sua vez retorna o número de elementos na lista.
 
 
-__Let' Try It__  
+__Vamos tentar__  
 ![try it](images/Try-It-Now.jpg)
 
-1. If you want to find just the first occurrence of a pattern, what method do you use?
+1. Se você quiser encontrar apenas a primeira ocorrência de um padrão, que método você usa?
 
-2. If you want to find all the occurrences of a pattern, what method do you use?
+2. Se você quiser encontrar todas as ocorrências de um padrão, que método você usa?
 
-3. What operator have we seen that will report if an exact match is in a sequence (string, list, etc)?
+3. Que operador vimos que reportará se uma correspondência exata está em uma sequência (string, lista, etc.)?
 
-4. What string method have we seen that will count the number of occurrences of an exact match in a string?
+4. Que método de string vimos que contará o número de ocorrências de uma correspondência exata em uma string?
 
 
-Let's talk a bit more about all the new characters we see in the pattern.
+Vamos falar um pouco mais sobre todos os novos caracteres que vemos no padrão.
 
-The pattern in made up of atoms.  Each atom represents **ONE** character.
+O padrão é composto por átomos. Cada átomo representa **UM** caractere.
 
-#### Individual Characters
+#### Caracteres Individuais
 
-| Atom                               | Description                              |
+| Átomo                              | Descrição                              |
 | ---------------------------------- | ---------------------------------------- |
-| a-z, A-Z, 0-9 and some punctuation | These are ordinary characters that match themselves |
-| "."                                | The dot, or period. This matches any single character except for the newline. |
+| a-z, A-Z, 0-9 e algumas pontuações | São caracteres comuns que correspondem a si mesmos |
+| "."                                | O ponto, ou período. Isso corresponde a qualquer caractere único, exceto a nova linha. |
 
 
-#### Character Classes
+#### Classes de Caracteres
 
-A group of characters that are allowed to be matched one time. There are a few predefined classes, which are symbols that means a series of characters.
+Um grupo de caracteres que podem ser correspondidos uma vez. Existem algumas classes predefinidas, que são símbolos que significam uma série de caracteres.
 
-| Atom  | Description                              |
+| Átomo  | Descrição                              |
 | ----- | ---------------------------------------- |
-| `[ ]` | A bracketed list of characters, like `[GA]`. This indicates a single character can match any character in the bracketed list. |
-| `\d`  | Digits. Also can be written `[0-9]`      |
-| `\D`  | Not digits. Also can be written`[^0-9]`  |
-| `\w`  | Word character. Also can be written `[A-Za-z0-9_]` Note underscore is part of this class |
-| `\W`  | Not a word character, or `[^A-Za-z0-9_]` |
-| `\s`  | White space character. Also can be written `[ \r\t\n]`. Note the space character after the first `[` |
-| `\S`  | Not whitespace. Also `[^ \r\\t\n]`       |
-| `[^]` |a carat within a bracketed list of characters indicates anything but the characters that follows |
+| `[ ]` | Uma lista entre colchetes de caracteres, como `[GA]`. Isso indica que um único caractere pode corresponder a qualquer caractere na lista entre colchetes. |
+| `\d`  | Dígitos. Também pode ser escrito como `[0-9]`      |
+| `\D`  | Não dígitos. Também pode ser escrito como `[^0-9]`  |
+| `\w`  | Caractere de palavra. Também pode ser escrito como `[A-Za-z0-9_]`. Note que o sublinhado faz parte dessa classe |
+| `\W`  | Não é um caractere de palavra, ou `[^A-Za-z0-9_]` |
+| `\s`  | Caractere de espaço em branco. Também pode ser escrito como `[ \r\t\n]`. Note o caractere de espaço após o primeiro `[` |
+| `\S`  | Não é um espaço em branco. Também pode ser escrito como `[^ \r\\t\n]`       |
+| `[^]` | Um acento circunflexo dentro de uma lista entre colchetes de caracteres indica qualquer coisa, exceto os caracteres que o seguem |
 
-#### Anchors
+#### Âncoras
 
-A pattern can be anchored to a region in the string:
+Um padrão pode ser ancorado a uma região na string:
 
-| Atom | Description                              |
+| Átomo | Descrição                              |
 | ---- | ---------------------------------------- |
-| `^`  | Matches the beginning of the string      |
-| `$`  | Matches the end of the string            |
-| `\b` | Matches a word boundary between `\w` and `\W` |
+| `^`  | Corresponde ao início da string      |
+| `$`  | Corresponde ao final da string            |
+| `\b` | Corresponde a um limite de palavra entre `\w` e `\W` |
 
-Examples:
+Exemplos:
 
 ```
 g..t
 ```
-> matches "gaat", "goat", and "gotta get a goat" (twice)
-
-
-<br><br> 
-```
-g[gatc][gatc]t
-```
-> matches "gaat", "gttt", "gatt", and "gotta get an agatt" (once) 
+> corresponde a "gaat", "goat" e "gotta get a goat" (duas vezes)
 
 
 <br><br> 
 ```
 \d\d\d-\d\d\d\d
 ```
-> matches 867-5309, and 5867-5309 but not 8-67-5309.
+> corresponde a 867-5309 e 5867-5309, mas não a 8-67-5309.
 
 <br><br> 
 
 ```
 ^\d\d\d-\d\d\d\d
 ```
->  matches 867-5309 and 867-53091 but not 5867-5309.
+>  corresponde a 867-5309 e 867-53091, mas não a 5867-5309.
 <br><br> 
 ```
 ^\d\d\d-\d\d\d\d$
 ```
-> only matche 3 digits followed by a dash followed by 4 digits, not extra characters anywhere are allowed
+> corresponde apenas a 3 dígitos seguidos de um traço seguido de 4 dígitos, nenhum caractere extra é permitido em qualquer lugar
 <br><br> 
 
 
 
-#### Quantifiers
+#### Quantificadores
 
-Quantifiers quantify how many atoms are to be found. By default an atom matches only once. This behaviour can be modified following an atom with a quantifier.
+Os quantificadores quantificam quantos átomos devem ser encontrados. Por padrão, um átomo corresponde apenas uma vez. Esse comportamento pode ser modificado seguindo um átomo com um quantificador.
 
-| Quantifier | Description                              |
+| Quantificador | Descrição                              |
 | ---------- | ---------------------------------------- |
-| `?`        | atom matches zero or exactly once        |
-| `*`        | atom matches zero or more times          |
-| `+`        | atom matches one or more times           |
-| `{3}`      | atom matches exactly 3 times             |
-| `{2,4}`    | atom matches between 2 and 4 times, inclusive |
-| `{4,}`     | atom matches at least 4 times            |
+| `?`        | o átomo corresponde zero ou exatamente uma vez        |
+| `*`        | o átomo corresponde zero ou mais vezes          |
+| `+`        | o átomo corresponde uma ou mais vezes           |
+| `{3}`      | o átomo corresponde exatamente 3 vezes             |
+| `{2,4}`    | o átomo corresponde entre 2 e 4 vezes, inclusive |
+| `{4,}`     | o átomo corresponde pelo menos 4 vezes            |
 
-Examples:  
+Exemplos:   
 
 ```
 goa?t
 ```
-> matches "goat" and "got".  Also any text that contains these words.
+> corresponde a "goat" e "got". Também qualquer texto que contenha essas palavras.
 
 ```
 g.+t
 ```
->  matches "goat", "goot", and "grant", among others.
+>  corresponde a "goat", "goot" e "grant", entre outros.
 
 ```
 g.*t
 ```
->  matches "gt", "goat", "goot", and "grant", among others.
+>  corresponde a "gt", "goat", "goot" e "grant", entre outros.
 
 ```
 ^\d{3}-\d{4}$
 ```
->  matches US telephone numbers (no extra text allowed).
+>  corresponde a números de telefone dos EUA (nenhum texto extra é permitido).
 
-__Let' Try It__  
+__Vamos tentar__  
 ![try it](images/Try-It-Now.jpg)
 
-1. What would be a pattern to recognize an email address?
-2. What would be a pattern to recognize the ID portion of a sequence record in a FASTA file?
+1. Qual seria um padrão para reconhecer um endereço de e-mail?
+2. Qual seria um padrão para reconhecer a parte de ID de um registro de sequência em um arquivo FASTA?
 
 
-#### Variables and Patterns
+#### Variáveis e Padrões
 
-Variables can be used to store patterns.  
+Variáveis podem ser usadas para armazenar padrões.
 
 ```python
->>> pattern = r"[GA]C.?G"
->>> len (re.findall(pattern,dna))
+>>> padrao = r"[GA]C.?G"
+>>> len(re.findall(padrao, dna))
 7
 ```
-> In this example, we stored our methylation pattern in the variable named 'pattern' and used it as the first argument to `findall`.
+> Neste exemplo, armazenamos nosso padrão de metilação na variável chamada 'padrao' e a utilizamos como primeiro argumento para `findall`.
 
 
-#### Either Or
+#### Ou
 
-A pipe '|' can be used to indicated that either the pattern before or after the '|' can match. Enclose the two options in parenthesis.
-
-```
-big bad (wolf|sheep)
-```
-> This pattern must match a string that contains:
->
-> - "big" followed by a space followed by 
-> - "bad" followed by 
-> - a space followed by 
-> - *either* "wolf" or "sheep"
->
->  This would match:
->
-> - "big bad wolf"
-> - "big bad sheep"
-
-__Let' Try It__  
-![try it](images/Try-It-Now.jpg)
-
-1. What would a pattern to match 'ATG' followed by a C or a T look like?
-
-
-#### Subpatterns
-
-Subpatterns, or parts of the pattern enclosed in parenthesis can be extracted and stored for later use. 
-```
-Who's afraid of the big bad w(.+)f
-```
-> This pattern has only one subpattern (.+)
-
-You can combine parenthesis and quantifiers to quantify entire subpatterns.
+Um pipe '|' pode ser usado para indicar que o padrão antes ou depois do '|' pode ser correspondido. Coloque as duas opções entre parênteses.
 
 ```
-Who's afraid of the big (bad )?wolf\?
+grande mau (lobo|ovelha)
 ```
-> This matches:
+> Este padrão deve corresponder a uma string que contém:
 >
-> - "Who's afraid of the big bad wolf?"
-> - As well as "Who's afraid of the big wolf?".
+> - "grande" seguido de um espaço seguido por
+> - "mau" seguido de
+> - um espaço seguido por
+> - *ou* "lobo" ou "ovelha"
 >
-> The 'bad ' is optional, it can be present 0 or 1 times in our string.
+> Isso corresponderia a:
 >
-> This also shows how to literally match special characters. Use a '\\' in to escape them.
+> - "grande lobo mau"
+> - "grande ovelha má"
 
-__Let' Try It__  
-![try it](images/Try-It-Now.jpg)
+__Vamos Tentar__  
+![tente agora](imagens/Tente-Agora.jpg)
 
-1. What pattern could you use to capture the ID in a sequence record of a FASTA file in a subpattern.
+1. Qual seria um padrão para reconhecer um endereço de e-mail?
+2. Qual seria um padrão para reconhecer a parte de ID de um registro de sequência em um arquivo FASTA?
 
-Example FASTA sequence record.
+#### Subpadrões
 
-```
-  >ID Optional Descrption
-  SEQUENCE
-  SEQUENCE
-  SEQUENCE 
-```
-
-
-
-
-
-#### Using Subpatterns Inside the Regular Expression Match
-
-This is helpful when you want to find a subpattern and then match the contents again. They can be used within the function call and used after the function call.
-
-__Subpatterns within the function call__
-
-Once a subpattern matches, you can refer to it within the same regular expression.  The first subpattern becomes \\1, the second \\2, the third \\3, and so on.
+Subpadrões, ou partes do padrão contidas entre parênteses, podem ser extraídos e armazenados para uso posterior.
 
 ```
-Who's afraid of the big bad w(.)\1f
+Quem tem medo do grande mau lobo(.+)f
 ```
-> This would match:
->
-> -  "Who's afraid of the big bad woof"
-> -  "Who's afraid of the big bad weef"
-> -  "Who's afraid of the big bad waaf"  
->
-> But Not:
->
-> -  "Who's afraid of the big bad wolf"
-> -  "Who's afraid of the big bad wife" 
+> Este padrão possui apenas um subpadrão (.+)
+
+Você pode combinar parênteses e quantificadores para quantificar subpadrões inteiros.
 
 
-In a similar vein, 
 ```
-\b(\w+)s love \1 food\b
+Quem tem medo do grande (mau )?lobo\?
 ```
-> This pattern will match 
+> Isto corresponde a:
 >
-> - "dogs love dog food"  
-> - But not "dogs love monkey food".  
+> - "Quem tem medo do grande mau lobo?"
+> - Bem como "Quem tem medo do grande lobo?".
 >
-> We were able to use the subpattern within the regular expression by using `\1`
+> O 'mau ' é opcional, ele pode estar presente 0 ou 1 vez em nossa string.
 >
->  If there were more subpatterns they would be `\2`, `\3` , `\4`, etc
+> Isso também mostra como corresponder literalmente a caracteres especiais. Use um '\\' para escapá-los.
+
+__Vamos Tentar__  
+![tente agora](imagens/Tente-Agora.jpg)
+
+1. Que padrão você usaria para capturar o ID em um registro de sequência de um arquivo FASTA em um subpadrão.
+
+Exemplo de registro de sequência FASTA.
+
+```
+  >ID Descrição Opcional
+  SEQUÊNCIA
+  SEQUÊNCIA
+  SEQUÊNCIA 
+```
 
 
 
-#### Using Subpatterns Outside the Regular Expression
 
-Subpatterns can be retrieved after the `search()` function call, or outside the regular expression, by using the `group()` method. This is a method and it belongs to the object that is returned by the `search()` function.
 
-The subpatterns are retrieved by a number. This will be the same number that could be used within the regular expression, i.e.,
+#### Usando Subpadrões Dentro da Correspondência de Expressão Regular
 
-  - `\1` within the subpattern can be used outside with `search_found_obj.group(1)`
-  - `\2` within the subpattern can be used outside with `search_found_obj.group(2)`
-  - `\3` within the subpattern can be used outside with `search_found_obj.group(3)`  
-  - and so on
+Isso é útil quando você deseja encontrar um subpadrão e, em seguida, corresponder ao conteúdo novamente. Eles podem ser usados dentro da chamada da função e depois dela.
+
+__Subpadrões dentro da chamada da função__
+
+Uma vez que um subpadrão corresponde, você pode se referir a ele dentro da mesma expressão regular. O primeiro subpadrão se torna \\1, o segundo \\2, o terceiro \\3 e assim por diante.
+
+```
+Quem tem medo do grande mau w(.)\1f
+```
+> Isso corresponderia a:
+>
+> - "Quem tem medo do grande mau woof"
+> - "Quem tem medo do grande mau weef"
+> - "Quem tem medo do grande mau waaf"  
+>
+> Mas não a:
+>
+> - "Quem tem medo do grande mau lobo"
+> - "Quem tem medo do grande mau esposa" 
+
+
+Da mesma forma,
+```
+\b(\w+)s amam comida \1\b
+```
+> Este padrão irá corresponder a:
+>
+> - "cães amam comida de cachorro"  
+> - Mas não "cães amam comida de macaco".  
+>
+> Fomos capazes de usar o subpadrão dentro da expressão regular usando `\1`
+>
+> Se houvesse mais subpadrões, eles seriam `\2`, `\3`, `\4`, etc.
+
+
+
+#### Usando Subpadrões Fora da Expressão Regular
+
+Os subpadrões podem ser recuperados após a chamada da função `search()`, ou fora da expressão regular, usando o método `group()`. Este é um método e pertence ao objeto que é retornado pela função `search()`.
+
+Os subpadrões são recuperados por um número. Este será o mesmo número que poderia ser usado dentro da expressão regular, ou seja,
+
+  - `\1` dentro do subpadrão pode ser usado fora com `search_found_obj.group(1)`
+  - `\2` dentro do subpadrão pode ser usado fora com `search_found_obj.group(2)`
+  - `\3` dentro do subpadrão pode ser usado fora com `search_found_obj.group(3)`  
+  - e assim por diante
 
 
 Example:
@@ -3258,21 +3256,21 @@ TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 >>  print(downstream)
 CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> 1. This pattern will recognize a consensus transcription start site (TATTAT) 
-> 2. And store the 50 base pairs upstream of the site 
-> 3. And the 25 base pairs downstream of the site
+> 1. Este padrão reconhecerá um sítio de início de transcrição de consenso (TATTAT) 
+> 2. E armazenará os 50 pares de bases a montante do sítio 
+> 3. E os 25 pares de bases a jusante do sítio
 
 
-If you want to find the upstream and downstream sequence of ALL 'TATTAT' sites, use the `findall()` function.
+Se você quiser encontrar as sequências a montante e a jusante de TODOS os sítios 'TATTAT', use a função `findall()`.
 ```python
 >>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
 >>> found = re.findall( r"(.{50})TATTAT(.{25})"  , dna )
 >>> print(found)
 [('TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA', 'CCGGTTTCCAAAGACAGTCTTCTAA'), ('TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA', 'CCGGTTTCCAAAGACAGTCTTCTAA')]
 ```
-> The subpatterns are stored in tuples within a list. More about this type of data structure later.
+> Os subpadrões são armazenados em tuplas dentro de uma lista. Mais sobre esse tipo de estrutura de dados mais tarde.
 
-Another option for retrieving the upstream and downstream subpatterns is to put the `findall()` in a for loop
+Outra opção para recuperar os subpadrões a montante e a jusante é colocar o `findall()` em um loop for
 
 ```python
 >>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
@@ -3285,20 +3283,20 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> 1. This code executes the `findall()` function once 
-> 2. The subpatterns are returned in a tuple 
-> 3. The subpatterns are stored in the variables upstream and downstream  
-> 4. The for block of code is executed  
-> 5. The `findall()` searches again  
-> 6. A match is found 
-> 7.  New subpatterns are returned and stored in the variables upstream and downstream
-> 8. The for block of code gets executed again 
-> 9.  The `findall()` searches again, but no match is found  
-> 10. The for loop ends  
+> 1. Este código executa a função `findall()` uma vez 
+> 2. Os objetos de tupla são retornados 
+> 3. Os subpadrões são armazenados nas variáveis a montante e a jusante 
+> 4. O bloco for é executado  
+> 5. O `findall()` busca novamente  
+> 6. Uma correspondência é encontrada 
+> 7. Novos subpadrões são retornados e armazenados nas variáveis a montante e a jusante
+> 8. O bloco for de código é executado novamente 
+> 9. O `findall()` busca novamente, mas nenhuma correspondência é encontrada  
+> 10. O loop for termina  
 
 
 
-Another way to get this done is with an iterator, use the `finditer()` function in a for loop. This allows you to not store all the matches in memory. `finditer()` also allows you to retrieve the postion of the match.
+Outra maneira de fazer isso é com um iterador, usando a função `finditer()` em um loop for. Isso permite que você não armazene todas as correspondências na memória. `finditer()` também permite que você recupere a posição da correspondência.
 
 ```python
 >>> dna="ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG"
@@ -3311,19 +3309,18 @@ downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 upstream: TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGA
 downstream: CCGGTTTCCAAAGACAGTCTTCTAA
 ```
-> 1. This code executes `finditer()` function once. 
-> 2. The match object is returned. A match object will have all the information about the match.
-> 3.  In the for block we call the `group()` method on the first match object returned
-> 4. We print out the first and second subpattern using the `group()` method
-> 5. The `finditer()` function is executed a second time and a match is found
-> 6. The second match object is returned
-> 7.  The second subpatterns are retrieved from the match object using the `group()` method 
-> 8. The `finditer()` function is executed again, but no matches found, so the loop ends  
+1. Este código executa a função `finditer()` uma vez.
+2. O objeto de correspondência é retornado. Um objeto de correspondência terá todas as informações sobre a correspondência.
+3. No bloco for, chamamos o método `group()` no primeiro objeto de correspondência retornado.
+4. Imprimimos o primeiro e o segundo subpadrão usando o método `group()`.
+5. A função `finditer()` é executada uma segunda vez e uma correspondência é encontrada.
+6. O segundo objeto de correspondência é retornado.
+7. Os segundos subpadrões são obtidos do objeto de correspondência usando o método `group()`.
+8. A função `finditer()` é executada novamente, mas não são encontradas correspondências, portanto o loop termina.
 
+#### Obtenha a posição do subpadrão com `finditer()`
 
-#### Get position of the subpattern with `finditer()`
-
-The match object contains information about the match that can be retrieved with match methods like `start()` and `end()`
+O objeto de correspondência contém informações sobre a correspondência que podem ser recuperadas com métodos de correspondência como `start()` e `end()`
 
 ```python
 #!/usr/bin/env python3
@@ -3343,7 +3340,7 @@ for found in re.finditer(r"(.{50})TATTAT(.{25})"  , dna):
 
   print( whole , up , up_start, up_end , down , dn_start , dn_end , sep="\t" )
 ```
-> we can use these match object methods `group()`, `start()`, `end()` to get the string, start position, and end position of each subpattern. 
+> podemos usar esses métodos de objeto de correspondência `group()`, `start()`, `end()` para obter a string, a posição de início e a posição de fim de cada subpadrão.
 
 ```
 $ python3 re.finditer.pos.py
@@ -3353,12 +3350,12 @@ TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTA
 
 
 
-**FYI:** `match()` function is another regular expression function that looks for patterns. It is similar to search but it only looks at the beginning of the string for the pattern while `search()` looks in the entire string. Usually `finditer()` , `search()`, and `findall()` will be more useful.
+**FYI:** A função `match()` é outra função de expressão regular que procura padrões. É semelhante a `search`, mas ela olha apenas para o início da string em busca do padrão, enquanto `search` procura em toda a string. Geralmente, `finditer()`, `search()` e `findall()` serão mais úteis.
 
 
-#### Subpatterns and Greediness
+#### Subpadrões e Ganância
 
-By default, regular expressions are "greedy".  They try to match as much as they can. Use the quantifier '?' to make the match not greedy. The not greedy match is called 'lazy' 
+Por padrão, as expressões regulares são "gananciosas". Elas tentam corresponder o máximo possível. Use o quantificador '?' para tornar a correspondência não gananciosa. A correspondência não gananciosa é chamada de 'preguiçosa'
 
 ```python
 >>> str = 'The fox ate my box of doughnuts'
@@ -3366,21 +3363,20 @@ By default, regular expressions are "greedy".  They try to match as much as they
 >>> print(found.group(1))
 fox ate my box
 ```
-> The pattern f.+x does not match what you might expect, it matches past 'fox' all the way out to 'fox ate my box'.  The '.+' id is greedy As many characters as possible are found that are between the 'f' and the 'x'. 
+> O padrão f.+x não corresponde ao que você pode esperar, ele corresponde a partir de 'fox' até 'fox ate my box'. O '.+' é ganancioso. Ele encontra o máximo possível de caracteres entre 'f' e 'x'.
 
-
-Let's make this match lazy by using '?'
+Vamos tornar essa correspondência preguiçosa usando '?'
 ```python
 >>> found = re.search(r"(f.+?x)",str)
 >>> print(found.group(1))
 fox
 ```
-> The match is now lazy and will only match 'fox'
+> A correspondência agora é preguiçosa e corresponderá apenas a 'fox'
 
 
-#### Practical Example: Codons
+#### Exemplo prático: Códons
 
-Extracting codons from a string of DNA can be accomplished by using a subpattern in a `findall()` function. Remember the `findall()` function will return a list of the matches.  
+A extração de códons de uma sequência de DNA pode ser realizada usando um subpadrão em uma função `findall()`. Lembre-se de que a função `findall()` retornará uma lista das correspondências.
 
 ```python
 >>> dna = 'GTTGCCTGAAATGGCGGAACCTTGAA'
@@ -3389,7 +3385,7 @@ Extracting codons from a string of DNA can be accomplished by using a subpattern
 ['GTT', 'GCC', 'TGA', 'AAT', 'GGC', 'GGA', 'ACC', 'TTG']
 ```
 
-Or you can use a for loop to do something to each match.
+Ou você pode usar um loop for para fazer algo com cada correspondência.
 ```python
 >>> for codon in re.findall(r"(.{3})",dna):
 ...   print(codon)
@@ -3404,100 +3400,101 @@ ACC
 TTG
 >>>
 ```
-> `finditer()` would also work in this for loop.  
->  Each codon can be accessed by using the `group()` method.
+> `finditer()` também funcionaria neste loop for. Cada códon pode ser acessado usando o método `group()`.
 
   
 
-#### Truth and Regular Expression Matches
+#### Verdade e correspondências de expressões regulares
 
-The `search()`, `match()`, `findall()`, and `finditer()` can be used in conditional tests. If a match is not found an empty list or 'None' is returned. These are both False.
+As funções `search()`, `match()`, `findall()` e `finditer()` podem ser usadas em testes condicionais. Se uma correspondência não for encontrada, uma lista vazia ou 'None' é retornada. Ambos são Falsos.
 
 ```python
 >>> found=re.search( r"(.{50})TATTATZ(.{25})"  , dna )
 >>> if found:
-...    print("found it")
+...    print("encontrado")
 ... else:
-...    print("not found")
+...    print("não encontrado")
 ...
-not found
+não encontrado
 >>> print(found)
 None
 ```
-> None is False so the else block is executed and "not found" is printed
+> None é False, então o bloco else é executado
+
+ e "não encontrado" é impresso.
 
 
-Nest it!
+Aninhe isso!
 ```python
 >>> 
 >>> if re.search( r"(.{50})TATTATZ(.{25})"  , dna ):
-...    print("found it")
+...    print("encontrado")
 ... else:
-...    print("not found")
+...    print("não encontrado")
 ...
-not found
+não encontrado
 >>> print(found)
 None
 ```
 
 
 
-#### Using Regular expressions in substitutions 
+#### Usando expressões regulares em substituições
 
-Earlier we went over how to find an **exact pattern** and replace it using the `replace()` method. To find a pattern, or inexact match, and make a replacement the regular expression `sub()` function is used. This function takes the pattern, the replacement, the string to be searched, the number of times to do the replacement, and flags.
+Anteriormente, vimos como encontrar um **padrão exato** e substituí-lo usando o método `replace()`. Para encontrar um padrão, ou correspondência inexata, e fazer uma substituição, é usada a função de expressão regular `sub()`. Esta função recebe o padrão, a substituição, a string a ser pesquisada, o número de vezes que a substituição deve ser feita e as flags.
 
 ```python
->>> str = "Who's afraid of the big bad wolf?"
->>> re.sub(r'w.+f' , 'goat', str)
-"Who's afraid of the big bad goat?"
+>>> str = "Quem tem medo do lobo mau?"
+>>> re.sub(r'w.+f' , 'cabra', str)
+"Quem tem medo do lobo mau?"
 >>> print(str)
-Who's afraid of the big bad wolf?
+Quem tem medo do lobo mau?
 ```
-> The `sub()` function returns "Who's afraid of the big bad goat?"  
-> The value of variable str has not been altered  
-> The new string can be stored in a new variable for later use.
+> A função `sub()` retorna "Quem tem medo do lobo mau?"
+> O valor da variável `str` não foi alterado
+> A nova string pode ser armazenada em uma nova variável para uso posterior.
 
-Let's save the new string that is returned in a variable
+Vamos salvar a nova string que é retornada em uma variável
 ```python
->>> str = "He had a wife."
->>> new_str = re.sub(r'w.+f' , 'goat', str)
+>>> str = "Ele tinha uma esposa."
+>>> new_str = re.sub(r'w.+f' , 'cabra', str)
 >>> print(new_str)
-He had a goate.
+Ele tinha uma cabra.
 >>> print(str)
-He had a wife.
+Ele tinha uma esposa.
 ```
-> The characters between 'w' and 'f' have been replaced with 'goat'.  
-> The new string is saved in new_str  
+> Os caracteres entre 'w' e 'f' foram substituídos por 'cabra'.
+> A nova string é salva em `new_str`
 
 
 
-#### Using subpatterns in the replacement
+#### Usando subpadrões na substituição
 
-Sometimes you want to find a pattern and use it in the replacement. 
+Às vezes, você deseja encontrar um padrão e usá-lo na substituição.
 ```python
->>> str = "Who's afraid of the big bad wolf?"
->>> new_str = re.sub(r"(\w+) (\w+) wolf" , r"\2 \1 wolf" , str)
+>>> str = "Quem tem medo do lobo mau?"
+>>> new_str = re.sub(r"(\w+) (\w+) lobo" , r"\2 \1 lobo" , str)
 >>> print(new_str)
-Who's afraid of the bad big wolf?
+Quem tem medo do mau lobo?
 ```
-> We found two words before 'wolf' and swapped the order.
-> \\2 refers to the second subpattern
-> \\1 refers to the first subpattern
+> Encontramos duas palavras antes de 'lobo' e trocamos a ordem.
+> \\2 refere-se ao segundo subpadrão
+> \\1 refere-se ao primeiro subpadrão
 
-__Let' Try It__  
-![try it](images/Try-It-Now.jpg)
+__Vamos tentar__  
+![tente agora](images/Tente-Agora.jpg)
 
-1. How would you use regular expressions to find all occurrences of 'ATG' and replace with '-M-' in this sequence 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'? 
+1. Como você usaria expressões regulares para encontrar todas as ocorrências de 'ATG' e substituir por '-M-' nesta sequência 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'?
 
-#### Regular Expression Option Modifiers
+#### Modificadores de opções de expressão regular
 
-| Modifier               | Description                              |
+| Modificador               | Descrição                              |
 | ---------------------- | ---------------------------------------- |
-| `re.I` `re.IGNORECASE` | Performs case-insensitive matching.      |
-| `re.M` `re.MULTILINE`  | Makes $ match the end of a line (not just the end of the string) and makes ^ match the start of any line (not just the start of the string). |
-| `re.S` `re.DOTALL`     | Makes a period (dot) match any character, including a newline. |
-| `re.U`                 | Interprets letters according to the Unicode character set. This flag affects the behavior of \w, \W, \b, \B. |
-| `re.X` `VERBOSE`       | This flag allows you to write regular expressions that look nicer and are more readable by allowing you to visually separate logical sections of the pattern and add comments. Whitespace within the pattern is ignored, except when in a character class or when preceded by an unescaped backslash. When a line contains a # that is not in a character class and is not preceded by an unescaped backslash, all characters from the leftmost such # through the end of the line are ignored. |
+| `re.I` `re.IGNORECASE` | Executa correspondência sem diferenciação entre maiúsculas e minúsculas.      |
+| `re.M` `re.MULTILINE`  | Faz com que $ corresponda ao final de uma linha (não apenas ao final da string) e faz com que ^ corresponda ao início de qualquer linha (não apenas ao início da string). |
+| `re.S` `re.DOTALL`     | Faz com que um ponto (.) corresponda a qualquer caractere, incluindo uma nova linha. |
+| `re.U`                 | Interpreta letras de acordo com o conjunto de caracteres Unicode. Esta bandeira afeta o comportamento de \w, \W, \b, \B. |
+| `re.X` `VERBOSE`       | Essa bandeira permite que você escreva expressões regulares que parecem mais bonitas e sejam mais legíveis, permitindo separar visualmente seções lógicas do padrão e adicionar comentários. Os espaços em branco dentro do padrão são ignorados, exceto quando estão em uma classe de caracteres ou quando precedidos por uma barra invertida não escapada. Quando uma linha contém um # que não está em uma classe de caracteres e não é precedido por uma barra invertida não escapada, todos os caracteres do # mais à esquerda até o final da linha são ignorados. |
 
 ```python
 >>> dna = "atgcgtaatggc"
@@ -3507,15 +3504,15 @@ __Let' Try It__
 <_sre.SRE_Match object; span=(0, 3), match='atg'>
 >>>
 ```
-> We can make our search case insensitive by using the `re.I` or `re.IGNORECASE` flag.
+> Podemos tornar nossa pesquisa insensível a maiúsculas e minúsculas usando a bandeira `re.I` ou `re.IGNORECASE`.
 
 
-You can use more than one flag by concatenating them with `|`.  `re.search(r"ATG",dna , re.I|re.M)`
+Você pode usar mais de uma bandeira concatenando-as com `|`. `re.search(r"ATG",dna , re.I|re.M)`
 
 
-### Helpful Regex tools
+### Ferramentas de Expressões Regulares Úteis
 
-There are a lot of online tools for actually seeing what is happening in your regular expression. Search for `Python Regular Expression Tester` 
+Existem muitas ferramentas online para realmente ver o que está acontecendo em sua expressão regular. Procure por `Python Regular Expression Tester`
 
  - [regex101](https://regex101.com/)  
  - [pyregex](http://www.pyregex.com/)
@@ -3524,7 +3521,7 @@ There are a lot of online tools for actually seeing what is happening in your re
 ---
 
 
-### [Link to Python 7 Problem Set](problemsets/Python_07_problemset.md)
+### [Link para o Python 7 Conjunto de Problemas](problemsets/Python_07_problemset.md)
 
 
 ## Python 8
