@@ -3032,7 +3032,7 @@ Um grupo de caracteres que podem ser correspondidos uma vez. Existem algumas cla
 | `\w`  | Caractere de palavra. Também pode ser escrito como `[A-Za-z0-9_]`. Note que o sublinhado faz parte dessa classe |
 | `\W`  | Não é um caractere de palavra, ou `[^A-Za-z0-9_]` |
 | `\s`  | Caractere de espaço em branco. Também pode ser escrito como `[ \r\t\n]`. Note o caractere de espaço após o primeiro `[` |
-| `\S`  | Não é um espaço em branco. Também pode ser escrito como `[^ \r\\t\n]`       |
+| `\S`  | Não é um espaço em branco. Também pode ser escrito como `[^ \r\t\n]`       |
 | `[^]` | Um acento circunflexo dentro de uma lista entre colchetes de caracteres indica qualquer coisa, exceto os caracteres que o seguem |
 
 #### Âncoras
