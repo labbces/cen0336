@@ -3204,28 +3204,28 @@ __Subpadrões dentro da chamada da função__
 Uma vez que um subpadrão corresponde, você pode se referir a ele dentro da mesma expressão regular. O primeiro subpadrão se torna \\1, o segundo \\2, o terceiro \\3 e assim por diante.
 
 ```
-Quem tem medo do grande mau w(.)\1f
+Who's afraid of the big bad w(.)\1f
 ```
 > Isso corresponderia a:
 >
-> - "Quem tem medo do grande mau woof"
-> - "Quem tem medo do grande mau weef"
-> - "Quem tem medo do grande mau waaf"  
+> -  "Who's afraid of the big bad woof"
+> -  "Who's afraid of the big bad weef"
+> -  "Who's afraid of the big bad waaf"  
 >
 > Mas não a:
 >
-> - "Quem tem medo do grande mau lobo"
-> - "Quem tem medo do grande mau esposa" 
+> -  "Who's afraid of the big bad wolf"
+> -  "Who's afraid of the big bad wife" 
 
 
 Da mesma forma,
 ```
-\b(\w+)s amam comida \1\b
+\b(\w+)s love \1 food\b
 ```
 > Este padrão irá corresponder a:
 >
-> - "cães amam comida de cachorro"  
-> - Mas não "cães amam comida de macaco".  
+> - "dogs love dog food"  
+> - But not "dogs love monkey food".  
 >
 > Fomos capazes de usar o subpadrão dentro da expressão regular usando `\1`
 >
