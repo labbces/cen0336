@@ -3444,11 +3444,11 @@ None
 Anteriormente, vimos como encontrar um **padrão exato** e substituí-lo usando o método `replace()`. Para encontrar um padrão, ou correspondência inexata, e fazer uma substituição, é usada a função de expressão regular `sub()`. Esta função recebe o padrão, a substituição, a string a ser pesquisada, o número de vezes que a substituição deve ser feita e as flags.
 
 ```python
->>> str = "Quem tem medo do lobo mau?"
->>> re.sub(r'w.+f' , 'cabra', str)
-"Quem tem medo do lobo mau?"
+>>> str = "Who's afraid of the big bad wolf?"
+>>> re.sub(r'w.+f' , 'goat', str)
+"Who's afraid of the big bad goat?"
 >>> print(str)
-Quem tem medo do lobo mau?
+Who's afraid of the big bad wolf?
 ```
 > A função `sub()` retorna "Quem tem medo do lobo mau?"
 > O valor da variável `str` não foi alterado
@@ -3456,14 +3456,14 @@ Quem tem medo do lobo mau?
 
 Vamos salvar a nova string que é retornada em uma variável
 ```python
->>> str = "Ele tinha uma esposa."
->>> new_str = re.sub(r'w.+f' , 'cabra', str)
+>>> str = "He had a wife."
+>>> new_str = re.sub(r'w.+f' , 'goat', str)
 >>> print(new_str)
-Ele tinha uma cabra.
+He had a goate.
 >>> print(str)
-Ele tinha uma esposa.
+He had a wife.
 ```
-> Os caracteres entre 'w' e 'f' foram substituídos por 'cabra'.
+> Os caracteres entre 'w' e 'f' foram substituídos por 'goat'.
 > A nova string é salva em `new_str`
 
 
@@ -3472,10 +3472,10 @@ Ele tinha uma esposa.
 
 Às vezes, você deseja encontrar um padrão e usá-lo na substituição.
 ```python
->>> str = "Quem tem medo do lobo mau?"
->>> new_str = re.sub(r"(\w+) (\w+) lobo" , r"\2 \1 lobo" , str)
+>>> str = "Who's afraid of the big bad wolf?"
+>>> new_str = re.sub(r"(\w+) (\w+) wolf" , r"\2 \1 wolf" , str)
 >>> print(new_str)
-Quem tem medo do mau lobo?
+Who's afraid of the bad big wolf?
 ```
 > Encontramos duas palavras antes de 'lobo' e trocamos a ordem.
 > \\2 refere-se ao segundo subpadrão
