@@ -2997,7 +2997,7 @@ Uma contagem rápida de todos os sites correspondentes pode ser feita contando o
 
 
 __Vamos tentar__  
-![try it](images/Try-It-Now.jpg)
+![tente agora](images/Try-It-Now.jpg)
 
 1. Se você quiser encontrar apenas a primeira ocorrência de um padrão, que método você usa?
 
@@ -3032,7 +3032,7 @@ Um grupo de caracteres que podem ser correspondidos uma vez. Existem algumas cla
 | `\w`  | Caractere de palavra. Também pode ser escrito como `[A-Za-z0-9_]`. Note que o sublinhado faz parte dessa classe |
 | `\W`  | Não é um caractere de palavra, ou `[^A-Za-z0-9_]` |
 | `\s`  | Caractere de espaço em branco. Também pode ser escrito como `[ \r\t\n]`. Note o caractere de espaço após o primeiro `[` |
-| `\S`  | Não é um espaço em branco. Também pode ser escrito como `[^ \r\\t\n]`       |
+| `\S`  | Não é um espaço em branco. Também pode ser escrito como `[^ \r\t\n]`       |
 | `[^]` | Um acento circunflexo dentro de uma lista entre colchetes de caracteres indica qualquer coisa, exceto os caracteres que o seguem |
 
 #### Âncoras
@@ -3110,7 +3110,7 @@ g.*t
 >  corresponde a números de telefone dos EUA (nenhum texto extra é permitido).
 
 __Vamos tentar__  
-![try it](images/Try-It-Now.jpg)
+![tente agora](images/Try-It-Now.jpg)
 
 1. Qual seria um padrão para reconhecer um endereço de e-mail?
 2. Qual seria um padrão para reconhecer a parte de ID de um registro de sequência em um arquivo FASTA?
@@ -3148,7 +3148,7 @@ grande mau (lobo|ovelha)
 > - "grande ovelha má"
 
 __Vamos Tentar__  
-![tente agora](imagens/Tente-Agora.jpg)
+![tente agora](images/Try-It-Now.jpg)
 
 1. Qual seria um padrão para reconhecer um endereço de e-mail?
 2. Qual seria um padrão para reconhecer a parte de ID de um registro de sequência em um arquivo FASTA?
@@ -3178,7 +3178,7 @@ Quem tem medo do grande (mau )?lobo\?
 > Isso também mostra como corresponder literalmente a caracteres especiais. Use um '\\' para escapá-los.
 
 __Vamos Tentar__  
-![tente agora](imagens/Tente-Agora.jpg)
+![tente agora](images/Try-It-Now.jpg)
 
 1. Que padrão você usaria para capturar o ID em um registro de sequência de um arquivo FASTA em um subpadrão.
 
@@ -3482,7 +3482,7 @@ Who's afraid of the bad big wolf?
 > \\1 refere-se ao primeiro subpadrão
 
 __Vamos tentar__  
-![tente agora](images/Tente-Agora.jpg)
+![tente agora](images/Try-It-Now.jpg)
 
 1. Como você usaria expressões regulares para encontrar todas as ocorrências de 'ATG' e substituir por '-M-' nesta sequência 'GCAGAGGTGATGGACTCCGTAATGGCCAAATGACACGT'?
 
