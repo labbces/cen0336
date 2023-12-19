@@ -3529,30 +3529,30 @@ Existem muitas ferramentas online para realmente ver o que está acontecendo em 
 
 
 
-### Data Structures
+### Estruturas de Dados
+
+Às vezes, uma lista ou dicionário _simples_ simplesmente não faz o que você quer. Às vezes, é necessário organizar dados de maneira mais _complexa_. Você pode aninhar qualquer tipo de dado dentro de qualquer outro tipo. Isso permite que você construa facilmente tabelas de dados multidimensionais.
 
 
-Sometimes a _simple_ list or dictionary just doesn't do what you want. Sometimes you need to organize data in a more _complex_ way.  You can nest any data type inside any other type. This lets you build multidimensional data tables easily.
+#### Lista de listas
+
+Listas de listas, frequentemente chamadas de matrizes, são importantes para organizar e acessar dados.
 
 
-#### List of lists
-
-List of lists, often called a matrix are important for organizing and accessing data
-
-
-Here's a way to make a 3 x 3 table of values.
+Aqui está uma maneira de criar uma tabela 3 x 3 de valores.
 
 ```python
->>> M = [[1,2,3], [4,5,6],[7,8,9]]
->>> M[1] # second row (starts with index 0)
-[4,5,6]
->>>M[1][2] # second row, third element
+>>> M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+>>> M[1]  # segunda linha (começa com índice 0)
+[4, 5, 6]
+>>> M[1][2]  # segunda linha, terceiro elemento
 6
 ```
 
-Here's a way to store sequence alignment data:
+Aqui está uma maneira de armazenar dados de alinhamento de sequência:
 
-Four sequences aligned:
+Quatro sequências alinhadas:
+
 ```
 AT-TG
 AATAG
@@ -3560,51 +3560,55 @@ T-TTG
 AA-TA
 ```
 
-The alignment in a list of lists.
+O alinhamento em uma lista de listas.
+
 ```python
 aln = [
-['A', 'T', '-', 'T', 'G'],
-['A', 'A', 'T', 'A', 'G'],
-['T', '-', 'T', 'T', 'G'],
-['A', 'A', '-', 'T', 'A']
+    ['A', 'T', '-', 'T', 'G'],
+    ['A', 'A', 'T', 'A', 'G'],
+    ['T', '-', 'T', 'T', 'G'],
+    ['A', 'A', '-', 'T', 'A']
 ]
 ```
 
-Get the full length of one sequence:
+Obtenha o comprimento total de uma sequência:
+
 ```python
 >>> seq = aln[2]
 >>> seq
 ['T', '-', 'T', 'T', 'G']
 ```
-> Use the outermost index to access each sequence
 
-Retrieve the nucleotide at a particular position in a sequence.
+> Use o índice mais externo para acessar cada sequência.
+
+Recupere o nucleotídeo em uma posição específica em uma sequência.
+
 ```python
 >>> nt = aln[2][3]
 >>> nt
 'T'
 ```
-> Use the outermost index to access the sequence of interest and the inner most index to access the position
+> Use o índice mais externo para acessar a sequência de interesse e o índice mais interno para acessar a posição.
 
+Obtenha todos os nucleotídeos em uma única coluna:
 
-Get every nucleotide in a single column:
 ```python
 >>> col = [seq[3] for seq in aln]
 >>> col
 ['T', 'A', 'T', 'T']
 ```
-> Retrieve each sequence from the aln list then the 4th column for each sequence. 
+> Recupere cada sequência da lista `aln` e, em seguida, a quarta coluna para cada sequência.
 
 
-#### Lists of dictionaries
+#### Listas de dicionários
 
-You can nest dictionaries in lists as well:
+Você também pode aninhar dicionários em listas:
 
 ```python
 >>> records = [
-... {'seq' : 'actgctagt', 'accession' : 'ABC123', 'genetic_code' : 1},
-... {'seq' : 'ttaggttta', 'accession' : 'XYZ456', 'genetic_code' : 1},
-... {'seq' : 'cgcgatcgt', 'accession' : 'HIJ789', 'genetic_code' : 5}
+... {'seq': 'actgctagt', 'accession': 'ABC123', 'genetic_code': 1},
+... {'seq': 'ttaggttta', 'accession': 'XYZ456', 'genetic_code': 1},
+... {'seq': 'cgcgatcgt', 'accession': 'HIJ789', 'genetic_code': 5}
 ... ]
 >>> records[0]['seq']
 'actgctagt'
@@ -3613,16 +3617,16 @@ You can nest dictionaries in lists as well:
 >>> records[0]['genetic_code']
 1
 ```
-> Here you can retrieve the accession of one record at a time by using a combination of the outer index and the key 'accession'
+> Aqui você pode recuperar o acesso de um registro por vez usando uma combinação do índice externo e a chave 'accession'.
 
-#### Dictionaries of lists
+#### Dicionários de listas
 
-And, if you haven't guessed, you can nest lists in dictionaries
+E, se você não adivinhou, você pode aninhar listas em dicionários.
 
-Here is a dictionary of kmers. The key is the kmer and its values is a list of postions
+Aqui está um dicionário de kmers. A chave é o kmer e seus valores são uma lista de posições.
+
 ```python
->>> kmers = {'ggaa': [4, 10], 'aatt': [0, 6, 12], 'gaat': [5, 11], 'tgga':
-... [3, 9], 'attg': [1, 7, 13], 'ttgg': [2, 8]}
+>>> kmers = {'ggaa': [4, 10], 'aatt': [0, 6, 12], 'gaat': [5, 11], 'tgga': [3, 9], 'attg': [1, 7, 13], 'ttgg': [2, 8]}
 >>> kmers
 {'tgga': [3, 9], 'ttgg': [2, 8], 'aatt': [0, 6, 12], 'attg': [1, 7, 13], 'ggaa': [4, 10], 'gaat': [5, 11]}
 >>>
@@ -3631,20 +3635,21 @@ Here is a dictionary of kmers. The key is the kmer and its values is a list of p
 >>> len(kmers['ggaa'])
 2
 ```
-> Here we can get a list of the positions of a kmer by using the kmer as the key. We can also do things to the returned list, like determining its length. The length will be the total count of this kmers.
+> Aqui, podemos obter uma lista das posições de um kmer usando o kmer como chave. Também podemos fazer coisas com a lista retornada, como determinar seu comprimento. O comprimento será o total de contagens desse kmer.
 
-You can also use the `get()` method to retrieve records.
+Você também pode usar o método `get()` para recuperar registros.
+
 ```python
 >>> kmers['ggaa']
 [4, 10]
 >>> kmers.get('ggaa')
 [4, 10]
 ```
-> These two statements returns the same results, but if the key does not exist you will get nothing and not an error.
+> Essas duas declarações retornam os mesmos resultados, mas se a chave não existir, você obterá nada e não um erro.
 
-#### Dictionaries of dictionaries
+#### Dicionários de dicionários
 
-Dictionaries of dictionaries is my favorite!! You can do so many useful things with this data structure. Here we are storing a gene name and some different types of information about that gene, such as its, sequence, length, description, nucleotide composition and length.
+Dicionários de dicionários são os meus favoritos!! Você pode fazer tantas coisas úteis com essa estrutura de dados. Aqui estamos armazenando um nome de gene e alguns tipos diferentes de informações sobre esse gene, como sua sequência, comprimento, descrição, composição de nucleotídeos e comprimento.
 
 ```python
 >>> genes = {
@@ -3677,15 +3682,15 @@ Dictionaries of dictionaries is my favorite!! You can do so many useful things w
 >>> genes['gene2']['nt_comp']
 {'C': 1, 'G': 1, 'A': 3, 'T': 1}
 ```
-> Here we store a gene name as the outermost key, with a second level of keys for qualities of the gene, like sequence, length, nucleotide composition. We can retrieve a quality by using the gene name and quality in conjunction.
+> Aqui, armazenamos um nome de gene como a chave mais externa, com um segundo nível de chaves para características do gene, como sequência, comprimento, composição de nucleotídeos. Podemos recuperar uma característica usando o nome do gene e a característica em conjunto.
 
-To retrieve just one gene's nucleotide composition
+Para recuperar apenas a composição de nucleotídeos de um gene:
 ```python
 >>> genes['gene1']['nt_comp']
 {'C': 2, 'G': 1, 'A': 1, 'T': 2}
 ```
 
-Alter one gene's nucleotide count with `=` assignment operator:
+Altere a contagem de nucleotídeos de um gene com o operador de atribuição `=`:
 ```python
 >>> genes['gene1']['nt_comp']
 {'C': 2, 'G': 1, 'A': 1, 'T': 2}
@@ -3695,7 +3700,7 @@ Alter one gene's nucleotide count with `=` assignment operator:
 {'C': 2, 'G': 1, 'A': 1, 'T': 6}
 ```
 
-Alter one gene's nucleotide count with `+=` assignment operator:
+Altere a contagem de nucleotídeos de um gene com o operador de atribuição `+=`:
 ```python
 >>> genes['gene1']['nt_comp']
 {'C': 2, 'G': 1, 'A': 1, 'T': 6}
@@ -3708,7 +3713,7 @@ Alter one gene's nucleotide count with `+=` assignment operator:
 >>>
 ```
 
-To retrieve the A composition of every gene use a for loop.
+Para recuperar a composição de A de todos os genes, use um loop for.
 ```python
 >>> for gene in sorted(genes):
 ...   A_comp = genes[gene]['nt_comp']['A']
@@ -3720,17 +3725,17 @@ gene2: As= 3
 
 
 
-#### Building Complex Datastructures
+#### Construindo Estruturas de Dados Complexas
 
-Below is an example of building a list with a mixed collection of value types. Remember that all elements inside a list or dictionary should be the same type. In other words, the values in a list should all be lists or dictonaries or scalar values. This allows you to loop over the data structure.
+A seguir, um exemplo de construção de uma lista com uma coleção mista de tipos de valores. Lembre-se de que todos os elementos dentro de uma lista ou dicionário devem ser do mesmo tipo. Em outras palavras, os valores em uma lista devem ser todos listas, dicionários ou valores escalares. Isso permite que você faça loop sobre a estrutura de dados.
 
-The dictionary which is a list value has a key that has a dictionary as a value.
+O dicionário, que é um valor de lista, tem uma chave que tem um dicionário como valor.
 
 ```
 [{'gene1' : {'sequence' : [1, 2, 3], [4, 5, 6], [7,8,9]]
 ```
 
-Just spaced differently:
+Apenas espaçado de maneira diferente:
 ```
 [
    [1, 2, 3], 
@@ -3745,7 +3750,7 @@ Just spaced differently:
  ]
 ```
 
-Building this data structure in the interpreter:
+Construindo esta estrutura de dados no interpretador:
 
 ```python
 >>> new_data = []
@@ -3778,11 +3783,11 @@ Building this data structure in the interpreter:
 >>>
 ```
 
-Same example in a script file: [Building Complex Datastructures](scripts/building_datastructures.py)
+O mesmo exemplo em um arquivo de script: [Building Complex Datastructures](scripts/building_datastructures.py)
 
-__Course T-shirt Organization and Counting__
+__Organização e Contagem de Camisetas do Curso__
 
-We have a spreadsheet of everyone's style, size, color. We want to know how many of each unique combination of style-size-color we need to order
+Temos uma planilha com o estilo, tamanho e cor de todos. Queremos saber quantas de cada combinação única de estilo-tamanho-cor precisamos encomendar.
 
 [shirts.txt](files/shirts.txt) 
 ```
@@ -3796,7 +3801,7 @@ mens	large	sport grey
 mens	small	Carolina Blue
 ```
 
-We want something like this:
+Queremos algo assim:
 
 ```
 womens	small	antique heliconia	2
@@ -3834,7 +3839,7 @@ for style in shirts:
 
 ```
 
-Output:
+Saída:
 ```
 sro$ python3 shirts.py
 mens	small	heather maroon	1
@@ -3848,7 +3853,7 @@ womens	medium	kiwi	2
 ...
 ```
 
-This is what the data structure we just built looks likes
+É assim que se parece a estrutura de dados que acabamos de construir.
 ```python
 {
   'mens': 
@@ -3945,11 +3950,11 @@ This is what the data structure we just built looks likes
 
 
 
-There are also specific data table and frame handling libraries like [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
+Também existem bibliotecas específicas para manipulação de tabelas e quadros de dados, como o [Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
-Here is a [intro](https://pandas.pydata.org/pandas-docs/stable/dsintro.html) to data structures in Panda.
+Aqui está uma [introdução](https://pandas.pydata.org/pandas-docs/stable/dsintro.html) às estruturas de dados no Pandas.
 
-Here is a very nice [interactive tutorial](https://www.learnpython.org/en/Pandas_Basics)
+E também há um [tutorial interativo](https://www.learnpython.org/en/Pandas_Basics) muito bom.
 
 ---
 ### [Link to Python 8 Problem Set](problemsets/Python_08_problemset.md)
