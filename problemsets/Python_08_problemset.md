@@ -1,11 +1,10 @@
-Python 8 - Data Structures -Problem Set
-===================
+### Python 8 - Estruturas de Dados - Conjunto de Problemas
 
-__Don't forget to use a small test data set when you are testing your code. Make sure you know what the correct answer should be__
+__Não se esqueça de usar um conjunto de dados de teste pequeno ao testar seu código. Certifique-se de saber qual deve ser a resposta correta.__
 
-1. Take a multi-FASTA [Python_08.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_08.fasta) file from user input and calculate the nucleotide composition for each sequence. Use a datastructure to keep count. Print out each sequence name and its compostion in this format `seqName\tA_count\tT_count\tG_count\C_count`
+1. Receba um arquivo multi-FASTA [Python_08.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_08.fasta) a partir da entrada do usuário e calcule a composição de nucleotídeos para cada sequência. Use uma estrutura de dados para contar. Imprima cada nome de sequência e sua composição no formato `seqNome\tA_contagem\tT_contagem\tG_contagem\C_contagem`
 
-Here is a structure of a handy datastructure to store this information
+Aqui está a estrutura de uma estrutura de dados útil para armazenar essas informações
 ```
 seqs[geneName][nucleotide]=count
 
@@ -21,16 +20,16 @@ seqs['geneB']['G'] = 2
 seqs['geneB']['C'] = 2
 ``` 
 
-2. Write a script that takes a multi-FASTA file [Python_08.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_08.fasta) from user input and breaks each sequence into codons (every three nucleotides is a codon) in just the first reading frame. Your output should look like this 
+2. Escreva um script que receba um arquivo multi-FASTA [Python_08.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_08.fasta) da entrada do usuário e divida cada sequência em códons (cada três nucleotídeos é um códon) apenas no primeiro quadro de leitura. Sua saída deve ser semelhante a isso:
 ```
 seq1-frame-1-codons
 CAT GCT TGA GTC
 ``` 
-Write the output to a file called 'Python_08.codons-frame-1.nt'.
+Escreva a saída para um arquivo chamado 'Python_08.codons-frame-1.nt'.
 
-3. Now produce codons in the first three reading frames for each sequence and print out ids and sequence records for each frame and print to a file called 'Python_08.codons-3frames.nt'
+3. Agora, produza códons nos três primeiros quadros de leitura para cada sequência e imprima os IDs e registros de sequência para cada quadro e imprima em um arquivo chamado 'Python_08.codons-3frames.nt'
 
-For example
+Por exemplo,
 ```
 seq1-frame-1-codons
 ATG TTG
@@ -38,12 +37,12 @@ seq-frame-2-codons
 TGT TGA
 ``` 
 
-4. Now reverse complement each sequence and print out all six reading frames to a file called 'Python_08.codons-6frames.nt'
+4. Agora, obtenha o complemento reverso de cada sequência e imprima todos os seis quadros de leitura em um arquivo chamado 'Python_08.codons-6frames.nt'
 
-5. Translate each of the six reading frames into amino acids. Create one file for which you print the six reading frames (Python_08.codons-6frames.nt) and one file for which you print the translation of the six reading frames (Python_08.translated.aa). Use the following translation table:
+5. Traduza cada um dos seis quadros de leitura em aminoácidos. Crie um arquivo para o qual você imprima os seis quadros de leitura (Python_08.codons-6frames.nt) e um arquivo para o qual você imprima a tradução dos seis quadros de leitura (Python_08.translated.aa). Use a seguinte tabela de tradução:
 
 ```python
-translation_table = {
+tabela_de_traducao = {
     'GCT':'A', 'GCC':'A', 'GCA':'A', 'GCG':'A',
     'CGT':'R', 'CGC':'R', 'CGA':'R', 'CGG':'R', 'AGA':'R', 'AGG':'R',
     'AAT':'N', 'AAC':'N',
@@ -68,6 +67,6 @@ translation_table = {
 }
 ```
 
-6. Find the longest peptide sequence (M => Stop) of all the six translated reading frames for a single sequence. Do this for all the sequence records. For each sequence, print out in FASTA format the six frames of codons to one file (Python_08.codons-6frames.nt), the translations to a second file (Python_08.translated.aa), and the single longest translated peptide to a third file (Python_08.translated-longest.aa).
+6. Encontre a sequência de peptídeo mais longa (M => Stop) de todos os seis quadros de leitura traduzidos para uma única sequência. Faça isso para todos os registros de sequência. Para cada sequência, imprima no formato FASTA os seis quadros de códons em um arquivo (Python_08.codons-6frames.nt), as traduções em um segundo arquivo (Python_08.translated.aa) e o peptídeo traduzido mais longo em um terceiro arquivo (Python_08.translated-longest.aa).
 
-7. Finally determine which subset of codons produced the longest peptide for each sequence record. Print this to a fourth file in FASTA format (Python_08.orf-longest.nt).  
+7. Finalmente, determine qual subconjunto de códons produziu o peptídeo mais longo para cada registro de sequência. Imprima isso em um quarto arquivo no formato FASTA (Python_08.orf-longest.nt).
