@@ -6,7 +6,7 @@ __Não se esqueça de usar um conjunto de dados de teste pequeno ao testar seu c
 
 Aqui está a estrutura de uma estrutura de dados útil para armazenar essas informações
 ```
-seqs[nomeGene][nucleotídeo]=contagem
+seqs[geneName][nucleotide]=count
 
 seqs['geneA']['A'] = 2
 seqs['geneA']['T'] = 3
