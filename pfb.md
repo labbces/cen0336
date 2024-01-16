@@ -3969,10 +3969,12 @@ E também há um [tutorial interativo](https://www.learnpython.org/en/Pandas_Bas
 ### [Link to Python 8 Problem Set](problemsets/Python_08_problemset.md)
 
 ## Python 9
-### Exceptions
+### Exceções
 
 
-There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Syntax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relavent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
+Existem alguns diferentes tipos de erros enquanto estamos programando. Erros de sintaxe, erros de lógica e exceções. Você provavelmente já encontrou todos os três. Erros de sintaxe e lógica são problemas com os quais você precisa lidar enquanto está programando. Uma exceção é um tipo especial de erro que pode ser informativo e usado para escrever códigos para responder a esse tipo de erro. Isso é especialmente relevante ao lidar com a entrada do usuário. E se ele não lhe der 
+
+This is especially relavent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
 
 ```python
 #!/usr/bin/env python3
