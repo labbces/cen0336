@@ -215,7 +215,7 @@ Sofia Robb
             * [Construindo Estruturas de Dados Complexas](pfb.md/#construindo-estruturas-de-dados-complexas)
    * [<a href="problemsets/Python_08_problemset.md">Link para o Python 8 Conjunto de Problemas</a>](pfb.md/#link-to-python-8-problem-set)
       * [Python 9](pfb.md/#python-9)
-         * [Exceções](pfb.md/#exceptions)
+         * [Exceções](pfb.md/#exceções)
             * [try/except/else/finally](pfb.md/#tryexceptelsefinally)
             * [Obtendo mais infromação sobre uma exceção](pfb.md/#getting-more-information-about-an-exception)
             * [Gerando uma Exceção](pfb.md/#raising-an-exception)
