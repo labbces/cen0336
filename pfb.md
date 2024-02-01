@@ -3969,10 +3969,10 @@ E também há um [tutorial interativo](https://www.learnpython.org/en/Pandas_Bas
 ### [Link to Python 8 Problem Set](problemsets/Python_08_problemset.md)
 
 ## Python 9
-### Exceptions
+### Exceções
 
 
-There are a few different types of errors when coding. Syntax errors, logic errors, and exceptions. You have probably encountered all three. Syntax and logic errors are issues you need to deal with while coding. An exception is a special type of error that can be informative and used to write code to respond to this type of error. This is especially relavent when dealing with user input. What if they don't give you any, or it is the wrong kind of input. We want our code to be able to detect these types of errors and respond accordingly.
+Existem alguns diferentes tipos de erros enquanto estamos programando. Erros de sintaxe, erros de lógica e exceções. Você provavelmente já encontrou todos os três. Erros de sintaxe e lógica são problemas com os quais você precisa lidar enquanto está programando. Uma exceção é um tipo especial de erro que pode ser informativo e usado para escrever códigos para responder a esse tipo de erro. Isso é especialmente relevante ao lidar com a entrada do usuário. E se ele não lhe der nenhuma, ou é o tipo errado de entrada. Nós queremos que nosso código seja capaz de detectar esses tipos de erros e responda adequadamente.
 
 ```python
 #!/usr/bin/env python3
@@ -3982,15 +3982,17 @@ file = sys.argv[1]
 
 print("User provided file:" , file)
 ```
-> This code takes user provided input and prints it
+> Este código aceita uma entrada fornecida pelo usuário e a imprime.
 
-Run it.
+Execute-o.
+
 ```
 $ python scripts/exceptions.py test.txt
 User provided file: test.txt
 ```
 
-What happens if the user does not provide any input and we try to print it? 
+O que acontece se o usuário não fornece nenhuma entrada e tentamos imprimi-la?
+
 ```bash
 $ python scripts/exceptions.py
 Traceback (most recent call last):
@@ -3998,22 +4000,22 @@ Traceback (most recent call last):
     file = sys.argv[1]
 IndexError: list index out of range 
 ```
-> We get an **IndexError** exception, which is raised when an index is not found in a sequence.
+> Obtemos uma exceção **IndexError** exception, a qual é gerada quando o índice não é encontrado em uma sequência.
 
 
-We have already seen quite a few exceptions throughout the lecture notes, here are some:   
-  - ValueError: math domain error
-  - AttributeError: 'list' object has no attribute 'rstrip'
-  - SyntaxError: EOL while scanning string literal
-  - NameError: name 'GGTCTAC' is not defined
-  - SyntaxError: Missing parentheses in call to 'print'
-  - AttributeError: 'int' object has no attribute 'lower'
-  - IndexError: list assignment index out of range
-  - NameError: name 'HDAC' is not defined
+Já vimos várias exeções ao longo daos capítulos, aqui estão algumas:
+  - ValueError: erro de domínio matemático
+  - AttributeError: o objeto 'list' não tem o atributo 'rstrip'
+  - SyntaxError: EOL ao analisar a string literal
+  - NameError: o nome 'GGTCTAC' não está definido
+  - SyntaxError: parênteses ausentes na chamada para 'print'
+  - AttributeError: o objeto 'int' não tem atributo 'lower'
+  - IndexError: índice de atribuição de lista fora de alcance
+  - NameError: o nome 'HDAC' não está definido
 
-[Link to Python Documentation of built in types of exceptions](https://www.tutorialspoint.com/python3/python_exceptions.htm)
+[Link para a Documentação de Python sobre tipos de exceções integradas](https://www.tutorialspoint.com/python3/python_exceptions.htm)
 
-We can use the exception to our advantage to help the people who are running the script. We can use a try/except condition like an if/else block to look for exceptions and to execute specific code if we **do not have** an exception and do something different if we **do have** an exception.
+Podemos usar a exeção à nosso favor para ajudar as pessoas que estão executando o código. Podemos usar a codição try/except como um bloco if/else para procurar exceções e executar um código específico se **não tivermos** uma exceção e fazer algo diferente se **tivermos** uma exceção.
 
 ```python
 #!/usr/bin/env python3
@@ -4026,27 +4028,26 @@ try:
 except:
   print("Please provide a file name")
 ```
-> We need to "try" to get a user provided argument. If we are successful then we can print it out. If we try and fail, we execute the code in the except portion of our try/except and print that we need a file name. 
+> Precisamos "tentar" obter um argumento fornecido do usuário. Caso seja um sucesso então podemos imprimi-lá. Caso tentemos e falhemos, nós executamos o código na parte da "exceção" do nosso bloco try/except e imprimimos que precisamos do nome do arquivo.
 
-Let's run it WITH user input
+Vamos executá-lo COM entrada do usuário
 ```bash
 $ python3 scripts/exceptions_try.py test.txt
 User provided file: test.txt
 ```
-> It runs as expected
+> Funciona como esperado
 
-Let's run it WITHOUT user input
+Vamos executá-lo SEM entrada do usuário
 ```bash
 $ python scripts/exceptions_try.py
 Please provide a file name
 ```
-> Yeah, the user is informed that they need to provide a file name to the script
+> Sim, o usuário é informado de que precisa fornecer um nome de arquivo para o script
 
 
-What if the user provides input but it is not a valid file or the path is incorrect? Or if you want to check to see if the user provided input as well as if it can open the input.  
+E se o usuário fornecer uma entrada mas ela não é um arquivo válido ou o caminho está incorreto? Ou se você quer verificar se o usuário forneceu a entrada, e se é possível abrir a entrada.
 
-
-We can add multiple exception tests, like if/elif block. Each except statement can specify what kind of exception it is waiting to recieve. If that kind of exception occures, that block of code will be executed.
+Podemos adicionar múltiplos testes de exceção, como blocos if/elif. Cada declaração de "exceção" pode especificar que tipo de exeção está esperando para receber. Se esse tipo de exceção ocorrer, ese bloco do código será executado.
 ```python
 import sys
 
@@ -4063,48 +4064,49 @@ except IndexError:
 except IOError:    
   print("Can't find file:" , file)
 ```
-> Here we test for an IndexError: Raised when an index is not found in a sequence.
-> The IndexError occurs when we try to access a list element that does not exists. 
-> And we test for a IOError: Raised when an input/ output operation fails, such as the print statement or the open() function when trying to open a file that does not exist.   
-> The IOError happens when we try to access a file that does not exist.
+> Aqui testamos um IndexError: Gerado quando um índice não é encontrado em uma sequência.
+> O IndexError ocorre quando tentamos acessar um elemento de lista que não existe.
+> E testamos um IOError: Gerado quando uma operação de entrada/saída falha, como a instrução print ou a função open() ao tentar abrir um arquivo que não existe.
+> O IOError ocorre quando tentamos acessar um arquivo que não existe.
 
-Let's run it with a file that does not exist.
+
+Vamos executá-lo com um arquivo que não existe.
 ```
 $ python scripts/exceptions_try_files.py test.txt
 User provided file name: test.txt
 Can't find file: test.txt
 ```
-> This informs the user that they did provide input but that the file listed can not be found.
+> Isso informo ao usuário que eles forneceram uma entrada no entanto que o arquivo listado não pode ser encontrado.
 
-Let's run it with no input
+
+Vamos executá-lo sem nenhuma entrada
 ```bash
 $ python scripts/exceptions_try_files.py
 Please provide a file name
 ```
-> This informs the user that they need to provide a file.
+> Isso informar ao usuário que ele precisa fornecer um arquivo.
 
 #### try/except/else/finally
 
-Lets summarize what we have covered and add on `else` and `finally`.
+Vamos resumir o que cobrimos e adicionar `else` e `finally`.
 
 ```
 try:
-  # try block is executed until an exception is raised
+  # o bloco try é executado até que uma exceção seja gerada
 except _ExceptionType_:
-  # if there is an exception of "ExceptionType" this block will be executed
-  # there can be more than one except block, just like an elif
+  # se houver uma exceção do tipo "ExceptionType", este bloco será executado
+  # pode haver mais de um bloco except, assim como um elif
 except:
-  # if there are any exceptions that are not of "ExceptionType" this except block will be executed
+  # se houver exceções que não sejam do tipo "ExceptionType", este bloco except será executado
 else: 
-  # the else block is executed after the try block has been completed, which means there were no exceptions raised
+  # o bloco else é executado após a conclusão do bloco try, o que significa que nenhuma exceção foi gerada
 finally:
-  # the finally block is executed if exceptions are or are not raised (no matter what happens)
+  # o bloco finally é executado se exceções forem ou não geradas (não importa o que aconteça)
 ```
 
-#### Getting more information about an exception
+#### Obtendo mais informação sobre uma exceção
 
-Some exceptions can be thrown for multiple reasons, for example, ErrorIO will occur if the file does not exist as well as if you don't have permissions to read it. We can get more information by viewing the contents of our Exception Object. Yes, an exception is an object too! The system errors get stored in the exception object.  To access the object use `as` and supply a variable name, like 'ex'
-
+Algumas exceções podem ser lançadas por múltiplas motivos, por exemplo, ErrorIO ocorrerá se o arquivo não existe, assim como se você não tiver permissões para lê-lo. Podemos obter mais informação observando o conteúdo das nosso Objeto de Exceção. Sim, uma exceção é um objeto também! O erros do sistema são armazenados no objeto de exceção. Para acessar o objeto use `as` e fornceça um nome de variável, como 'ex'.
 ```python
 file = ''
 try:
@@ -4119,26 +4121,25 @@ except IndexError:
 except IOError as ex:
   print("Can't find file:" , file , ': ' , ex.strerror  ) 
 ```
-> Here we added `except IOError as ex` and now we can get the 'strerror' message from ex.
+> Aqui nós adicionamos `except IOError as ex` e agora nós obtemos a mensagem de 'strerror' de ex.
 
-Run it.
+Execute.
 ```bash
 $ python scripts/exceptions_try_files_as.py  test.txt
 User provided file name: test.txt
 Can't find file: test.txt :  No such file or directory
 ```
-> Now we know that this file name or path is not valid
+> Agora nós sabemos que esse nome de arquivo ou o caminho não é válido
 
 
-#### Raising an Exception
+#### Gerando uma Exceção
 
-We can call or raise exceptions too!! This is accomplished by using a `raise` statement. 
+Nós podemos chamar ou gerar exceções também!! Isso é feito usando uma instrução `raise`
 
-1. First, create a new Exception Object, i.e., `ValueError()`
-2. Use the Exception Object in a Raise statment `raise ValueError('your message')`
+1. Primeiro, criamos um novo objeto de exceção, ou seja, `ValueError()`
+2. Use o objeto de exceção em uma frase com "Raise" `raise ValueError('your message')`
 
-
-Let's raise an exception if the file name does not end in 'fa'
+Vamos gerar uma exceção se o nome do arquivo não terminar em 'fa'
 ```python
 import sys
 
@@ -4156,9 +4157,9 @@ except IndexError:
 except IOError as ex:
   print("Can't find file:" , file , ': ' , ex.strerror  )
 ```
-> Here we raise a known exception, 'ValueError', if the file does not end with (uses `endswith()` method). 
+> Aqui geramos uma exceção conhecida, 'ValueError', se o arquivo não terminar com (usamos o método `endswith()`). 
 
-Let's run it.
+Vamos executá-lo.
 ``` bash
 $ python scripts/exceptions_try_files_raise.py test.txt
 User provided file name: test.txt
@@ -4167,7 +4168,7 @@ Traceback (most recent call last):
     raise ValueError("Not a FASTA file")
 ValueError: Not a FASTA file
 ```
-> Our exception get's raised, now lets do something with it.
+> Nossa exceção é gerada, agora vamos fazer algo com ela.
 
 ```python
 import sys
@@ -4188,21 +4189,21 @@ except ValueError:
 except IOError as ex:
   print("Can't find file:" , file , ': ' , ex.strerror  )
 ```
-> Here we created an exception to catch any ValueError
+> Aqui criamos uma exceção para capturar qualquer ValueError.
 
-Let's Run it.
+Vamos executá-lo.
 ```bash
 $ python scripts/exceptions_try_files_raise_value.py test.txt
 User provided file name: test.txt
 File needs to be a FASTA file and end with .fa
 ```
-> We get a great error message now.
+> Agora temos uma ótima mensagem de erro.
 
-But what if there is another ValueError, how can we tell if has anything to do with the FASTA file extension or not? Answer: the message will be different.
+Mas e se houver outro ValueError, como podemos saber se tem algo a ver com a extensão do arquivo FASTA ou não? Resposta: a mensagem será diferente.
 
-#### Creating Custom Exceptions
+#### Criando Exceções Personalizadas
 
-We can create our own custom exception. We will need to create a new class of exception. Below is the syntax to do this.
+Podemos criar nossa própria exceção personalizada. Precisaremos criar uma nova classe de exceção. Abaixo está a sintaxe para fazer isso.
 
 ```python
 import sys
@@ -4227,21 +4228,21 @@ except NotFASTAError:
 except IOError as ex:
   print("Can't find file:" , file , ': ' , ex.strerror  )
 ```
-> Here we created a new class of exception called 'NotFASTAError'. Then we raised this new exception.
+> Aqui criamos uma nova classe de exceção chamada 'NotFASTAError'. Em seguida, levantamos esta nova exceção.
 
-Let's Run it.
+Vamos executá-lo.
 ```bash
 $ python scripts/exceptions_try_files_raise_try.py test.txt
 User provided file name: test.txt
 File needs to be a FASTA file and end with .fa
 ```
-> Our new class of exception, NotFASTAError, works just like the built in exceptions.
+> Nossa nova classe de exceção, NotFASTAError, funciona da mesma forma que as exceções integradas.
 
 
 
 ---
 
-### [Link to Python 9 Problem Set](problemsets/Python_09_problemset.md)
+### [Link para o Conjunto de Problemas Python 9](problemsets/Python_09_problemset.md)
 
 
 
