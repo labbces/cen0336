@@ -4249,13 +4249,13 @@ File needs to be a FASTA file and end with .fa
 ---
 ## Python 10
 
-### Functions
+### Funções
 
-Functions consist of several lines of code that do something useful and that you want to run more than once. There are built-in functions in python. You can also write your own. You also give your function a name so you can refer to it in your code. This avoids copying and pasting the same code to many places in your script and makes your code easier to read.
+Funções consistem em várias linhas de código que fazem algo útil e que você deseja executar mais de uma vez. Existem funções integradas em Python. Você também pode escrever as suas próprias. Além disso, você dá um nome à sua função para poder se referir a ela em seu código. Isso evita copiar e colar o mesmo código em muitos lugares em seu script e torna seu código mais fácil de ler.
 
-Let's see some examples.
+Vamos ver alguns exemplos.
 
-Python has built-in functions
+Python tem funções integradas
 
 ```python
 >>> print('Hello world!')
@@ -4264,50 +4264,50 @@ Hello world!
 5
 ```
 
-You can define your own functions with  `def` Let's write a function that calculates the GC content. Let's define this as the fraction of nucleotides in a DNA sequence that are G or C. It can vary from 0 to 1.
+Você pode definir suas próprias funções com `def`. Vamos escrever uma função que calcula o conteúdo de GC. Vamos definir isso como a fração de nucleotídeos em uma sequência de DNA que são G ou C. Isso pode variar de 0 a 1.
 
-First we can look at the code that makes the calculation, then we can convert those lines of code into a function.
+Primeiro, podemos olhar para o código que faz o cálculo, depois podemos converter essas linhas de código em uma função.
 
-Code to find GC content:
+Código para encontrar o conteúdo de GC:
 ```python
 dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCT'
-c_count = dna.count('C')  # count is a string method
+c_count = dna.count('C')  # count é um método de string
 g_count = dna.count('G')
-dna_len = len(dna) # len is a function
-gc_content = (c_count + g_count) / dna_len # fraction from 0 to 1
+dna_len = len(dna) # len é uma função
+gc_content = (c_count + g_count) / dna_len # fração de 0 a 1
 print(gc_content)
 ```
-#### Defining a Function that calculates GC Content
+#### Definindo uma Função que Calcula o Conteúdo de GC
 
-We use `def` do define our own function. It is followed by the name of the function (`gc_content`) and parameters it will take in parentheses. A colon is the last character on the `def` line. The parameter variables will be available for your code inside the function to use.
+Usamos `def` para definir nossa própria função. É seguido pelo nome da função (`gc_content`) e parâmetros que serão inseridos entre parênteses. Um dois pontos é o último caractere na linha `def`. As variáveis de parâmetro estarão disponíveis para o seu código dentro da função para usar.
 
 ```python
-def gc_content(dna):   # give our function a name and parameter 'dna'
+def gc_content(dna):   # dê um nome à nossa função e ao parâmetro 'dna'
    c_count = dna.count('C')
    g_count = dna.count('G')
    dna_len = len(dna)
    gc_content = (c_count + g_count) / dna_len
-   return gc_content # return the value to the code that called this function
+   return gc_content # retorna o valor para o código que chamou esta função
 ```
-> Here is a custom function that you can use like a built in Python function
+> Aqui está uma função personalizada que você pode usar como uma função integrada do Python
 
-#### Using your function to calculate GC content
+#### Usando sua função para calcular o conteúdo de GC
 
-This is just like any other python function. You write the name of the function with any variables you want to pass to the function in parentheses. In the example below the contents of `dna_string` get passed into `gc_content()`. Inside the function this data is passed to the variable `dna`.
+Isso é igual a qualquer outra função python. Você escreve o nome da função com quaisquer variáveis que deseja passar para a função entre parênteses. No exemplo abaixo, o conteúdo de `dna_string` é passado para `gc_content()`. Dentro da função, esses dados são passados para a variável `dna`.
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
 print(gc_content(dna_string))
 ```
-This code will print 0.45161290322580644 to the screen. You can save this value in a variable to use later in your code like this
+Este código imprimirá 0,45161290322580644 na tela. Você pode salvar esse valor em uma variável para usar posteriormente em seu código, assim:
 
 ```python
 dna_gc = gc_content('GTACCTTGATTTCGTATTCTGAGAGGCTGCT')
 ```
 
-As you can see we can write a nice clear line of python to call this function and because the function has a name that describes what it does it's easy to understand how the code works. Don't give your functions names like this `def my_function(a):`!
+Como você pode ver, podemos escrever uma linha de código python clara e, como a função tem um nome que descreve o que ela faz, é fácil entender como o código funciona. Não dê nomes às suas funções como esta `def my_function(a):`!
 
-How could you convert the GC fraction to % GC. Use `format()`.
+Como você poderia converter a fração GC em % GC. Use `format()`.
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
@@ -4316,29 +4316,29 @@ pc_gc = '{:.2%}'.format(dna_gc)
 print('This sequence is' , pc_gc , 'GC')
 ```
 
-Here's the output
+Aqui está a saída
 
 ```python
 This sequence is 45.16% GC
 ```
 
-#### The details
+#### Os detalhes
 
-1. You define a function with `def`.  You need to define a function before you can call it.
-2. The function must have a name. This name should clearly describe what the function does. Here is our example `gc_content`
-3. You can pass variables to functions but you don't have to. In the definition line, you place variables your function needs inside parentheses like this `(dna)`. This variable only exists inside the function.
-4. The first line of the function must end with a `:` so the complete function definition line looks like this ```def gc_content(dna):```
-5. The next lines of code, the function body, need to be indented. This code comprises what the function does.
-6. You can return a value as the last line of the function, but this is not required. This line `return gc_content` at the end of our function definition passes the value of gc_content back to the code that called the function in your main script.
+1. Você define uma função com `def`. Você precisa definir uma função antes de poder chamá-la.
+2. A função deve ter um nome. Este nome deve descrever claramente o que a função faz. Aqui está o nosso exemplo `gc_content`.
+3. Você pode passar variáveis para funções, mas não é obrigatório. Na linha de definição, você coloca as variáveis que sua função precisa entre parênteses, assim `(dna)`. Esta variável existe apenas dentro da função.
+4. A primeira linha da função deve terminar com um `:` para que a linha completa de definição da função pareça com isso ```def gc_content(dna):```
+5. As próximas linhas de código, o corpo da função, precisam estar indentadas. Este código compreende o que a função faz.
+6. Você pode retornar um valor como a última linha da função, mas isso não é obrigatório. Esta linha `return gc_content` no final da definição de nossa função passa o valor de conteudo_gc de volta para o código que chamou a função em seu script principal.
 
 
-#### Naming Arguments
+#### Nomeando Argumentos
 
-You can name your argument variables anything you want, but the name should describe the data contained. The name needs to be consistent within your function. 
+Você pode nomear suas variáveis de argumento como quiser, mas o nome deve descrever os dados contidos. O nome precisa ser consistente dentro de sua função.
 
-#### Keyword Arguments
+#### Argumentos de Palavra-chave
 
-Arguments can be named and these names can be used when the function is called. This name is called a 'keyword' 
+Argumentos podem ser nomeados e esses nomes podem ser usados quando a função é chamada. Este nome é chamado de 'palavra-chave'
 
 ```python
 >>> dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
@@ -4348,11 +4348,11 @@ Arguments can be named and these names can be used when the function is called. 
 0.45161290322580644
 
 ```
-> The keyword must be the same as the defined function argument. If a function has multiple arguments, using the keyword allows for calling the function with the arguments in any order.
+> A palavra-chave deve ser a mesma que o argumento definido da função. Se uma função tiver múltiplos argumentos, usar a palavra-chave permite chamar a função com os argumentos em qualquer ordem.
 
-#### Default Values for Arguments
+#### Valores Padrão para Argumentos
 
-As defined above, our function is expecting an argument (`dna`) in the definition. You get an error if you call the function without any parameters.
+Como definido acima, nossa função está esperando um argumento (`dna`) na definição. Você recebe um erro se chamar a função sem quaisquer parâmetros.
 
 ```python
 >>> gc_content()
@@ -4362,53 +4362,53 @@ TypeError: gc_content() missing 1 required positional argument: 'dna'
 
 ```
 
-You can define default values for arguments when you define your function.
+Você pode definir valores padrão para argumentos quando definir sua função.
 
 ```python
-def gc_content(dna='N'):   # give our function a name and parameter 'dna'
+def gc_content(dna='N'):   # dê um nome à nossa função e parâmetro 'dna'
    c_count = dna.count('C')
    g_count = dna.count('G')
    dna_len = len(dna)
    gc_content = (c_count + g_count) / dna_len
-   return gc_content # return the value to the code that called this function
+   return gc_content # retorna o valor para o código que chamou esta função
 
 ```
-> If you call the function with no arguments, the default will be used. In this case a default is pretty useless, and the function will return '0' if called without providing a DNA sequence.
+> Se você chamar a função sem argumentos, o padrão será usado. Neste caso, um padrão é bastante inútil, e a função retornará '0' se chamada sem fornecer uma sequência de DNA.
 
-#### Lambda expressions
+#### Expressões Lambda
 
-Lambda expressions can be used to define simple (one-line) functions. There are some uses for lambda which we won't go into here. We are showing it to you because sometimes you will come across it.
+Expressões Lambda podem ser usadas para definir funções simples (de uma linha). Existem alguns usos para lambda que não vamos discutir aqui. Estamos mostrando a você porque às vezes você vai encontrar.
 
-Here is a one line custom function, like the functions we have already talked about:
+Aqui está uma função personalizada de uma linha, como as funções sobre as quais já falamos:    
 ```python
 def get_first_codon(dna):
   return dna[0:3]
 
 print(get_first_codon('ATGTTT'))
 ```
-> This will print `ATG`
+> Isso imprimirá `ATG`
 
-Here is the same function written as a lambda
+Aqui está a mesma função escrita como uma lambda
 ```python
 get_first_codon = lambda dna : dna[0:3]
 print(get_first_codon('ATGTTT'))
 ```
-> This also prints `ATG`. lambdas can only contain one line and there is no `return` statement.
+> Isso também imprime `ATG`. lambdas só podem conter uma linha e não há instrução de `return`.
 
-List comprehensions can often be used instead of lambdas and may be easier to read. You can read more about `lambda`, particularly in relation to `map` which will perform an operation on a list, but generally  a `for` loop is easier to read.
+Compreensões de lista frequentemente podem ser usadas em vez de lambdas e podem ser mais fáceis de ler. Você pode ler mais sobre `lambda`, particularmente em relação ao `map` que irá realizar uma operação em uma lista, mas geralmente um laço `for` é mais fácil de ler.
 
-### Scope
+### Escopo
 
-Almost all python variables are global. This means they are available everywhere in your code.  Remember that python blocks are defined as code at the same level of indentation.
+Quase todas as variáveis Python são globais. Isso significa que estão disponíveis em todo o seu código. Lembre-se de que os blocos Python são definidos como código no mesmo nível de indentação.
 
 ```python
 #!/usr/bin/env python3
 print('Before if block')
 x = 100
 print('x=',x)
-if True:  # this if condition will always be True 
-  # we want to make sure the block gets executed
-  # so we can show you what happens
+if True:  # esta condição if será sempre Verdadeira     
+  # queremos garantir que o bloco seja executado
+  # para que possamos mostrar o que acontece
   print('Inside if block')
   x = 30
   y = 10
@@ -4422,7 +4422,7 @@ print("y=", y)
 
 ```
 
-Let's Run it:
+Vamos executar:
 ```bash
 $ python3 scripts/scope.py
 Before if block
@@ -4436,7 +4436,7 @@ y= 10
 
 ```
 
-The most important exception to variables being global is that variables that are defined in **functions** are **local** i.e. they only exist inside their function. Inside a function, global variables are visible, but it's better to pass variables to a function as arguments
+A exceção mais importante às variáveis serem globais é que variáveis definidas em **funções** são **locais**, ou seja, existem apenas dentro de sua função. Dentro de uma função, as variáveis globais são visíveis, mas é melhor passar variáveis para uma função como argumentos.
 
 ```python
 def show_n():
@@ -4445,7 +4445,7 @@ n = 5
 show_n()
 ```
 
-The output is this `5` as you would expect, but the example below is better programming practice. Why? We'll see a little later.
+A saída é esta `5`, como você esperaria, mas o exemplo abaixo é uma prática de programação melhor. Por quê? Veremos um pouco mais tarde.
 
 ```python3
 def show_n(n):
@@ -4456,9 +4456,9 @@ show_n(n)
 
 
 
-#### Local Variables
+#### Variáveis Locais
 
-Variables inside functions are local and therefore can only been accessed from within the function block. This applies to arguments as well as variables defined inside a function.
+Variáveis dentro de funções são locais e, portanto, só podem ser acessadas de dentro do bloco da função. Isso se aplica tanto a argumentos quanto a variáveis definidas dentro de uma função.
 
 
 ```python
