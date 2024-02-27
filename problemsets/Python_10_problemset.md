@@ -1,9 +1,9 @@
-Python 10 - Functions - Problem Set
+Python 10 - Funções - Conjunto de Problemas
 ===================
 
-1. Create a function to format a string of DNA so that each line is no more than 60 nt long. Your function will:
-	- INPUT: a string of DNA without newlines   
-	- OUTPUT: a string of DNA with lines no more than 60 nucleoties long
+1. Crie uma função para formatar uma sequência de DNA de modo que cada linha tenha no máximo 60 nt. Sua função:
+	- ENTRADA: uma sequência de DNA sem quebras de linha   
+	- SAÍDA: uma sequência de DNA com linhas de no máximo 60 nucleotídeos de comprimento
 
 ```
 INPUT:
@@ -21,7 +21,7 @@ GGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCT
 GTCATCTTCT
 ```
 
-2. Modify your function so that it will work whether the DNA string does or does not have newlines. 
+2. Modifique sua função para que ela funcione tanto se a sequência de DNA tiver ou não quebras de linha. 
 
 ```
 INPUT:
@@ -46,7 +46,7 @@ GGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCT
 GTCATCTTCT
 ```
 
-3. Modify your function so that it takes two arguments, the DNA string and the max length of each line.
+3. Modifique sua função para que ela receba dois argumentos: a sequência de DNA e o comprimento máximo de cada linha.
 
 ```
 INPUT:
@@ -63,22 +63,22 @@ CCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCT
 GTCATCTTCT
 ```
 
-4. Modify your script so that it can take two command line arguments:
-     1) FASTA file name
-     2) Max length of each line
+4. Modifique seu script para que ele possa receber dois argumentos da linha de comando:
+     1) Nome do arquivo FASTA
+     2) Comprimento máximo de cada linha
 
-   The script should reformat every sequence in the file to the specified max line length. Make sure your output is in proper FASTA format.
+   O script deve reformatar cada sequência no arquivo para o comprimento máximo especificado. Certifique-se de que sua saída esteja em formato FASTA adequado.
 
-5. Create a new function that calculates the GC content of a DNA sequence. 
-	- it will take a DNA sequence without spaces and no header as an argument and return the percentage of nucleotides that are a G or C.
-	- example `percentGC = gc_conent('CGTGCTTTCCACGACGGTGACACGCTTCCCTGGA')` or `percentGC = gc_content(dna)`
+5. Crie uma nova função que calcula o conteúdo de GC de uma sequência de DNA.
+	- ela receberá uma sequência de DNA sem espaços e sem cabeçalho como argumento e retornará a porcentagem de nucleotídeos que são G ou C.
+	- exemplo `percentGC = gc_conent('CGTGCTTTCCACGACGGTGACACGCTTCCCTGGA')` ou `percentGC = gc_content(dna)`
 	
-6. Create a new function that computes and returns the reverse complement of a sequence
-	- it will take a DNA sequence without spaces and no header as an argument and return the reverse complement, with no spaces and no header.
-	- example `revComp_sequence = get_reverse_complement(dna)`
+6. Crie uma nova função que calcula e retorna o complemento reverso de uma sequência
+	- ela receberá uma sequência de DNA sem espaços e sem cabeçalho como argumento e retornará o complemento reverso, sem espaços e sem cabeçalho.
+	- exemplo `seqCompReversa = get_reverse_complement(dna)`
 	
 	
 7. Pipelines:  
-  a. Create a script that runs a command with `subprocess.run`.    
-  b. Check the exit status  
-  c. If exit status is good, run a second command.  
+  a. Crie um script que execute um comando com `subprocess.run`.    
+  b. Verifique o status de saída  
+  c. Se o status de saída for bom, execute um segundo comando.  

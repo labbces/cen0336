@@ -4249,13 +4249,13 @@ File needs to be a FASTA file and end with .fa
 ---
 ## Python 10
 
-### Functions
+### Funções
 
-Functions consist of several lines of code that do something useful and that you want to run more than once. There are built-in functions in python. You can also write your own. You also give your function a name so you can refer to it in your code. This avoids copying and pasting the same code to many places in your script and makes your code easier to read.
+Funções consistem em várias linhas de código que fazem algo útil e que você deseja executar mais de uma vez. Existem funções integradas em Python. Você também pode escrever as suas próprias. Além disso, você dá um nome à sua função para poder se referir a ela em seu código. Isso evita copiar e colar o mesmo código em muitos lugares em seu script e torna seu código mais fácil de ler.
 
-Let's see some examples.
+Vamos ver alguns exemplos.
 
-Python has built-in functions
+Python tem funções integradas
 
 ```python
 >>> print('Hello world!')
@@ -4264,50 +4264,50 @@ Hello world!
 5
 ```
 
-You can define your own functions with  `def` Let's write a function that calculates the GC content. Let's define this as the fraction of nucleotides in a DNA sequence that are G or C. It can vary from 0 to 1.
+Você pode definir suas próprias funções com `def`. Vamos escrever uma função que calcula o conteúdo de GC. Vamos definir isso como a fração de nucleotídeos em uma sequência de DNA que são G ou C. Isso pode variar de 0 a 1.
 
-First we can look at the code that makes the calculation, then we can convert those lines of code into a function.
+Primeiro, podemos olhar para o código que faz o cálculo, depois podemos converter essas linhas de código em uma função.
 
-Code to find GC content:
+Código para encontrar o conteúdo de GC:
 ```python
 dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCT'
-c_count = dna.count('C')  # count is a string method
+c_count = dna.count('C')  # count é um método de string
 g_count = dna.count('G')
-dna_len = len(dna) # len is a function
-gc_content = (c_count + g_count) / dna_len # fraction from 0 to 1
+dna_len = len(dna) # len é uma função
+gc_content = (c_count + g_count) / dna_len # fração de 0 a 1
 print(gc_content)
 ```
-#### Defining a Function that calculates GC Content
+#### Definindo uma Função que Calcula o Conteúdo de GC
 
-We use `def` do define our own function. It is followed by the name of the function (`gc_content`) and parameters it will take in parentheses. A colon is the last character on the `def` line. The parameter variables will be available for your code inside the function to use.
+Usamos `def` para definir nossa própria função. É seguido pelo nome da função (`gc_content`) e parâmetros que serão inseridos entre parênteses. Um dois pontos é o último caractere na linha `def`. As variáveis de parâmetro estarão disponíveis para o seu código dentro da função para usar.
 
 ```python
-def gc_content(dna):   # give our function a name and parameter 'dna'
+def gc_content(dna):   # dê um nome à nossa função e ao parâmetro 'dna'
    c_count = dna.count('C')
    g_count = dna.count('G')
    dna_len = len(dna)
    gc_content = (c_count + g_count) / dna_len
-   return gc_content # return the value to the code that called this function
+   return gc_content # retorna o valor para o código que chamou esta função
 ```
-> Here is a custom function that you can use like a built in Python function
+> Aqui está uma função personalizada que você pode usar como uma função integrada do Python
 
-#### Using your function to calculate GC content
+#### Usando sua função para calcular o conteúdo de GC
 
-This is just like any other python function. You write the name of the function with any variables you want to pass to the function in parentheses. In the example below the contents of `dna_string` get passed into `gc_content()`. Inside the function this data is passed to the variable `dna`.
+Isso é igual a qualquer outra função python. Você escreve o nome da função com quaisquer variáveis que deseja passar para a função entre parênteses. No exemplo abaixo, o conteúdo de `dna_string` é passado para `gc_content()`. Dentro da função, esses dados são passados para a variável `dna`.
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
 print(gc_content(dna_string))
 ```
-This code will print 0.45161290322580644 to the screen. You can save this value in a variable to use later in your code like this
+Este código imprimirá 0,45161290322580644 na tela. Você pode salvar esse valor em uma variável para usar posteriormente em seu código, assim:
 
 ```python
 dna_gc = gc_content('GTACCTTGATTTCGTATTCTGAGAGGCTGCT')
 ```
 
-As you can see we can write a nice clear line of python to call this function and because the function has a name that describes what it does it's easy to understand how the code works. Don't give your functions names like this `def my_function(a):`!
+Como você pode ver, podemos escrever uma linha de código python clara e, como a função tem um nome que descreve o que ela faz, é fácil entender como o código funciona. Não dê nomes às suas funções como esta `def my_function(a):`!
 
-How could you convert the GC fraction to % GC. Use `format()`.
+Como você poderia converter a fração GC em % GC. Use `format()`.
 
 ```python
 dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
@@ -4316,29 +4316,29 @@ pc_gc = '{:.2%}'.format(dna_gc)
 print('This sequence is' , pc_gc , 'GC')
 ```
 
-Here's the output
+Aqui está a saída
 
 ```python
 This sequence is 45.16% GC
 ```
 
-#### The details
+#### Os detalhes
 
-1. You define a function with `def`.  You need to define a function before you can call it.
-2. The function must have a name. This name should clearly describe what the function does. Here is our example `gc_content`
-3. You can pass variables to functions but you don't have to. In the definition line, you place variables your function needs inside parentheses like this `(dna)`. This variable only exists inside the function.
-4. The first line of the function must end with a `:` so the complete function definition line looks like this ```def gc_content(dna):```
-5. The next lines of code, the function body, need to be indented. This code comprises what the function does.
-6. You can return a value as the last line of the function, but this is not required. This line `return gc_content` at the end of our function definition passes the value of gc_content back to the code that called the function in your main script.
+1. Você define uma função com `def`. Você precisa definir uma função antes de poder chamá-la.
+2. A função deve ter um nome. Este nome deve descrever claramente o que a função faz. Aqui está o nosso exemplo `gc_content`.
+3. Você pode passar variáveis para funções, mas não é obrigatório. Na linha de definição, você coloca as variáveis que sua função precisa entre parênteses, assim `(dna)`. Esta variável existe apenas dentro da função.
+4. A primeira linha da função deve terminar com um `:` para que a linha completa de definição da função pareça com isso ```def gc_content(dna):```
+5. As próximas linhas de código, o corpo da função, precisam estar indentadas. Este código compreende o que a função faz.
+6. Você pode retornar um valor como a última linha da função, mas isso não é obrigatório. Esta linha `return gc_content` no final da definição de nossa função passa o valor de conteudo_gc de volta para o código que chamou a função em seu script principal.
 
 
-#### Naming Arguments
+#### Nomeando Argumentos
 
-You can name your argument variables anything you want, but the name should describe the data contained. The name needs to be consistent within your function. 
+Você pode nomear suas variáveis de argumento como quiser, mas o nome deve descrever os dados contidos. O nome precisa ser consistente dentro de sua função.
 
-#### Keyword Arguments
+#### Argumentos de Palavra-chave
 
-Arguments can be named and these names can be used when the function is called. This name is called a 'keyword' 
+Argumentos podem ser nomeados e esses nomes podem ser usados quando a função é chamada. Este nome é chamado de 'palavra-chave'
 
 ```python
 >>> dna_string = "GTACCTTGATTTCGTATTCTGAGAGGCTGCT"
@@ -4348,11 +4348,11 @@ Arguments can be named and these names can be used when the function is called. 
 0.45161290322580644
 
 ```
-> The keyword must be the same as the defined function argument. If a function has multiple arguments, using the keyword allows for calling the function with the arguments in any order.
+> A palavra-chave deve ser a mesma que o argumento definido da função. Se uma função tiver múltiplos argumentos, usar a palavra-chave permite chamar a função com os argumentos em qualquer ordem.
 
-#### Default Values for Arguments
+#### Valores Padrão para Argumentos
 
-As defined above, our function is expecting an argument (`dna`) in the definition. You get an error if you call the function without any parameters.
+Como definido acima, nossa função está esperando um argumento (`dna`) na definição. Você recebe um erro se chamar a função sem quaisquer parâmetros.
 
 ```python
 >>> gc_content()
@@ -4362,53 +4362,53 @@ TypeError: gc_content() missing 1 required positional argument: 'dna'
 
 ```
 
-You can define default values for arguments when you define your function.
+Você pode definir valores padrão para argumentos quando definir sua função.
 
 ```python
-def gc_content(dna='N'):   # give our function a name and parameter 'dna'
+def gc_content(dna='N'):   # dê um nome à nossa função e parâmetro 'dna'
    c_count = dna.count('C')
    g_count = dna.count('G')
    dna_len = len(dna)
    gc_content = (c_count + g_count) / dna_len
-   return gc_content # return the value to the code that called this function
+   return gc_content # retorna o valor para o código que chamou esta função
 
 ```
-> If you call the function with no arguments, the default will be used. In this case a default is pretty useless, and the function will return '0' if called without providing a DNA sequence.
+> Se você chamar a função sem argumentos, o padrão será usado. Neste caso, um padrão é bastante inútil, e a função retornará '0' se chamada sem fornecer uma sequência de DNA.
 
-#### Lambda expressions
+#### Expressões Lambda
 
-Lambda expressions can be used to define simple (one-line) functions. There are some uses for lambda which we won't go into here. We are showing it to you because sometimes you will come across it.
+Expressões Lambda podem ser usadas para definir funções simples (de uma linha). Existem alguns usos para lambda que não vamos discutir aqui. Estamos mostrando a você porque às vezes você vai encontrar.
 
-Here is a one line custom function, like the functions we have already talked about:
+Aqui está uma função personalizada de uma linha, como as funções sobre as quais já falamos:    
 ```python
 def get_first_codon(dna):
   return dna[0:3]
 
 print(get_first_codon('ATGTTT'))
 ```
-> This will print `ATG`
+> Isso imprimirá `ATG`
 
-Here is the same function written as a lambda
+Aqui está a mesma função escrita como uma lambda
 ```python
 get_first_codon = lambda dna : dna[0:3]
 print(get_first_codon('ATGTTT'))
 ```
-> This also prints `ATG`. lambdas can only contain one line and there is no `return` statement.
+> Isso também imprime `ATG`. lambdas só podem conter uma linha e não há instrução de `return`.
 
-List comprehensions can often be used instead of lambdas and may be easier to read. You can read more about `lambda`, particularly in relation to `map` which will perform an operation on a list, but generally  a `for` loop is easier to read.
+Compreensões de lista frequentemente podem ser usadas em vez de lambdas e podem ser mais fáceis de ler. Você pode ler mais sobre `lambda`, particularmente em relação ao `map` que irá realizar uma operação em uma lista, mas geralmente um laço `for` é mais fácil de ler.
 
-### Scope
+### Escopo
 
-Almost all python variables are global. This means they are available everywhere in your code.  Remember that python blocks are defined as code at the same level of indentation.
+Quase todas as variáveis Python são globais. Isso significa que estão disponíveis em todo o seu código. Lembre-se de que os blocos Python são definidos como código no mesmo nível de indentação.
 
 ```python
 #!/usr/bin/env python3
 print('Before if block')
 x = 100
 print('x=',x)
-if True:  # this if condition will always be True 
-  # we want to make sure the block gets executed
-  # so we can show you what happens
+if True:  # esta condição if será sempre Verdadeira     
+  # queremos garantir que o bloco seja executado
+  # para que possamos mostrar o que acontece
   print('Inside if block')
   x = 30
   y = 10
@@ -4422,7 +4422,7 @@ print("y=", y)
 
 ```
 
-Let's Run it:
+Vamos executar:
 ```bash
 $ python3 scripts/scope.py
 Before if block
@@ -4436,7 +4436,7 @@ y= 10
 
 ```
 
-The most important exception to variables being global is that variables that are defined in **functions** are **local** i.e. they only exist inside their function. Inside a function, global variables are visible, but it's better to pass variables to a function as arguments
+A exceção mais importante às variáveis serem globais é que variáveis definidas em **funções** são **locais**, ou seja, existem apenas dentro de sua função. Dentro de uma função, as variáveis globais são visíveis, mas é melhor passar variáveis para uma função como argumentos.
 
 ```python
 def show_n():
@@ -4445,7 +4445,7 @@ n = 5
 show_n()
 ```
 
-The output is this `5` as you would expect, but the example below is better programming practice. Why? We'll see a little later.
+A saída é esta `5`, como você esperaria, mas o exemplo abaixo é uma prática de programação melhor. Por quê? Veremos um pouco mais tarde.
 
 ```python3
 def show_n(n):
@@ -4456,9 +4456,9 @@ show_n(n)
 
 
 
-#### Local Variables
+#### Variáveis Locais
 
-Variables inside functions are local and therefore can only been accessed from within the function block. This applies to arguments as well as variables defined inside a function.
+Variáveis dentro de funções são locais e, portanto, só podem ser acessadas de dentro do bloco da função. Isso se aplica tanto a argumentos quanto a variáveis definidas dentro de uma função.
 
 
 ```python
@@ -4466,8 +4466,8 @@ Variables inside functions are local and therefore can only been accessed from w
 
 def set_local_x_to_five(x):
   print('Inside def')
-  x = 5 # local to set_local_x_to_five()
-  y=5   # also local
+  x = 5 # localmente para set_local_x_to_five()
+  y=5   # também local
   print("x =",x)
   print("y = ",y)
 
@@ -4483,9 +4483,9 @@ print('x=',x)
 print('y=',y)
 
 ```
-> Here we have added a function `set_local_x_to_five` with an argument named 'x'. This variable exists only within the function where is replaces any variable with the same name outside the `def`. Inside the `def` we also initialize a variable `y` that also replaces any global `y` within the `def`
+Aqui adicionamos uma função `set_local_x_to_five` com um argumento chamado 'x'. Esta variável existe apenas dentro da função, onde substitui qualquer variável com o mesmo nome fora do `def`. Dentro do `def`, também inicializamos uma variável `y` que substitui qualquer `y` global dentro do `def`.
 
-Let's run it:
+Vamos executá-lo:
 ```bash
 $ python3 scope_w_function.py
 After def
@@ -4501,19 +4501,19 @@ y= 100
 
 
 ```
-> There is a global variable, `x` = 100, but when the function is called, it makes a new local variable, also called `x` with value = 5. This variable disappears after the function finishes and we go back to using the global variable `x` = 100. Same for `y`
+> Há uma variável global, `x` = 100, mas quando a função é chamada, ela cria uma nova variável local, também chamada `x`, com valor = 5. Esta variável desaparece depois que a função termina e voltamos a usar a variável global `x` = 100. O mesmo vale para `y`.
 
 #### Global
 
-You can make a local variable global with the statement `global`. Now a variable you use in a function is the same variable as in the rest of the code. It is best not to define any variables as global until you know you need to because you might modify the contents of a variable without meaning to.
+Você pode tornar uma variável local global com a declaração `global`. Agora, uma variável que você usa em uma função é a mesma variável no restante do código. É melhor não definir nenhuma variável como global até que você saiba que precisa, porque você pode modificar o conteúdo de uma variável sem querer.
 
-Here is an example use of `global`. 
+Aqui está um exemplo de uso do `global`.
 
 ```python
 #!/usr/bin/env python3
 
 def set_global_variable():
-  global greeting  # make greeting global
+  global greeting  # torna a variável "greeting" global
   greeting = "I say hello"
 
 
@@ -4521,13 +4521,13 @@ greeting = 'Good morning'
 print('Before function call')
 print('greeting =',greeting)
 
-#make call to function
+#fazendo a chamada da função
 set_global_variable()
 print('After function call')
 print('greeting =',greeting)
 
 ```
-Let's look at the output
+Vamos olhar a saída!
 
 
 ```bash
@@ -4538,119 +4538,111 @@ After function call
 greeting = I say hello
 
 ```
-> Note that the function has changed the value of the global variable. You might not want to do this. 
+> Observe que a função alterou o valor da variável global. Pode ser algo que você não queira fazer.
 
-By creating new local variables inside function definitions, python stops variables with the same name from over-writing each other by mistake.
+Ao criar novas variáveis locais dentro das definições de função, o Python impede que variáveis com o mesmo nome se sobreponham por engano.
 
-### Modules
+### Módulos
 
-Python comes with some core functions and methods. There are many useful modules that you will want to use. `import` is the statement for telling your script you want to use code in a module. As we've already seen with regular expresions, you can bring in code that handles regular expressions with `import re`
+O Python vem com algumas funções e métodos principais. Existem muitos módulos úteis que você desejará usar. `import` é a declaração para informar ao seu script que você deseja usar código em um módulo. Como já vimos com expressões regulares, você pode trazer código que manipula expressões regulares com `import re`.
 
-#### Getting information about modules with `pydoc`
+#### Obtendo informações sobre módulos com `pydoc`
 
-How do you find out information about a module? Python has help pages built into the command line, like `man` we met earlier in the unix lecture. Online information may be more up to date. Search at https://docs.python.org/3.6/. But if you don't have internet access, you can always use `pydoc`.
-To find out about the `re` module, type `pydoc re` on the command line. The last line in the output tells you where the python module is actually installed.
+Como você obtém informações sobre um módulo? O Python possui páginas de ajuda incorporadas na linha de comando, como `man` que encontramos anteriormente na palestra sobre Unix. As informações online podem ser mais atualizadas. Pesquise em https://docs.python.org/3.6/. Mas se você não tiver acesso à internet, sempre pode usar `pydoc`. Para saber mais sobre o módulo `re`, digite `pydoc re` na linha de comando. A última linha na saída informa onde o módulo Python está instalado.
 
 ```bash
 % pydoc re
-Help on module re:
+Ajuda sobre o módulo re:
 
-NAME
-    re - Support for regular expressions (RE).
+NOME
+    re - Suporte para operações de correspondência de expressões regulares (RE).
 
-MODULE REFERENCE
+REFERÊNCIA DO MÓDULO
     https://docs.python.org/3.6/library/re
     
-    The following documentation is automatically generated from the Python
-    source files.  It may be incomplete, incorrect or include features that
-    are considered implementation detail and may vary between Python
-    implementations.  When in doubt, consult the module reference at the
-    location listed above.
+    A seguinte documentação é gerada automaticamente dos arquivos-fonte do Python.
+    Pode estar incompleta, incorreta ou incluir recursos considerados detalhes de implementação e que podem variar entre as implementações do Python.
+    Em caso de dúvida, consulte a referência do módulo no local indicado acima.
 
-DESCRIPTION
-    This module provides regular expression matching operations similar to
-    those found in Perl.  It supports both 8-bit and Unicode strings; both
-    the pattern and the strings being processed can contain null bytes and
-    characters outside the US ASCII range.
+DESCRIÇÃO
+    Este módulo fornece operações de correspondência de expressões regulares semelhantes às encontradas em Perl. Ele oferece suporte a strings de 8 bits e Unicode; tanto o padrão quanto as strings processadas podem conter bytes nulos e caracteres fora da faixa ASCII dos EUA.
     
-    Regular expressions can contain both special and ordinary characters.
-    Most ordinary characters, like "A", "a", or "0", are the simplest
-    regular expressions; they simply match themselves.  You can
-    concatenate ordinary characters, so last matches the string 'last'.
+    As expressões regulares podem conter caracteres especiais e ordinários.
+    A maioria dos caracteres comuns, como "A", "a" ou "0", são as expressões regulares mais simples; eles simplesmente correspondem a si mesmos. Você pode
+    concatenar caracteres comuns, então o último corresponde à string 'last'.
 ...
-FILE
+ARQUIVO
     /anaconda3/lib/python3.6/glob.py
 
 ```
 
-Here are some of the most common and useful modules, along with their methods and objects. It's a lightning tour. 
+Aqui estão alguns dos módulos mais comuns e úteis, juntamente com seus métodos e objetos. É um tour rápido.
 
 #### os.path
 
-`os.path` has common utilities for working file paths (filenames and directories). A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
+`os.path` possui utilitários comuns para trabalhar com caminhos de arquivos (nomes de arquivos e diretórios). Um caminho é uma lista de diretórios (geralmente terminando com um nome de arquivo) que diz onde encontrar um arquivo ou diretório.
 
-| function               | description                              |
-| ---------------------- | ---------------------------------------- |
-| os.path.basename(path) | what's the last element of the path? Note `/home/tmp/` returns `''`, rather than `tmp` |
-| os.path.dirname(path)  | what's the directory the file is in?     |
-| os.path.exists(path)   | does the path exist?                     |
-| os.path.getsize(path)  | returns path (file) size in bytes or error |
-| os.path.isfile(path)   | does the path point to a file?           |
-| os.path.isdir(path)    | does the path point to a directory?      |
-| os.path.splitext(path) | splits before and after the file extension (e.g. '.txt') |
+| função                 | descrição                              |
+| ---------------------- | -------------------------------------- |
+| os.path.basename(path) | qual é o último elemento do caminho? Observe que `/home/tmp/` retorna `''`, em vez de `tmp` |
+| os.path.dirname(path)  | qual é o diretório em que o arquivo está? |
+| os.path.exists(path)   | o caminho existe?                       |
+| os.path.getsize(path)  | retorna o tamanho do caminho (arquivo) em bytes ou erro |
+| os.path.isfile(path)   | o caminho aponta para um arquivo?       |
+| os.path.isdir(path)    | o caminho aponta para um diretório?     |
+| os.path.splitext(path) | divide antes e depois da extensão do arquivo (por exemplo, '.txt') |
 
 
 
 #### os.system
 
-Replaced by subprocess.
+Substituído por subprocess.
 
 
 
 #### subprocess
 
-This is the current module for running command lines from python scripts
+Este é o módulo atual para executar linhas de comando a partir de scripts Python
 
 
 ```python
 import subprocess
-subprocess.run(["ls","-l"])  # same as running ls -l on the command line
+subprocess.run(["ls","-l"])  # o mesmo que executar ls -l na linha de comando
 ```
 
-more complex than `os.system()`. You need to specify where input and output go. Let's look at this in some more detail. 
+Mais complexo que `os.system()`. Você precisa especificar onde a entrada e a saída vão. Vamos olhar sobre isso com mais mais detalhes
 
-##### Capturing output from a shell pipeline
+##### Capturando a saída de um pipeline de shell
 
-Let's say we want to find all the files that have user amanda (or in the filename)
+Digamos que queremos encontrar todos os arquivos que têm o usuário amanda (ou no nome do arquivo)
 
 `ls -l | grep amanda`
 
-becomes this 'shortcut' which will capture the output of the two unix commands in the variable `output`
+torna-se este 'atalho' que capturará a saída dos dois comandos unix na variável `output`
 
 ```python
 import subprocess
 output = subprocess.check_output('ls -l | grep amanda', shell = True)
 ```
 
-This is better than alternatives with `subprocess.run()`. This is equivalent to the unix backtick quoted string.
+Isso é melhor do que alternativas com `subprocess.run()`. Isso é equivalente à string unix citada com backtick.
 
-`output` contains a bytes object (more or less a string of ASCII character encodings)
+`output` contém um objeto de bytes (mais ou menos uma string de codificações de caracteres ASCII)
 
 ```python
 b'-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
 ```
 
-You can covert by decoding the bytes object into a string 
+Você pode converter decodificando o objeto de bytes em uma string
 
 ```python3
 >>>output.decode('utf-8')
 '-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
 ```
 
-##### Capturing output the long way (for a single command)
+##### Capturando a saída do jeito longo (para um único comando)
 
-
-Let's assume that `ls -l` generates some output something like this
+Vamos supor que `ls -l` gera alguma saída algo assim
 
 ```
 total 112
@@ -4659,18 +4651,18 @@ total 112
 -rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt
 ```
 
-How do we run `ls -l` in Python and capture the output (stdout)?
+Como nós executamos `ls -l` no Python e capturamos a saída (stdout)?
 
 ```python3
 import subprocess
-rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )  # specify you want to capture STDOUT
+rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )  # especifique que você deseja capturar STDOUT
 bytes = rtn.stdout
 stdout = bytes.decode('utf-8')
-# something like
+# algo como
 lines = stdout.splitlines()
 ```
 
-`lines` now contains elements from every line of the `ls -l` output, including the header line, which is not a file
+`lines` agora contêm elementos de cada linha da saída de `ls -l`, incluído a linha do cabeçalho, que não é um arquivo
 
 ```python3
 >>> lines[0]
@@ -4681,9 +4673,9 @@ lines = stdout.splitlines()
 
 
 
-##### Check the exit status of a command
+##### Verifique o status da saída do comando
 
-To run a command and check the exit status (really to check the exit status was ok or zero), use 
+Para executar um comando e verificar o status da saída (realmente para verficar se o status da saída foi ok ou zero) use
 
 ```python
 oops = subprocess.check_call(['ls', '-l'])
@@ -4691,9 +4683,9 @@ oops = subprocess.check_call(['ls', '-l'])
 oops = subprocess.check_call('ls -l', shell=True)
 ```
 
-##### Run a command with that redirects stdout to a file using python subprocess
+##### Executar um comando que redireciona stdout para um arquvo usando subprocess do Python
 
-You can't write `ls -l > listing.txt`  to redirect stdout in the subprocess method, so use this instead
+Você não pode escrever `ls -l > listing.txt` para redirecionar stdout no método subprocess, então use isso
 
 ```python
  tmp_file = 'listing.txt'
@@ -4706,77 +4698,76 @@ You can't write `ls -l > listing.txt`  to redirect stdout in the subprocess meth
 #### sys
 
 
-A couple of useful variables for beginners. Many more advanced system parameters and settings that we are not covering here.
+Algumas variáveis úteis para iniciantes. Muitos mais parâmetros e configurações avançadas do sistema que não estamos cobrindo aqui.
 
-| function | description                          |
-| -------- | ------------------------------------ |
-| sys.argv | list of command line parameters      |
-| sys.path | where Python should look for modules |
+| função | descrição                            |
+| ------ | ------------------------------------ |
+| sys.argv | lista de parâmetros da linha de comando |
+| sys.path | onde o Python deve procurar módulos |
 
 
 
 #### re
 
-See notes on regular expressions
+Consulte as notas sobre expressões regulares
 
 #### collections
 
-Better lists etc.
+Listas etc. melhores
 
 `from collections import deque`
 
 #### copy
 `copy.copy()`
 
-and 
+e
 
 `copy.deepcopy()`
 
-[Link to more info for more on deep vs shallow copying](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/)
+[Link para mais informações sobre cópia profunda vs. cópia rasa](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/)
 
 #### math
 
-
-| function            | description |
+| função            | descrição |
 | ------------------- | ----------- |
 | math.exp()          | e**x        |
 | math.log2()         | log base 2  |
 | math.log10()        | log base 10 |
-| math.sqrt()         | square root |
-| math.sin()          | sine        |
-| math.pi(), math.e() | constants   |
+| math.sqrt()         | raiz quadrada |
+| math.sin()          | seno        |
+| math.pi(), math.e() | constantes   |
 | etc                 |             |
 
-see also numpy
+veja também numpy
 
 #### random
-Random numbers generated by computers are not truly random, so python calls these pseudo-random. 
+Números aleatórios gerados por computadores não são verdadeiramente aleatórios, então o Python os chama de pseudo-aleatórios.
 
-| example                 | description                                                  |
+| exemplo                 | descrição                                                  |
 | ----------------------- | ------------------------------------------------------------ |
-| random.seed(1)          | set starting seed for random sequence to 1 to enable reproducibility |
-| random.randrange(9)     | integer between 0 and 8                                      |
-| random.randint(1,5)     | integer between 1 and 5                                      |
-| random.random()         | float between 0 and 1                                        |
-| random.uniform(1,2)     | float between 1 and 2                                        |
-| random.choice(my_genes) | return a random element of the sequence                      |
+| random.seed(1)          | define a semente inicial para a sequência pseudo-aleatória como 1 para possibilitar a reprodutibilidade |
+| random.randrange(9)     | inteiro entre 0 e 8                                       |
+| random.randint(1,5)     | inteiro entre 1 e 5                                       |
+| random.random()         | float entre 0 e 1                                         |
+| random.uniform(1,2)     | float entre 1 e 2                                         |
+| random.choice(my_genes) | retorna um elemento aleatório da sequência                |
 
-To get a random index from an element of `list` use `i=random.randrange(len(list))`
+Para obter um índice aleatório de um elemento de `list`, use `i=random.randrange(len(list))`
 
 #### statistics
 
-Typical statistical quantities
+Quantidades estatísticas típicas
 
-| example                         | description                              |
+| exemplo                         | descrição                              |
 | ------------------------------- | ---------------------------------------- |
-| statistics.mean([1,2,3,4,5])    | mean or average                          |
-| statistics.median([ 2,3,4,5])   | median = 3.5                             |
-| statistics.stdev([1,2,3,4,5])   | standard deviation of sample (square root of sample variance) |
-| statistics.pstdev([1,2,3,4,5])q | estimate of population standard deviation |
+| statistics.mean([1,2,3,4,5])    | média ou média                          |
+| statistics.median([ 2,3,4,5])   | mediana = 3,5                           |
+| statistics.stdev([1,2,3,4,5])   | desvio padrão da amostra (raiz quadrada da variância da amostra) |
+| statistics.pstdev([1,2,3,4,5])q | estimativa do desvio padrão da população |
 
 #### glob
 
-Does unix-like wildcard file path expansion.
+Realiza expansão de caminho de arquivo com curingas semelhantes ao Unix.
 
 ```python
 >>> import glob
@@ -4789,28 +4780,28 @@ Does unix-like wildcard file path expansion.
 
 #### argparse
 
-Great (if quite complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
+Ferramenta excelente (embora bastante complicada) para analisar argumentos da linha de comando e gerar automaticamente mensagens de ajuda para scripts (muito útil!). Aqui está um script simples que explica um pouco do que ele faz.
 
 ```python
 #!/usr/bin/env python3
 import argparse
 parser = argparse.ArgumentParser(description="A test program that reads in some number of lines from an input file. The output can be screen or an output file")
-# we want the first argument to be the filename
+# queremos que o primeiro argumento seja o nome do arquivo
 parser.add_argument("file", help="path to input fasta filename")
-# second argument will be line number
-# default type is string, need to specify if expecting an int
+# segundo argumento será o número da linha
+# o tipo padrão é string, precisa especificar se espera um inteiro
 parser.add_argument("lines", type=int, help ="how many lines to print")
-# optional outfile argument specified with -o or --out
+# argumento outfile opcional especificado com -o ou --out
 parser.add_argument("-o","--outfile", help = "optional: supply output filename, otherwise write to screen", dest = 'out')
 args = parser.parse_args()
-# arguments appear in args
+# os argumentos aparece em args
 filename = args.file
 lines = args.lines
 if args.out:
   print("writing output to", args.out)
 ```
 
-With this module, -h help comes for free. --outfile type arguments are optional unless you write 'required=True' like this
+Com este módulo, a ajuda -h vem de graça. Os argumentos --outfile são opcionais, a menos que você escreva 'required=True', assim
 
 ```
 parser.add_argument('-f', "-fasta", required=True, help='Output fasta filename', dest='outfile')
@@ -4821,15 +4812,15 @@ parser.add_argument('-f', "-fasta", required=True, help='Output fasta filename',
 
 
 
-### Many more modules that do many things
+### Muitos outros módulos que realizam diversas funções
 
-time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
+Tempo, HTML, XML, e-mail, CGI, soquetes, áudio, interfaces gráficas de usuário com Tk, depuração, teste, utilitários Unix.
 
-Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics, pandas for data, scikitlearn for machine learning.
+Além disso, não essenciais: BioPython para bioinformática, Numpy para matemática e estatísticas, pandas para dados, scikit-learn para aprendizado de máquina.
 
 ---
 
-### [Link to Python 10 Problem Set](problemsets/Python_10_problemset.md)
+### [Link para o Conjunto de Problemas Python 10](problemsets/Python_10_problemset.md)
 
 ---
 
