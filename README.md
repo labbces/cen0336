@@ -222,7 +222,7 @@ Sofia Robb
             * [Criando Exceções Customizadas](pfb.md/#criando-exceções-personalizadas)
    * [<a href="problemsets/Python_09_problemset.md">Link para o Python 9 Conjunto de Problemas</a>](pfb.md/#link-to-python-9-problem-set)
       * [Python 10](pfb.md/#python-10)
-         * [Functions](pfb.md/#functions)
+         * [Funções](pfb.md/#funções)
             * [Defining a Function that calculates GC Content](pfb.md/#defining-a-function-that-calculates-gc-content)
             * [Using your function to calculate GC content](pfb.md/#using-your-function-to-calculate-gc-content)
             * [The details](pfb.md/#the-details)
