@@ -4812,7 +4812,7 @@ parser.add_argument('-f', "-fasta", required=True, help='Output fasta filename',
 
 
 
-### Muitos outros módulos que realizam diversas funções:
+### Muitos outros módulos que realizam diversas funções
 
 Tempo, HTML, XML, e-mail, CGI, soquetes, áudio, interfaces gráficas de usuário com Tk, depuração, teste, utilitários Unix.
 
