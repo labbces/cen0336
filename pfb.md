@@ -4466,8 +4466,8 @@ Variáveis dentro de funções são locais e, portanto, só podem ser acessadas 
 
 def set_local_x_to_five(x):
   print('Inside def')
-  x = 5 # local to set_local_x_to_five()
-  y=5   # also local
+  x = 5 # localmente para set_local_x_to_five()
+  y=5   # também local
   print("x =",x)
   print("y = ",y)
 
@@ -4483,9 +4483,9 @@ print('x=',x)
 print('y=',y)
 
 ```
-> Here we have added a function `set_local_x_to_five` with an argument named 'x'. This variable exists only within the function where is replaces any variable with the same name outside the `def`. Inside the `def` we also initialize a variable `y` that also replaces any global `y` within the `def`
+Aqui adicionamos uma função `set_local_x_to_five` com um argumento chamado 'x'. Esta variável existe apenas dentro da função, onde substitui qualquer variável com o mesmo nome fora do `def`. Dentro do `def`, também inicializamos uma variável `y` que substitui qualquer `y` global dentro do `def`.
 
-Let's run it:
+Vamos executá-lo:
 ```bash
 $ python3 scope_w_function.py
 After def
@@ -4501,19 +4501,19 @@ y= 100
 
 
 ```
-> There is a global variable, `x` = 100, but when the function is called, it makes a new local variable, also called `x` with value = 5. This variable disappears after the function finishes and we go back to using the global variable `x` = 100. Same for `y`
+> Há uma variável global, `x` = 100, mas quando a função é chamada, ela cria uma nova variável local, também chamada `x`, com valor = 5. Esta variável desaparece depois que a função termina e voltamos a usar a variável global `x` = 100. O mesmo vale para `y`.
 
 #### Global
 
-You can make a local variable global with the statement `global`. Now a variable you use in a function is the same variable as in the rest of the code. It is best not to define any variables as global until you know you need to because you might modify the contents of a variable without meaning to.
+Você pode tornar uma variável local global com a declaração `global`. Agora, uma variável que você usa em uma função é a mesma variável no restante do código. É melhor não definir nenhuma variável como global até que você saiba que precisa, porque você pode modificar o conteúdo de uma variável sem querer.
 
-Here is an example use of `global`. 
+Aqui está um exemplo de uso do `global`.
 
 ```python
 #!/usr/bin/env python3
 
 def set_global_variable():
-  global greeting  # make greeting global
+  global greeting  # torna a variável "greeting" global
   greeting = "I say hello"
 
 
@@ -4521,13 +4521,13 @@ greeting = 'Good morning'
 print('Before function call')
 print('greeting =',greeting)
 
-#make call to function
+#fazendo a chamada da função
 set_global_variable()
 print('After function call')
 print('greeting =',greeting)
 
 ```
-Let's look at the output
+Vamos olhar a saída!
 
 
 ```bash
@@ -4538,119 +4538,111 @@ After function call
 greeting = I say hello
 
 ```
-> Note that the function has changed the value of the global variable. You might not want to do this. 
+> Observe que a função alterou o valor da variável global. Pode ser algo que você não queira fazer.
 
-By creating new local variables inside function definitions, python stops variables with the same name from over-writing each other by mistake.
+Ao criar novas variáveis locais dentro das definições de função, o Python impede que variáveis com o mesmo nome se sobreponham por engano.
 
-### Modules
+### Módulos
 
-Python comes with some core functions and methods. There are many useful modules that you will want to use. `import` is the statement for telling your script you want to use code in a module. As we've already seen with regular expresions, you can bring in code that handles regular expressions with `import re`
+O Python vem com algumas funções e métodos principais. Existem muitos módulos úteis que você desejará usar. `import` é a declaração para informar ao seu script que você deseja usar código em um módulo. Como já vimos com expressões regulares, você pode trazer código que manipula expressões regulares com `import re`.
 
-#### Getting information about modules with `pydoc`
+#### Obtendo informações sobre módulos com `pydoc`
 
-How do you find out information about a module? Python has help pages built into the command line, like `man` we met earlier in the unix lecture. Online information may be more up to date. Search at https://docs.python.org/3.6/. But if you don't have internet access, you can always use `pydoc`.
-To find out about the `re` module, type `pydoc re` on the command line. The last line in the output tells you where the python module is actually installed.
+Como você obtém informações sobre um módulo? O Python possui páginas de ajuda incorporadas na linha de comando, como `man` que encontramos anteriormente na palestra sobre Unix. As informações online podem ser mais atualizadas. Pesquise em https://docs.python.org/3.6/. Mas se você não tiver acesso à internet, sempre pode usar `pydoc`. Para saber mais sobre o módulo `re`, digite `pydoc re` na linha de comando. A última linha na saída informa onde o módulo Python está instalado.
 
 ```bash
 % pydoc re
-Help on module re:
+Ajuda sobre o módulo re:
 
-NAME
-    re - Support for regular expressions (RE).
+NOME
+    re - Suporte para operações de correspondência de expressões regulares (RE).
 
-MODULE REFERENCE
+REFERÊNCIA DO MÓDULO
     https://docs.python.org/3.6/library/re
     
-    The following documentation is automatically generated from the Python
-    source files.  It may be incomplete, incorrect or include features that
-    are considered implementation detail and may vary between Python
-    implementations.  When in doubt, consult the module reference at the
-    location listed above.
+    A seguinte documentação é gerada automaticamente dos arquivos-fonte do Python.
+    Pode estar incompleta, incorreta ou incluir recursos considerados detalhes de implementação e que podem variar entre as implementações do Python.
+    Em caso de dúvida, consulte a referência do módulo no local indicado acima.
 
-DESCRIPTION
-    This module provides regular expression matching operations similar to
-    those found in Perl.  It supports both 8-bit and Unicode strings; both
-    the pattern and the strings being processed can contain null bytes and
-    characters outside the US ASCII range.
+DESCRIÇÃO
+    Este módulo fornece operações de correspondência de expressões regulares semelhantes às encontradas em Perl. Ele oferece suporte a strings de 8 bits e Unicode; tanto o padrão quanto as strings processadas podem conter bytes nulos e caracteres fora da faixa ASCII dos EUA.
     
-    Regular expressions can contain both special and ordinary characters.
-    Most ordinary characters, like "A", "a", or "0", are the simplest
-    regular expressions; they simply match themselves.  You can
-    concatenate ordinary characters, so last matches the string 'last'.
+    As expressões regulares podem conter caracteres especiais e ordinários.
+    A maioria dos caracteres comuns, como "A", "a" ou "0", são as expressões regulares mais simples; eles simplesmente correspondem a si mesmos. Você pode
+    concatenar caracteres comuns, então o último corresponde à string 'last'.
 ...
-FILE
+ARQUIVO
     /anaconda3/lib/python3.6/glob.py
 
 ```
 
-Here are some of the most common and useful modules, along with their methods and objects. It's a lightning tour. 
+Aqui estão alguns dos módulos mais comuns e úteis, juntamente com seus métodos e objetos. É um tour rápido.
 
 #### os.path
 
-`os.path` has common utilities for working file paths (filenames and directories). A path is either a relative or absolute list of directories (often ending with a filename) that tells you where to find a file or directory.
+`os.path` possui utilitários comuns para trabalhar com caminhos de arquivos (nomes de arquivos e diretórios). Um caminho é uma lista de diretórios (geralmente terminando com um nome de arquivo) que diz onde encontrar um arquivo ou diretório.
 
-| function               | description                              |
-| ---------------------- | ---------------------------------------- |
-| os.path.basename(path) | what's the last element of the path? Note `/home/tmp/` returns `''`, rather than `tmp` |
-| os.path.dirname(path)  | what's the directory the file is in?     |
-| os.path.exists(path)   | does the path exist?                     |
-| os.path.getsize(path)  | returns path (file) size in bytes or error |
-| os.path.isfile(path)   | does the path point to a file?           |
-| os.path.isdir(path)    | does the path point to a directory?      |
-| os.path.splitext(path) | splits before and after the file extension (e.g. '.txt') |
+| função                 | descrição                              |
+| ---------------------- | -------------------------------------- |
+| os.path.basename(path) | qual é o último elemento do caminho? Observe que `/home/tmp/` retorna `''`, em vez de `tmp` |
+| os.path.dirname(path)  | qual é o diretório em que o arquivo está? |
+| os.path.exists(path)   | o caminho existe?                       |
+| os.path.getsize(path)  | retorna o tamanho do caminho (arquivo) em bytes ou erro |
+| os.path.isfile(path)   | o caminho aponta para um arquivo?       |
+| os.path.isdir(path)    | o caminho aponta para um diretório?     |
+| os.path.splitext(path) | divide antes e depois da extensão do arquivo (por exemplo, '.txt') |
 
 
 
 #### os.system
 
-Replaced by subprocess.
+Substituído por subprocess.
 
 
 
 #### subprocess
 
-This is the current module for running command lines from python scripts
+Este é o módulo atual para executar linhas de comando a partir de scripts Python
 
 
 ```python
 import subprocess
-subprocess.run(["ls","-l"])  # same as running ls -l on the command line
+subprocess.run(["ls","-l"])  # o mesmo que executar ls -l na linha de comando
 ```
 
-more complex than `os.system()`. You need to specify where input and output go. Let's look at this in some more detail. 
+Mais complexo que `os.system()`. Você precisa especificar onde a entrada e a saída vão. Vamos olhar sobre isso com mais mais detalhes
 
-##### Capturing output from a shell pipeline
+##### Capturando a saída de um pipeline de shell
 
-Let's say we want to find all the files that have user amanda (or in the filename)
+Digamos que queremos encontrar todos os arquivos que têm o usuário amanda (ou no nome do arquivo)
 
 `ls -l | grep amanda`
 
-becomes this 'shortcut' which will capture the output of the two unix commands in the variable `output`
+torna-se este 'atalho' que capturará a saída dos dois comandos unix na variável `output`
 
 ```python
 import subprocess
 output = subprocess.check_output('ls -l | grep amanda', shell = True)
 ```
 
-This is better than alternatives with `subprocess.run()`. This is equivalent to the unix backtick quoted string.
+Isso é melhor do que alternativas com `subprocess.run()`. Isso é equivalente à string unix citada com backtick.
 
-`output` contains a bytes object (more or less a string of ASCII character encodings)
+`output` contém um objeto de bytes (mais ou menos uma string de codificações de caracteres ASCII)
 
 ```python
 b'-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
 ```
 
-You can covert by decoding the bytes object into a string 
+Você pode converter decodificando o objeto de bytes em uma string
 
 ```python3
 >>>output.decode('utf-8')
 '-rw-r--r--  1 amanda  staff       161952 Oct  2 18:03 test.subreads.fa\n-rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt\n'
 ```
 
-##### Capturing output the long way (for a single command)
+##### Capturando a saída do jeito longo (para um único comando)
 
-
-Let's assume that `ls -l` generates some output something like this
+Vamos supor que `ls -l` gera alguma saída algo assim
 
 ```
 total 112
@@ -4659,18 +4651,18 @@ total 112
 -rw-r--r--  1 amanda  staff          126 Oct  2 13:23 test.txt
 ```
 
-How do we run `ls -l` in Python and capture the output (stdout)?
+Como nós executamos `ls -l` no Python e capturamos a saída (stdout)?
 
 ```python3
 import subprocess
-rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )  # specify you want to capture STDOUT
+rtn = subprocess.run(['ls','-l'], stdout=subprocess.PIPE )  # especifique que você deseja capturar STDOUT
 bytes = rtn.stdout
 stdout = bytes.decode('utf-8')
-# something like
+# algo como
 lines = stdout.splitlines()
 ```
 
-`lines` now contains elements from every line of the `ls -l` output, including the header line, which is not a file
+`lines` agora contêm elementos de cada linha da saída de `ls -l`, incluído a linha do cabeçalho, que não é um arquivo
 
 ```python3
 >>> lines[0]
@@ -4681,9 +4673,9 @@ lines = stdout.splitlines()
 
 
 
-##### Check the exit status of a command
+##### Verifique o status da saída do comando
 
-To run a command and check the exit status (really to check the exit status was ok or zero), use 
+Para executar um comando e verificar o status da saída (realmente para verficar se o status da saída foi ok ou zero) use
 
 ```python
 oops = subprocess.check_call(['ls', '-l'])
@@ -4691,9 +4683,9 @@ oops = subprocess.check_call(['ls', '-l'])
 oops = subprocess.check_call('ls -l', shell=True)
 ```
 
-##### Run a command with that redirects stdout to a file using python subprocess
+##### Executar um comando que redireciona stdout para um arquvo usando subprocess do Python
 
-You can't write `ls -l > listing.txt`  to redirect stdout in the subprocess method, so use this instead
+Você não pode escrever `ls -l > listing.txt` para redirecionar stdout no método subprocess, então use isso
 
 ```python
  tmp_file = 'listing.txt'
@@ -4706,77 +4698,76 @@ You can't write `ls -l > listing.txt`  to redirect stdout in the subprocess meth
 #### sys
 
 
-A couple of useful variables for beginners. Many more advanced system parameters and settings that we are not covering here.
+Algumas variáveis úteis para iniciantes. Muitos mais parâmetros e configurações avançadas do sistema que não estamos cobrindo aqui.
 
-| function | description                          |
-| -------- | ------------------------------------ |
-| sys.argv | list of command line parameters      |
-| sys.path | where Python should look for modules |
+| função | descrição                            |
+| ------ | ------------------------------------ |
+| sys.argv | lista de parâmetros da linha de comando |
+| sys.path | onde o Python deve procurar módulos |
 
 
 
 #### re
 
-See notes on regular expressions
+Consulte as notas sobre expressões regulares
 
 #### collections
 
-Better lists etc.
+Listas etc. melhores
 
 `from collections import deque`
 
 #### copy
 `copy.copy()`
 
-and 
+e
 
 `copy.deepcopy()`
 
-[Link to more info for more on deep vs shallow copying](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/)
+[Link para mais informações sobre cópia profunda vs. cópia rasa](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/)
 
 #### math
 
-
-| function            | description |
+| função            | descrição |
 | ------------------- | ----------- |
 | math.exp()          | e**x        |
 | math.log2()         | log base 2  |
 | math.log10()        | log base 10 |
-| math.sqrt()         | square root |
-| math.sin()          | sine        |
-| math.pi(), math.e() | constants   |
+| math.sqrt()         | raiz quadrada |
+| math.sin()          | seno        |
+| math.pi(), math.e() | constantes   |
 | etc                 |             |
 
-see also numpy
+veja também numpy
 
 #### random
-Random numbers generated by computers are not truly random, so python calls these pseudo-random. 
+Números aleatórios gerados por computadores não são verdadeiramente aleatórios, então o Python os chama de pseudo-aleatórios.
 
-| example                 | description                                                  |
+| exemplo                 | descrição                                                  |
 | ----------------------- | ------------------------------------------------------------ |
-| random.seed(1)          | set starting seed for random sequence to 1 to enable reproducibility |
-| random.randrange(9)     | integer between 0 and 8                                      |
-| random.randint(1,5)     | integer between 1 and 5                                      |
-| random.random()         | float between 0 and 1                                        |
-| random.uniform(1,2)     | float between 1 and 2                                        |
-| random.choice(my_genes) | return a random element of the sequence                      |
+| random.seed(1)          | define a semente inicial para a sequência pseudo-aleatória como 1 para possibilitar a reprodutibilidade |
+| random.randrange(9)     | inteiro entre 0 e 8                                       |
+| random.randint(1,5)     | inteiro entre 1 e 5                                       |
+| random.random()         | float entre 0 e 1                                         |
+| random.uniform(1,2)     | float entre 1 e 2                                         |
+| random.choice(my_genes) | retorna um elemento aleatório da sequência                |
 
-To get a random index from an element of `list` use `i=random.randrange(len(list))`
+Para obter um índice aleatório de um elemento de `list`, use `i=random.randrange(len(list))`
 
 #### statistics
 
-Typical statistical quantities
+Quantidades estatísticas típicas
 
-| example                         | description                              |
+| exemplo                         | descrição                              |
 | ------------------------------- | ---------------------------------------- |
-| statistics.mean([1,2,3,4,5])    | mean or average                          |
-| statistics.median([ 2,3,4,5])   | median = 3.5                             |
-| statistics.stdev([1,2,3,4,5])   | standard deviation of sample (square root of sample variance) |
-| statistics.pstdev([1,2,3,4,5])q | estimate of population standard deviation |
+| statistics.mean([1,2,3,4,5])    | média ou média                          |
+| statistics.median([ 2,3,4,5])   | mediana = 3,5                           |
+| statistics.stdev([1,2,3,4,5])   | desvio padrão da amostra (raiz quadrada da variância da amostra) |
+| statistics.pstdev([1,2,3,4,5])q | estimativa do desvio padrão da população |
 
 #### glob
 
-Does unix-like wildcard file path expansion.
+Realiza expansão de caminho de arquivo com curingas semelhantes ao Unix.
 
 ```python
 >>> import glob
@@ -4789,28 +4780,28 @@ Does unix-like wildcard file path expansion.
 
 #### argparse
 
-Great (if quite complicated) tool for parsing command line arguments and automatically generating help messages for scripts (very handy!). Here's a simple script that explains a little of what it does.
+Ferramenta excelente (embora bastante complicada) para analisar argumentos da linha de comando e gerar automaticamente mensagens de ajuda para scripts (muito útil!). Aqui está um script simples que explica um pouco do que ele faz.
 
 ```python
 #!/usr/bin/env python3
 import argparse
 parser = argparse.ArgumentParser(description="A test program that reads in some number of lines from an input file. The output can be screen or an output file")
-# we want the first argument to be the filename
+# queremos que o primeiro argumento seja o nome do arquivo
 parser.add_argument("file", help="path to input fasta filename")
-# second argument will be line number
-# default type is string, need to specify if expecting an int
+# segundo argumento será o número da linha
+# o tipo padrão é string, precisa especificar se espera um inteiro
 parser.add_argument("lines", type=int, help ="how many lines to print")
-# optional outfile argument specified with -o or --out
+# argumento outfile opcional especificado com -o ou --out
 parser.add_argument("-o","--outfile", help = "optional: supply output filename, otherwise write to screen", dest = 'out')
 args = parser.parse_args()
-# arguments appear in args
+# os argumentos aparece em args
 filename = args.file
 lines = args.lines
 if args.out:
   print("writing output to", args.out)
 ```
 
-With this module, -h help comes for free. --outfile type arguments are optional unless you write 'required=True' like this
+Com este módulo, a ajuda -h vem de graça. Os argumentos --outfile são opcionais, a menos que você escreva 'required=True', assim
 
 ```
 parser.add_argument('-f', "-fasta", required=True, help='Output fasta filename', dest='outfile')
@@ -4821,15 +4812,15 @@ parser.add_argument('-f', "-fasta", required=True, help='Output fasta filename',
 
 
 
-### Many more modules that do many things
+### Muitos outros módulos que realizam diversas funções:
 
-time, HTML, XML, email, CGI, sockets, audio, GUIs with Tk, debugging, testing, unix utils
+Tempo, HTML, XML, e-mail, CGI, soquetes, áudio, interfaces gráficas de usuário com Tk, depuração, teste, utilitários Unix.
 
-Also, non-core: BioPython for bioinformatics, Numpy for mathematics, statistics, pandas for data, scikitlearn for machine learning.
+Além disso, não essenciais: BioPython para bioinformática, Numpy para matemática e estatísticas, pandas para dados, scikit-learn para aprendizado de máquina.
 
 ---
 
-### [Link to Python 10 Problem Set](problemsets/Python_10_problemset.md)
+### [Link para o Conjunto de Problemas Python 10](problemsets/Python_10_problemset.md)
 
 ---
 
