@@ -263,7 +263,7 @@ Sofia Robb
          * [Usando métodos de classe](pfb.md/#Usando-métodos-de-classe)
          * [Obtendo dados em uma nova instância de nossa classe](pfb.md/#Obtendo-dados-em-uma-nova-instância-de-nossa-classe)
             * [<strong>__init__</strong>](pfb.md/#__init__)
-      * [<a href="problemsets/Python_11_problemset.md">Link para o Conhunto de Problemas Python 11</a>](problemsets/Python_11_problemset.md)
+      * [<a href="problemsets/Python_11_problemset.md">Link para o Conjunto de Problemas Python 11</a>](problemsets/Python_11_problemset.md)
 * [Workshops](workshops.md/#workshops)
    * [BioPython  -- Sofia Robb](workshops.md/#biopython-----sofia-robb)
    * [NGS -- Anoja Perera](workshops.md/#ngs----anoja-perera)
