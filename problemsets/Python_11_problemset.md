@@ -1,34 +1,30 @@
-# Python 11 Problem Set -- Classes
+# Conjunto de Problemas Python 11 - Classes
 
+1. Crie uma classe de sequência de DNA que conterá uma sequência, seu nome e o organismo de origem. Faça isso criando uma função \_\_init\_\_.
 
-1. Create a DNA sequence class that will contain a sequence, its name, and it's organism of origin. Do this by creating an \_\_init\_\_ function.
+2. Escreva algumas linhas de código, fora da sua classe (no seu programa principal), que definem o nome, a sequência de DNA e o organismo para um gene.
 
-2. Write some some lines of code, outside your class (in your main program) that sets the name, DNA sequence, and organism for a gene.
+3. Escreva algumas linhas de código, fora da sua classe, que:  
+  a. usa o atributo de sequência do objeto para recuperar e imprimir a sequência.   
+  b. usa o atributo de nome do objeto para recuperar e imprimir o nome.   
+  c. usa o atributo de organismo do objeto para recuperar e imprimir o organismo.
 
-3. Write some some lines of code, outside your class that:  
-  a. uses the object sequence attribute to retrieve and print the sequence.   
-  b. uses the object name attribute to retrieve and print the name.   
-  c. uses the object organism attribute to retrieve and print the organism.  
+4. Método de comprimento da sequência   
+  a. Adicione um método à sua classe que calcula e retorna o comprimento da sequência.   
+  b. Escreva algumas linhas de código, fora da sua classe (no seu programa principal), que obtêm e imprimem o comprimento da sequência usando seu novo método.
 
-4. Sequence length method   
-  a. Add a method to your class that caclulates and returns the length of the sequence.   
-  b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence length using your new method.
+5. Método de composição de nucleotídeos  
+  a. Adicione um método que calcula e retorna a composição de nucleotídeos.    
+  b. Escreva algumas linhas de código, fora da sua classe (no seu programa principal), que obtêm e imprimem a composição de nucleotídeos da sequência usando seu novo método.
 
-5. Nucleotide composition method  
-  a. Add in a method that caclulates and returns the nucleotide composition.    
-  b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence nucleotide compositio using your new method.
-  
-6. GC content method  
-  a. Add in a method that caclulates and returns the GC content.    
-  b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence GC content using your new method.
+6. Método de conteúdo GC  
+  a. Adicione um método que calcula e retorna o conteúdo GC.    
+  b. Escreva algumas linhas de código, fora da sua classe (no seu programa principal), que obtêm e imprimem o conteúdo GC da sequência usando seu novo método.
 
-7. FASTA Formatter method  
-  a. Add in a method that returns the sequence record in FASTA format.    
-  b. Write some some lines of code, outside your class (in your main program) that gets and prints the sequence in FASTA format using your new method.
+7. Método de Formatação FASTA  
+  a. Adicione um método que retorna o registro de sequência no formato FASTA.    
+  b. Escreva algumas linhas de código, fora da sua classe (no seu programa principal), que obtêm e imprimem a sequência no formato FASTA usando seu novo método.
 
-## Challenge Question
+## Questão de Desafio
 
-1. Create a method that can compare two DNA Sequence records and returns True if they are the same or False if they are differet. Sameness is based on name, organism, and seqeunce. All need to be the same for two objects to be considered the same.
-
-
-
+1. Crie um método que possa comparar dois registros de sequência de DNA e retorne True se forem iguais ou False se forem diferentes. A igualdade é baseada no nome, organismo e sequência. Todos precisam ser iguais para que dois objetos sejam considerados iguais.
