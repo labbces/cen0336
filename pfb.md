@@ -4829,74 +4829,73 @@ Além disso, não essenciais: BioPython para bioinformática, Numpy para matemá
 
 ### Classes
 
-The advantages of writing classes and writing functions are very similar. 
+As vantagens de escrever classes e escrever funções são muito semelhantes.
 
-When we write functions we group core Python functions and methods to create a unique collection statements that occur in a specific order. 
+Quando escrevemos funções, agrupamos funções principais do Python e métodos para criar uma coleção única de instruções que ocorrem em uma ordem específica.
 
-These new functions make our code easier to read and to write, especially if you will use the function many times.
+Essas novas funções tornam nosso código mais fácil de ler e escrever, especialmente se você for usar a função muitas vezes.
 
-A conceptual difference between a function and a class is that a function usually does one thing, while a class will do many related things to help solve a problem.
+Uma diferença conceitual entre uma função e uma classe é que uma função geralmente faz uma coisa, enquanto uma classe fará muitas coisas relacionadas para ajudar a resolver um problema.
 
-What is a class really, what does it do? A class doesn't really do anything except for setting a list of rules for creating a new custom object. Every time you use the class you are creating an instance of a type of object.   
+O que é uma classe de verdade, o que ela faz? Uma classe na verdade não faz nada, exceto definir uma lista de regras para criar um novo objeto personalizado. Toda vez que você usa a classe, está criando uma instância de um tipo de objeto.
 
-#### You have been using classes to create objects
+#### Você tem usado classes para criar objetos
 
-You have already been using classes to create objects. Here we are using the `open` function to create two instances of a file object. One instance holds information about a FASTA file while the other holds information about a GFF file.
+Você já tem usado classes para criar objetos. Aqui estamos usando a função `open` para criar duas instâncias de um objeto de arquivo. Uma instância contém informações sobre um arquivo FASTA enquanto a outra contém informações sobre um arquivo GFF.
+
 ```python
 fa_input = open("somedata.fa")
 gff_input = open("somedata.gff")
 ```
 
 
-#### attributes and methods
+#### Atributos e Métodos
 
-Classes create objects, these objects will have attributes and methods associated with them.
-
-
-
-__methods__
-
-Methods are functions which belong to objects of a particular class.
+Classes criam objetos, e esses objetos terão atributos e métodos associados a eles.
 
 
 
-__attributes__
+__Métodos__
 
-Attributes are variables that are associated with an object of a particular class.
+Métodos são funções que pertencem a objetos de uma classe específica.
+
+__Atributos__
+
+Atributos são variáveis que estão associadas a um objeto de uma classe específica.
 
  
 
-#### Creating a Class
+#### Criando uma Classe
 
-Defining a class is straightforward. 
+Definir uma classe é objetivo.
 
-The first step is to decide what attributes and what methods it will have. 
-
-
-
-__Create a DNARecord Class.__
-
-When we create a class, we are really setting up a series of rules that a DNARecord object must follow.
-
-DNARecord Rules:
-1. DNARecord must have a sequence [attribute]
-2. DNARecord must have a name [attribute]
-3. DNARecord must have an organism [attribute]
-4. DNARecord will be able to calculate AT content [method]
-5. DNARecord will be able to calculate the reverse complement [method]
+O primeiro passo é decidir quais atributos e quais métodos ela terá.
 
 
 
-Here is the first, but not final draft of our class. We will go through each section of this code below:
+__Criar uma Classe DNARecord__
+
+Quando criamos uma classe, na verdade estamos estabelecendo uma série de regras que um objeto DNARecord deve seguir.
+
+Regras do DNARecord:
+1. O DNARecord deve ter uma sequência [atributo]
+2. O DNARecord deve ter um nome [atributo]
+3. O DNARecord deve ter um organismo [atributo]
+4. O DNARecord será capaz de calcular o conteúdo de AT [método]
+5. O DNARecord será capaz de calcular o complemento reverso [método]
+
+
+Aqui está o primeiro rascunho, mas não final, da nossa classe. Vamos passar por cada seção deste código abaixo:
+
 
 ```python
 class DNARecord(object):
-  # define class attributes
+  # definir atributos da classe
   sequence = 'ACGTAGCTGACGATC' 
   gene_name = 'ABC1'
   species_name = 'Drosophila melanogaster'
   
-  # define methods
+  # definir métodos
   def reverse_complement(self): 
     replacement1 = self.sequence.replace('A', 't') 
     replacement2 = replacement1.replace('T', 'a')
@@ -4912,19 +4911,18 @@ class DNARecord(object):
     at_content = (a_count + t_count) / length 
     return at_content
 
-## create a new DNARecord Object
+## criar um novo objeto DNARecord
 dna_rec_obj = DNARecord() 
 
-## Use New DNARecord object
+## Use o novo objeto DNARecord
 print('Created a record for ' + dna_rec_obj.gene_name + ' from ' + dna_rec_obj.species_name) 
 print('AT is ' + str(dna_rec_obj.get_AT()))
 print('complement is ' + dna_rec_obj.reverse_complement())
 ```
 
-Now let's go through each section: 
+Agora vamos passar por cada seção:
 
-We start with the keyword `class`, followed by the name of our class `DNARecord` with
-the name of the base class in parentheses `object`.  
+Começamos com a palavra-chave `class`, seguida pelo nome da nossa classe `DNARecord` com o nome da classe base entre parênteses `object`.
 
 ```python
 class DNARecord(object):
@@ -4932,21 +4930,20 @@ class DNARecord(object):
 
 
 
-Then we define class attributes. These are variables with data that belongs to the class, and therefore to any object that is created using this class
+Em seguida, definimos os atributos da classe. Estas são variáveis com dados que pertencem à classe e, portanto, a qualquer objeto que seja criado usando esta classe.
 
 ```python
-  # define class attributes
+  # definir atributos da classe
   sequence = 'ACGTAGCTGACGATC' 
   gene_name = 'ABC1'
   species_name = 'Drosophila melanogaster' 
 ```
 
 
-
-Next, we define our class methods:
+A seguir, definimos nossos métodos de classe:
 
 ```python
-  # define methods
+  # define métodos
   def reverse_complement(self): 
     replacement1 = self.sequence.replace('A', 't') 
     replacement2 = replacement1.replace('T', 'a')
@@ -4963,36 +4960,38 @@ Next, we define our class methods:
     return at_content
 ```
 
-The methods are using an argument called `self`, i.e., `length = len(self.sequence)`. This is a special variable that you use inside a class. With it you can access all the data that is contained inside the object when it is created.
+Os métodos estão usando um argumento chamado `self`, ou seja, `length = len(self.sequence)`. Esta é uma variável especial que você usa dentro de uma classe. Com ela, você pode acessar todos os dados que estão contidos dentro do objeto quando ele é criado.
 
-Use `self.attribute` format to retrieve the value of variables created within the class. Here we use `self.sequence` to retrieve the information stored in our attribute named `sequence`.
+Use o formato `self.attribute` para recuperar o valor das variáveis criadas dentro da classe. Aqui usamos `self.sequence` para recuperar as informações armazenadas em nosso atributo chamado `sequence`.
+
 
 ```python
 replacement1 = self.sequence.replace('A', 't') 
 ```
 
-#### Creating a DNARecord Object
 
+#### Criando um Objeto DNARecord
 
-The above class is a set of rules that need to be followed when creating a new DNARecord object. 
-Now let's create a new DNARecord object:
+A classe acima é um conjunto de regras que precisam ser seguidas ao criar um novo objeto DNARecord.
+Agora vamos criar um novo objeto DNARecord:
 
 ```python
   dna_rec_obj = DNARecord() 
 ```
 
-`dna_rec_obj` is our new DNARecord object that was creating using the rules we put into place in the class definition.
+`dna_rec_obj` é o nosso novo objeto DNARecord que foi criado usando as regras que estabelecemos na definição da classe.
 
 
-#### Retrieving attribute values
 
-Now that a new DNARecord object has been created, and assigned to the variable `dna_rec_obj`, we can access its attributes using the following format, `object.attribute_name` 
+#### Recuperando valores de atributos
 
-To get the gene name of the object we created, we simply write `dna_rec_obj.gene_name`. 
+Agora que um novo objeto DNARecord foi criado e atribuído à variável `dna_rec_obj`, podemos acessar seus atributos usando o seguinte formato, `objeto.nome_do_atributo`.
 
-This is possible because within our class definition we create a `gene_name` variable.
+Para obter o nome do gene do objeto que criamos, simplesmente escrevemos `dna_rec_obj.gene_name`.
 
-Let's try it:
+Isso é possível porque dentro da nossa definição de classe criamos uma variável `gene_name`.
+
+Vamos tentar:
 
 ```python
 >>> dna_rec_obj.gene_name
@@ -5004,13 +5003,15 @@ Let's try it:
 
 
 
-#### Using class methods
+#### Usando métodos de classe
 
-To call a method associated with our new object, we use a similar format `object.method_name`.
+Para chamar um método associado ao nosso novo objeto, usamos um formato similar, `objeto.nome_do_método`.
 
-So to call the `get_AT()` method, we would use `dna_rec_obj.get_AT() `. This should look familiar, you have done used class methods over and over again: `some_string.count('A')` 
+Então, para chamar
 
-Let's try it with our `dna_rec_obj`:  
+ o método `get_AT()`, usaríamos `dna_rec_obj.get_AT()`. Isso deve parecer familiar, você já usou métodos de classe várias vezes: `alguma_string.count('A')`.
+
+Vamos tentar com nosso `dna_rec_obj`:
 
 
 ```python
@@ -5022,48 +5023,48 @@ Let's try it with our `dna_rec_obj`:
 ```
 
 
-Now let's use the `reverse_complement()` method
+Agora vamos usar o método `reverse_complement()`
 ```python
 >>> dna_rec_obj.sequence
 'ACGTAGCTGACGATC'
 >>> dna_rec_obj.reverse_complement()
 GATCGTCAGCTACGT
 ```
-Wow!! Getting the reverse complement in one line is pretty nice!
+Uau!! Obter o complemento reverso em uma linha é bem legal!
 
 
-#### Getting data into a new instance of our class
+#### Obtendo dados em uma nova instância de nossa classe
 
-Great!!! 
+Ótimo!!!
 
-We can now create a DNARecord object and retrieve the object attributes and use the cool methods we created.
+Agora podemos criar um objeto DNARecord e recuperar os atributos do objeto e usar os métodos legais que criamos.
 
-But..... It always contains the same gene_name, sequence, and species information 😟 
+Mas..... Ele sempre contém o mesmo nome de gene, sequência e informações de espécie 😟
 
-Let's make our class more generic, or in other words, make it so that a user can provide a new gene name, gene sequence, and source organism everytime a DNARecord object is created.
+Vamos tornar nossa classe mais genérica, ou em outras palavras, fazer com que um usuário possa fornecer um novo nome de gene, sequência de gene e organismo de origem toda vez que um objeto DNARecord for criado.
 
 
 
 ##### __\_\_init\_\___
 
-To do this we need to add an `__init__` function to our Object Rules, or Class. 
+Para fazer isso, precisamos adicionar uma função `__init__` à nossa Regra de Objeto, ou Classe.
 
-The `init` function will automatically get called when you create an object. 
+A função `init` será chamada automaticamente quando você criar um objeto.
 
-It contains specific instructions for creating a new DNARecord Object. 
+Ela contém instruções específicas para criar um novo Objeto DNARecord.
 
-It specifies how many pieces of data we want to collect from the creator of a DNARecord object to use within a DNARecord object.
+Ela especifica quantos dados queremos coletar do criador de um objeto DNARecord para usar dentro de um objeto DNARecord.
 
-Below our __\_\_init\_\___ instructions indicate that we want to create object attributes called `sequence`, `gene_name`, and `species_name` and to set them with the values provided as arguments when the object was created.
+Abaixo, nossas instruções __\_\_init\_\___ indicam que queremos criar atributos de objeto chamados `sequence`, `gene_name` e `species_name` e defini-los com os valores fornecidos como argumentos quando o objeto foi criado.
 
-Here is our new class definition and new object creation when using the  __\_\_init\_\___  function:
+Aqui está a definição da nossa nova classe e a criação de um novo objeto ao usar a função __\_\_init\_\___:
 
 ```python
 #!/usr/bin/env python3
 class DNARecord(object):
   
-  # define class attributes
-  def __init__(self, sequence, gene_name, species_name): ## note that '__init__' is wrapped with two underscores
+  # definir atributos da classe
+  def __init__(self, sequence, gene_name, species_name): ## observe que '__init__' está envolto com dois sublinhados
     #sequence = 'ACGTAGCTGACGATC'
     #gene_name = 'ABC1'
     #species_name = 'Drosophila melanogaster'
@@ -5087,7 +5088,7 @@ class DNARecord(object):
     at_content = (a_count + t_count) / length
     return at_content
 
-## Create new DNARecord Objects with user defined data
+## Criar novos Objetos DNARecord com dados definidos pelo usuário
 dna_rec_obj_1 = DNARecord('ACTGATCGTTACGTACGAGT', 'ABC1', 'Drosophila melanogaster')
 dna_rec_obj_2 = DNARecord('ATATATTATTATATTATA', 'COX1', 'Homo sapiens')
 
@@ -5095,7 +5096,7 @@ for d in [ dna_rec_obj_1, dna_rec_obj_2 ]:
   print('name:' , d.gene_name , ' ' , 'seq:' , d.sequence)
 ```
 
-Output:
+Saída:
 
 ```bash
 $ python3 dnaRecord_init.py
@@ -5103,13 +5104,13 @@ name: ABC1   seq: ACTGATCGTTACGTACGAGT
 name: COX1   seq: ATATATTATTATATTATA
 ```
 
-Now you can create as many DNASequence Objects as you like, each can contain information about a different sequence.
+Agora você pode criar tantos Objetos DNASequence quanto desejar, cada um pode conter informações sobre uma sequência diferente.
 
 
 
 ---
 
-### [Link to Python 11 Problem Set](problemsets/Python_11_problemset.md)
+### [Link para o Conjunto de Problemas Python 11](problemsets/Python_11_problemset.md)
 
 ---
 
