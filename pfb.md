@@ -100,7 +100,7 @@ Você pode verificar as permissões assim:
 -rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 ola.py
 ```
 
-Os primiros 10 caracteres que ver na tela possuem significados especiais. O primeiro (`-`) diz a você qual tipo de arquivo `ola.py` é. `-` significa um arquivo normal, 'd' um diretório, '1' um link. Os próximos nove caracteres aparecem em três sets de três. O primeiro set se refere às suas permissões, o segundo as permissões do grupo, e o último de quaisquer outros. Cada set de trÊs caracteres mostra em ordem 'rwx' para leitura, escrita, execução. Se alguém não tem uma permissão, um `-` é mostrado ao invés de uma letra. Os três caracteres 'x' significam que qualquer um pode executar ou rodar o script.  
+Os primeiros 10 caracteres que aparecerem na tela possuem significados especiais. O primeiro (`-`) diz a você qual tipo de arquivo `ola.py` é. `-` significa um arquivo normal, 'd' um diretório, '1' um link. Os próximos nove caracteres aparecem em três sets de três. O primeiro set se refere às suas permissões, o segundo às permissões do grupo, e o último de quaisquer outros. Cada set de três caracteres mostra em ordem 'rwx' para leitura, escrita, execução. Se alguém não tem uma permissão, um `-` é mostrado ao invés de uma letra. Os três caracteres 'x' significam que qualquer um pode executar ou rodar o script.  
 
 Nós também precisamos adicionar uma linha no começo do script que pede para o python3 interpretar o script. Essa linha começa com `#`, então aparece como um comentário para o python. O '!' é importante como o espaço entre `env` e `python3`. O programa `/usr/bin/env` procura por onde `python3` está instalado e roda o script com `python3`. Os detalhes podem parecer um pouco complexos, mas você pode apenas copiar e colar essa linha 'mágica'.
 
@@ -141,7 +141,7 @@ Selecionar bons nomes de variável para objetos que você nomeia é muito import
 
 Uma escolha ainda pior é dar nomes de variáveis que contêm nomes de genes como `sequencias`. Por que é uma ideia ruim? Pense no que poderia acontecer se você encher seu carro de combustível em um comércio chamado "posto de gasolina" que vendesse limonada em vez de gasolina ou etanol combustível.
 
-Em Ciência da Computação, os nomes devem sempre descrever de forma acurada os objetos aos quais estejam vinculados. Isso reduz a possibilidade de `bugs` no seu código, torna muito mais fácil o seu entendimento se você volta ao seis meses depois ou por pessoas com as quais compartilha seu código. Embora pensar em bons nomes para variáveis tome um pouco mais de tempo e esforço, isso prenive problemas no futuro!
+Em Ciência da Computação, os nomes devem sempre descrever de forma acurada os objetos aos quais estejam vinculados. Isso reduz a possibilidade de `bugs` no seu código, torna muito mais fácil o seu entendimento se você volta ao seis meses depois ou por pessoas com as quais compartilha seu código. Embora pensar em bons nomes para variáveis tome um pouco mais de tempo e esforço, isso previne problemas no futuro!
 
 #### Palavras reservadas
 
@@ -163,9 +163,9 @@ except      list        hash
 
 #### Linhas e indentação
 
-Python considera como um bloco de código linhas adjacentes que apresentam o mesmo nível de indentação. Isso mantém organizadas as linhas de código que são executadas de forma conjunta. Espaçamento e/ou indentação incorretos irão causar erros ou podem fazer que seu código seja executado de uma forma que você não espera. Ambientes de Desenvolvimento Interativo (IDEs) e editores de texto podem ajudar a indentar códigos corretamente.
+Python considera como um bloco de código linhas adjacentes que apresentam o mesmo nível de indentação. Isso mantém organizadas as linhas de código que são executadas de forma conjunta. Espaçamento e/ou indentação incorretos irão causar erros ou podem fazer com que seu código seja executado de uma forma que você não espera. Ambientes de Desenvolvimento Interativo (IDEs) e editores de texto podem ajudar a indentar códigos corretamente.
 
-O número de espaços na indentação precisa ser consistente, mas este número não é específico. Todas as linhas de código ou sentenças dentro de um bloco precisa ser identado com o mesmo número. Por exemplo, usando quatro espaços:
+O número de espaços na indentação precisa ser consistente, mas este número não é específico. Todas as linhas de código ou sentenças dentro de um bloco precisam ser indentados com o mesmo número. Por exemplo, usando quatro espaços:
 
 
 ```python
@@ -195,7 +195,7 @@ A primeira linha de um script começa com `#!`, um exemplo especial de comentár
 #!/usr/bin/env python3
 
 # este é meu primeiro código
-print("Olá, turma 2022!") # esta linha imprema o conteúdo na tela
+print("Olá, turma 2022!") # esta linha imprime o conteúdo na tela
 ```
 
 
@@ -208,7 +208,7 @@ Linhas em branco são importantes para aumentar a legibilidade do código. Você
 
 Esta é a sua primeira oportunidade de olhar para variáveis e tipos de dados. Cada tipo será discutido em mais detalhes nas seções subsequentes.
 
-O primeiro conceito a ser considerado é que os tipos de dados de Python podem ser ou não mutáveis. Números literais, strings e tuplas não podem ser alterados. Listas, dicionários e sets podem. Da mesma forma, variáveis individuais também podem ser alteradas. Você pode armazenar dados na memória por meio da atribução de variáveis, o que pode ser feito usando o sinal "=".
+O primeiro conceito a ser considerado é que os tipos de dados de Python podem ser ou não mutáveis. Números literais, strings e tuplas não podem ser alterados. Listas, dicionários e sets podem. Da mesma forma, variáveis individuais também podem ser alteradas. Você pode armazenar dados na memória por meio da atribuição de variáveis, o que pode ser feito usando o sinal "=".
 
 #### Números e Strings
 
@@ -221,7 +221,7 @@ contagem_genes = 5
 # alterando o valor de contagem_genes
 contagem_genes = 10
 ```
->Lembre-se que da seção anterior sobre nomes de variáveis e objetos (e variáveis são objetos em Python).
+>Lembre-se da seção anterior sobre nomes de variáveis e objetos (e variáveis são objetos em Python).
 
 Diferentes tipos de dados podem ser atribuídos a variáveis, como inteiros (`1`,`2`,`3`), números de ponto flutuante (`3.1415`) e strings (`"texto"`).
 
@@ -258,7 +258,7 @@ Coleções de dados podem também ser armazenados em tipos de dados especiais, i
 
 #### Tuplas
 
-- Tuplas são similares a listas e contêm coleçaões de dados ordenados (indexados).
+- Tuplas são similares a listas e contêm coleções de dados ordenados (indexados).
 - **Tuplas são imutáveis: você não consegue alterar os valores ou número de elementos**
 - A tupla é delimitada por parênteses e seus itens são separados por vírgula.
 ```python
@@ -291,7 +291,7 @@ Coleções de dados podem também ser armazenados em tipos de dados especiais, i
 
 - Um dicionário é delimitado por chaves e conjuntos de Chave/Valor separados por vírgula.
 
-- Um sinal de dois-pontos é colocado entre cada chave e valor. Vírgulas separam pares de chave:valor.
+- Um sinal de dois pontos é colocado entre cada chave e valor. Vírgulas separam pares de chave:valor.
 
 
 ```python
@@ -330,7 +330,7 @@ Isso acontece dentro do script:
 
 > Estes são os parâmetros da linha de comando, ou argumentos que queira passar para o script. 
 > `sys.argv[0]` é o nome do script.
-> Você pode acessar valores dos outros parâmetros pelos seus índices, começando com 1, então `sys.argv[1]` contém 'Maria' e `sys.argv[2]` contém 'Carlos'. Você acessa elementos em uma lista adicionando colchetes e o ínidce numérico depois do nome da lista.  
+> Você pode acessar valores dos outros parâmetros pelos seus índices, começando com 1, então `sys.argv[1]` contém 'Maria' e `sys.argv[2]` contém 'Carlos'. Você acessa elementos em uma lista adicionando colchetes e o índice numérico depois do nome da lista.  
 > Se você quisesse imprimir uma mensagem dizendo que estas duas pessoas são amigas, você poderia escrever um código como este
 
 
@@ -400,7 +400,7 @@ Em Python nós podemos escrever declarações que performam cálculos matemátic
 
 __Módulo__
 
-![3 dividido por 2 é 1 com um restante de 1. Módulo retorna o restatne](images/modulus.png)
+![3 dividido por 2 é 1 com um restante de 1. Módulo retorna o restante](images/modulus.png)
 
 __Exemplos de piso__
 
@@ -458,7 +458,7 @@ Estes operadores comparam dois valores e retornam verdadeiro ou falso.
 
 #### Operadores lógicos
 
-Operadores lógicos permitem combinar dois ou mais conjuntos de comparações. Você pode combinar os resultados de diferentes formas. Por exemplo você pode 1) querer que todos as declarações sejam verdade, 2) que apenas uma declaração precise ser verdadeira, ou 3) que a declaração precise ser falsa.
+Operadores lógicos permitem combinar dois ou mais conjuntos de comparações. Você pode combinar os resultados de diferentes formas. Por exemplo, você pode 1) querer que todas as declarações sejam verdade, 2) que apenas uma declaração precise ser verdadeira, ou 3) que a declaração precise ser falsa.
 
 | Operador | Descrição                                | Exemplo        | Resultado |
 | -------- | ---------------------------------------- | -------------- | ------ |
@@ -735,7 +735,7 @@ Python reconhece 3 tipos de números: inteiros, números de ponto flutuante e n�
 
 #### Funções de conversão    
 
-As vezes um tipo de número precisa ser mudado por outro para a função poder trabalhar. Aqui está a lista de funções para converter tipos de números:
+Às vezes um tipo de número precisa ser mudado por outro para a função poder trabalhar. Aqui está a lista de funções para converter tipos de números:
 
 | função          | Descrição                                |
 | --------------- | ---------------------------------------- |
@@ -898,9 +898,9 @@ Ele retorna três diferentes valores dependendo do x e do y
 
 ### Sequências
 
-Na próxima seção, nós iremos aprender sobre as strings, tuplas, e listas. Todos estes são exemplos de sequências em python. uma sequência de caracteres `'ACGTGA'`, uma tupla `(0.23, 9.74, -8.17, 3.24, 0.16)`, e uma lista `['dog', 'cat', 'bird']` são sequências de diferentes tipos de dados. Veremos mais detalhes em breve.
+Na próxima seção, nós iremos aprender sobre strings, tuplas, e listas. Todos estes são exemplos de sequências em python. uma sequência de caracteres `'ACGTGA'`, uma tupla `(0.23, 9.74, -8.17, 3.24, 0.16)`, e uma lista `['dog', 'cat', 'bird']` são sequências de diferentes tipos de dados. Veremos mais detalhes em breve.
 
-Em Python, um tipo de objeto consegue operações que pertencem àquele tipo. Sequências tem operações sequenciais então as strings podem também usar operações sequenciais. Strings também possuem suas próprias operações específicas.
+Em Python, um tipo de objeto consegue operações que pertencem àquele tipo. Sequências têm operações sequenciais então as strings podem também usar operações sequenciais. Strings também possuem suas próprias operações específicas.
 
 Você pode perguntar qual a extensão de qualquer sequência
 
@@ -913,7 +913,7 @@ Você pode perguntar qual a extensão de qualquer sequência
 3
 ```
 
-Você pode também usar funções de strings específicas, mas não em listas e vice versa. Nós vamos aprender mais sobre isso posteriormente. `rstrip()` é um método de string ou função. Você obtém um erro se você tentar usar isso em uma lista.
+Você pode também usar funções de strings específicas, mas não em listas e vice-versa. Nós vamos aprender mais sobre isso posteriormente. `rstrip()` é um método de string ou função. Você obtém um erro se você tentar usar isso em uma lista.
 
 ```python
 >>> 'ACGTGA'.rstrip('A')
@@ -997,7 +997,7 @@ ATG GGTCTAC
 ```
 > Nós conseguimos as duas strings literais impressas na tela separadas por um espaço
 
-E se vocÊ não quiser suas strings separadas por um espaço? use o operador concatenação para concatenar as duas strings antes ou dentro da função `print()`. 
+E se você não quiser suas strings separadas por um espaço? use o operador concatenação para concatenar as duas strings antes ou dentro da função `print()`. 
 ```python
 >>> print("ATG"+"GGTCTAC")
 ATGGGTCTAC
@@ -1064,7 +1064,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'GGTCTAC' is not defined
 ```
-> Nós obtemos um 'NameError' quando a string literal não for inclusa nas sentenças porque o Python está procurando uma variável com o nome GGTCTAC
+> Nós obtemos um 'NameError' quando a string literal não for incluída nas sentenças porque o Python está procurando uma variável com o nome GGTCTAC
 
 ```python
 >>> print "boo"
@@ -1187,8 +1187,8 @@ O valor que `len()` retorna pode ser armazenado em uma variável.
 Você pode misturar strings e ints em `print()`, mas não em concatenação.
 
 ```python
->>> print("The lenth of the DNA sequence:" , dna , "is" , dna_length)
-The lenth of the DNA sequence: TAGCTATATAAAATCATAAT is 20
+>>> print("The length of the DNA sequence:" , dna , "is" , dna_length)
+The length of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 ```
 
 
@@ -1228,7 +1228,7 @@ O método de string pode ser guardado dentro de outras funções.
 >>> print(dna.lower())
 atgcttg
 ```
-> Os conteúdos de 'dna' são transformados em minúsculos e trasnportados para a função `print()`.
+> Os conteúdos de 'dna' são transformados em minúsculos e transportados para a função `print()`.
 
 Se você tentar usar um método de string em um objeto que não é uma string você receberá um erro. 
 
@@ -1290,7 +1290,7 @@ ATGCTGCATT
 >>> print(rna)
 AUGCUGCAUU
 ```
-> Todos as ocorrências de T são substitupidas por U. A nova string é retornada. A string original não foi de fato alterada. Se você quiser reutilizar a nova string, armazene ela em uma variável.
+> Todas as ocorrências de T são substituídas por U. A nova string é retornada. A string original não foi de fato alterada. Se você quiser reutilizar a nova string, armazene ela em uma variável.
 
 
 
@@ -1383,7 +1383,7 @@ Desde que estes são métodos, se certifique de utilizar na sentença `string.me
 | ------------------------------ | ---------------------------------------- |
 | `s.strip()`                    | retorna uma string com o espaço em branco removido do começo e fim |
 | `s.isalpha()`                  | testa se todos caracteres da string são alfabéticos. Retorna verdadeiro ou falso. |
-| `s.isdigit()`                  | testa se todos caracteres da string são nnuméricos. Retorna verdadeiro ou falso. |
+| `s.isdigit()`                  | testa se todos caracteres da string são numéricos. Retorna verdadeiro ou falso. |
 | `s.startswith('other_string')` | testa se a string começa com a string fornecida como argumento. Retorna verdadeiro ou falso. |
 | `s.endswith('other_string')`   | testa se a string termina com a string fornecida como argumento. Retorna verdadeiro ou falso. |
 | `s.split('delim')`             | separa a string no delimitador exato fornecido. Retorna a lista de subtermos. Se o argumento é fornecido, a string será separada no espaço em branco. |
@@ -1414,7 +1414,7 @@ Vamos tentar isso:
 ```
 > Nós começamos com uma string e agora temos uma lista com todos os delimitadores removidos
 
-Aqui está outro exemplo. Vamos dividir em tabs para obter uma lista dos números em colunas separadas tab.   
+Aqui está outro exemplo. Vamos dividir em tabs para obter uma lista dos números em colunas separadas por tab.   
 ```python
 >>> input_expr = '4.73\t7.91\t3.65'
 >>> expression_values = input_expr.split('\t')
@@ -1553,9 +1553,9 @@ __Aqui estão algumas das opções de ALINHAMENTO:__
 
 | Opção  | Significado                              |      |
 | ------ | ---------------------------------------- | ---- |
-| `<`    | Força o campo para estar alinhado a esquerda com o espaço disponível (Isso é o padrão para a maioria dos objetos). |      |
-| `>`    | Força o campo para estar alinhado a direita com o espaço disponível (Isso é o padrão para números). |      |
-| `=`    | Força o campo para o preenchimento ser posto de pois do sinal (se tiver) mas antes dos dígitos. Isso é usado para imprimir campos na forma ‘+000000120’. Essa opção de alinhamento é apenas válida para tipos numéricos. |      |
+| `<`    | Força o campo para estar alinhado à esquerda com o espaço disponível (Isso é o padrão para a maioria dos objetos). |      |
+| `>`    | Força o campo para estar alinhado à direita com o espaço disponível (Isso é o padrão para números). |      |
+| `=`    | Força o campo para o preenchimento ser posto depois do sinal (se tiver) mas antes dos dígitos. Isso é usado para imprimir campos na forma ‘+000000120’. Essa opção de alinhamento é apenas válida para tipos numéricos. |      |
 | `^`    | Força o campo para ser centralizado com o espaço disponível. |      |
 
 >Aqui está um exemplo 
@@ -1563,7 +1563,7 @@ __Aqui estão algumas das opções de ALINHAMENTO:__
 >`{  :    x  <  10   s}`
 >
 > preencher com `x`   
-> justificamento à esquerda `<`  
+> justificar à esquerda `<`  
 > `10` um campo com dez caracteres 
 > `s` uma string
 
@@ -1586,7 +1586,7 @@ __Tipos comuns__
 #### Qual é o ponto?
 
 
-Muito pode ser feito com a função `format()`. Aqui está um último exemplo, mas não a última funcionalidade desta função. vamos circular um número de ponto de flutuação para algumas casas decimais, começando com muitos. (o padrão é 6). Note que a função circula para a casa decimal mais próxima, mas nem sempre exatamente da forma que você espera por conta da forma que os computadores representam decimais com 1s e 0s.
+Muito pode ser feito com a função `format()`. Aqui está um último exemplo, mas não a última funcionalidade desta função, vamos circular um número de ponto de flutuação para algumas casas decimais, começando com muitos. (o padrão é 6). Note que a função circula para a casa decimal mais próxima, mas nem sempre exatamente da forma que você espera por conta da forma que os computadores representam decimais com 1s e 0s.
 
 ```python
 '{:f}'.format(3.141592653589793)
@@ -1628,7 +1628,7 @@ Listas são tipos de dados que armazenam uma coleção de dados.
 
 - Tuplas são usadas para armazenar uma coleção de dados ordenada e indexada
 - Valores são separados por vírgulas
-- Valores são anexados entre parenteses '()'
+- Valores são anexados entre parênteses '()'
 - Tuplas **NÃO** podem crescer ou encolher
 - Valores são imutáveis
 
@@ -1636,7 +1636,7 @@ Listas são tipos de dados que armazenam uma coleção de dados.
 ( 'Jan' , 'Fev' , 'Mar' , 'Abr' , 'Mai' , 'Jun' , 'Jul' , 'Ago' , 'Set' , 'Out' , 'Nov' , 'Dez' )
 ```
 
-Muitas funções e métodos retornam tuplas como `math.modf(x)`. Essa função retorna as partes fracionais e inteiras de `x` em uma tupla de dois itens. Aqui não existe motivos para mudar a sequência.
+Muitas funções e métodos retornam tuplas como `math.modf(x)`. Essa função retorna as partes fracionais e inteiras de `x` em uma tupla de dois itens. Aqui não existem motivos para mudar a sequência.
 
 ```python
 >>> math.modf(2.6)
@@ -1721,7 +1721,7 @@ IndexError: list assignment index out of range
 
 #### Extraindo um subconjunto de uma lista, ou Recortando
 
-Isso funciona da mesma forma com as listas como com as strings. Isso é porque ambos são sequências, ou cooleções ordenadas de dados com informação posicional. Lembre-se que Python conta as divisões entre os elementos, começando com 0.
+Isso funciona da mesma forma com as listas como com as strings. Isso é porque ambos são sequências, ou coleções ordenadas de dados com informação posicional. Lembre-se que Python conta as divisões entre os elementos, começando com 0.
 
 | Índice | Valor |
 | ----- | ----- |
@@ -1782,11 +1782,11 @@ Para esses exemplos utilize: `nums = [1,2,3]` e `codons = [ 'atg' , 'aaa' , 'agg
 | `list.append(obj)`        | anexa um objeto no final de uma lista  | nums.append(9) ; print(nums) ; retorna [1,2,3,9] |
 | `list.count(obj)`         | conta as ocorrências de um objeto em uma lista | nums.count(2) retorna 1                  |
 | `list.index(obj)`         | retorna o menor índice em que o objeto fornecido é encontrado | nums.index(2) retorna 1                  |
-| `list.pop()`              | remove e retorna o últio valor de uma lista. A lista é agora um elemento mais curta | nums.pop() retorna 3                     |
+| `list.pop()`              | remove e retorna o último valor de uma lista. A lista é agora um elemento mais curta | nums.pop() retorna 3                     |
 | `list.insert(index, obj)` | insere um valor ao índice fornecido. Lembre-se de pensar sobre as divisões entre os elementos | nums.insert(0,100) ; print(nums) retorna [100, 1, 2, 3] |
 | `list.extend(new_list)`   | anexa `new_list` ao final de `list`  | nums.extend([7, 8]) ; print(nums) retorna [1, 2, 3, 7,8] |
 | `list.pop(index)`         | remove e retorna o valor do argumento indexado. A lista é agora um valor mais curta | nums.pop(0) retorna 1                    |
-| `list.remove(obj)`        | encontra o menor índice do objeto fornecido e remove ele da lista. A lista é agora um elemento mais curta | codons.remove('aaa') ; print(codons) retorna  [ 'atg' , 'agg' ] |
+| `list.remove(obj)`        | encontra o menor índice do objeto fornecido e o remove da lista. A lista é agora um elemento mais curta | codons.remove('aaa') ; print(codons) retorna  [ 'atg' , 'agg' ] |
 | `list.reverse()`          | inverte a ordem da lista          | nums.reverse() ; print(nums) retorna [3,2,1] |
 | `list.copy()`             | Retorna uma cópia rasa da lista. Rasa vs [Deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) apenas importa em estruturas de data multidimensionais. |                                          |
 | `list.sort([func])`       | organiza uma lista utilizando a função fornecida. Não retorna uma lista. A lista foi alterada. Uma organização de lista avançada será coberta assim que escrever suas próprias funções for discutido. | codons.sort() ; print(codons) retorna ['aaa', 'agg', 'atg'] |
@@ -1818,7 +1818,7 @@ Vamos copiar a lista utilizando o método `copy()`.
 
 #### Construindo uma lista um valor por vez
 
-Agora que você já viu a função `append()` nós podemos ir em como construir uma lista valor por vez.
+Agora que você já viu a função `append()` nós podemos ver como construir uma lista com um valor por vez.
 
 ```python
 >>> words = []
@@ -1899,14 +1899,14 @@ Done
 
 #### Loops infinitos
 
-Um loop infinito ocorre quando um condição while é sempre verdadeira. Aqui está um exemplo de um loop infinito.
+Um loop infinito ocorre quando uma condição while é sempre verdadeira. Aqui está um exemplo de um loop infinito.
 
 ```python
 #!/usr/bin/env python3
 
 contagem = 0
 while contagem < 5:            # isso é normalmente um bug!!
-  print("contagem:" , contagem)   # esqueça de incrementar contagem no loop!!
+  print("contagem:" , contagem)   # esqueça de incrementar a contagem no loop!!
 print("Done") 
 ```
 
@@ -2002,7 +2002,7 @@ T
 > Essa é uma forma fácil de acessar cada caractere em uma string. É especialmente bom para sequências de DNA.
 
 
-Outro exemplo de interagir em uma lista de variáveis, estes números de tempo.
+Outro exemplo de interagir em uma lista de variáveis, um número por vez.
 
 Código:
 ```python
@@ -2023,7 +2023,7 @@ $ python3 list_numbers.py
 4
 ```
 
-Python tem uma função chamada `range()` que retornará números que podem ser convertidos em lista. 
+Python tem uma função chamada `range()` que retornará números que podem ser convertidos em uma lista. 
 ```python
 >>> range(5)
 range(0, 5)
@@ -2031,7 +2031,7 @@ range(0, 5)
 [0, 1, 2, 3, 4]
 ```
 
-A função `range()` pode ser utilizada em conjunto com um for loop para interar em um faixa de números. AlcaA faixa (range) também começa com 0 e opera sobre os espaços entre os números.  
+A função `range()` pode ser utilizada em conjunto com um for loop para integrar em um faixa de números. A faixa (range) também começa com 0 e opera sobre os espaços entre os números.  
 
 Código:
 ```python
@@ -2080,7 +2080,7 @@ As declarações de controle de loop permitem alteração no fluxo normal de exe
 | Declaração de controle | Descrição                             |
 | ----------------- | ---------------------------------------- |
 | `break`           | Um loop é terminado quando uma declaração break é executada. Todas as linhas de código após o break, mas dentro do bloco de loop não são executadas. Sem mais interações do loop sendo executadas |
-| `continue`        | Uma única interação de uma loop é terminada quando a declaração continue é executada. A próxima interação vai proceder normalmente. |
+| `continue`        | Uma única iteração de um loop é terminada quando a declaração continue é executada. A próxima iteração vai proceder normalmente. |
 
 
 #### Controle de loop: Break  
@@ -2142,7 +2142,7 @@ Done
 
 #### Iteradores
 
-Um iterável é qualquer tipo de dado que pode ser iterado, ou pode ser usado em uma interação. Um interável pode ser transformado em um iterador com a função `iter()`. Isso significa que você pode utilizar a função `next()`.
+Um iterável é qualquer tipo de dado que pode ser iterado, ou pode ser usado em uma iteração. Um iterável pode ser transformado em um iterador com a função `iter()`. Isso significa que você pode utilizar a função `next()`.
 
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
@@ -2383,9 +2383,9 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
 
 
-#### Construindo um Dicionário um Par de Chave/Valor de Cada Vez Usando um Loop
+#### Construindo um Dicionário com um Par de Chave/Valor de Cada Vez Usando um Loop
 
-Agora temos todas as ferramentas para construir um dicionário um par de chave/valor usando um loop for. Isso é como você construirá dicionários com mais frequência na vida real.
+Agora temos todas as ferramentas para construir um dicionário com um par de chave/valor usando um loop for. Isso é como você construirá dicionários com mais frequência na vida real.
 
 Aqui, vamos contar e armazenar contagens de nucleotídeos:  
 
@@ -2406,7 +2406,7 @@ for nt in dna:
     new_count = previous_count + 1
     nt_count[nt] = new_count
   else:
-    # senão, adcionamos e contamos 1
+    # se não, adicionamos e contamos 1
     nt_count[nt] = 1;
 
 print(nt_count)
@@ -2431,12 +2431,12 @@ print(nt_count)
 
 
 
-#### Ordenando chavesd de dicionários
+#### Ordenando chaves de dicionários
 
 Se você deseja imprimir o conteúdo de um dicionário, deve classificar as chaves e, em seguida, iterar sobre as chaves com um loop for. Por que você gostaria de classificar as chaves?
 
 ```python
-for gene_key in sorted(genes): # python permite que voce use atalhos em um "for loop"
+for gene_key in sorted(genes): # python permite que você use atalhos em um "for loop"
                                # você não precisa escrever genes.keys() em um for loop
                                # para iterar sobre as chaves
   print(gene_key, '=>' , genes[gene_key])
@@ -2589,7 +2589,7 @@ A diferença simétrica é composta pelos elementos que estão apenas no primeir
 | `set.add(new)`                          | adiciona novos elementos                       |
 | `set.clear()`                           | remove todos elementos                 |
 | `set.copy()`                            | retorna uma cópia rasa de um conjunto          |
-| `set.difference(set2)`                  | retorna a diferença entre o conjunto e o conjunto2   |
+| `set.difference(set2)`                  | retorna a diferença entre o set e o set2   |
 | `set.difference_update(set2)`           | remove todos os elementos de outro conjunto deste conjunto |
 | `set.discard(element)`                  | remove um elemento do conjunto se ele for encontrado no conjunto. (Não faz nada se o elemento não estiver no conjunto) |
 | `set.intersection(sets)`                | retorna a interseção do conjunto com outros conjuntos fornecidos |
@@ -2599,8 +2599,8 @@ A diferença simétrica é composta pelos elementos que estão apenas no primeir
 | `set.issuperset(set2)`                  | retorna Verdadeiro se o set contém o set2.       |
 | `set.pop()`                             | remove e retorna um elemento arbitrário do conjunto. |
 | `set.remove(element)`                   | remove um elemento de um conjunto.              |
-| `set.symmetric_difference(set2)`        | retorna a diferença simétrica entre o conjunto e o conjunto2. |
-| `set.symmetric_difference_update(set2)` | atualiza o conjunto com a diferença simétrica entre o conjunto e o conjunto2 |
+| `set.symmetric_difference(set2)`        | retorna a diferença simétrica entre o set e o set2. |
+| `set.symmetric_difference_update(set2)` | atualiza o conjunto com a diferença simétrica entre o set e o set2 |
 | `set.union(sets)`                       | retorna a união do conjunto e dos outros conjuntos fornecidos. |
 | `set.update(set2)`                      | atualiza o conjunto com a união do conjunto e o conjunto2. |
 
@@ -2777,7 +2777,7 @@ ACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG
 
 #### Abrindo um arquivo com `with open() as fh:`
 
-Muitas pessoas adicionam isso porque ele fecha o arquivo automaticamente para você. Boa prática de programação. Seu código limpará conforme ele é executado. Para codificação mais avançada, `with ... as ...` economiza recursos limitados, como identificadores de arquivo e conexões de banco de dados. Por enquanto, só precisamos saber que `with ... as ...:` faz o mesmo que `fh = open(...) ... fh.close()`. Portanto, aqui está como o código adaptado se parece:
+Muitas pessoas adicionam isso porque ele fecha o arquivo automaticamente para você. Boa prática de programação. Seu código se limpará conforme ele é executado. Para codificação mais avançada, `with ... as ...` economiza recursos limitados, como identificadores de arquivo e conexões de banco de dados. Por enquanto, só precisamos saber que `with ... as ...:` faz o mesmo que `fh = open(...) ... fh.close()`. Portanto, aqui está como o código adaptado se parece:
 
 ```python
 #!/usr/bin/env python3
@@ -3350,7 +3350,7 @@ TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTA
 
 
 
-**FYI:** A função `match()` é outra função de expressão regular que procura padrões. É semelhante a `search`, mas ela olha apenas para o início da string em busca do padrão, enquanto `search` procura em toda a string. Geralmente, `finditer()`, `search()` e `findall()` serão mais úteis.
+**FYI:** A função `match()` é outra função de expressão regular que procura padrões. É semelhante à `search`, mas ela olha apenas para o início da string em busca do padrão, enquanto `search` procura em toda a string. Geralmente, `finditer()`, `search()` e `findall()` serão mais úteis.
 
 
 #### Subpadrões e Ganância
@@ -3685,9 +3685,7 @@ Dicionários de dicionários são os meus favoritos!! Você pode fazer tantas co
 {'C': 1, 'G': 1, 'A': 3, 'T': 1}
 ```
 
-> Aqui, armazenamos um nome de gene como a chave mais externa, com um segundo nível de chaves para características do gene, como sequência, comprimento, composição de nucleotídeos. Podemos recuper
-
-ar uma característica usando o nome do gene e a característica em conjunto.
+> Aqui, armazenamos um nome de gene como a chave mais externa, com um segundo nível de chaves para características do gene, como sequência, comprimento, composição de nucleotídeos. Podemos recuperar uma característica usando o nome do gene e a característica em conjunto.
 
 Para recuperar apenas a composição de nucleotídeos de um gene:
 
@@ -3991,7 +3989,7 @@ $ python scripts/exceptions.py test.txt
 User provided file: test.txt
 ```
 
-O que acontece se o usuário não fornece nenhuma entrada e tentamos imprimi-la?
+O que acontece se o usuário não fornecer nenhuma entrada e tentar imprimi-la?
 
 ```bash
 $ python scripts/exceptions.py
@@ -4003,7 +4001,7 @@ IndexError: list index out of range
 > Obtemos uma exceção **IndexError** exception, a qual é gerada quando o índice não é encontrado em uma sequência.
 
 
-Já vimos várias exeções ao longo daos capítulos, aqui estão algumas:
+Já vimos várias exceções ao longo dos capítulos, aqui estão algumas:
   - ValueError: erro de domínio matemático
   - AttributeError: o objeto 'list' não tem o atributo 'rstrip'
   - SyntaxError: EOL ao analisar a string literal
@@ -4015,7 +4013,7 @@ Já vimos várias exeções ao longo daos capítulos, aqui estão algumas:
 
 [Link para a Documentação de Python sobre tipos de exceções integradas](https://www.tutorialspoint.com/python3/python_exceptions.htm)
 
-Podemos usar a exeção à nosso favor para ajudar as pessoas que estão executando o código. Podemos usar a codição try/except como um bloco if/else para procurar exceções e executar um código específico se **não tivermos** uma exceção e fazer algo diferente se **tivermos** uma exceção.
+Podemos usar a exceção à nosso favor para ajudar as pessoas que estão executando o código. Podemos usar a condição try/except como um bloco if/else para procurar exceções e executar um código específico se **não tivermos** uma exceção e fazer algo diferente se **tivermos** uma exceção.
 
 ```python
 #!/usr/bin/env python3
@@ -4047,7 +4045,7 @@ Please provide a file name
 
 E se o usuário fornecer uma entrada mas ela não é um arquivo válido ou o caminho está incorreto? Ou se você quer verificar se o usuário forneceu a entrada, e se é possível abrir a entrada.
 
-Podemos adicionar múltiplos testes de exceção, como blocos if/elif. Cada declaração de "exceção" pode especificar que tipo de exeção está esperando para receber. Se esse tipo de exceção ocorrer, ese bloco do código será executado.
+Podemos adicionar múltiplos testes de exceção, como blocos if/elif. Cada declaração de "exceção" pode especificar que tipo de exceção está esperando para receber. Se esse tipo de exceção ocorrer, esse bloco do código será executado.
 ```python
 import sys
 
@@ -4076,7 +4074,7 @@ $ python scripts/exceptions_try_files.py test.txt
 User provided file name: test.txt
 Can't find file: test.txt
 ```
-> Isso informo ao usuário que eles forneceram uma entrada no entanto que o arquivo listado não pode ser encontrado.
+> Isso informa ao usuário que eles forneceram uma entrada, no entanto, que o arquivo listado não pode ser encontrado.
 
 
 Vamos executá-lo sem nenhuma entrada
@@ -4084,7 +4082,7 @@ Vamos executá-lo sem nenhuma entrada
 $ python scripts/exceptions_try_files.py
 Please provide a file name
 ```
-> Isso informar ao usuário que ele precisa fornecer um arquivo.
+> Isso informa ao usuário que ele precisa fornecer um arquivo.
 
 #### try/except/else/finally
 
@@ -4106,7 +4104,7 @@ finally:
 
 #### Obtendo mais informação sobre uma exceção
 
-Algumas exceções podem ser lançadas por múltiplas motivos, por exemplo, ErrorIO ocorrerá se o arquivo não existe, assim como se você não tiver permissões para lê-lo. Podemos obter mais informação observando o conteúdo das nosso Objeto de Exceção. Sim, uma exceção é um objeto também! O erros do sistema são armazenados no objeto de exceção. Para acessar o objeto use `as` e fornceça um nome de variável, como 'ex'.
+Algumas exceções podem ser lançadas por múltiplos motivos, por exemplo, ErrorIO ocorrerá se o arquivo não existir, assim como se você não tiver permissões para lê-lo. Podemos obter mais informação observando o conteúdo dos nosso Objetos de Exceção. Sim, uma exceção é um objeto também! Os erros do sistema são armazenados no objeto de exceção. Para acessar o objeto use `as` e forneça um nome de variável, como 'ex'.
 ```python
 file = ''
 try:
@@ -4675,7 +4673,7 @@ lines = stdout.splitlines()
 
 ##### Verifique o status da saída do comando
 
-Para executar um comando e verificar o status da saída (realmente para verficar se o status da saída foi ok ou zero) use
+Para executar um comando e verificar o status da saída (realmente para verificar se o status da saída foi ok ou zero) use
 
 ```python
 oops = subprocess.check_call(['ls', '-l'])
@@ -4683,7 +4681,7 @@ oops = subprocess.check_call(['ls', '-l'])
 oops = subprocess.check_call('ls -l', shell=True)
 ```
 
-##### Executar um comando que redireciona stdout para um arquvo usando subprocess do Python
+##### Executar um comando que redireciona stdout para um arquivo usando subprocess do Python
 
 Você não pode escrever `ls -l > listing.txt` para redirecionar stdout no método subprocess, então use isso
 
@@ -4816,7 +4814,7 @@ parser.add_argument('-f', "-fasta", required=True, help='Output fasta filename',
 
 Tempo, HTML, XML, e-mail, CGI, soquetes, áudio, interfaces gráficas de usuário com Tk, depuração, teste, utilitários Unix.
 
-Além disso, não essenciais: BioPython para bioinformática, Numpy para matemática e estatísticas, pandas para dados, scikit-learn para aprendizado de máquina.
+Além disso, são essenciais: BioPython para bioinformática, Numpy para matemática e estatísticas, pandas para dados, scikit-learn para aprendizado de máquina.
 
 ---
 
