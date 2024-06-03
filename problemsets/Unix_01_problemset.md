@@ -3,26 +3,26 @@
 comandos úteis
 =========================
 
-| command         | description                              |
+| Comando         | Descrição                              |
 | --------------- | ---------------------------------------- |
-| `ls`            | list directory contents                  |
-| `cd`            | change directory                         |
-| `mkdir`         | make a directory                         |
-| `rm`            | remove, or delete files and directories. Use caution, it is easy to delete more that you want. |
-| `head`          | prints the top few lines to the terminal window |
-| `tail`          | prints the last few lines to the terminal window |
-| `sort`          | sorts the lines                          |
-| `uniq`          | prints the unique lines                  |
-| `grep`          | finds the lines that contain a pattern  |
-| `wc`            | counts the number of lines, characters and words |
-| `mv`            | move files                               |
-| `cp`            | copy files                               |
-| `date`          | returns the current date and time        |
-| `pwd`           | return working directory name            |
-| `ssh`           | remote login                             |
-| `scp`           | remote secure copy                       |
-| `~`             | shortcut for your home directory         |
-| `man <command>` | manual page for the command e.g. `man ls` to get the man page for `ls` |
+| `ls`            | Mostrar em forma de lista o conteúdo de uma pasta. O uso mais frequente é como  `ls -F` (lista decorada), `ls -l` (lista larga), `ls -a` (listar todos os arquivos).                  |
+| `cd`            | Mover-se por diretórios.                         |
+| `mkdir`         | Criar uma pasta.                         |
+| `rm`            | Apagar um arquivo ou diretórios completos. Utilize com cuidado, é muit fácil deletar mais do que deseja. |
+| `head`          | Visualizar as primeiras linhas de um arquivo. Você pode controlar quantas linhas visualizar. |
+| `tail`          | Visualizar o final de um arquivo.  Você pode controlar quantas linhas visualizar.  Pode usar  `tail -f` para visualizar um arquivo onde está escrevendo. |
+| `sort`          | Ordenar as linhas de um arquivo de forma alfabética ou numérica.                          |
+| `uniq`          | Apagar linhas duplicadas num arquivo.                  |
+| `grep`          | Filtrar as linhas de um arquivo selecionando aquelas que tem um padrão especificado.  Pode fazer o contrário, e mostrar as linhas que não tem o padrão especificado.  |
+| `wc`            | Contar palavras, linhas e/ou caracteres em um ou mais arquivos. |
+| `mv`            | Renomear ou mover um arquivo ou pasta.                               |
+| `cp`            | Copiar um arquivo.                               |
+| `date`          | Retorna a data e hora atual.        |
+| `pwd`           | Retorna o nome do diretório de trabalho atual            |
+| `ssh`           | Uma forma segura (encriptada) de entrar em servidores remotos.                             |
+| `scp`           | Uma forma segura de copiar arquivos de e até servidores remotos.                       |
+| `~`             | Atalho para o diretório home         |
+| `man <command>` | Página de manual para determinado comando e.g. `man ls` para a página de manual do comando `ls` |
 
 
 
