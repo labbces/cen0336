@@ -624,11 +624,11 @@ Aqui estão mais alguns comandos avançados de Unix que são muito úteis, e qua
 ### Editores de texto
 
 
-Se é frequentemente necessário criar e escrever para um arquivo enquanto usanod o terminal. Isso torna essencial o uso de um editor de texto para o terminal. Existem muitos editores de texto. Alguns dos nossos favoritos são Emacs e vim. Nós vamos te introduzir com um editor de texto simples chamado 'vi'. 
+É frequentemente necessário criar e escrever para um arquivo enquanto utiliza o terminal, o que torna essencial o uso de um editor de texto para o terminal. Existem muitos editores de texto. Alguns dos nossos favoritos são Emacs, vim e nano. Nós vamos introduzir inicialmente o editor 'nano' seguido de um editor de texto simples chamado 'vi'. 
 
 ### Introdução ao nano
 
-Na próxima seção você conhecerá o editor de texto **vi**, que é um editor muito poderoso. Encorajamos você a aprender a usar o **vi**. Entendemos que o **vi** pode ser um pouco difícil de usar no inicio, por isso vamos a apresentar um editor muito mais simples, sem as características avanzadas que tem o **vi**. Esse editor é o **nano**
+Na próxima seção você conhecerá o editor de texto **vi**, que é um editor muito poderoso. Encorajamos você a aprender a usar o **vi**. Entendemos que o **vi** pode ser um pouco difícil de usar no inicio, por isso vamos a apresentar um editor muito mais simples, sem as características avançadas que tem o **vi**. Esse editor é o **nano**
 
 Como o **vi**, **nano** é um editor de texto da linha de comandos, e assim, você não tem uma interface do mouse para interagir com o editor, tudo é feito com combinações de teclas.
 
@@ -676,7 +676,7 @@ Seu terminal aparecerá como segue:
 ^X Exit         ^J Justify	^W Where Is     ^V Next Page    ^U UnCut Text   ^T To Spell
 ```
 
-Note que o nome do arquivo aparece na primeira linha. Se você iniciar o `nano` sem in dicar um nome de arquivo, na primeira linha aparecerá:
+Note que o nome do arquivo aparece na primeira linha. Se você iniciar o `nano` sem indicar um nome de arquivo, na primeira linha aparecerá:
 
 ```
   GNU nano 2.3.1                      New Buffer                                                  
@@ -796,7 +796,7 @@ __vi tem dois modos.__
 
    
 
-**Insert Mode** É para digitar o nome dos arquivos. Todas as teclas pressionadas serão interpretadas como caracteres que você quer ver em seu arquivo. 
+**Insert Mode** É para digitar nos arquivos. Todas as teclas pressionadas serão interpretadas como caracteres que você quer ver em seu arquivo. 
 
 **Command Mode** É para usar comandos. Todas as teclas pressionadas serão interpretadas como comando e **não** como parte do arquivo. Comandos comuns são para deletar, copiar, pesquisar, recolocar e salvar. 
 
@@ -837,7 +837,7 @@ Repare o `INSERT` na parte inferior da tela.
 
 
 
-Comece digitando os conteúdos do arquivo. Lembre que todas as teclas pressionadas são aquelas que você quer ver no seu arquivo e seu mouse não funcionará. 
+Comece digitando o conteúdo do arquivo. Lembre-se que todas as teclas pressionadas aparecerão no seu arquivo e seu mouse não funcionará. 
 
 
 
@@ -888,7 +888,7 @@ Lembre-se de entrar no **modo de comando** com a tecla `<esc>`
 |Teclas | Significados | 
 |-----------|---------|  
 |Flechas  | movem o cursor ao redor |  
-|`j`, `k`, `h`, `l` | movem o cursor para baixo, cima, esquerda e direita (similar as flechas) |  
+|`j`, `k`, `h`, `l` | movem o cursor para baixo, cima, esquerda e direita (similar às flechas) |  
 |`0` (zero) | move o cursor para o começo da linha atual |  
 |`^` (circunflexo) | move o cursor para o começo da linha atual |  
 |`$`  | move o cursor para o fim da linha atual |  
@@ -933,7 +933,7 @@ Lembre-se de entrar no **Modo de Comando** com a tecla '<esc>'
 
 |tecla pressionada | significado | 
 |-----------|---------|  
-| `:set number` | exibe números de linha | 
+| `:set number` | exibe números de linhas | 
 | `:set nonumber` | desliga os números de linha |  
 | `:/[search text]` | encontra [esse texto] em seu arquivo |  
 | `n` | vai até a próxima ocorrência de seu resultado de busca | 
@@ -1019,7 +1019,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 cat ~/.ssh/id_ed25519.pub
 ``````
 
-Repare de substituir "your_email@example.com", pelo e-mail que usou para se cadastrar no github.
+Lembre-se de substituir "your_email@example.com", pelo e-mail que usou para se cadastrar no github.
 
 O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteúdo deste arquivo.
 
@@ -1072,19 +1072,19 @@ __Revendo os Comandos__
 
 __Me siga__
 
-Cria um repositório **local** que é conectado a um **remoto**. 'git remote add' conecta seu local ao remoto. Antes deste comando o local não saberá nada sobre o remoto e vice versa. 
+Crie um repositório **local** que é conectado a um **remoto**. 'git remote add' conecta seu local ao remoto. Antes deste comando o local não saberá nada sobre o remoto e vice versa. 
 
 1. Crie um novo repositório remoto no github.
 2. Siga todas as instruções fornecidas a você no github.
 
 Adicione alguns arquivos para seu novo repositório:
 
-3. Muda diretório para seu repositório local
-4. Cria um novo arquivo com o vi: `vi git_exercises.txt`
-5. Adiciona uma linha de texto para o novo arquivo.
-6. Salva `:w` e sai `:q`
+3. Mude o diretório para seu repositório local
+4. Crie um novo arquivo com o vi: `vi git_exercises.txt`
+5. Adicione uma linha de texto para o novo arquivo.
+6. Salve `:w` e sai `:q`
 7. (Add) Propõe suas mudanças. `git add git_exercises.txt`
-8. (Commit) Se certifica que você quer suas mudanças. `git commit -m 'added a line of text'`
+8. (Commit) Certifica-se que você quer as mudanças. `git commit -m 'added a line of text'`
 9. (Push) Sincroniza/Upload suas mudanças para o repositório __remoto__. `git push origin master`
 
 
@@ -1093,11 +1093,11 @@ Estas são todas as funcionalidades! Existem mais algumas coisas complicadas de 
 
 #### Mantendo o monitoramento de diferenças entre repositórios locais e remotos
 
-Se você pensa no que você precisa adicionar em seu repositório remoto use o comando `git status`. Isso irá fornecer uma lista de arquivos que foram modificados, deletados, e aqueles que não são rastreados. Arquivos não rastreados sçao aqueles que nunca foram adicionados a fase de preparação com o `git add`
+Se você precisa saber o que precisa ser adicionado ao seu repositório remoto, use o comando `git status`. Isso irá fornecer uma lista de arquivos que foram modificados, deletados, e aqueles que não são rastreados. Arquivos não rastreados são aqueles que nunca foram adicionados na fase de preparação com o `git add`
 
 | comando                                 | descrição                              |
 | --------------------------------------- | ---------------------------------------- |
-| `git status` | Para ver a list dos arquivos que foram modificados, deletados, e aqueles que não são rastreados |
+| `git status` | Para ver a lista dos arquivos que foram modificados, deletados, e aqueles que não são rastreados |
 
 
 #### Deletando e movendo arquivos
@@ -1109,7 +1109,7 @@ Se você pensa no que você precisa adicionar em seu repositório remoto use o c
 
 > Estes dois comandos vão atualizar seu index assim como alterar seus arquivos locais. Se você usar apenas `rm` ou `mv` você vai ter que atualizar o index com add/commit. 
 
-#### Conseguir uma cópia do arquivo em seu remoto
+#### Conseguir uma cópia do arquivo em seu repositório remoto
 
 Às vezes você acaba bagunçando um arquivo, ou deletando sem querer. Porém existe uma cópia do github remoto. Como acessá-la?
 
@@ -1123,7 +1123,7 @@ git checkout <filename>
 
 1. Adicionar arquivos acima de 50M vai quebrar seu git repo. Não adicione arquivos grandes. Não use `git add -A` quando existem arquivos grandes dentro. Você não quer isso. 
 2. Não clone o repositório git dentro de outro. Isso prejudica o git. 
-3. Não tenha medo de perguntar coisas ao google. git pode ser complicado e várias pessoas fazem perguntas que são respondidas em fóruns online, ou GitHub terá um tutorial
+3. Não tenha medo de perguntar coisas ao google. Git pode ser complicado e várias pessoas fazem perguntas que são respondidas em fóruns online, ou o próprio GitHub terá um tutorial
 
 
 ### Clonando um Repositório
