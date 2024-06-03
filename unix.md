@@ -14,7 +14,7 @@ Sofia Robb
 
 Por que é importante para profissionais das ciências da vida aprender a programar?
 
-Possivelmente você já tem a resposta a essa pergunta, a final das contas, você está aqui!
+Possivelmente você já tem a resposta a essa pergunta, afinal das contas, você está aqui!
 
 Estamos convencidos que saber programar é tão essencial quanto fazer uma eletroforese em gel ou preparar uma reação de PCR. Os dados que hoje podemos obter de um só experimento podem ser esmagadores. Esses dados muitas vezes precisam ser reformatados, filtrados e analisados de formas únicas. A programação de computadores permitirá que você execute essas tarefas de uma maneira **eficiente** e **reprodutível**.
 
@@ -24,19 +24,19 @@ Estamos convencidos que saber programar é tão essencial quanto fazer uma eletr
 Algumas dicas para cursar uma disciplina de programação com sucesso:
 
 
-1. Pratica, pratica, pratica. Por favor, invista tanto tempo como seja possivel escrevendo código.
+1. Prática, prática, prática. Por favor, invista tanto tempo quanto possível escrevendo código.
 
-2. Limite-se a escrever uma linha ou duas de codigo, e teste-las. Se você escreve muitas linhas, será mais dificil corregir os erros (debug), caso tiver.
+2. Limite-se a escrever uma ou duas linhas de código e teste-as. Se você escrever muitas linhas será mais difícil corrigir os erros (debug), caso teha.
 
-3. Os erros não são fracassos. Cada erro é uma oportunidade de aprendizagem. Cada erro que você pesca e corrige (debug) e um grande sucesso. Corregir erros é como você cimenta seu aprendizado.
+3. Os erros não são fracassos. Cada erro é uma oportunidade de aprendizagem. Cada erro que você pesca e corrige (debug) é um grande sucesso. Corrigir erros é como você cimenta seu aprendizado.
 
-4. Não gaste muito tempo tentando descifrar um problema. Claro, é uma experiencia de aprendizado resolver os problemas você mesmo, mas a frustração e o bloqueio não são. Estamos aqui para ajuda-los, pergunte cada vez que precisar.
+4. Não gaste muito tempo tentando decifrar um problema. Claro, é uma experiencia de aprendizado resolver os problemas você mesmo, mas a frustração e o bloqueio não são. Estamos aqui para ajudá-los, pergunte cada vez que precisar.
 
-5. As palestras são importantes, mas a pratica e muito mais importante.
+5. As palestras são importantes, mas a prática é muito mais importante.
 
-6. Sessões de revisão são importantes, mas a pratica e muito mais importante.
+6. Sessões de revisão são importantes, mas a prática e muito mais importante.
 
-7. Nosso principal objetivo é ensinar-les a resolver problemas vocês mesmo, devagar mas com segurança.
+7. Nosso principal objetivo é ensinar-lhes a resolver problemas vocês mesmos, devagar mas com segurança.
 
 ---
 
@@ -50,7 +50,7 @@ Algumas dicas para cursar uma disciplina de programação com sucesso:
 
 Subjacente a quaisquer interfaces gráficas (GUI) existe um poderoso sistema operacional (SO) de linha de comandos. A linha de comandos oferece acesso ao interior do SO, e é também uma forma conveniente de escrever software e scripts personalizados.
 
-Muitas das ferramentas bioinformáticas são desenvolvidas para serem executadas na linha de comando e não ter uma GUI. Em muitos casos, uma ferramenta na linha de comandos é mais versátil que uma ferramente gráfica, já que você pode combinar facilmente diversas ferramentas de linha de comandos para criar scripts que realizem tarefas sem a intervenção de um humano.
+Muitas das ferramentas bioinformáticas são desenvolvidas para serem executadas na linha de comando e não ter uma GUI. Em muitos casos, uma ferramenta na linha de comandos é mais versátil que uma ferramenta gráfica, já que você pode combinar facilmente diversas ferramentas de linha de comandos para criar scripts que realizem tarefas sem a intervenção de um humano.
 
 Nesta disciplina, vocês escreverão scripts na linguagem Python e os executarão exclusivamente de uma linha de comandos.
 
@@ -76,15 +76,15 @@ Durante a disciplina vamos usar muito esse terminal.
 
 #### OK. Estou no terminal. E agora?
 
-A janela da terminal está executando uma **shell** chamada de "bash." A shell é um loop (ciclo) que:  
+A janela do terminal está executando uma **shell** chamada de "bash." A shell é um loop (ciclo) que:  
 1. Imprime o prompt
 2. Lê uma linha de entrada do teclado
 3. Analisa a linha em um ou mais comandos
-4. Executa os comandos (geralmente imprimindo algum tipo de saida no terminal)
+4. Executa os comandos (geralmente imprimindo algum tipo de saída no terminal)
 5. Volta ao passo 1.
 
 
-Existem muitas shells diferentes, com nomes bizarros como **bash**, **sh**, **csh**, **tcsh**, **ksh**, e **zsh**.  A particula "sh" no nome, significa shell. Cada shell é sutilmente diferente e algumas vezes confusa.
+Existem muitas shells diferentes, com nomes bizarros como **bash**, **sh**, **csh**, **tcsh**, **ksh**, e **zsh**.  A partícula "sh" no nome, significa shell. Cada shell é sutilmente diferente e algumas vezes confusa.
 
 
 #### Prompt da linha de comandos
@@ -120,12 +120,12 @@ Outro:
 
 O que você vai ter como prompt depende de como o administrador do sistema fez a configuração. Mas, você pode mudá-lo, [claro depois de saber como!](https://linuxconfig.org/bash-prompt-basics).
 
-O prompt indica à shell que está pronto para aceitar comandos. Quando um programa esta rodando, o prompt não aparece até que o sistema estiver pronto para lidar com uma nova solicitação.
+O prompt indica à shell que está pronto para aceitar comandos. Quando um programa está rodando, o prompt não aparece até que o sistema esteja pronto para lidar com uma nova solicitação.
 
 #### Executando comandos
 
 
-Escreva um comando e pressione a tecla &lt;Enter&gt;.  Se o comando produz alguma saida, esta aparecerá na tela.  Por exemplo:
+Escreva um comando e pressione a tecla &lt;Enter&gt;.  Se o comando produz alguma saída, esta aparecerá na tela.  Por exemplo:
 
 ```
 (~) 53% ls -F
@@ -144,13 +144,13 @@ ccod/
 O comando aqui é `ls -F`, que gera uma lista dos arquivos e pastas dentro da pasta atual (já falaremos disso). Abaixo do comando aparece sua saída, e o prompt aparece novamente.
 
 
-Alguns programas podem demorar muito tempo para rodar. Depois que você executa eles, não recuperará o prompt da shell até eles terminarem a tarefa que lhes foi encomendada. Nesse caso você poderia abrir um novo terminal para continuar seus trabalhos ou rodar o comando no segundo plano adicionando o simbolo "&" após o comando, no final da linha.
+Alguns programas podem demorar muito tempo para rodar. Depois que você executa eles, não recuperará o prompt da shell até eles terminarem a tarefa que lhes foi encomendada. Nesse caso você poderia abrir um novo terminal para continuar seus trabalhos ou rodar o comando no segundo plano adicionando o símbolo "&" após o comando, no final da linha.
 
 ```
 (~) 54% long_running_application &
 (~) 55%
 ```
-> Assim o comando vai rodar no segundo plano até terminar. Se ele gerar alguma saida, ela vai aparecer na tela. Seria bom você capturar a saida num arquivo (isso é chamado de redirecionamento). Depois vamos descrever como fazer isso.
+> Assim o comando vai rodar no segundo plano até terminar. Se ele gerar alguma saída, ela vai aparecer na tela. Seria bom você capturar a saida num arquivo (isso é chamado de redirecionamento). Depois vamos descrever como fazer isso.
 
 
 #### Edição da linha de comandos
@@ -158,22 +158,22 @@ Alguns programas podem demorar muito tempo para rodar. Depois que você executa 
 A maioria das shells permite editar a linha de comandos.  Até o momento em que você pressiona a tecla \<Enter\>, você pode voltar na linha de comandos e editá-lo usando o teclado.  Aqui tem algumas das combinações de teclas mais úteis:
 
 - _Backspace_: Apagar o caractere anterior.
-- _zatra esquerda_, _zeta direita_: Move o ponto de inserção de texto (cursor) um caractere para a esquerda ou direita.
+- _seta esquerda_, _seta direita_: Move o ponto de inserção de texto (cursor) um caractere para a esquerda ou direita.
 - _control-a (^a)_: Move o cursor para o início da linha. (Mnemônico: A é a primeira letra do alfabeto).
 - _control-e (^e)_: Move o cursor até o final da linha. (Mnemônico: E pela palavra "End")
-- _control-d (^d)_: Apagar o caractere atualmante abaixo do cursos. D=Delete.
-- _control-k (^k)_: Apagar a linha desde onde esteja o cursor até o final. k=kill.  Na verdade a linha não é apagada, ela é colocada num local temporario chamado de "kill buffer". Isto é como cortar texto.
+- _control-d (^d)_: Apagar o caractere atualmente abaixo do cursor. D=Delete.
+- _control-k (^k)_: Apagar a linha desde onde esteja o cursor até o final. k=kill.  Na verdade a linha não é apagada, ela é colocada num local temporário chamado de "kill buffer". Isto é como cortar texto.
 - _control-y (^y)_: Colar o conteúdo do "kill buffer" na linha de comandos, no ponto onde estiver o cursor.  y=yank.
-- _zata acima_, _zeta abaixo_: Move o cursor para acima e para abaixo na historia de comandos.  Muito útil para rodar comandos que já foram rodados, possivelmente depois de modificá-los.
+- _seta acima_, _seta abaixo_: Move o cursor para acima e para abaixo na historia de comandos.  Muito útil para rodar comandos que já foram rodados, possivelmente depois de modificá-los.
 
 Tem também alguns comandos úteis da shell que você pode usar:
 
-- `history` Mostra todos os comandos que você usour recentemente, numerados.
-- `!<number>` Executar novamente um comando, baseado no seu número na historia (Você pode obter o número com o comando `history`).
+- `history` Mostra todos os comandos que você usou recentemente, numerados.
+- `!<number>` Executar novamente um comando, baseado no seu número no histórico (Você pode obter o número com o comando `history`).
 - `!!` Executar novamente o comando imediatamente anterior.
-- `!<pedaço de um comando>`: Executar novamente um comando anterior que começava como as letras indicadas.  Por exemplo, `!l` (a letra 'ele', não o número 1) executará novamente o comando `ls -F` que usamos no inicio deste capítulo.
+- `!<pedaço de um comando>`: Executar novamente um comando anterior que começava como as letras indicadas. Por exemplo, `!l` (a letra 'ele', não o número 1) executará novamente o comando `ls -F` que usamos no inicio deste capítulo.
 
-A shell **bash** oferece os serviçoes de auto-completar e correção ortográfica. Se você escreve parte de um comando e usa a tecla de tabulação, a shell mostrará para você todas as formas possiveis de completar o comando.  Por exemplo:
+A shell **bash** oferece os serviços de auto-completar e correção ortográfica. Se você escreve parte de um comando e usa a tecla de tabulação, a shell mostrará para você todas as formas possíveis de completar o comando.  Por exemplo:
 
 ```
 (~) 51% fd<tab><tab>
@@ -181,7 +181,7 @@ A shell **bash** oferece os serviçoes de auto-completar e correção ortográfi
 fd2ps    fdesign  fdformat fdlist   fdmount  fdmountd fdrawcmd fdumount
 (~) 51%
 ```
-> Se você teclar tab após escrever um comando, mas antes de pressionar a tecla \<Enter\>, **bash** mostrará uma lista de nomes de arquivos. Isto acontece porque muito comandos operam em arquivos.
+> Se você teclar tab após escrever um comando, mas antes de pressionar a tecla \<Enter\>, **bash** mostrará uma lista de nomes de arquivos. Isto acontece porque muitos comandos operam em arquivos.
 
 #### Curingas
 
@@ -193,7 +193,7 @@ final_exam_questions.txt  genomics_problem.txt
 genebridge.txt            mapping_run.txt
 ```
 
-Existem padrões mais avançados de curingas, poder ler sobre eles na página de manual do **tcsh**.  Por exemplo, se você quer selecionar os arquivos que começam com os caracteres "f" ou "g" e que terminam com ".txt", pode usar uma faixa de caracteres dentro de colchetes `[f-g]` como parte de seu coringa. Aqui tem um exemplo:
+Existem padrões mais avançados de curingas, poder ler sobre eles na página de manual do **tcsh**.  Por exemplo, se você quer selecionar os arquivos que começam com os caracteres "f" ou "g" e que terminam com ".txt", pode usar uma faixa de caracteres dentro de colchetes `[f-g]` como parte de seu curinga. Aqui tem um exemplo:
 
 ```
 (~) 57% ls -F [f-g]*.txt
@@ -205,7 +205,7 @@ final_exam_questions.txt  genebridge.txt            genomics_problem.txt
 
 Quando você entra no terminal, chegará numa parte do sistema que é sua pasta pessoal, chamada de _home directory_.  Você pode fazer o que você quiser nessa área: pode criar e apagar arquivos e outras pastas. De forma geral, você não pode criar arquivos em outras pastas do sistema.
 
-Sua pasta home está localizada dentro sistema de arquivos da máquina (poderia ser um servidor, por exemplo). Nela, como na maioria dos sistemas Linux e muitos Unixes, esta pasta tem seu nome de usuário, e está localizada em `/home`. A rota completa é `/home/usuário`.  A shell permite abreviá-lo como `~usuário` (onde usuário é seu nome de usuário no sistema), ou simplesmente como `~`. Esse caractere é chamado de "til" ou "twiddle".
+Sua pasta home está localizada dentro do sistema de arquivos da máquina (poderia ser um servidor, por exemplo). Nela, como na maioria dos sistemas Linux e muitos Unixes, esta pasta tem seu nome de usuário, e está localizada em `/home`. A rota completa é `/home/usuário`.  A shell permite abreviá-lo como `~usuário` (onde usuário é seu nome de usuário no sistema), ou simplesmente como `~`. Esse caractere é chamado de "til" ou "twiddle".
 
 Para ver o que você tem na sua pasta home, execute os comandos:
 
@@ -218,12 +218,12 @@ INBOX         Mail         News         nsmail       public_html
 
 ```
 
-Qual é a difereça entre os comandos `ls -F` e `ls`?
+Qual é a diferença entre os comandos `ls -F` e `ls`?
 
-Este comando mostra um arquivo "INBOX" e quatro pastas adicionais ("Mail", "News").  (A particula `-F` no comando liga a opção para saida sofisticada ('fancy'), que acrescente alguna caracteres especiais nas listas de pastas, para ajudá-lo na identificação do que está observando.  O simbolo `/` no final do nome de um arquivo indica que o arquivo é uma pasta.
+Este comando mostra um arquivo "INBOX" e quatro pastas adicionais ("Mail", "News").  (A partícula `-F` no comando liga a opção para saída sofisticada ('fancy'), que acrescente alguna caracteres especiais nas listas de pastas, para ajudá-lo na identificação do que está observando.  O símbolo `/` no final do nome de um arquivo indica que o arquivo é uma pasta.
 
 
-Algumas pastas podem ter arquivos e outras pastas que não aparacem quando executa o comando `ls -F`, eles estão ocultos. Os nomes desses aquivos e pastas ocultos iniciam com um `.` ("ponto") . Para conseguir ver esses arquivos e pastas, tem que acrescentar uma `a` nas opções do comando `ls`:
+Algumas pastas podem ter arquivos e outras pastas que não aparecem quando executa o comando `ls -F`, eles estão ocultos. Os nomes desses aquivos e pastas ocultos iniciam com um `.` ("ponto") . Para conseguir ver esses arquivos e pastas, tem que acrescentar uma `a` nas opções do comando `ls`:
 
 ```
 (~) % ls -aF
@@ -234,7 +234,7 @@ Algumas pastas podem ter arquivos e outras pastas que não aparacem quando execu
 .bash_profile     .less             .xsession-errors
 .bashrc           .lessrc           INBOX
 ```
-> Whoa!   Tem um monte de coisas lá. Pero por favor não vai apagar eses aquivos. Muitos deles são esenciais para a configuração de outros programas. Por exemplo o artuivo `.profile` contem as informações para a configuração da shell **bash**. Você pode dar uma olhadinha nele para ver algumas das muitas opções de **bash**. Você pode também editá-lo (claro quando você saiba o que está fazendo) para modificar o comportamento da shell, como por exemplo o typo de prompt que você tem, o as rotas de busca de comandos.
+> Whoa!   Tem um monte de coisas lá. Mas por favor não vai apagar estes arquivos. Muitos deles são essenciais para a configuração de outros programas. Por exemplo o arquivo `.profile` contem as informações para a configuração da shell **bash**. Você pode dar uma olhadinha nele para ver algumas das muitas opções de **bash**. Você pode também editá-lo (claro quando você saiba o que está fazendo) para modificar o comportamento da shell, como por exemplo o typo de prompt que você tem, o as rotas de busca de comandos.
 
 
 #### Conhecendo o sistema de arquivos
@@ -283,7 +283,7 @@ e pode fazer coisas arbitrariamente bizarras como esta:
 ```
 (~/Mail) 65% cd ../../dria/Mail
 ```
-> O ultimo comando sobe dois niveis, e logo vai na pasta Mail que está dentro da pasta chamada `dria`.
+> O último comando sobe dois níveis, e logo vai na pasta Mail que está dentro da pasta chamada `dria`.
 
 
 Se você ficar perdido no sistema de arquivos, o comando `pwd` imprimirá o caminho completo da pasta onde você está:
@@ -296,14 +296,14 @@ Se você ficar perdido no sistema de arquivos, o comando `pwd` imprimirá o cami
 #### Comandos essenciais de Unix
 
 
-Com exceção de poucos comandos que estão construídos diretamente na shell, todos os comandos de linux são programas executáveis autônomos. Quando você escreve um comando, a shell buscará em todas as pastas listadas na variavel de ambiente PATH por um executavel com o mesmo nome. Se acha-lo, então a shell o executará. Se não, imprimirá o erro "command not found".
+Com exceção de poucos comandos que estão construídos diretamente na shell, todos os comandos de linux são programas executáveis autônomos. Quando você escreve um comando, a shell buscará em todas as pastas listadas na variável de ambiente PATH por um executável com o mesmo nome. Se achá-lo, então a shell o executará. Se não, imprimirá o erro "command not found".
 
 A maioria dos comandos estão em `/bin`, `/usr/bin`, ou `/usr/local/bin`.
 
 #### Obtendo informação dos comandos
 
 
-O comando `man` le dará uma breve sinopsis do comando. Vamos obter informação do comando `wc`
+O comando `man` lhe dará uma breve sinopse do comando. Vamos obter informação do comando `wc`
 
 ```
 (~) 76% man wc
@@ -325,7 +325,7 @@ DESCRIPTION
 
 #### Encontrando quais comandos estão disponíveis no seu computador
 
-O comando `apropos` procurará comando que batem com uma palavra chave ou uma frase. Aqui tem um exemplo usando a palavra chave 'column'
+O comando `apropos` procurará comandos que batem com uma palavra chave ou uma frase. Aqui tem um exemplo usando a palavra chave 'column'
 
 ```
 (~) 100% apropos column
@@ -363,13 +363,13 @@ Muitos comandos mostrarão um pequeno resumo da forma de uso quando você chamar
 
 #### Espaços e caracteres estranhos
 
-A shell usa espaços em branco (espaços, tabs, e outros catacteres não imprimíveis) para separar argumentos.  Se você deseja usar espaços em branco em um argumento, tem que usar aspas simples ao redor dele. For Exemplo: 
+A shell usa espaços em branco (espaços, tabs, e outros caracteres não imprimíveis) para separar argumentos.  Se você deseja usar espaços em branco em um argumento, tem que usar aspas simples ao redor dele. For Exemplo: 
 
 ```
 mail -s 'Uma mensagem importante' 'Bob Ghost <bob@ghost.org>'
 ```
 
-Esse comando enviará uma mensagem de e-mail para a pessoa fictícia Bob Ghost. O switch `-s` aceita um argumento, que será o tema do e-mail. Já que o tema desejado pode conter espaços, tem que usar aspas ao redor. De forma semelhante, meu nome e endereço de e-mail, que podem ter espeços, têm que usar aspas da mesma forma. 
+Esse comando enviará uma mensagem de e-mail para a pessoa fictícia Bob Ghost. O switch `-s` aceita um argumento, que será o tema do e-mail. Já que o tema desejado pode conter espaços, tem que usar aspas ao redor. De forma semelhante, meu nome e endereço de e-mail, que podem ter espaços, têm que usar aspas da mesma forma. 
 
 Alguns caracteres especiais não imprimíveis têm _códigos de escape_ associados
 
@@ -380,12 +380,12 @@ Alguns caracteres especiais não imprimíveis têm _códigos de escape_ associad
 | \\t         | Caracter tabulação (TAB)                     |
 | \\r         | Caracter de retorno de carro                 |
 | \\a         | Caracter de campainha (ding! ding!)          |
-| \\nnn       | O caracter que tem cõdigo ASCII **nnn**      |
+| \\nnn       | O caracter que tem código ASCII **nnn**      |
 
 
 #### Comandos úteis
 
-Aqui tem alguns comandos que são usados com muita frequência.  Pode usar o comando  `man` para parender mais deles.  Alguns desses comandos podem ser de muita utilidade para resolver alguns dos exercicios ;-)
+Aqui tem alguns comandos que são usados com muita frequência.  Pode usar o comando  `man` para aprender mais deles.  Alguns desses comandos podem ser de muita utilidade para resolver alguns dos exercicios ;-)
 
 #### Manipulando pastas
 
@@ -397,27 +397,27 @@ Aqui tem alguns comandos que são usados com muita frequência.  Pode usar o com
 | `rm`    | Apagar um arquivo.                  |
 | `mkdir` | Criar uma pasta.                         |
 | `rmdir` | Apagar uma pasta.                       |
-| `ln`    | Criar um vínculo simbólico ou rigido.          |
+| `ln`    | Criar um vínculo simbólico ou rígido.          |
 | `chmod` | Mudar as permissões de um arquivo ou uma pasta. |
 
 
 | Comando           | Descrição                              |
 | ----------------- | ---------------------------------------- |
-| `cat`             | Programa para concatenar. Pode ser usado para concatenar múltiplos arquivos em um único arquivo, ou, com maior frequencia, para visualizar o conteúdo de um ou varios arquivo no terminal.|
-| `echo`            | Imprime na tela uma copia de algum texto. E.g. `echo 'Hola Mundo!'` |
-| `more`            | Navegar num arquivo pagina a pagina; Muito útil para visualizar o conteúdo de arquivos grandes. Funciona inclusive com arquivos que nem sequer podem ser visualizados num editor de texto. |
+| `cat`             | Programa para concatenar. Pode ser usado para concatenar múltiplos arquivos em um único arquivo, ou, com maior frequência, para visualizar o conteúdo de um ou vários arquivos no terminal.|
+| `echo`            | Imprime na tela uma cópia de algum texto. E.g. `echo 'Hola Mundo!'` |
+| `more`            | Navegar num arquivo página a página; Muito útil para visualizar o conteúdo de arquivos grandes. Funciona inclusive com arquivos que nem sequer podem ser visualizados num editor de texto. |
 | `less`            | É uma versão do comando more, com ainda mais recursos.  |
 | `head`            | Visualizar as primeiras linhas de um arquivo. Você pode controlar quantas linhas visualizar. |
-| `tail`            | Vizualizar o final de um arquivo.  Você pode controlar quantas linhas visualizar.  Pode usar  `tail -f` para visualizar um arquivo onde está escrevendo. |
-| `wc`              | contar palavras, linhas e/ou characteres em um ou mais arquivos. |
-| `tr`              | Substituir um caracater por outro.  também é útil para apagar caracteres. |
-| `sort`            | Ordenar as linhas de um arquivo de forma alfabetica ou numérica. |
-| `uniq`            | Apagar linhas duplicada num arquivo.       |
+| `tail`            | Visualizar o final de um arquivo.  Você pode controlar quantas linhas visualizar.  Pode usar  `tail -f` para visualizar um arquivo onde está escrevendo. |
+| `wc`              | contar palavras, linhas e/ou caracteres em um ou mais arquivos. |
+| `tr`              | Substituir um caracter por outro. Também é útil para apagar caracteres. |
+| `sort`            | Ordenar as linhas de um arquivo de forma alfabética ou numérica. |
+| `uniq`            | Apagar linhas duplicadas num arquivo.       |
 | `cut`             | Apagar colunas de cada linha de um ou mais arquivos. |
-| `fold`            | Ajustar o comprimento de linha a um maximo especificado. |
-| `grep`            | Filtrar as linhas de um arquivo selecionando aquelas que tem um padrão especificado.  Pode faver o contrário, e mostrar as linhas que nõ tem o padrão especificado. |
-| `gzip` (`gunzip`) | Comprimir (descomprimit) um arquivo.            |
-| `tar`             | Arquivar (ou desarquivar) um pasta interia em um arquivo único. |
+| `fold`            | Ajustar o comprimento de linha a um máximo especificado. |
+| `grep`            | Filtrar as linhas de um arquivo selecionando aquelas que tem um padrão especificado.  Pode fazer o contrário, e mostrar as linhas que não tem o padrão especificado. |
+| `gzip` (`gunzip`) | Comprimir (descomprimir) um arquivo.            |
+| `tar`             | Arquivar (ou desarquivar) uma pasta inteira em um arquivo único. |
 | `emacs`           | O editor de textos Emacs (bom para expertos). |
 | `vi`              | O editor de textos vi  (melhor para expertos). |
 
@@ -426,32 +426,32 @@ Aqui tem alguns comandos que são usados com muita frequência.  Pode usar o com
 
 | Command                | Description                              |
 | ---------------------- | ---------------------------------------- |
-| `ssh`                  | Uma forma segura (encriptada) de entrar em seridores remotos. |
-| `scp`                  | Uma forma segura de copiar arquivos de e até servidores remotors. |
+| `ssh`                  | Uma forma segura (encriptada) de entrar em servidores remotos. |
+| `scp`                  | Uma forma segura de copiar arquivos de e até servidores remotos. |
 | `ping`                 | Conferir se um servidor remoto está ligado.              |
-| `ftp`/ `sftp` (secure) | Transferir arquivos com o protocolo de transferencia de arquivos (File Transfer Protocol). |
+| `ftp`/ `sftp` (secure) | Transferir arquivos com o protocolo de transferência de arquivos (File Transfer Protocol). |
 
 #### E/S padrão e redirecionamento
 
 
-Os comandos de Unix se comumicam via a interface de linha de comandos. Eles podem imprimir informacão no terminal para você visualizar e também podem aceitar entradas desde o teclado (o seja, de  _você_!)
+Os comandos de Unix se comunicam via a interface de linha de comandos. Eles podem imprimir informação no terminal para você visualizar e também podem aceitar entradas desde o teclado (ou seja, de  _você_!)
 
 
-Cada programa de Unix inicia com três conexoes ao mundo exterior.  Essas conexões são chamadas de "correntes" ou "streams", porque agem como se fosem uma corrente de informacão(metaforicamente falando):
+Cada programa de Unix inicia com três conexões ao mundo exterior.  Essas conexões são chamadas de "correntes" ou "streams", porque agem como se fossem uma corrente de informacão (metaforicamente falando):
 
 
 | Tipo de Corrente     | Descrição                              |
 | --------------- | ---------------------------------------- |
-| Entrada padrão  | É uma corrente de comunicacões inicialmente atrelada ao teclado. Quando o programa lê da entrada padrão, ele lê qualquer cosa que você digitar. |
-| saída padrão | Esta corrente está inicialmente atrelada ao terminal. Qualquer coisa que o programa imprimir nesta cenal aparecerá na sua janela do terminal. |
-| Erro padrão  | Esta corrente esta, também, inicialmente atrelada ao terminal. É um canal separado com o intuito de imprimir messages de erro. |
+| Entrada padrão  | É uma corrente de comunicações inicialmente atrelada ao teclado. Quando o programa lê da entrada padrão, ele lê qualquer coisa que você digitar. |
+| saída padrão | Esta corrente está inicialmente atrelada ao terminal. Qualquer coisa que o programa imprimir nesta canal aparecerá na sua janela do terminal. |
+| Erro padrão  | Esta corrente está, também, inicialmente atrelada ao terminal. É um canal separado com o intuito de imprimir mensagens de erro. |
 
-La palavra "inicialmente" tem que levar a pensar que os padrões de entradas, saida e de erro, podem de alguma forma ser desatrelados de seus locais de inicio, e atrelados a algum outro. Isso é correto! Você pode atrelar uma o mais dessas correntes a um arquivo, ou incluso a um outro programa.  Isso pode parecer esoterico, mas é na verdade muito útil.
+A palavra "inicialmente" tem que levar a pensar que os padrões de entradas, saída e de erro, podem de alguma forma ser desatrelados de seus locais de início, e atrelados a algum outro. Isso é correto! Você pode atrelar uma ou mais dessas correntes a um arquivo, ou incluso a um outro programa.  Isso pode parecer esotérico, mas é na verdade muito útil.
 
 #### Um exemplo simples
 
 
-O programa  `wc` conta linhas, caracteres e palavras nos dados enviados a usa entrada padrão.  Você pode usear ele de forma interactiva assim::
+O programa  `wc` conta linhas, caracteres e palavras nos dados enviados a uma entrada padrão.  Você pode usar ele de forma interactiva assim::
 
 ```
 (~) 62% wc
@@ -460,11 +460,11 @@ cordeirinho,
 cordeirinho.
 
 Mary tinha um cordeirinho,
-cuja a lã era branca como a neve.
+sua lã era branca como a neve.
 ^d * NOTE - Precisa digitar isto, mas não será impresso no terminal (O sinal `^` corresponde a tecla `control`)
       6      20     107
 ```
-En este exemplo, executei o programa `wc` .  Ele aguardou para eu escrever um pequeno poema. Quando terminei, usei o character FIM-DE-ARQUIVO (END-OF-FILE), control-d (^d ).  Então `wc` imprimiu três números, que representam o número de linhas, palavras e caracteres na entrada.
+Neste exemplo, executei o programa `wc` .  Ele aguardou para eu escrever um pequeno poema. Quando terminei, usei o character FIM-DE-ARQUIVO (END-OF-FILE), control-d (^d ).  Então `wc` imprimiu três números, que representam o número de linhas, palavras e caracteres na entrada.
 
 Frequentemente, você vai querer contar o número de linhas em um arquivo grande; como um arquivo cheio de sequências de DNA.  você pode fazer isso ao _redirecting_ os conteúdos do arquivo para a entrada padrão `wc`. Isso usa
 o `<`  símbolo:
@@ -497,8 +497,8 @@ Aqui está a lista completa de comandos de redirecionamento para `bash`:
 | `< myfile.txt`      | Redireciona os conteúdos do arquivo para a entrada padrão |
 | `> myfile.txt`      | Redireciona a saída padrão para o arquivo         |
 | `>> logfile.txt`    | Acrescenta uma saída padrão para o final do arquivo |
-| `1 > myfile.txt`    | Redireciona apenas a saída padrão para o arquivo (Assim como acima) |
-| `2 > myfile.txt`    | Redireciona apenas o erro padrão para o arquivo     |
+| `1> myfile.txt`    | Redireciona apenas a saída padrão para o arquivo (Assim como acima) |
+| `2> myfile.txt`    | Redireciona apenas o erro padrão para o arquivo     |
 | `&> myfile.txt` | Redireciona tanto o stdout quanto o stderr para o arquivo  |
 
 
@@ -510,13 +510,13 @@ Eles podem ser combinados.  Por exemplo, esse comando redireciona a entrada padr
 
 #### Filtros, Nomes de arquivos, e entrada padrão
 
-Muitos Unix comandos agem como filtros, pegando informação de um arquivo ou entrada padrão, transformando a informação, e escrevendo os resultados para saída padrão.  A maioria dos filtros são programados então se eles forem chamados com um ou mais nomes de arquivo na linha de comando, eles usarão estes arquivos como entradas.  Porém eles agirão como entradas padrão.  Por exemplo, estes dois comandos são equivalentes:
+Muitos comandos Unix agem como filtros, pegando informação de um arquivo ou entrada padrão, transformando a informação, e escrevendo os resultados para saída padrão.  A maioria dos filtros são programados, então se eles forem chamados com um ou mais nomes de arquivo na linha de comando, eles usarão estes arquivos como entradas.  Porém eles agirão como entradas padrão.  Por exemplo, estes dois comandos são equivalentes:
 
 ```
 (~) 66% grep 'gatttgc' < big_file.fasta
 (~) 67% grep 'gatttgc' big_file.fasta
 ```
-Ambos usam `grep` para pesquisar pela corda "gatttgc" no arquivo `big_file.fasta`.  O primeiro pesquisa entrada padrão, que acontece de ser redirecionado para o arquivo.  O segundo comando está explícitamente dando o nome do arquivo na linha de comando.
+Ambos usam `grep` para pesquisar pela string "gatttgc" no arquivo `big_file.fasta`.  O primeiro pesquisa entrada padrão, que acontece de ser redirecionado para o arquivo.  O segundo comando está explicitamente dando o nome do arquivo na linha de comando.
 
 
 Às vezes você quer um filtro para agir em séries de arquivos, um dos quais acontece de ser a entrada padrão. Muitos comandos deixam usar `-` na linha de comando como em pseudônimos para a entrada padrão.  Exemplo:
@@ -524,30 +524,30 @@ Ambos usam `grep` para pesquisar pela corda "gatttgc" no arquivo `big_file.fasta
 ```
 (~) 68% grep 'gatttgc' big_file.fasta bigger_file.fasta -
 ```
-Esse exemplo pesquisa por "gatttgc" em três lugares.  Primeiro olha no arquivo `big_file.fasta`, depois no `bigger_file.fasta`, e por úlitmo na entrada padrão (que, desde que não seja redirecionad, virá do teclado).
+Esse exemplo pesquisa por "gatttgc" em três lugares.  Primeiro olha no arquivo `big_file.fasta`, depois no `bigger_file.fasta`, e por úlitmo na entrada padrão (que, desde que não seja redirecionado, virá do teclado).
 
 
 #### E/S Padrão e Tubos
 
 
-A coisa mais legal de Unix shell é a possibilidades de acorrentar comandos juntos em tubulações.  Aqui um exemplo:
+A coisa mais legal de Unix shell é a possibilidade de acorrentar comandos juntos em tubulações.  Aqui um exemplo:
 
 ```
 (~) 65% grep gatttgc big_file.fasta | wc -l
 22
 ```
-Três são dois comandos aqui. `grep` pesquisa pelo arquivo ou entrada padrão por linhas contendo uma corda particular.  As que contém a corda são impressas para a saída padrão.  `wc -l` é o programa de conta familiar, que conta palavras, linhas, e caracteres em um arquivo ou entrada padrão. A `-l` opção de linha de comando instrui `wc` para imprimir apenas a linha de conta.  O `|` caractere, conhecido como "cano", conecta os dois comandos juntos então a saída padrão de `grep` se torna a entrada inicial de `wc`. Pense nos canos conectando fluxos de informação a seguir. 
+São dois comandos aqui: `grep` pesquisa pelo arquivo ou entrada padrão por linhas contendo uma string particular.  As que contém a string são impressas para a saída padrão.  `wc -l` é o programa de contagem familiar, que conta palavras, linhas, e caracteres em um arquivo ou entrada padrão. A opção `-l` instrui `wc` para imprimir apenas a linha de contagem.  O caractere `|`, conhecido como "cano" ou "pipe", conecta os dois comandos juntos. Assim, a saída padrão de `grep` se torna a entrada inicial de `wc`. Pense nos canos conectando fluxos de informação a seguir. 
 
 
-O que o cano faz?  ele imprime o número de linhas em que a corda "gatttgc" aparece no arquivo `big_file.fasta`.
+O que o cano faz? Ele imprime o número de linhas em que a string "gatttgc" aparece no arquivo `big_file.fasta`.
 
-#### Mais Exemplos de Encadeamento de Comandos (Pipes)
+#### Mais Exemplos de Encadeamento de Comandos (Canos)
 
 Canos são muito poderosos. Aqui estão alguns idiomas de linhas de comando comuns.
 
 **Conte o número de vezes que o padrão NÃO aparece no arquivo**
 
-O exemplo no começo da seção mostrou como contar o número de linhas em que um padrão particular de corda aparece no arquivo.  E se você contar o número de linhas em que o padrão **não** aparece?
+O exemplo no começo da seção mostrou como contar o número de linhas em que um padrão particular de string aparece no arquivo.  E se você contar o número de linhas em que o padrão **não** aparece?
 
 Simples.  Faça o teste reverso `-v` trocar:
 
@@ -564,12 +564,12 @@ Se você tem uma longa lista de nomes em um arquivo de texto, e você quer elimi
 ```
 (~) 66% sort long_file.txt | uniq > unique.out
 ```
-Isso funciona ordenando todas as linhas alfabeticamente e tubulando o resultado para o 'uniq' programa, que remove linhas duplicadas que ocorrem em sequência. Por conta disso você precisa ordenrar primeiro. A saída é colocada em um arquivo chamado 'unique.out'.
+Isso funciona ordenando todas as linhas alfabeticamente e tubulando o resultado para o programa 'uniq', que remove linhas duplicadas que ocorrem em sequência, por conta disso você precisa ordenar primeiro. A saída é colocada em um arquivo chamado 'unique.out'.
 
 **Concatenar várias listas e remover duplicadas**
 
 
-Se vocÊ tem muitas listas que podem conter entradas repetidas entre elas, você pode combinar elas em uma lista única ao concatenar elas juntas, depois ordenando e unificando-as como antes.
+Se você tem muitas listas que podem conter entradas repetidas entre elas, você pode combinar elas em uma lista única ao concatenar elas, depois ordenando-as e unificando-as como antes.
 
 ```
 (~) 67% cat file1 file2 file3 file4 | sort | uniq
@@ -586,7 +586,7 @@ Se você só quer saber quantas linhas únicas existem no arquivo, adicione um '
 **Página através de uma listagem de diretório muito longa**
 
 
-Canalize a saída 'is' para o programa 'more', que mostra a página de uma vez. se você a tiver, o programa 'less' é ainda melhor:
+Canalize a saída 'ls' para o programa 'more', que mostra a página de uma vez. se você a tiver, o programa 'less' é ainda melhor:
 ```
 (~) 69% ls -l | more
 ```
@@ -628,9 +628,9 @@ Se é frequentemente necessário criar e escrever para um arquivo enquanto usano
 
 ### Introdução ao nano
 
-Na próxima seção você conhecerá o editor de texto **vi**, que é um editor muito poderoso. Encorajamos você a aprender a usar o **vi**. as entendemos que o **vi** pode ser um pouco dificil de usar no inicio, por isso vamos a apresentar um editor muito mais simples, sem as características avanzadas que tem o **vi**. Esse editor é o **nano**
+Na próxima seção você conhecerá o editor de texto **vi**, que é um editor muito poderoso. Encorajamos você a aprender a usar o **vi**. Entendemos que o **vi** pode ser um pouco difícil de usar no inicio, por isso vamos a apresentar um editor muito mais simples, sem as características avanzadas que tem o **vi**. Esse editor é o **nano**
 
-Como o **vi**, **nano** é um editor de texto da lihna de comandos, e assim, você não tem uma interface do mouse para interagir com o editor, tudo é feito com convinações de teclas.
+Como o **vi**, **nano** é um editor de texto da linha de comandos, e assim, você não tem uma interface do mouse para interagir com o editor, tudo é feito com combinações de teclas.
 
 #### Usando nano
 
@@ -676,13 +676,13 @@ Seu terminal aparecerá como segue:
 ^X Exit         ^J Justify	^W Where Is     ^V Next Page    ^U UnCut Text   ^T To Spell
 ```
 
-Note que o nome do arquivo aparece na primeira linha. Se você iniciar o `nano` sem in dicar um nome de arquivo, na primeria linha aparecerá:
+Note que o nome do arquivo aparece na primeira linha. Se você iniciar o `nano` sem in dicar um nome de arquivo, na primeira linha aparecerá:
 
 ```
   GNU nano 2.3.1                      New Buffer                                                  
 ```
 
-Nas ultimas dois linhas da sua tela tem varias combinações de teclas com diversas funções. O simbolo `^` indica que você tem que usar a tecla `control` na combinação. Por exemplo `^O`, significa que tem que usar as teclas `control` + `O` para escrever seu arquivo em disco.
+Nas últimas duas linhas da sua tela tem várias combinações de teclas com diversas funções. O símbolo `^` indica que você tem que usar a tecla `control` na combinação. Por exemplo `^O`, significa que tem que usar as teclas `control` + `O` para escrever seu arquivo em disco.
 
 ### Introdução ao vi
 
@@ -955,13 +955,13 @@ Lembre-se de entrar no **Modo de Comando** com a tecla '<esc>'
 
 ## Git para iniciantes
 
-Git é uma ferramenta para gerenciar arquivos e versões de arquivos. é um _Sistema de Controle de Versão_. Ela te permite acompanhar as alterações. Você estará utilizando o Git para gerenciar seu trabalho de curso e manter sua cópia das notas de aula e arquivar nos dados. Git pode ajudar você a fazer tarefas muito difíceis com arquivos. Nós vamos vamos mantê-las simples.
+Git é uma ferramenta para gerenciar arquivos e versões de arquivos. É um _Sistema de Controle de Versão_. Ela te permite acompanhar as alterações. Você estará utilizando o Git para gerenciar seu trabalho de curso e manter sua cópia das notas de aula e arquivar os dados. Git pode ajudar você a fazer tarefas muito difíceis com arquivos. Nós vamos mantê-las simples.
 
 
 ### A visão geral.
 
 
-Um Sistema de Controle de Verões é bom para colaborações, versões de armazenamento, restauração de versões anteriores, e gerenciar Backups.
+Um Sistema de Controle de Versões é bom para colaborações, versões de armazenamento, restauração de versões anteriores, e gerenciar Backups.
 
 #### Colaboração 
 
@@ -974,7 +974,7 @@ Um Sistema de Controle de Versões permite que você salve versões de seus arqu
 
 #### Restaurando Versões Anteriores 
 
-Desde que você matém o rastreamento das versões, é possível reverter todos os arquivos de um projeto ou apenas um arquivo para uma versão anterior.
+Desde que você mantenha o rastreamento das versões, é possível reverter todos os arquivos de um projeto ou apenas um arquivo para uma versão anterior.
 
 
 #### Backup  
@@ -985,7 +985,7 @@ Um Sistema de Controle de Versões faz com que você trabalhe localmente e sincr
 
 git é o Sistema de Controle de Versões que usaremos para monitorar mudanças em nossos arquivos.
 
-[GitHub](https://github.com/) é a o Servidor do Sistema de Controle de Versões que estaremos utilizando. Eles providenciam contas gratuitas para quaisquer projetos públicos.
+[GitHub](https://github.com/) é o Servidor do Sistema de Controle de Versões que estaremos utilizando. Eles providenciam contas gratuitas para quaisquer projetos públicos.
 
 
 ### O Básico
@@ -1001,7 +1001,7 @@ Você pode usar o buscador da web para interagir com o servidor remoto (github) 
 Um repositório é um projeto que contém todos os arquivos do projeto, e guarda cada revisão histórica de arquivos, Repositórios podem ter múltiplos colaboradores. Repositórios normalmente possuem dois componentes, um __remoto__ e outro __local__.
 
 
-Siga os passo 1 e 2 para criar o __repositório remoto__.   
+Siga os passos 1 e 2 para criar o __repositório remoto__.   
 
 
 1. Navegue para GitHub --> Create Account / Log In --> Vá para Repositories --> Clique 'New'  
@@ -1028,7 +1028,7 @@ O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteúdo deste 
 	A) No seu avatar da click no menu "Settings"
 	B) click em "SSH and GPG keys"
 	C) click em "New SSH keys"
-        D) Colar o conteudo do arquivo ~/.ssh/id_ed25519.pub
+        D) Colar o conteúdo do arquivo ~/.ssh/id_ed25519.pub
 
 5. Retorne à página web do seu repositório e clique em "<> Code" para acessar o código. Em seguida, copie o endereço SSH do repositório.
 
@@ -1043,9 +1043,9 @@ git clone endereco_repositorio
 
 Essa cópia local está conectada à cópia remota no GitHub. Você poder ter varias copias locais, em computadores diferentes. As alterações que você realizar podem ser sincronizadas com todas as cópias do seu repositório.
 
-O novo repositório local consiste em três "árvores" mantidas por git. A primeira é seu "Working Directory" que mantém os arquivos atuais. O segundo é o "Index" que atua como área de preparação e finalmente a "HEAD" que aponta para o úlitmo envio que você fez.
+O novo repositório local consiste em três "árvores" mantidas por git. A primeira é seu "Working Directory" que mantém os arquivos atuais. O segundo é o "Index" que atua como área de preparação e finalmente a "HEAD" que aponta para o último envio que você fez.
 
-Todo repositório local git tem três elementos prinicpais chamados _árvores (trees)_:
+Todo repositório local git tem três elementos principais chamados _árvores (trees)_:
 1. O _Working Directory_ contém seus arquivos
 2. O _Index_ é a área de preparação
 3. O _HEAD_ Aponta para o último envio que você fez.
@@ -1074,10 +1074,10 @@ __Me siga__
 
 Cria um repositório **local** que é conectado a um **remoto**. 'git remote add' conecta seu local ao remoto. Antes deste comando o local não saberá nada sobre o remoto e vice versa. 
 
-1. Cria um novo repositório remoto no github.
+1. Crie um novo repositório remoto no github.
 2. Siga todas as instruções fornecidas a você no github.
 
-Adicion alguns arquivos para seu novo repositório:
+Adicione alguns arquivos para seu novo repositório:
 
 3. Muda diretório para seu repositório local
 4. Cria um novo arquivo com o vi: `vi git_exercises.txt`
@@ -1121,9 +1121,9 @@ git checkout <filename>
 
 #### Dicas
 
-1. Adicionando arquivos acima de 50M vai quebrar seu git repo. Não adicione arquivos largos. Não use `git add -A` quando existem arquivos grandes dentro. Você não quer isso. 
+1. Adicionar arquivos acima de 50M vai quebrar seu git repo. Não adicione arquivos grandes. Não use `git add -A` quando existem arquivos grandes dentro. Você não quer isso. 
 2. Não clone o repositório git dentro de outro. Isso prejudica o git. 
-3. Não tenha medo de perguntar coisas ao google. git pode ser complicado e várias pessoas fazem perguntas que são respondidas em fórums online, ou GitHub terá um tutorial
+3. Não tenha medo de perguntar coisas ao google. git pode ser complicado e várias pessoas fazem perguntas que são respondidas em fóruns online, ou GitHub terá um tutorial
 
 
 ### Clonando um Repositório
