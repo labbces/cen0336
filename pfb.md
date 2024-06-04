@@ -3047,9 +3047,9 @@ Um padrão pode ser ancorado a uma região na string:
 Exemplos:
 
 ```
-g..t
+c...a
 ```
-> corresponde a "gaat", "goat" e "gotta get a goat" (duas vezes)
+> corresponde a "cobra", "cabra" e "caçar uma cabra" (duas vezes)
 
 
 <br><br> 
@@ -3089,19 +3089,19 @@ Os quantificadores quantificam quantos átomos devem ser encontrados. Por padrã
 Exemplos:   
 
 ```
-goa?t
+ca?bra
 ```
-> corresponde a "goat" e "got". Também qualquer texto que contenha essas palavras.
+> corresponde a "cabra" e "cbra". Também qualquer texto que contenha essas palavras.
 
 ```
-g.+t
+c.+a
 ```
->  corresponde a "goat", "goot" e "grant", entre outros.
+>  corresponde a "cabra", "cobra" e "covabra", entre outros.
 
 ```
-g.*t
+c.*a
 ```
->  corresponde a "gt", "goat", "goot" e "grant", entre outros.
+>  corresponde a "ca", "cabra", "ceeba" e "covabra", entre outros.
 
 ```
 ^\d{3}-\d{4}$
@@ -3371,6 +3371,21 @@ fox
 ```
 > A correspondência agora é preguiçosa e corresponderá apenas a 'fox'
 
+```python
+>>> str = 'Atrás da porta torta tem uma porca morta'
+>>> found = re.search(r"(p.+a)",str)
+>>> print(found.group(1))
+porta torta tem uma porca morta
+```
+> O padrão p.+a não corresponde ao que você pode esperar, ele corresponde a partir de 'porta' até 'porta torta tem uma porca morta'. O '.+' é ganancioso. Ele encontra o máximo possível de caracteres entre 'p' e 'a'.
+
+Vamos tornar essa correspondência preguiçosa usando '?'
+```python
+>>> found = re.search(r"(p.+?a)",str)
+>>> print(found.group(1))
+porta
+```
+> A correspondência agora é preguiçosa e corresponderá apenas a 'porta'
 
 #### Exemplo prático: Códons
 
