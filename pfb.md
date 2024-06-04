@@ -3202,28 +3202,28 @@ __Subpadrões dentro da chamada da função__
 Uma vez que um subpadrão corresponde, você pode se referir a ele dentro da mesma expressão regular. O primeiro subpadrão se torna \\1, o segundo \\2, o terceiro \\3 e assim por diante.
 
 ```
-Who's afraid of the big bad w(.)\1f
+Quem tem medo do l(.)b\1 mau
 ```
 > Isso corresponderia a:
 >
-> -  "Who's afraid of the big bad woof"
-> -  "Who's afraid of the big bad weef"
-> -  "Who's afraid of the big bad waaf"  
+> -  "Quem tem medo do lobo mau"
+> -  "Quem tem medo do laba mau"
+> -  "Quem tem medo do lebe mau"  
 >
 > Mas não a:
 >
-> -  "Who's afraid of the big bad wolf"
-> -  "Who's afraid of the big bad wife" 
+> -  "Quem tem medo do loba mau"
+> -  "Quem tem medo do labe mau" 
 
 
 Da mesma forma,
 ```
-\b(\w+)s love \1 food\b
+\b(\w+)s adoram comida de \1
 ```
 > Este padrão irá corresponder a:
 >
-> - "dogs love dog food"  
-> - But not "dogs love monkey food".  
+> - "cachorros adoram comida de cachorro"  
+> - Mas não a "cachorros adoram comida de macaco".  
 >
 > Fomos capazes de usar o subpadrão dentro da expressão regular usando `\1`
 >
@@ -3331,7 +3331,7 @@ for found in re.finditer(r"(.{50})TATTAT(.{25})"  , dna):
   whole    = found.group(0)
   up       = found.group(1)
   down     = found.group(2)
-  up_start = found.start(1) + 1   # need to convert from 0 to 1 notation 
+  up_start = found.start(1) + 1   # é necessário converter da notação 0 para 1 
   up_end   = found.end(1) 
   dn_start = found.start(2) + 1
   dn_end   = found.end(2)
@@ -3442,26 +3442,26 @@ None
 Anteriormente, vimos como encontrar um **padrão exato** e substituí-lo usando o método `replace()`. Para encontrar um padrão, ou correspondência inexata, e fazer uma substituição, é usada a função de expressão regular `sub()`. Esta função recebe o padrão, a substituição, a string a ser pesquisada, o número de vezes que a substituição deve ser feita e as flags.
 
 ```python
->>> str = "Who's afraid of the big bad wolf?"
->>> re.sub(r'w.+f' , 'goat', str)
-"Who's afraid of the big bad goat?"
+>>> str = "Quem tem medo do lobo mau?"
+>>> re.sub(r'l.+o' , 'porquinho', str)
+"Quem tem medo do porquinho mau?"
 >>> print(str)
-Who's afraid of the big bad wolf?
+Quem tem medo do lobo mau?
 ```
-> A função `sub()` retorna "Quem tem medo do lobo mau?"
+> A função `sub()` retorna "Quem tem medo do porquinho mau?"
 > O valor da variável `str` não foi alterado
 > A nova string pode ser armazenada em uma nova variável para uso posterior.
 
 Vamos salvar a nova string que é retornada em uma variável
 ```python
->>> str = "He had a wife."
->>> new_str = re.sub(r'w.+f' , 'goat', str)
+>>> str = "Ele tinha uma noiva."
+>>> new_str = re.sub(r'n.+i' , 'cabra', str)
 >>> print(new_str)
-He had a goate.
+Ele tinha uma cabrava.
 >>> print(str)
-He had a wife.
+Ele tinha uma noiva.
 ```
-> Os caracteres entre 'w' e 'f' foram substituídos por 'goat'.
+> Os caracteres entre 'n' e 'i' foram substituídos por 'cabra'.
 > A nova string é salva em `new_str`
 
 
@@ -3470,12 +3470,12 @@ He had a wife.
 
 Às vezes, você deseja encontrar um padrão e usá-lo na substituição.
 ```python
->>> str = "Who's afraid of the big bad wolf?"
->>> new_str = re.sub(r"(\w+) (\w+) wolf" , r"\2 \1 wolf" , str)
+>>> str = "Quem tem medo do lobo mau?"
+>>> new_str = re.sub(r" do (\w+) (\w+)" , r" do \2 \1" , str)
 >>> print(new_str)
-Who's afraid of the bad big wolf?
+Quem tem medo do mau lobo?
 ```
-> Encontramos duas palavras antes de 'lobo' e trocamos a ordem.
+> Encontramos duas palavras depois de 'do' e trocamos a ordem.
 > \\2 refere-se ao segundo subpadrão
 > \\1 refere-se ao primeiro subpadrão
 
@@ -4399,19 +4399,19 @@ Quase todas as variáveis Python são globais. Isso significa que estão dispon�
 
 ```python
 #!/usr/bin/env python3
-print('Before if block')
+print('Antes do bloco if')
 x = 100
 print('x=',x)
 if True:  # esta condição if será sempre Verdadeira     
   # queremos garantir que o bloco seja executado
   # para que possamos mostrar o que acontece
-  print('Inside if block')
+  print('Dentro do bloco if')
   x = 30
   y = 10
   print("x=", x)
   print("y=", y)
 
-print('After if block')
+print('Após o bloco if')
 print("x=", x)
 print("y=", y)
 
@@ -4421,12 +4421,12 @@ print("y=", y)
 Vamos executar:
 ```bash
 $ python3 scripts/scope.py
-Before if block
+Antes do bloco if
 x= 100
-Inside if block
+Dentro do bloco if
 x= 30
 y= 10
-After if block
+Após o bloco if
 x= 30
 y= 10
 
@@ -4461,20 +4461,20 @@ Variáveis dentro de funções são locais e, portanto, só podem ser acessadas 
 #!/usr/bin/end python3
 
 def set_local_x_to_five(x):
-  print('Inside def')
+  print('Dentro de def')
   x = 5 # localmente para set_local_x_to_five()
   y=5   # também local
   print("x =",x)
   print("y = ",y)
 
-print('After def')
+print('Após def')
 x = 100 # global x
 y = 100 # global
 print('x=',x)
 print('y=',y)
 
 set_local_x_to_five(500)
-print('After function call')
+print('Após chamada da função')
 print('x=',x)
 print('y=',y)
 
@@ -4484,13 +4484,13 @@ Aqui adicionamos uma função `set_local_x_to_five` com um argumento chamado 'x'
 Vamos executá-lo:
 ```bash
 $ python3 scope_w_function.py
-After def
+Após def
 x= 100
 y= 100
-Inside def
+Dentro de def
 x = 5
 y =  5
-After function call
+Após chamada da função
 x= 100
 y= 100
 
@@ -4510,16 +4510,16 @@ Aqui está um exemplo de uso do `global`.
 
 def set_global_variable():
   global greeting  # torna a variável "greeting" global
-  greeting = "I say hello"
+  greeting = "Eu digo olá"
 
 
-greeting = 'Good morning'
-print('Before function call')
+greeting = 'Bom dia'
+print('Antes da chamada de função')
 print('greeting =',greeting)
 
 #fazendo a chamada da função
 set_global_variable()
-print('After function call')
+print('Após a chamada de função')
 print('greeting =',greeting)
 
 ```
@@ -4528,10 +4528,10 @@ Vamos olhar a saída!
 
 ```bash
 $ python3 scripts/scope_global.py
-Before function call
-greeting = Good morning
-After function call
-greeting = I say hello
+Antes da chamada de função
+greeting = Bom dia
+Após a chamada de função
+greeting = Eu digo olá
 
 ```
 > Observe que a função alterou o valor da variável global. Pode ser algo que você não queira fazer.
@@ -4675,7 +4675,7 @@ Para executar um comando e verificar o status da saída (realmente para verifica
 
 ```python
 oops = subprocess.check_call(['ls', '-l'])
-# or, simpler...
+# ou, simplesmente...
 oops = subprocess.check_call('ls -l', shell=True)
 ```
 
@@ -4759,7 +4759,7 @@ Quantidades estatísticas típicas
 | statistics.mean([1,2,3,4,5])    | média ou média                          |
 | statistics.median([ 2,3,4,5])   | mediana = 3,5                           |
 | statistics.stdev([1,2,3,4,5])   | desvio padrão da amostra (raiz quadrada da variância da amostra) |
-| statistics.pstdev([1,2,3,4,5])q | estimativa do desvio padrão da população |
+| statistics.pstdev([1,2,3,4,5]) | estimativa do desvio padrão da população |
 
 #### glob
 
@@ -4911,9 +4911,9 @@ class DNARecord(object):
 dna_rec_obj = DNARecord() 
 
 ## Use o novo objeto DNARecord
-print('Created a record for ' + dna_rec_obj.gene_name + ' from ' + dna_rec_obj.species_name) 
-print('AT is ' + str(dna_rec_obj.get_AT()))
-print('complement is ' + dna_rec_obj.reverse_complement())
+print('Um novo registro para ' + dna_rec_obj.gene_name + ' foi criado de ' + dna_rec_obj.species_name) 
+print('AT é ' + str(dna_rec_obj.get_AT()))
+print('A fita complementar é ' + dna_rec_obj.reverse_complement())
 ```
 
 Agora vamos passar por cada seção:
