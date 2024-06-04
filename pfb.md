@@ -19,8 +19,7 @@ Sofia Robb
 
 Python é uma linguagem de script. Ela é útil para desenvolvimento de projetos científicos de médio porte. Quando você executa um script de Python, o interpretador da linguagem irá gerar um código em bytes e interpretá-lo. Esse processo acontece automaticamente, você não precisa se preocupar com isso. Linguagens compiladas como C e C++ vão rodar muito mais rapidamente, mas são também muito mais complicadas de programar. Programas usando linguagens como Java (que também são compiladas) são adequados para projetos grandes com programação colaborativa, mas não são executados tão rapidamente como C e são mais complexos de escrever que Python.
 
-Python tem
-
+Python tem:
 - tipos de dados
 - funções
 - objetos
@@ -43,7 +42,7 @@ Há duas versões de Python: Python 2 e Python 3. Nós usaremos Python 3. Esta v
 
 #### Interpretador interativo
 
-Python pode ser executado em uma linha por vez em um interpretador interativo. É como se usasse a linha de comando de Shell (que estudamos nas duas primeiras aulas/ capítulos), mas agora com a linguagem Python. Para executar o interpretador, execute o seguinte código no seu terminal:  
+Python pode ser executado em uma linha por vez em um interpretador interativo. É como se usasse a linha de comando de Shell (que estudamos nas duas primeiras aulas/capítulos), mas agora com a linguagem Python. Para executar o interpretador, execute o seguinte código no seu terminal:  
 
 `$ python3`
 
@@ -52,11 +51,11 @@ Nota: '$' indica o prompt de comando. Lembre-se do Unix 1 que cada computador te
 Primeiros comandos em Python:
 
 ```python
->>> print("Olá, turma 2022!")
-Olá, turma 2022!
+>>> print("Olá, turma 2024!")
+Olá, turma 2024!
 ```
 
-> Nota: `print` é uma função. Nomes de funções precedem (); assim, de maneira formal a função é `print()`
+> Nota: `print` é uma função. Nomes de funções precedem (); assim, de maneira formal, a função é `print()`
 
 
 #### Scripts em Python são arquivos de texto
@@ -68,7 +67,7 @@ Olá, turma 2022!
 Conteúdos do arquivo:
 
 ```python
-print("Olá, turma 2022!")
+print("Olá, turma 2024!")
 ```
 
 #### Rodando scripts em Python
@@ -84,7 +83,7 @@ Execute o script desta forma (% representa o prompt):
 Este procedimento gera o seguinte resultado no terminal:
 
 ```bash
-print("Olá, turma 2022!")
+print("Olá, turma 2024!")
 ```
 
 #### Uma forma mais rápida/melhor de rodar scripts em Python
@@ -108,14 +107,14 @@ Esse arquivo ola.py agora se parece com isso
 
 ```python
 #!/usr/bin/env python3
-print("Olá, turma 2022!")
+print("Olá, turma 2024!")
 ```
 
 Agora você pode simplesmente digitar o símbolo para o diretório atual `.` seguido por um `/` e o nome do script para rodá-lo. Como isso: 
 
 ```
 % ./ola.py
-Olá, turma 2022!
+Olá, turma 2024!
 ```
 
 
@@ -132,12 +131,12 @@ Python não permite caracteres como `@`, `$` e `%` dentro do nome de variável. 
 #### Convenções para nomeação de nomes de variável em Python
 
  * A primeira letra deve ser minúscula, exceto em nomes de classes. Classes devem começar com letra maiúscula (p.e. `Seq`).
- * Private variable names begin with an underscore (ex. `_private`).
- * Strong private variable names begin with two underscores (ex. `__private`).
- * Nomes especiais de variável definidas pela linguagem começam e terminam com dois travessões (p.e. `__special__`).
+ * Os nomes de variáveis privadas são iniciadas com sublinhado (ex. `_private`).
+ * Os nomes de variáveis privadas fortes (verdadeiras) são iniciadas com dois sublinhados (ex. `__private`).
+ * Nomes especiais de variáveis definidas pela linguagem começam e terminam com dois travessões (p.e. `__special__`).
 
 
-Selecionar bons nomes de variável para objetos que você nomeia é muito importante. Não chame suas variáveis de `item` ou `minha_lista` ou `dados` ou `var`, exceto em casos que você esteja trabalhando com trechos de códigos muito simples (a título de testes) ou fazendo algum gráfico. Não dê `x` ou `y` como nome de variáveis. Todos estes nomes não são descritivos para o tipo de informação encontrado naquela variável ou objeto.
+Selecionar bons nomes de variáveis para objetos que você nomeia é muito importante. Não chame suas variáveis de `item` ou `minha_lista` ou `dados` ou `var`, exceto em casos que você esteja trabalhando com trechos de códigos muito simples (a título de testes) ou fazendo algum gráfico. Não dê `x` ou `y` como nome de variáveis. Todos estes nomes não são descritivos para o tipo de informação encontrado naquela variável ou objeto.
 
 Uma escolha ainda pior é dar nomes de variáveis que contêm nomes de genes como `sequencias`. Por que é uma ideia ruim? Pense no que poderia acontecer se você encher seu carro de combustível em um comércio chamado "posto de gasolina" que vendesse limonada em vez de gasolina ou etanol combustível.
 
@@ -195,7 +194,7 @@ A primeira linha de um script começa com `#!`, um exemplo especial de comentár
 #!/usr/bin/env python3
 
 # este é meu primeiro código
-print("Olá, turma 2022!") # esta linha imprime o conteúdo na tela
+print("Olá, turma 2024!") # esta linha imprime o conteúdo na tela
 ```
 
 
@@ -228,12 +227,12 @@ Diferentes tipos de dados podem ser atribuídos a variáveis, como inteiros (`1`
 Por exemplo:
 
 ```python
-contagem   = 10    # este é um inteiro
+contagem = 10    # este é um inteiro
 média = 2.531      # este é um número de ponto flutuante
 mensagem = "Bem-vindo ao interpretador de Python" # isso é uma string
 ```
 
-`10`, `2.531`, e `"Bem-vindo ao interpretador de Python"` são peças de dados singulares (escalares) e cada um é armazenado em sua própria variável.
+`10`, `2.531` e `"Bem-vindo ao interpretador de Python"` são peças de dados singulares (escalares) e cada um é armazenado em sua própria variável.
 
 Coleções de dados podem também ser armazenados em tipos de dados especiais, i.e., tuplas, listas, sets, e dicionários. Você deveria sempre tentar armazenar semelhantes com semelhantes, de forma tal que cada elemento da coleção deveria ser do mesmo tipo de dado, como um valor de expressão de RNA-seq ou uma contagem de quantos exons estão em um gene ou uma sequência de leitura. Para o quê você imagina que isso deve ser?
 
@@ -337,10 +336,10 @@ Isso acontece dentro do script:
 ```python
 #!/usr/bin/env python3
 import sys
-friend1 = sys.argv[1] # get first command line parameter
-friend2 = sys.argv[2] # get second command line parameter
-# now print a message to the screen
-print(friend1,'and',friend2,'are friends')
+friend1 = sys.argv[1] # obtém o parâmetro do primeiro comando
+friend2 = sys.argv[2] # obtém o parâmetro do segundo comando
+# agora a mensagem será exibida na tela
+print(friend1,'e',friend2,'são amigos')
 ```
 
 A vantagem de obter input do usuário da linha de comando é que você pode escrever um script que é genérico. Ele pode imprimir uma mensagem com qualquer input que o usuário fornecer. Isso o torna flexível.
@@ -381,7 +380,7 @@ Nós cobriremos `dir()` em mais detalhes mais adiante.
 
 ### Operadores
 
-Um operador em uma linguagem de programação é um símbolo que faz o cumpridor ou intérprete para performar operações matemáticas, relativas ou lógicas e produzir um resultado. Aqui explicaremos o conceito de operadores. 
+Um operador em uma linguagem de programação é um símbolo que faz o cumpridor ou intérprete performar operações matemáticas, relativas ou lógicas e produzir um resultado. Aqui explicaremos o conceito de operadores. 
 
 #### Operadores aritméticos  
 
@@ -393,7 +392,7 @@ Em Python nós podemos escrever declarações que performam cálculos matemátic
 | `-`      | Subtração                                                    | `3-2`            | 1           |
 | `*`      | Multiplicação                                                | `3*2`            | 6           |
 | `/`      | Divisão                                                      | `3/2`            | 1.5         |
-| `%`      | Módulo (divide o operador da esquerda pelo da direita e retorna o lembrete) | `3%2`            | 1           |
+| `%`      | Módulo (divide o operador da esquerda pelo da direita e retorna o resto) | `3%2`            | 1           |
 | `**`     | Expoente                                                     | `3**2`           | 9           |
 | `//`     | Divisão de piso (resultado é o quociente com os dígitos depois do ponto removidos). | `3//2`  `-11//3` | 1        -4 |
 
@@ -447,23 +446,23 @@ Estes operadores comparam dois valores e retornam verdadeiro ou falso.
 
 | Operador | Descrição             | Exemplo  | Resultado |
 | -------- | --------------------- | -------- | ------ |
-| `==`     | equal to              | `3 == 2` | Falso  |
-| `!=`     | not equal             | `3 != 2` | Verdadeiro  |
-| `>`      | greater than          | `3 > 2`  | Verdadeiro  |
-| `<`      | less than             | `3 < 2`  | Falso  |
-| `>=`     | greater than or equal | `3 >= 2` | Verdadeiro  |
-| `<=`     | less than or equal    | `3 <= 2` | Falso  |
+| `==`     | Igual a              | `3 == 2` | Falso  |
+| `!=`     | Diferente de             | `3 != 2` | Verdadeiro  |
+| `>`      | Maior que          | `3 > 2`  | Verdadeiro  |
+| `<`      | Menor que             | `3 < 2`  | Falso  |
+| `>=`     | Maior ou igual que | `3 >= 2` | Verdadeiro  |
+| `<=`     | Menor ou igual que    | `3 <= 2` | Falso  |
 
 
 
 #### Operadores lógicos
 
-Operadores lógicos permitem combinar dois ou mais conjuntos de comparações. Você pode combinar os resultados de diferentes formas. Por exemplo, você pode 1) querer que todas as declarações sejam verdade, 2) que apenas uma declaração precise ser verdadeira, ou 3) que a declaração precise ser falsa.
+Operadores lógicos permitem combinar dois ou mais conjuntos de comparações. Você pode combinar os resultados de diferentes formas. Por exemplo, você pode 1) querer que todas as declarações sejam verdadeiras, 2) que apenas uma declaração precise ser verdadeira, ou 3) que a declaração precise ser falsa.
 
 | Operador | Descrição                                | Exemplo        | Resultado |
 | -------- | ---------------------------------------- | -------------- | ------ |
 | `and`    | Verdadeiro se o operador da esquerda e o da direita forem verdade | `3>=2 and 2<3` | Verdadeiro  |
-| `or`     | Verdadeiro se o operador da esquerda ou o da direita forem verdade | `3==2 or 2<3`  | Falso   |
+| `or`     | Verdadeiro se o operador da esquerda ou o da direita forem verdade | `3==2 or 2>3`  | Falso   |
 | `not`    | Inverte o status lógico           | `not False`    | Verdadeiro  |
 
 
@@ -503,14 +502,14 @@ Operadores são listados em ordem de precedência. Os maiores listados primeiro.
 | Operador                                 | Descrição                                |
 | ---------------------------------------- | ---------------------------------------- |
 | `**`                                     | Exponenciação (Eleva o poder)            |
-| `~` `+` `-`                              | Complemento, unário mais e menos (nomes de métodos que os dois últimos são +@ e -@) |
+| `~` `+` `-`                              | Complemento binário mais e menos (nomes de métodos que os dois últimos são +@ e -@) |
 | `*` `/` `%` `//`                         | Multiplica, divide, módulo e divisão de piso |
 | `+` `-`                                  | Adição e subtração                       |
-| `>>` `<<`                                | Deslocamento parte por parte de direita e esquerda |
-| `&`                                      | Deslocamento 'AND'                       |
+| `>>` `<<`                                | Deslocamento binário parte por parte de direita e esquerda |
+| `&`                                      | Deslocamento binário 'AND'                       |
 | `^` `\|`                                 | Bitwise exclusivo 'OR' e regular 'OR'    |
 | `<=` `<` `>` `>=`                        | Operadores de comparação                 |
-| `<>` `==` `!=`                           | Operadores de igualdade                  |
+| `<>` `==` `!=`                           | Operadores de igualdade ('<>' obsoleto no python 3)                  |
 | `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Operadores de atribuição                 |
 | `is`                                     | Operadores de identidade                 |
 | `is not`                                 | Operador de não identidade               |
@@ -592,12 +591,12 @@ False
 ### Lógica: Declarações de controle 
 
 
-Declarações de controle são usadas para direcionar o fluxo do seu código e criar oportunidade para tomada de decisão. Os fundamentos das declarações de controle são construindo a verdade.
+Declarações de controle são usadas para direcionar o fluxo do seu código e criar oportunidade para tomada de decisão. Os fundamentos das declarações de controle são construídas por expressões verdadeiras.
 
 #### Declaração If
 
 - Use a declaração `if` para testar a verdade e executar linhas do código caso seja verdade.  
-- Quando a expressão avalia como verdade cada uma das declarações recuadas abaixo da declaração `if`, também conhecidas como o bloco de declarações aninhadas, serão executadas.
+- Quando a expressão é avaliada como verdadeira, cada uma das declarações recuadas abaixo da declaração `if`, também conhecidas como o bloco de declarações aninhadas, será executada.
 
 
 **if**
@@ -614,7 +613,7 @@ dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
 if 'AGC' in dna:
   print('found AGC in your dna sequence')
 ```
-Returns:  
+Retorna:  
 ```
 found AGC in your dna sequence
 ```
@@ -622,7 +621,7 @@ found AGC in your dna sequence
 **else**
 
 - A porção `if` da declaração if/else statement se comporta como antes. 
-- O primeiro bloco recuado é executado se a condição é verdadeira. .
+- O primeiro bloco recuado é executado se a condição é verdadeira.
 - Se a condição for falsa, o segundo bloco else recuado é executado.
 
 ```python
@@ -632,7 +631,7 @@ if 'ATG' in dna:
 else:
   print('did not find ATG in your dna sequence')
 ```
-Returns:  
+Retorna:  
 ```
 did not find ATG in your dna sequence
 ```
@@ -647,21 +646,21 @@ did not find ATG in your dna sequence
 ```python
 count = 60
 if count < 0:
-  message = "is less than 0"
+  message = "é menor que 0"
   print(count, message)
 elif count < 50:
-  message = "is less than 50"
+  message = "é menor que 50"
   print (count, message)
 elif count > 50:
-  message = "is greater than 50"
+  message = "é maior que 50"
   print (count, message)
 else:
-  message = "must be 50"
+  message = "deve ser 50"
   print(count, message)
 ```
-Returns:  
+Retorna:  
 ```
-60 is greater than 50
+60 é maior que 50
 ```
 
 Vamos mudar a contagem para 20, qual declaração será executada?   
@@ -669,21 +668,21 @@ Vamos mudar a contagem para 20, qual declaração será executada?
 ```python
 count = 20
 if count < 0:
-  message = "is less than 0"
+  message = "é menor que 0"
   print(count, message)
 elif count < 50:
-  message = "is less than 50"
+  message = "é menor que 50"
   print (count, message)
 elif count > 50:
-  message = "is greater than 50"
+  message = "é maior que 50"
   print (count, message)
 else:
-  message = "must be 50"
+  message = "deve ser 50"
   print(count, message)
 ```
-Returns:  
+Retorna:  
 ```
-20 is less than 50
+20 é menor que 50
 ```
 
 O que acontece quando a contagem é 50?  
@@ -691,21 +690,21 @@ O que acontece quando a contagem é 50?
 ```python
 count = 50
 if count < 0:
-  message = "is less than 0"
+  message = "é menor que 0"
   print(count, message)
 elif count < 50:
-  message = "is less than 50"
+  message = "é menor que 50"
   print (count, message)
 elif count > 50:
-  message = "is greater than 50"
+  message = "é maior que 50"
   print (count, message)
 else:
-  message = "must be 50"
+  message = "deve ser 50"
   print(count, message)
 ```
-Returns:  
+Retorna:  
 ```
-50 must be 50
+50 deve ser 50
 ```
 
 
@@ -765,8 +764,8 @@ Aqui está a lista de funções que usam números como argumentos. Elas são út
 | função            | Descrição                                |
 | ----------------- | ---------------------------------------- |
 | `abs(x)`          | O valor absoluto de x: a distância (positiva) entre x e zero. |
-| `round(x [,n])`   | x arredondado para n dígitos do ponto decimal. round() arredonda para um inteiro se o valor é exatamente entre dois inteiros, então round(0.5) é 0 e round(-0.5) é 0. round(1.5) é 2. **Arredondar para um número fixo de lugares decimais pode fornecer resultados imprevisíveis.** |
-| `max(x1, x2,...)` | O último argumento é retornado           |
+| `round(x,n)`   | x arredondado para n dígitos do ponto decimal. round() arredonda para um inteiro se o valor é exatamente entre dois inteiros, então round(0.5) é 0 e round(-0.5) é 0. round(1.5) é 2. **Arredondar para um número fixo de lugares decimais pode fornecer resultados imprevisíveis.** |
+| `max(x1, x2,...)` | O maior argumento é retornado           |
 | `min(x1, x2,...)` | O menor argumento é retornado            |
 
 ```python
@@ -786,7 +785,7 @@ Aqui está a lista de funções que usam números como argumentos. Elas são út
 -2
 >>> round(-2.009,2)
 -2.01
->>> round(2.675, 2)  # note this rounds down
+>>> round(2.675, 2)  # Observe que este arredonda para baixo
 2.67
 >>> max(4,-5,5,1,11)
 11
@@ -804,12 +803,12 @@ Estas próximas funções são encontradas no módulo matemático e precisam ser
 | math.function    | Descrição                                |
 | ---------------- | ---------------------------------------- |
 | `math.ceil(x)`   | retorna o menor inteiro maior ou igual que x |
-| `math.floor(x)`  | retorna o maior inteiro menor ou igual que x. |
+| `math.floor(x)`  | retorna o maior inteiro menor ou igual que x |
 | `math.exp(x)`    | O exponencial de x: e<sup>x</sup> é retornado |
-| `math.log(x)`    | O logarítmo natural de x, para x > 0 é retornado |
-| `math.log10(x)`  | O logarítmo de base 10 de x para x > 0 é retornado |
+| `math.log(x)`    | O logaritmo natural de x, para x > 0 é retornado |
+| `math.log10(x)`  | O logaritmo de base 10 de x para x > 0 é retornado |
 | `math.modf(x)`   | As partes fracionárias e inteiras de x são retornadas em uma tupla de dois itens |
-| `math.pow(x, y)` | O valor de x criado pelo poder y é retornado |
+| `math.pow(x,y)` | O valor de x criado pelo poder y é retornado |
 | `math.sqrt(x)`   | Retorna a raíz quadrada de x para x >= 0   |
 
 
@@ -900,7 +899,7 @@ Ele retorna três diferentes valores dependendo do x e do y
 
 Na próxima seção, nós iremos aprender sobre strings, tuplas, e listas. Todos estes são exemplos de sequências em python. uma sequência de caracteres `'ACGTGA'`, uma tupla `(0.23, 9.74, -8.17, 3.24, 0.16)`, e uma lista `['dog', 'cat', 'bird']` são sequências de diferentes tipos de dados. Veremos mais detalhes em breve.
 
-Em Python, um tipo de objeto consegue operações que pertencem àquele tipo. Sequências têm operações sequenciais então as strings podem também usar operações sequenciais. Strings também possuem suas próprias operações específicas.
+Em Python, um tipo de objeto consegue operações que pertencem àquele tipo. Sequências têm operações sequenciais então as strings também podem usar operações sequenciais. Strings também possuem suas próprias operações específicas.
 
 Você pode perguntar qual a extensão de qualquer sequência
 
@@ -958,7 +957,7 @@ Uso de exemplos das aspas:
 ```python
 palavra = 'word'
 sentença = "This is a sentence."
-parágrafo = """This is a paragraph. Isso é feito de múltiplas linhas e sentenças. 
+parágrafo = """Isso é um parágrafo. Isso é feito de múltiplas linhas e sentenças. 
 E assim vai.
 """
 ```
@@ -1082,55 +1081,55 @@ Como você incluiria uma nova linha, retorno de transporte, ou tab em sua string
 | Caractere de escape | Descrição     |
 | ---------------- | --------------- |
 | \\n              | Nova linha      |
-| \\r              | Retorno de transporte |
+| \\r              | Retorno de carro |
 | \\t              | Tab             |
 
 
 Vamos incluir alguns caracteres de escape em suas strings e funções `print()`.
 ```python
->>> string_with_newline = 'this sting has a new line\nthis is the second line'
+>>> string_with_newline = 'esta string possuí uma quebra de linha\nesta é a segunda linha'
 >>> print(string_with_newline)
-this sting has a new line
-this is the second line
+esta string possuí uma quebra de linha
+esta é a segunda linha
 ```
 > Nós imprimimos uma nova linha na tela
 
 `print()` adiciona espaços entre argumentos e uma nova linha ao final. Você pode mudar isso com `sep=` e `end=`. Aqui está um exemplo:
-`print('one line', 'second line' , 'third line', sep='\n', end = '')`
+`print('uma linha', 'segunda linha' , 'terceira linha', sep='\n', end = '')`
 
 Uma forma mais limpa para fazer isso é expressar uma string de múltiplas linhas inclusa em aspas triplas (""").
 ```python
->>> print("""this string has a new line
-... this is the second line""")
-this string has a new line
-this is the second line
+>>> print("""esta string possuí uma quebra de linha
+... esta é a segunda linha""")
+esta string possuí uma quebra de linha
+esta é a segunda linha
 ```
 
 Vamos imprimir um caractere tab (\t).
 ```python
->>> line = "value1\tvalue2\tvalue3"
+>>> line = "valor1\tvalor2\tvalor3"
 >>> print(line)
-value1	value2	value3
+valor1	valor2	valor3
 ```
 > Nós obtemos as três palavras separadas por caracteres tab. Um formato comum para dados é separar colunas com tabs como isso.
 
-Você pode adicionar uma barra invertida antes de qualquer caractere para forçar de ser impresso como um literal. Isso é chamado 'escaping'. Só é realmente útil para imprimir sentenças literais ' and " 
+Você pode adicionar uma barra invertida antes de qualquer caractere para forçar de ser impresso como um literal. Isso é chamado 'escaping'. Só é realmente útil para imprimir sentenças literais ' e " 
 
 ```python
->>> print('this is a \'word\'')  # if you want to print a ' inside '...'
-this is a 'word'
->>> print("this is a 'word'") # maybe clearer to print a ' inside "..."
-this is a 'word'
+>>> print('esta é uma \'palavra\'')  # se você quiser imprimir um ' dentro: '...'
+esta é uma 'palavra'
+>>> print("esta é uma 'palavra'") # talvez mais claro para imprimir um ' dentro "..."
+esta é uma 'palavra'
 ```
 > Em ambos os casos a sentença atual única é impressa na tela 
 
 Se você quiser todos caracteres em sua string para permanecer exatamente como são, declare sua string uma string crua literal com 'r' antes da primeira sentença. Isso parece feio, mas funciona.
 ```python
->>> line = r"value1\tvalue2\tvalue3"
+>>> line = r"valor1\tvalor2\tvalor3"
 >>> print(line)
-value1\tvalue2\tvalue3
+valor1\tvalor2\tvalor3
 ```
-> Nossos caracteres de escape '\t' declare como nós digitamos, eles não são convertidos para caracteres tab de fato.
+> Nossos caracteres de escape '\t' estão como nós digitamos, eles não são convertidos para caracteres tab de fato.
 
 #### Concatenação
 
@@ -1334,7 +1333,7 @@ string       A   T   T   A   A   A   G   G  ...
 >>> print(sub_dna)
 AAA
 ```
-> Os caracteres com índices 3, 4, 5 são retornados. Em outras palavras, todo caractere começando com o índice 3 e acima mas não incluindo, o índice de 6 que retornado. 
+> Os caracteres com índices 3, 4, 5 são retornados. Em outras palavras, todo caractere começando com o índice 3 e acima, mas não incluindo acima ou igual ao índice 6. 
 
 Vamos retornar os primeiros 6 caracteres.
 ```python
@@ -1343,7 +1342,7 @@ Vamos retornar os primeiros 6 caracteres.
 >>> print(sub_dna)
 ATTAAA
 ```
-> Todo caractere começando no índice 0 e acima mas não incluindo o de índice 6 são retornados. Esse é o mesmo que dna[:6]
+> Todo caractere começando no índice 0 e acima, mas não incluindo o de índice 6 e acima, são retornados. Esse é o mesmo que dna[:6]
 
 Vamos retornar todos os caracteres do índice 6 até o fim da string.
 ```python
@@ -1391,7 +1390,7 @@ Desde que estes são métodos, se certifique de utilizar na sentença `string.me
 
 
 __split__
-`split` é um método ou forma de partir uma string em um grupo de caracteres. O que é retornado é uma lista de elementos com caracteres que são usados para partir removidos. Iremos através das listas em mais detalhes na próxima sessão. Não se preocupe com isso.
+`split` é um método ou forma de partir uma string em um grupo de caracteres. O que é retornado é uma lista de elementos com caracteres que são usados para partir removidos. Veremos as listas com mais detalhes na próxima seção. Não se preocupe com isso.
 
 Vamos olhar para essa string:
 ```
@@ -1399,7 +1398,7 @@ Vamos olhar para essa string:
 ```
 Vamos separar em 'xx' e obter uma lista dos 0's  
 
-O que é o What 's' em `s.split(delim)` ?
+O que é o 's' em `s.split(delim)` ?
 
 O que é 'delim' em `s.split(delim)` ?
 
@@ -1450,7 +1449,7 @@ O que é a 'list' em `s.join(list)` ?
 > Nós começamos com uma lista e agora temos todos os elementos em uma string com o delimitador adicionado entre cada elemento.
 
 
-Vamos pegar uma lista de valores de expressão e criar uma string delimitada tab que abrirá bem em uma planilha com cada valor em sua própria coluna:
+Vamos pegar uma lista de valores de expressão e criar uma string delimitada por tab que abrirá bem em uma planilha com cada valor em sua própria coluna:
 ```python
 >>> expression_values = ['4.73', '7.91', '3.65']
 >>>expression_values
@@ -1468,14 +1467,14 @@ Vamos pegar uma lista de valores de expressão e criar uma string delimitada tab
 Strings podem ser formatadas usando a função `format()`. Bem intuitivo, mas espere até ver os detalhes! Por exemplo, se você quiser incluir strings literais e variáveis em sua declaração de impressão e não quer concatenar ou usar múltiplos argumentos na função `print()` você pode usar formatação de string.  
 
 ```python
->>> string = "This sequence: {} is {} nucleotides long and is found in {}."
+>>> string = "Esta sequência: {} possui {} nucleotídeos e é encontrada em {}."
 >>> string.format(dna,dna_len,gene_name)
-'This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.'
->>> print(string) # string.format() does not alter string
-This sequence: {} is {} nucleotides long and is found in {}.
+'Esta sequência: TGAACATCTAAAAGATGAAGTTT possui 23 nucleotídeos e é encontrada em Brca1.'
+>>> print(string) # string.format() não altera a string original
+Esta sequência: {} possui {} nucleotídeos e é encontrada em {}.
 >>> new_string = string.format(dna,dna_len,gene_name)
 >>> print(new_string)
-This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
+Esta sequência: TGAACATCTAAAAGATGAAGTTT possui 23 nucleotídeos e é encontrada em Brca1.
 ```
 Nós colocamos juntamente três variáveis e strings literais em uma string única usando a função `format()`. A string original não é alterada, uma nova string é retornada e incorpora os argumentos. Você pode salvar o valor retornado em uma nova variável. Cada `{}` é um espaço reservado para a string que precisa ser inserida.  
 
@@ -1484,14 +1483,14 @@ Algo legal sobre `format()` é que você pode imprimir int e tipos variáveis de
 Você pode também chamar diretamente `format()` dentro de uma função `print()`. Aqui estão dois exemplos
 
 ```python
->>> string = "This sequence: {} is {} nucleotides long and is found in {}."
+>>> string = "Esta sequência: {} possui {} nucleotídeos e é encontrada em {}."
 >>> print(string.format(dna,dna_len,gene_name))
-This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
+Esta sequência: TGAACATCTAAAAGATGAAGTTT possui 23 nucleotídeos e é encontrada em Brca1.
 ```
 Ou use a função `format()` em uma string literal:
 ```python
->>> print( "This sequence: {} is {} nucleotides long and is found in {}.".format(dna,dna_len,gene_name))
-This sequence: TGAACATCTAAAAGATGAAGTTT is 23 nucleotides long and is found in Brca1.
+>>> print( "Esta sequência: {} possui {} nucleotídeos e é encontrada em {}.".format(dna,dna_len,gene_name))
+Esta sequência: TGAACATCTAAAAGATGAAGTTT possui 23 nucleotídeos e é encontrada em Brca1.
 ```
 #### A mini-linguagem `format()` 
 
@@ -1586,7 +1585,7 @@ __Tipos comuns__
 #### Qual é o ponto?
 
 
-Muito pode ser feito com a função `format()`. Aqui está um último exemplo, mas não a última funcionalidade desta função, vamos circular um número de ponto de flutuação para algumas casas decimais, começando com muitos. (o padrão é 6). Note que a função circula para a casa decimal mais próxima, mas nem sempre exatamente da forma que você espera por conta da forma que os computadores representam decimais com 1s e 0s.
+Muito pode ser feito com a função `format()`. Aqui está um último exemplo, mas não a última funcionalidade desta função, vamos arredondar um número de ponto de flutuação para algumas casas decimais, começando com muitos. (o padrão é 6). Note que a função arredonda para a casa decimal mais próxima, mas nem sempre exatamente da forma que você espera por conta da forma que os computadores representam decimais com 1s e 0s.
 
 ```python
 '{:f}'.format(3.141592653589793)
@@ -1614,7 +1613,7 @@ Muito pode ser feito com a função `format()`. Aqui está um último exemplo, m
 Listas são tipos de dados que armazenam uma coleção de dados. 
 
 
-- Listas são usadas para armazenar uma coleção de dados ordenada e *indexada*.
+- Listas são usadas para armazenar uma coleção de dados de maneira ordenada e *indexada*.
 - Valores são separados por vírgulas
 - Valores são anexados entre colchetes '[]'
 - Listas podem crescer e encolher
@@ -1626,7 +1625,7 @@ Listas são tipos de dados que armazenam uma coleção de dados.
 
 #### Tuplas
 
-- Tuplas são usadas para armazenar uma coleção de dados ordenada e indexada
+- Tuplas são usadas para armazenar uma coleção de dados de maneira ordenada e indexada
 - Valores são separados por vírgulas
 - Valores são anexados entre parênteses '()'
 - Tuplas **NÃO** podem crescer ou encolher
@@ -1636,7 +1635,7 @@ Listas são tipos de dados que armazenam uma coleção de dados.
 ( 'Jan' , 'Fev' , 'Mar' , 'Abr' , 'Mai' , 'Jun' , 'Jul' , 'Ago' , 'Set' , 'Out' , 'Nov' , 'Dez' )
 ```
 
-Muitas funções e métodos retornam tuplas como `math.modf(x)`. Essa função retorna as partes fracionais e inteiras de `x` em uma tupla de dois itens. Aqui não existem motivos para mudar a sequência.
+Muitas funções e métodos retornam tuplas: O `math.modf(x)`, por exemplo, retorna as partes fracionais e inteiras de `x` em uma tupla de dois itens. Aqui não existem motivos para mudar a sequência.
 
 ```python
 >>> math.modf(2.6)
@@ -1717,7 +1716,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 IndexError: list assignment index out of range
 ```
-> codon[5] não existe, e quando tentamos atribuir valor para esse índice ocorre um IndexError. Se você deseja adicionar novos elementos no final da lista use `codons.append('taa')` ou `codons.extend(list)`. Veja abaixo mais detalhes.
+> codon[5] não existe, e quando tentamos atribuir valor para esse índice ocorre um IndexError. Se você deseja adicionar novos elementos no final da lista use `codons.append('taa')` ou `codons.extend(list)`. Veja mais detalhes abaixo.
 
 #### Extraindo um subconjunto de uma lista, ou Recortando
 
@@ -1732,7 +1731,7 @@ Isso funciona da mesma forma com as listas como com as strings. Isso é porque a
 | 4     | cgc   |
 | 5     | acg   |
 
-use a syntaxe [start : end : step] para dividir sua sequência python 
+use a sintaxe [start : end : step] para dividir sua sequência python 
 
 ```python
 >>> codons = [ 'atg' , 'aaa' , 'agg' , 'aac' , 'cgc' , 'acg']
@@ -1745,9 +1744,9 @@ use a syntaxe [start : end : step] para dividir sua sequência python
 >>> print (codons[0:3])
 ['atg', 'aaa', 'agg']
 ```
-> `codons[1:3]` retorna todo valor começando com o valor de códons[1] até mas não incluindo os códons[3]  
-> `codons[3:]` retorna todo valor começando com o valor de códons[3] e todos os valores posteriores.  
-> `codons[:3]` retorna todo valor até mas não incluindo códons[3]  
+> `codons[1:3]` retorna todo valor começando com o valor de codons[1] até, mas não incluindo, o codons[3]  
+> `codons[3:]` retorna todo valor começando com o valor de codons[3] e todos os valores posteriores.  
+> `codons[:3]` retorna todo valor até, mas não incluindo, codons[3]  
 > `codons[0:3]` é o mesmo que `codons[:3]`   
 
 
