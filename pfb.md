@@ -1767,7 +1767,7 @@ use a sintaxe [start : end : step] para dividir sua sequência python
 | `min(list)`                             | retorna o valor com o menor ASCII (=primeiro no alfabeto ASCII) | `min(['a','A','z'])` retorna `'A'`       |
 | `list(seq)`                             | converte uma tupla em uma lista          | `list(('a','A','z'))` retorna `['a', 'A', 'z']` |
 | `sorted(list, key=None, reverse=False)` | retorna uma lista organizada baseada na chave fornecida | `sorted(['a','A','z'])` retorna `['A', 'a', 'z']` |
-| `sorted(list, key=str.lower, reverse=False)`  | `str.lower()` faz com que todos os elementos fiquem minúsculos antes de organizar | `sorted(['a','A','z'],key=str.lower)` retorna `['a', 'A', 'z']` |
+| `sorted(list, key=str.lower, reverse=False)`  | `str.lower()` faz com que os elementos minúsculos retornem antes na lista organizada | `sorted(['a','A','z'],key=str.lower)` retorna `['a', 'A', 'z']` |
 
 
 #### Lista de métodos
@@ -1788,28 +1788,28 @@ Para esses exemplos utilize: `nums = [1,2,3]` e `codons = [ 'atg' , 'aaa' , 'agg
 | `list.remove(obj)`        | encontra o menor índice do objeto fornecido e o remove da lista. A lista é agora um elemento mais curta | codons.remove('aaa') ; print(codons) retorna  [ 'atg' , 'agg' ] |
 | `list.reverse()`          | inverte a ordem da lista          | nums.reverse() ; print(nums) retorna [3,2,1] |
 | `list.copy()`             | Retorna uma cópia rasa da lista. Rasa vs [Deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) apenas importa em estruturas de data multidimensionais. |                                          |
-| `list.sort([func])`       | organiza uma lista utilizando a função fornecida. Não retorna uma lista. A lista foi alterada. Uma organização de lista avançada será coberta assim que escrever suas próprias funções for discutido. | codons.sort() ; print(codons) retorna ['aaa', 'agg', 'atg'] |
+| `list.sort([func])`       | organiza uma lista utilizando a função fornecida. Não retorna uma lista. A lista foi alterada. A organização avançada de listas será coberta adiante na discussão sobre escrever suas próprias funções. | codons.sort() ; print(codons) retorna ['aaa', 'agg', 'atg'] |
 
 
 Tome cuidado em como você faz uma cópia de sua lista
 ```python
->>> my_list=['a', 'one', 'two']
+>>> my_list=['a', 'um', 'dois']
 >>> copy_list=my_list
 >>> copy_list.append('1')
 >>> print(my_list)
-['a', 'one', 'two', '1']
+['a', 'um', 'dois', '1']
 >>> print(copy_list)
-['a', 'one', 'two', '1']
+['a', 'um', 'dois', '1']
 ```
 > Não foi o que esperava?! Ambas listas foram alteradas porque nós apenas copiamos um ponteiro para a lista original quando escrevemos `copy_list=my_list`. 
 
 Vamos copiar a lista utilizando o método `copy()`.
 ```python
->>> my_list=['a', 'one', 'two']
+>>> my_list=['a', 'um', 'dois']
 >>> copy_list=my_list.copy()
 >>> copy_list.append('1')
 >>> print(my_list)
-['a', 'one', 'two']
+['a', 'um', 'dois']
 ```
 > Agora sim, nós obtivemos o esperado desta vez!
 
@@ -1823,12 +1823,12 @@ Agora que você já viu a função `append()` nós podemos ver como construir um
 >>> words = []
 >>> print(words)
 []
->>> words.append('one')
->>> words.append('two')
+>>> words.append('um')
+>>> words.append('dois')
 >>> print(words)
-['one', 'two']
+['um', 'dois']
 ```
-> Nós começamos com uma lista vazia chamada 'words'. Nós usamos `append()` para adicionar o valor 'one' depois o valor 'two'. Finalizamos a lista com dois valores. Você pode adicionar uma lista inteira em outra lista com `words.extend(['three','four','five'])`
+> Nós começamos com uma lista vazia chamada 'words'. Nós usamos `append()` para adicionar o valor 'um' depois o valor 'dois'. Finalizamos a lista com dois valores. Você pode adicionar uma lista inteira em outra lista com `words.extend(['três','quatro','cinco'])`
 
 
 
@@ -1855,7 +1855,7 @@ while expression:
   statement1
   statement2
   more_statements
-# código logo abaixo é executado depois que o while loop existir
+# código logo abaixo é executado depois que o while loop encerrar
 rest_of_code_goes_here
 more_code
 ```
@@ -1945,7 +1945,7 @@ print('Finished the loop')
 
 Um for loop é um loop que executa o bloco de códigos for para qualquer membro de uma sequência, por exemplo os elementos de uma lista ou as letras de uma string.
 
-#### For Loop Syntaxe
+#### Sintaxe do For Loop
 
 ```python
 for iterating_variable in sequence:
@@ -2078,7 +2078,7 @@ As declarações de controle de loop permitem alteração no fluxo normal de exe
 
 | Declaração de controle | Descrição                             |
 | ----------------- | ---------------------------------------- |
-| `break`           | Um loop é terminado quando uma declaração break é executada. Todas as linhas de código após o break, mas dentro do bloco de loop não são executadas. Sem mais interações do loop sendo executadas |
+| `break`           | Um loop é terminado quando uma declaração break é executada. Todas as linhas de código após o break, mas dentro do bloco de loop, não são executadas. Sem mais interações do loop sendo executadas |
 | `continue`        | Uma única iteração de um loop é terminada quando a declaração continue é executada. A próxima iteração vai proceder normalmente. |
 
 
@@ -2119,7 +2119,7 @@ while count < 5:
   count+=1
   if count == 3:
     continue
-  print("line after our continue")
+  print("Linha após o nosso continue")
 print("Done")
 ```
 
@@ -2127,14 +2127,14 @@ Saída:
 ```
 $ python continue.py
 count: 0
-line after our continue
+Linha após o nosso continue
 count: 1
-line after our continue
+Linha após o nosso continue
 count: 2
 count: 3
-line after our continue
+Linha após o nosso continue
 count: 4
-line after our continue
+Linha após o nosso continue
 Done
 ```
 > Quando a contagem é igual a 3 o continue é executado. Isso faz com que todas as linhas contendo o bloco de loop sejam puladas. "Linha após o nosso continue" não é impresso quando a contagem é igual a 3. O próximo loop é executado normalmente.
@@ -2460,7 +2460,7 @@ Essas funções também funcionam com vários outros tipos de dados!
 | `dict.copy()`                          | Retorna uma cópia rasa (shallow copy) do dicionário. [Shallow vs. deep](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/) A cópia só é relevante em estruturas de dados multidimensionais. |
 | `dict.fromkeys(seq,value)`             | Crie um novo dicionário com chaves de seq (tipo de sequência Python) e valores definidos como valor. |
 | `dict.items()`                         | Retorna uma lista de tuplas (chave, valor). |
-| `dict.pop(key)`                        | Remove o par chave: valor e retorna o valor. |
+| `dict.pop(key)`                        | Remove o par chave:valor e retorna o valor. |
 | `dict.keys()`                          | Retorna uma lista de chaves                     |
 | `dict.get(key, default = None)`        | Obtenha o valor de dict[key], use o padrão se não estiver presente. |
 | `dict.setdefault(key, default = None)` | Semelhante a get(), mas definirá dict[key] = default se a chave ainda não estiver em dict. |
@@ -2482,17 +2482,17 @@ Chaves `{}` ou a função `set()` podem ser usadas para criar conjuntos.
 > Observação: para criar um conjunto vazio, você precisa usar `set()`, não `{}`, este último cria um dicionário vazio.
 
 ```python
->>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+>>> basket = {'maçã', 'laranja', 'maçã', 'pera', 'laranja', 'banana'}
 >>> print(basket)                     
-{'orange', 'banana', 'pear', 'apple'}
+{'laranja', 'banana', 'pera', 'maçã'}
 ```
 > Veja, os duplicados foram removidos.
 
 Testar se um valor está no conjunto.
 ```python
->>> 'orange' in basket                 
+>>> 'laranja' in basket                 
 True
->>> 'crabgrass' in basket
+>>> 'capim-colchão' in basket
 False
 ```
 > O operador `in` funciona da mesma forma com conjuntos como funciona com listas e dicionários.
@@ -2505,7 +2505,7 @@ União, interseção, diferença e diferença simétrica podem ser feitas com co
 >>> a                                 
 {'a', 'r', 'b', 'c', 'd'}
 ```
-> Conjuntos contêm elementos únicos; portanto, mesmo que elementos duplicados sejam fornecidos, eles serão removidos..
+> Conjuntos contêm elementos únicos; portanto, mesmo que elementos duplicados sejam fornecidos, eles serão removidos.
 
 #### Operadores de Conjuntos
 
@@ -2525,7 +2525,7 @@ A diferença entre dois conjuntos são os elementos que são exclusivos do conju
 
 **União**
 
-A união entre dois conjuntos é uma sequência de todos os elementos dos conjuntos primeiro e segundo combinados, com duplicatas removidas.
+A união entre dois conjuntos é uma sequência de todos os elementos de ambos os conjuntos combinados, com duplicatas removidas.
 
 ![União de Conjunto](images/set_union.png)
 
@@ -2539,7 +2539,7 @@ A união entre dois conjuntos é uma sequência de todos os elementos dos conjun
 
 **Interseção**
 
-A interseção entre dois conjuntos é uma sequência dos elementos que estão em ambos os conjuntos, com duplicatas removidas.
+A interseção entre dois conjuntos é uma sequência dos elementos que estão em ambos os conjuntos ao mesmo tempo, com duplicatas removidas.
 
 ![Interseção do Conjunto](images/set_intersection.png)
 
@@ -2589,10 +2589,10 @@ A diferença simétrica é composta pelos elementos que estão apenas no primeir
 | `set.clear()`                           | remove todos elementos                 |
 | `set.copy()`                            | retorna uma cópia rasa de um conjunto          |
 | `set.difference(set2)`                  | retorna a diferença entre o set e o set2   |
-| `set.difference_update(set2)`           | remove todos os elementos de outro conjunto deste conjunto |
+| `set.difference_update(set2)`           | remove todos os elementos de outro conjunto (set) deste conjunto (set2) |
 | `set.discard(element)`                  | remove um elemento do conjunto se ele for encontrado no conjunto. (Não faz nada se o elemento não estiver no conjunto) |
 | `set.intersection(sets)`                | retorna a interseção do conjunto com outros conjuntos fornecidos |
-| `set.intersection_update(sets)`         | atualiza o conjunto com a interseção do conjunto e os outros conjuntos fornecidos. |
+| `set.intersection_update(sets)`         | atualiza o conjunto com a interseção do conjunto (set) e os outros conjuntos fornecidos (sets). |
 | `set.isdisjoint(set2)`                  | retorna Verdadeiro se o set e o set2 não têm interseção. |
 | `set.issubset(set2)`                    | retorna Verdadeiro se o set2 contém o conjunto.        |
 | `set.issuperset(set2)`                  | retorna Verdadeiro se o set contém o set2.       |
@@ -2600,8 +2600,8 @@ A diferença simétrica é composta pelos elementos que estão apenas no primeir
 | `set.remove(element)`                   | remove um elemento de um conjunto.              |
 | `set.symmetric_difference(set2)`        | retorna a diferença simétrica entre o set e o set2. |
 | `set.symmetric_difference_update(set2)` | atualiza o conjunto com a diferença simétrica entre o set e o set2 |
-| `set.union(sets)`                       | retorna a união do conjunto e dos outros conjuntos fornecidos. |
-| `set.update(set2)`                      | atualiza o conjunto com a união do conjunto e o conjunto2. |
+| `set.union(sets)`                       | retorna a união do conjunto (set) e dos outros conjuntos fornecidos (sets). |
+| `set.update(set2)`                      | atualiza o conjunto com a união do set e o set2. |
 
 
 
@@ -2849,7 +2849,7 @@ Total: 142
 ```
 > O arquivo do qual estamos lendo é chamado de "seq.nt.txt"
 > O arquivo para o qual estamos escrevendo é chamado de "nt.counts.txt"
-> Leemos cada linha, calculamos o comprimento de cada linha e imprimimos o comprimento
+> Lemos cada linha, calculamos o comprimento de cada linha e imprimimos o comprimento
 > Também criamos uma variável para acompanhar a contagem total de nt
 > No final, imprimimos o total de nt
 > Finalmente, fechamos cada um dos arquivos 
@@ -2915,13 +2915,13 @@ import re
 
 Primeiro, veremos alguns exemplos e depois entraremos nos detalhes mecânicos com mais detalhes.
 
-Vamos começar com algo simples e encontrar uma correspondência exata para o site de restrição EcoRI em uma string.
+Vamos começar com algo simples e encontrar uma correspondência exata para o sítio de restrição EcoRI em uma string.
 ```python
 >>> dna = 'ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAGGAATTCACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGACCGGTTTCCAAAGACAGTCTTCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGG'
 >>> if re.search(r"GAATTC",dna):
-...   print("Found an EcoRI site!")
+...   print("Um sítio de EcoRI foi encontrado!")
 ...
-Found an EcoRI site!
+Um sítio de EcoRI foi encontrado!
 >>>
 ```
 > Como podemos pesquisar por caracteres de controle como um tab (\t), é bom criar o hábito de usar a função de string raw 
@@ -2940,7 +2940,7 @@ Vamos descobrir o que é retornado pela função `search()`.
 > As informações sobre a primeira correspondência são retornadas
 
 
-E uma correspondência não exata. Vamos procurar por um site de metilação que deve corresponder aos seguintes critérios:
+E uma correspondência não exata? Vamos procurar por um sítio de metilação que deve corresponder aos seguintes critérios:
 - G ou A
 - seguido por C
 - seguido por qualquer coisa ou nada
@@ -2977,20 +2977,20 @@ E outras correspondências potenciais em nossa string de DNA? Podemos usar a fun
 >>> print(found)
 ['ACG', 'GCTG', 'ACTG', 'ACCG', 'ACAG', 'ACCG', 'ACAG']
 ```
-> `findall()` retorna uma lista de todas as partes da string que correspondem à regex.
+> `findall()` retorna uma lista de todas as partes da string que correspondem ao regex.
 
-Uma contagem rápida de todos os sites correspondentes pode ser feita contando o comprimento da lista retornada.
+Uma contagem rápida de todos os sítios correspondentes pode ser feita contando o comprimento da lista retornada.
 
 ```python
 >>> len (re.findall(r"[GA]C.?G",dna))
 7
 ```
 
-> Existem 7 sites de metilação.
+> Existem 7 sítios de metilação.
 >
 > Aqui temos outro exemplo de aninhamento.
 >
-> Chamamos a função `findall()`, procurando todas as correspondências de um site de metilação.
+> Chamamos a função `findall()`, procurando todas as correspondências de um sítio de metilação.
 >
 > Esta função retorna uma lista, a lista é passada para a função `len()`, que por sua vez retorna o número de elementos na lista.
 
@@ -3132,25 +3132,24 @@ Variáveis podem ser usadas para armazenar padrões.
 Um pipe '|' pode ser usado para indicar que o padrão antes ou depois do '|' pode ser correspondido. Coloque as duas opções entre parênteses.
 
 ```
-grande mau (lobo|ovelha)
+grande (lobo|porquinho) mau
 ```
 > Este padrão deve corresponder a uma string que contém:
 >
 > - "grande" seguido de um espaço seguido por
-> - "mau" seguido de
-> - um espaço seguido por
-> - *ou* "lobo" ou "ovelha"
->
+> -  *ou* "lobo" ou "porquinho" seguido de
+> -  um espaço seguido de
+> - "mau"
+> 
 > Isso corresponderia a:
 >
 > - "grande lobo mau"
-> - "grande ovelha má"
+> - "grande porquinho mau"
 
 __Vamos Tentar__  
 ![tente agora](images/Try-It-Now.jpg)
 
-1. Qual seria um padrão para reconhecer um endereço de e-mail?
-2. Qual seria um padrão para reconhecer a parte de ID de um registro de sequência em um arquivo FASTA?
+1. Qual seria um padrão para reconhecer 'ATG' seguido de C ou um T?
 
 #### Subpadrões
 
