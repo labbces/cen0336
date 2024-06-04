@@ -821,7 +821,7 @@ Para isso digite `i`.
 
 
 
-Sua sessão vi agora vai se parecer com isso: 
+Sua seção vi agora vai se parecer com isso: 
 
 ```bash
 ~
