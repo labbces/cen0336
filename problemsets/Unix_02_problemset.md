@@ -1,7 +1,7 @@
 # Conjunto de problemas Unix 2
 
 
-1. Se você ainda não o fez, siga [Etapas 1-3 em Unix: GIT para iniciantes](https://github.com/labbces/cen0336/blob/master/unix.md/#git-para-iniciantes). Aqui está um **sumário** destas etapas, **Por favor vá até a aula para ter o detalhamento**:
+1. Se você ainda não o fez, siga [Etapas 1-3 em Unix: GIT para iniciantes](../unix.md/#git-para-iniciantes). Aqui está um **sumário** destas etapas, **Por favor vá até a aula para ter o detalhamento**:
    NOTA: Não crie um repositório dentro de outro repositório.
    - Crie uma conta GitHub e clique em "Novo" para criar um novo repositório.
    - Adicione informação sobre seu repositório. Assegure-se de selecionar a opção de criar um arquivo README de forma automática.
