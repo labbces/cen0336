@@ -2,7 +2,7 @@
 
 count = 0
 while count < 5:
-  print("count:" , count)
+  print("contagem:" , count)
   count+=1
 print("Done")
 
