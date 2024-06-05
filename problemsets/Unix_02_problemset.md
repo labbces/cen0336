@@ -1,11 +1,11 @@
 # Conjunto de problemas Unix 2
 
 
-1. Se você ainda não o fez, siga [Steps 1-3 in Unix: GIT for Beginners](https://github.com/prog4biol/pfb2019#git-for-beginners). Aqui está um **sumário** destas etapas, **Por favor vá até a aula para ter o detalhamento**:
+1. Se você ainda não o fez, siga [Etapas 1-3 em Unix: GIT para iniciantes](../unix.md/#git-para-iniciantes). Aqui está um **sumário** destas etapas, **Por favor vá até a aula para ter o detalhamento**:
    NOTA: Não crie um repositório dentro de outro repositório.
    - Crie uma conta GitHub e clique em "Novo" para criar um novo repositório.
-   - Adicione informação sobre seu repositório. Asegurese de selecionar a opcao de criar um arquivo README de forma automática.
-   - Agora na sua máquina, clone seu repositorio.
+   - Adicione informação sobre seu repositório. Assegure-se de selecionar a opção de criar um arquivo README de forma automática.
+   - Agora na sua máquina, clone seu repositório.
 
 2. Mova quaisquer arquivos que você criou no conjunto de problemas Unix_01 para o seu repositório git de conjunto de problemas local.
 
@@ -14,9 +14,9 @@
    - `git add <filename>`  ou  `git add <filename1> <filename2> <filename3> ...`  
    - `git commit -m 'adding previous problem set files'`
    - `git push`
-   - Visite o site do seu repositório Github (em github.com) e veja os arquivps do seu repositório local que você acabou de empurrar para o seu repositório remoto.
+   - Visite o site do seu repositório Github (em github.com) e veja os arquivos do seu repositório local que você acabou de empurrar para o seu repositório remoto.
 
-4. Se você está cansado de ficar digitando seu nome de usuário e senha github, crie e adicione um ssh key para sua conta github. Informação pode ser encontrada [Aqui](https://help.github.com/articles/connecting-to-github-with-ssh/) em github.com. Siga as intruções para esses dois passos no tutorial.
+4. Se você está cansado de ficar digitando seu nome de usuário e senha github, crie e adicione um ssh key para sua conta github. Informação pode ser encontrada [Aqui](https://help.github.com/articles/connecting-to-github-with-ssh/) em github.com. Siga as instruções para esses dois passos no tutorial.
    - [Gerando uma nova SSH key e adicionando ao ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 
    - [Adicionando uma nova SSH key a sua conta GitHub](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account)
 
@@ -30,7 +30,7 @@
   - `git push`
   - Visite o site seu repositório GitHub (em github.com) e veja o arquivo do seu repositório local que você acabou de transferir para o seu repositório remoto.
 
-8. Usando seu editor de texto vi crie um arquivo fasta e dê o nome `mysequences.txt`. Se assegure de que ele acabe em seu diretório de arquivos para conjuntos de problemas.
+8. Usando seu editor de texto vi crie um arquivo fasta e dê o nome `mysequences.txt`. Se assegure de que ele esteja em seu diretório de arquivos para o conjuntos de problemas.
 
 Esse é o formato do arquivo fasta:
 ```
@@ -50,7 +50,7 @@ ATTCTTGGCCTTAAATTGGCCTTG
   - Delete a linha
   - Desfaça seu último delete
   - Pesquise por `CTT`
-  - Encontre a próxima ocorrÊncia de `CTT`
+  - Encontre a próxima ocorrência de `CTT`
   - Salve e saia
 
 

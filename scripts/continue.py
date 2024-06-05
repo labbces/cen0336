@@ -6,6 +6,6 @@ while count < 5:
   count+=1
   if count == 3:
     continue 
-  print("line after our continue")
+  print("Linha após o nosso continue")
 print("Done")
 

@@ -1,18 +1,18 @@
 Python 7 - Expressões Regulares - Conjunto de Problemas
 ===================
 
-1. No arquivo [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_nobody.txt), encontre todas as ocorrências de 'Nobody' e imprima a posição.
+1. No arquivo [Python_07_nobody.txt](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_07_nobody.txt), encontre todas as ocorrências de 'Nobody' e imprima a posição.
 
-2. No arquivo [Python_07_nobody.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_nobody.txt), substitua todas as ocorrências de 'Nobody' pelo seu nome favorito e escreva um arquivo de saída com o nome dessa pessoa (ex. Michael.txt).
+2. No arquivo [Python_07_nobody.txt](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_07_nobody.txt), substitua todas as ocorrências de 'Nobody' pelo seu nome favorito e escreva um arquivo de saída com o nome dessa pessoa (ex. Michael.txt).
 
-3. Usando correspondência de padrões, encontre todas as linhas de cabeçalho em [Python_07.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07.fasta). Observe que o formato de um cabeçalho em um arquivo FASTA é uma linha que começa com um símbolo maior que e é seguido por algum texto (por exemplo, `>seqName descrição`, onde seqName é o nome ou identificador da sequência. O identificador não pode ter espaços nele. A descrição que o segue pode ter espaços.)
+3. Usando correspondência de padrões, encontre todas as linhas de cabeçalho em [Python_07.fasta](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_07.fasta). Observe que o formato de um cabeçalho em um arquivo FASTA é uma linha que começa com um símbolo maior que é seguido por algum texto (por exemplo, `>seqName descrição`, onde seqName é o nome ou identificador da sequência. O identificador não pode ter espaços nele. A descrição que o segue pode ter espaços.)
 
 4. Se uma linha corresponder ao formato de um cabeçalho FASTA, extraia o nome da sequência e a descrição usando subpadrões (grupos).
    - Imprima linhas parecidas com esta `id:"nome da sequência extraído" desc:"descrição extraída"`
 
 5. Crie um analisador de FASTA ou modifique seu analisador de FASTA do conjunto de problemas anterior para usar expressões regulares. Certifique-se também de que seu analisador possa lidar com uma sequência que está dividida em várias linhas.
 
-6. A enzima ApoI possui um local de restrição: R^AATTY onde R e Y são nucleotídeos degenerados. Consulte a tabela IUPAC para identificar as possibilidades de nucleotídeos para R e Y. Escreva uma expressão regular para encontrar e imprimir todas as ocorrências do local na seguinte sequência [Python_07_ApoI.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_07_ApoI.fasta).
+6. A enzima ApoI possui um local de restrição: R^AATTY onde R e Y são nucleotídeos degenerados. Consulte a tabela IUPAC para identificar as possibilidades de nucleotídeos para R e Y. Escreva uma expressão regular para encontrar e imprimir todas as ocorrências do local na seguinte sequência [Python_07_ApoI.fasta](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_07_ApoI.fasta).
 
 ```
 >seq1
