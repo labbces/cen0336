@@ -44,7 +44,7 @@ Python 1 Problem Set
         ```
         >>>  Lembre-se, escreva um trecho curto, execute o código, escreva mais, e execute novamente. Isto torna o código mais fácil de debugar. 
 
-4. Utilize `sys.argv` (certifique-se de importar sys!!!) para obter seu próprio nome, cor favorita, atividade favorita e animal favorito por linha de comando. Lembre-se de verificar o [exemplo nas anotações](master/pfb.md/#par%C3%A2metros-de-linha-de-comando-uma-lista-especial-de-par%C3%A2metros). Imprima todas as variáveis em uma única declaração Print.
+4. Utilize `sys.argv` (certifique-se de importar sys!!!) para obter seu próprio nome, cor favorita, atividade favorita e animal favorito por linha de comando. Lembre-se de verificar o [exemplo nas anotações](https://github.com/labbces/cen0336/blob/master/pfb.md/#par%C3%A2metros-de-linha-de-comando-uma-lista-especial-de-par%C3%A2metros). Imprima todas as variáveis em uma única declaração Print.
     - utilize vírgulas para separar sua declaração Print. 
     - utilize '+' para separar seus argumentos de Print.
 
