@@ -264,7 +264,7 @@ Sofia Robb
          * [Obtendo dados em uma nova instância de nossa classe](pfb.md/#Obtendo-dados-em-uma-nova-instância-de-nossa-classe)
             * [<strong>__init__</strong>](pfb.md/#__init__)
       * [<a href="problemsets/Python_11_problemset.md">Link para o Conjunto de Problemas Python 11</a>](problemsets/Python_11_problemset.md)
-* [Workshops](workshops.md/#workshops)
+* [Workshops](workshops#workshops)
    * [BioPython  -- Sofia Robb](workshops.md/#biopython-----sofia-robb)
    * [NGS -- Anoja Perera](workshops.md/#ngs----anoja-perera)
    * [Sequence Homology -- Bill Pearson](workshops.md/#sequence-homology----bill-pearson)
