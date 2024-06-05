@@ -1,7 +1,7 @@
 Python 6 - IO - Conjunto de Problemas
 ===================
 
-1. Escreva um script para fazer o seguinte com [Python_06.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.txt)
+1. Escreva um script para fazer o seguinte com [Python_06.txt](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_06.txt)
    - Abrir e ler o conteúdo.  
    - Converter para maiúsculas cada linha
    - Imprimir cada linha no STDOUT
@@ -10,10 +10,10 @@ Python 6 - IO - Conjunto de Problemas
 2. Modifique o script do problema anterior para escrever o conteúdo em um novo arquivo chamado "Python_06_uc.txt"
 
 
-3. Abra e imprima o complemento reverso de cada sequência em [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt). Cada linha está no seguinte formato:    `seqName\tsequence\n`. Certifique-se de imprimir a saída no formato fasta, incluindo o nome da sequência e uma observação na descrição de que este é o complemento reverso. Imprima no STDOUT e capture a saída em um arquivo com redirecionamento de linha de comando '>'. 
+3. Abra e imprima o complemento reverso de cada sequência em [Python_06.seq.txt](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_06.seq.txt). Cada linha está no seguinte formato:    `seqName\tsequence\n`. Certifique-se de imprimir a saída no formato fasta, incluindo o nome da sequência e uma observação na descrição de que este é o complemento reverso. Imprima no STDOUT e capture a saída em um arquivo com redirecionamento de linha de comando '>'. 
    - **Lembre-se de que é sempre uma boa ideia começar com um conjunto de teste para o qual você conhece a saída correta.**
 
-4. Abra o arquivo [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) [Python_06.fastq](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.fastq) e percorra cada linha do arquivo. Conte o número de linhas e o número de caracteres por linha. Faça com que seu programa relate o:  
+4. Abra o arquivo [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) [Python_06.fastq](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_06.fastq) e percorra cada linha do arquivo. Conte o número de linhas e o número de caracteres por linha. Faça com que seu programa relate o:  
     - número total de linhas  
     - número total de caracteres  
     - comprimento médio da linha     
@@ -88,7 +88,7 @@ __Agora, vamos fazer isso novamente com fatores de transcrição.__
 4. Insira esses dois IDs de acesso que, na maioria dos organismos, serão todos os fatores de transcrição
    - GO:0006355 é "regulação da transcrição dependente de DNA”. 
    - GO:0003677 é "ligação ao DNA"
-5.  Clique em Resultados (canto superior esquerdo)
+5. Clique em Resultados (canto superior esquerdo)
 6. Exporte todos os resultados para "Arquivo" "TSV" --> GO
 7. Renomeie o arquivo para "alpaca_transcriptionFactors.tsv"
 
@@ -101,7 +101,7 @@ __Agora faça o mesmo na linha de comando com o comando `comm`. Talvez seja nece
 
 
 ## Extra: Expandindo um exercício do Conjunto de Problemas 5 sobre composição de nucleotídeos
-  - obtenha o arquivo bruto [Python_06.seq.txt](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_06.seq.txt)
+  - obtenha o arquivo bruto [Python_06.seq.txt](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_06.seq.txt)
   - em um script, abra este arquivo
   - itere sobre cada linha neste arquivo (seqName\tsequence\n)
      - para cada sequência:
