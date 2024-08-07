@@ -478,6 +478,16 @@ Você pode testar para ver se o valor é incluído em uma string, tupla ou lista
 
 Por Exemplo:  
 ```python
+>>> frutas = ['maca', 'laranja', 'manga', 'tomate']
+>>> 'manga' in frutas
+True
+>>>
+>>> 'pera' in frutas
+False
+```
+
+Outro exemplo:
+```python
 >>> dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
 >>> 'TCT' in dna
 True
@@ -492,8 +502,6 @@ True
 >>> 'ttt' in codons
 False
 ```
-
-
 
 #### Operador Precedente
 
@@ -1685,7 +1693,34 @@ aaa
 >>> print(codons[2])
 agg
 ```
+
+Outro exemplo com culturas:
+
+```python
+>>> culturas = ['soja', 'milho', 'algodao', 'arroz']
+>>> print(culturas[0])
+soja
+>>> print(culturas[1])
+milho
+>>> print(culturas[3])
+arroz
+```
 > Os 3 valores são acessados independentemente e impressos imediatamente. Eles não são armazenados em uma variável.
+
+
+Mais um exemplo com números inteiros
+
+```python
+>>> producao = [3000, 8000, 2000, 3000]
+>>> print(producao[2])
+```
+
+Mas nessa lista com inteiros, podemos fazer algumas operações, por exemplo, somar os valores armazenados nos índices 1 e 2:
+
+```python
+>>> producao[1] + producao[2]
+>>> 10000
+```
 
 
 Se você deseja acessar os valores começando pelo fim da lista, use índices negativos.
@@ -1696,7 +1731,13 @@ agg
 >>> print(codons[-2])
 aaa
 ```
+
 > Usar um índice negativo retornará os valores do final da lista. Por exemplo, -1 é o índice do último valor 'agg'. Esse valor também possui um índice de 2.
+
+Ou com o exemplo das culturas
+
+>>> print(culturas[-1])
+arroz
 
 #### Alterando valores em uma lista
 
@@ -1717,6 +1758,13 @@ Traceback (most recent call last):
 IndexError: list assignment index out of range
 ```
 > codon[5] não existe, e quando tentamos atribuir valor para esse índice ocorre um IndexError. Se você deseja adicionar novos elementos no final da lista use `codons.append('taa')` ou `codons.extend(list)`. Veja mais detalhes abaixo.
+
+Vamos acrescentar mais uma cultura na nossa lista de culturas: mandioca.
+
+```python
+>>> culturas.append('mandioca')
+print(culturas)
+```
 
 #### Extraindo um subconjunto de uma lista, ou Recortando
 
@@ -1974,7 +2022,7 @@ três
 quatro
 ```
 
-Esse próximo exemplo é utilizando um for loop para interagir em uma string. Lembre-se que uma string é uma sequência como uma lista. Cada caractere possui uma posição. Olhe novamente em "Extraindo uma substring, ou Recortando" na seção [Strings](#strings) para ver outras formas em que strings podem ser tratadas como listas.
+Esse próximo exemplo é utilizando um for loop para iterar em uma string. Lembre-se que uma string é uma sequência como uma lista. Cada caractere possui uma posição. Olhe novamente em "Extraindo uma substring, ou Recortando" na seção [Strings](#strings) para ver outras formas em que strings podem ser tratadas como listas.
 
 Código:
 ```python
@@ -2000,8 +2048,7 @@ T
 ```
 > Essa é uma forma fácil de acessar cada caractere em uma string. É especialmente bom para sequências de DNA.
 
-
-Outro exemplo de interagir em uma lista de variáveis, um número por vez.
+Outro exemplo de iterar em uma lista de variáveis, estes números de tempo.
 
 Código:
 ```python
@@ -2030,7 +2077,7 @@ range(0, 5)
 [0, 1, 2, 3, 4]
 ```
 
-A função `range()` pode ser utilizada em conjunto com um for loop para integrar em um faixa de números. A faixa (range) também começa com 0 e opera sobre os espaços entre os números.  
+A função `range()` pode ser utilizada em conjunto com um for loop para iterar em um faixa de números. A função `range()` também começa com 0 e opera sobre os espaços entre os números.  
 
 Código:
 ```python
@@ -2080,7 +2127,6 @@ As declarações de controle de loop permitem alteração no fluxo normal de exe
 | ----------------- | ---------------------------------------- |
 | `break`           | Um loop é terminado quando uma declaração break é executada. Todas as linhas de código após o break, mas dentro do bloco de loop, não são executadas. Sem mais interações do loop sendo executadas |
 | `continue`        | Uma única iteração de um loop é terminada quando a declaração continue é executada. A próxima iteração vai proceder normalmente. |
-
 
 #### Controle de loop: Break  
 
@@ -2140,6 +2186,7 @@ Done
 > Quando a contagem é igual a 3 o continue é executado. Isso faz com que todas as linhas contendo o bloco de loop sejam puladas. "Linha após o nosso continue" não é impresso quando a contagem é igual a 3. O próximo loop é executado normalmente.
 
 #### Iteradores
+
 
 Um iterável é qualquer tipo de dado que pode ser iterado, ou pode ser usado em uma iteração. Um iterável pode ser transformado em um iterador com a função `iter()`. Isso significa que você pode utilizar a função `next()`.
 
@@ -2267,6 +2314,7 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 > A sequência do gene TP53 está armazenada como um valor da chave 'TP53'. Podemos acessar a sequência usando a chave neste formato dict[chave].
 
 O valor pode ser acessado e passado diretamente para uma função ou armazenado em uma variável.
+
 ```python
 >>> print(genes['TP53'])
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
@@ -2276,6 +2324,19 @@ GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC
 ```
 
+Lembre-se da lista de culturas e produção acima. Vamos criar um dicionário com esses dados:
+
+```python
+>>> producao_por_cultura = {'soja': 3000, 'milho': 8000, 'algodao':2000 , 'arroz':3000}
+>>> print(producao_por_cultura['milho'])
+```
+
+Também podemos criar um dicionario com um animal repreentativo de cada bioma brasileiro: 
+
+```python
+>>> animais_por_bioma={'Amazonia':'Arara-vermelha','Cerrado':'Lobo-guará','Mata Atlantica': 'Capivara','Pantanal': 'Onca','Pampa': 'Garça','Caatinga': 'Jiboia'}
+>>> print(animais_por_bioma['Cerrado'])
+```
 
 #### Mudando os valores de um dicionário
 
@@ -2305,6 +2366,13 @@ Outros operadores de atribuição também podem ser usados para alterar um valor
 ```
 > Aqui, usamos o operador de atribuição de concatenação '+='. Isso é equivalente a  `genes['TP53'] = genes['TP53'] + 'TAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTG'`.
 
+No dicionário de animais dos biomas brasileiros, vamos substituir a Capivara da Mata Atlântica pelo Tucano.
+
+```python
+>>> animais_por_bioma['Mata Atlantica']= 'Tucano'
+>>> print(animais_por_bioma)
+```
+
 #### Acessando cada chave/valor do dicionário
 
 Já que um dicionário é um objeto iterável, podemos percorrer os seus conteúdos.
@@ -2326,6 +2394,22 @@ Depois de obter a chave, você pode recuperar o valor:
 ...
 TP53 GATGGGATTG
 BRCA1 GTACCTTGAT
+```
+
+Vamos imprimir os animais representativos dos biomas brasileiros:
+
+
+```python
+>>> for bioma in animais_por_bioma:
+...   animal=animais_por_bioma[bioma]
+...   print(bioma, animal)
+... 
+Amazonia Arara-vermelha
+Cerrado Lobo-guará
+Mata Atlantica Tucano
+Pantanal Onca
+Pampa Garça
+Caatinga Jiboia
 ```
 
 #### Construir um dicionário uma chave/valor de cada vez
