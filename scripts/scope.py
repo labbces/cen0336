@@ -1,16 +1,16 @@
-#!/usr/bin/end python3
-print('Before if block')
+#!/usr/bin/env python3
+print('Antes do bloco if')
 x = 100
 print('x=',x)
-if True:  # this if condition will always be True 
-  # we want to make sure the block gets executed
-  # so we can show you what happens
-  print('Inside if block')
-  y = 10
+if True:  # esta condição if será sempre Verdadeira     
+  # queremos garantir que o bloco seja executado
+  # para que possamos mostrar o que acontece
+  print('Dentro do bloco if')
   x = 30
+  y = 10
   print("x=", x)
   print("y=", y)
 
-print('After if block')
+print('Após o bloco if')
 print("x=", x)
 print("y=", y)

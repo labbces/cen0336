@@ -7,47 +7,47 @@ Python 1 Problem Set
     - Armazene o seu nome em uma variável.
     - Imprima o conteúdo dessa variável.
     
-2. Working with a text editor. Use vi to write a script. 
-   - Make sure to include `#!/usr/bin/env python3` at the top!! 
-   - Add code to print out, your name  
+2. Trabalhando com editores de texto. Utilize o vi para escrever um script. 
+   - Certifique-se de incluir `#!/usr/bin/env python3` no início do script!! 
+   - Adicione o código para imprimir seu nome  
    
         ```
-         My name: Sofia
+         Meu nome: Sofia
         ```
-    - On the command line make it executable using `chmod` (only have to do this one time per script).
-    - Run it from the command line. 
-    - Remember it is important to write only a bit, test, then write more.
-    - If it works, ADD/COMMIT. Make a good message, like "added name to print"
-    - Now add some code to print out your favorite color:  
+    - Na linha de comando, torne o script executável utilizando `chmod` (só é necessário realizar este processo uma vez por script).
+    - Rode o script por linha de comando. 
+    - Lembre-se que é importante sempre escrever pequenos trechos e testar antes de escrever mais.
+    - Se funcionar, ADD/COMMIT. Utilize uma mensagem útil, como "nome adicionado para impressão"
+    - Agora adicione algum código para imprimir sua cor favorita: 
   
          ```
-         My name: Sofia
-         My favorite color: Green
+         Meu nome: Sofia
+         Minha cor favorita: Verde
         ```
-   - Save it, and run it from the command line. 
-   - Now add some code to create a variable with your favorite activity. Make sure to give your variable a descriptive name.
-   - Print out the variable with your favorite activity. You will need to use a comma in your print statement to print text and your variable. `print("some text" , your_variable)`
+   - Salve e execute por linha de comando.
+   - Agora adicione algum código para criar uma variável com sua atividade favorita. Certifique-se de dar um nome descritivo à sua variável.
+   - Imprima a variável com sua atividade favorita. Você precisará utilizar vírgula na sua declaração com o texto e sua variável. `print("algum texto" , your_variable)`
 
        ```
-         My name: Sofia
-         My favorite color: Green
-         My favorite activity: Coding
+         Meu nome: Sofia
+         Minha cor favorita: Green
+         Minha atividade favorita: Codar
         ```
-   - Save it, and run it from the command line. 
-   - Now add some code to print out your favorite animal:      
+   - Salve e execute por linha de comando. 
+   - Agora adicione algum código para imprimir seu animal favorito:      
         
         ```
-         My name: Sofia
-         My favorite color: Green
-         My favorite activity: Coding
-         My favorite animal: Chicken
+         Meu nome: Sofia
+         Minha cor favorita: Verde
+         Minha atividade favorita: Codar
+         Meu animal favorito: Galinha
         ```
-        >>>  Remember, write a bit, then run your code, write some more, then run again. This makes code easier to debug. 
+        >>>  Lembre-se, escreva um trecho curto, execute o código, escreva mais, e execute novamente. Isto torna o código mais fácil de debugar. 
 
-4. Use `sys.argv` (make sure to import sys!!!) to retrieve your name, favorite color, favorite activity, and favorite animal from the command line. Remember to check out the [example in the notes](https://github.com//labbces/cen0336/pfb.md/#parâmetros-de-linha-de-comando-uma-lista-especial-de-parâmetros). Print all the variables in one print statement.
-    - try using commas to separate your print arguments. 
-    - try using '+' to separate your print arguments.
+4. Utilize `sys.argv` (certifique-se de importar sys!!!) para obter seu próprio nome, cor favorita, atividade favorita e animal favorito por linha de comando. Lembre-se de verificar o [exemplo nas anotações](../pfb.md/#par%C3%A2metros-de-linha-de-comando-uma-lista-especial-de-par%C3%A2metros). Imprima todas as variáveis em uma única declaração Print.
+    - utilize vírgulas para separar sua declaração Print. 
+    - utilize '+' para separar seus argumentos de Print.
 
-5. Make sure to keep your remote repository synced with your local repo. (ADD/COMMIT/PUSH)
+5. Certifique-se de manter seu repositório remoto sincronizado com seu repositório local. (ADD/COMMIT/PUSH)
 
 

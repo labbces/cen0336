@@ -1,4 +1,4 @@
-Python 9 - Exeções - Conjunto de Problemas
+Python 9 - Exceções - Conjunto de Problemas
 ===================
 
 

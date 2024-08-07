@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
-fo = open("../files/writing.txt" , "w")
-fo.write("One line.\n")
-fo.write("2nd line.\n")
-fo.write("3rd line" + " has extra text\n")
-some_var = 5
-fo.write("4th line has " + str(some_var) + " words\n")
+fo = open("writing.txt", "w")
+fo.write("Uma linha.\n")
+fo.write("Segunda linha.\n")
+fo.write("Terceira linha" + " tem texto adicional\n")
+alguma_var = 5
+fo.write("Quarta linha tem " + str(alguma_var) + " palavras\n")
 fo.close()
-

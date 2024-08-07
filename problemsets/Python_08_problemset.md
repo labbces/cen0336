@@ -2,7 +2,7 @@
 
 __Não se esqueça de usar um conjunto de dados de teste pequeno ao testar seu código. Certifique-se de saber qual deve ser a resposta correta.__
 
-1. Receba um arquivo multi-FASTA [Python_08.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_08.fasta) a partir da entrada do usuário e calcule a composição de nucleotídeos para cada sequência. Use uma estrutura de dados para contar. Imprima cada nome de sequência e sua composição no formato `seqNome\tA_contagem\tT_contagem\tG_contagem\C_contagem`
+1. Receba um arquivo multi-FASTA [Python_08.fasta](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_08.fasta) a partir da entrada do usuário e calcule a composição de nucleotídeos para cada sequência. Use uma estrutura de dados para contar. Imprima cada nome de sequência e sua composição no formato `seqNome\tA_contagem\tT_contagem\tG_contagem\C_contagem`
 
 Aqui está a estrutura de uma estrutura de dados útil para armazenar essas informações
 ```
@@ -20,7 +20,7 @@ seqs['geneB']['G'] = 2
 seqs['geneB']['C'] = 2
 ``` 
 
-2. Escreva um script que receba um arquivo multi-FASTA [Python_08.fasta](https://raw.githubusercontent.com/prog4biol/pfb2019/master/files/Python_08.fasta) da entrada do usuário e divida cada sequência em códons (cada três nucleotídeos é um códon) apenas no primeiro quadro de leitura. Sua saída deve ser semelhante a isso:
+2. Escreva um script que receba um arquivo multi-FASTA [Python_08.fasta](https://raw.githubusercontent.com/labbces/cen0336/master/files/Python_08.fasta) da entrada do usuário e divida cada sequência em códons (cada três nucleotídeos é um códon) apenas no primeiro quadro de leitura. Sua saída deve ser semelhante a isso:
 ```
 seq1-frame-1-codons
 CAT GCT TGA GTC
