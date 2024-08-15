@@ -8,7 +8,7 @@ comandos úteis
 | `ls`            | Mostrar em forma de lista o conteúdo de uma pasta. O uso mais frequente é como  `ls -F` (lista decorada), `ls -l` (lista larga), `ls -a` (listar todos os arquivos).                  |
 | `cd`            | Mover-se por diretórios.                         |
 | `mkdir`         | Criar uma pasta.                         |
-| `rm`            | Apagar um arquivo ou diretórios completos. Utilize com cuidado, é muit fácil deletar mais do que deseja. |
+| `rm`            | Apagar um arquivo ou diretórios completos. Utilize com cuidado, é muito fácil deletar mais do que deseja. |
 | `head`          | Visualizar as primeiras linhas de um arquivo. Você pode controlar quantas linhas visualizar. |
 | `tail`          | Visualizar o final de um arquivo.  Você pode controlar quantas linhas visualizar.  Pode usar  `tail -f` para visualizar um arquivo onde está escrevendo. |
 | `sort`          | Ordenar as linhas de um arquivo de forma alfabética ou numérica.                          |
