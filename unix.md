@@ -1137,7 +1137,7 @@ Vamos lá!
 1. Vá para o repositório de nosso [curso CEN0336](https://github.com/labbces/cen0336)
 2. Clique no botão de 'Clone or Download'
 3. Copie o URL
-  ![Clone PFB2019](images/github-clone.png)
+  ![Clone CEN0336](images/github-cloneSSHCode.png)
 4. _Clone_ o repositório para sua máquina local
    `git clone https://github.com/labbces/cen0336.git`
 
