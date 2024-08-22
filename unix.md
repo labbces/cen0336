@@ -1134,14 +1134,14 @@ Vamos clonar o material do curso.
 
 Vamos lá!
 
-1. Vá para nosso [PFB GitHub Repository](https://github.com/labbces/cen0336)
+1. Vá para o repositório de nosso [curso CEN0336](https://github.com/labbces/cen0336)
 2. Clique no botão de 'Clone or Download'
 3. Copie o URL
-  ~[Clone PFB2019](images/github-clone.png)
+  ![Clone PFB2019](images/github-clone.png)
 4. _Clone_ o repositório para sua máquina local
    `git clone https://github.com/labbces/cen0336.git`
 
-Agora você tem uma cópia do material do curso no seu computador!
+Agora você tem uma cópia do material do curso no seu computador! Só repare que você não poderá sincronizar as mudanças que fizer nessa cópia com o repositório no GitHub, porque você não tem as permissões apropriadas.
 
 #### Trazendo mudanças do repositório remoto para o local
 
