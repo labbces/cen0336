@@ -1,6 +1,7 @@
 Python 1 Problem Set
 ==================
 
+Lembre-se de criar seus scripts na cópia do repositório do GitHub que você criou na semana passada.
 
 1. Inicie o interpretador interativo do Python.
     - Imprima "Olá Piracicaba".
