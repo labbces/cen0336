@@ -83,7 +83,7 @@ Execute o script desta forma (% representa o prompt):
 Este procedimento gera o seguinte resultado no terminal:
 
 ```bash
-print("Olá, turma 2024!")
+Olá, turma 2024!
 ```
 
 #### Uma forma mais rápida/melhor de rodar scripts em Python
