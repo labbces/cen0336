@@ -1376,9 +1376,9 @@ CCC
 
 #### Reverter uma string ou uma lista
 
- Não existe função de reverso, você precisa usar uma fatia com patamar -1 e início e fim vazios.
+Não existe uma função específica para reverter uma string; para isso, você precisa usar fatiamento com um passo de -1, deixando o início e o fim vazios.
 
-Para uma string, se parece com isso
+Assim:
 
 ```python
 >>> dna='GATGAA'
@@ -1389,7 +1389,7 @@ Para uma string, se parece com isso
 
 #### Outros métodos de string
 
-Desde que estes são métodos, se certifique de utilizar na sentença `string.method()`.
+Já que todos estes são métodos, se certifique de utilizar da forma `string.method()`.
 
 | função                         | Descrição                                |
 | ------------------------------ | ---------------------------------------- |
@@ -1403,7 +1403,7 @@ Desde que estes são métodos, se certifique de utilizar na sentença `string.me
 
 
 __split__
-`split` é um método ou forma de partir uma string em um grupo de caracteres. O que é retornado é uma lista de elementos com caracteres que são usados para partir removidos. Veremos as listas com mais detalhes na próxima seção. Não se preocupe com isso.
+`split` é um método que divide uma string em um grupo de substrings. O que é retornado é uma lista de elementos, com os caracteres usados para a divisão removidos. Veremos as listas com mais detalhes na próxima seção, então não se preocupe com isso agora..
 
 Vamos olhar para essa string:
 ```
@@ -1437,14 +1437,13 @@ Aqui está outro exemplo. Vamos dividir em tabs para obter uma lista dos número
 
 
 __join__
-`join` é um método ou uma forma de pegar uma lista de elementos, de coisas, e transformar em uma string com algo posto entre cada elemento. A lista será coberta na próxima seção com mais detalhes.
-
+`join` é um método que permite transformar uma lista de elementos em uma única string, inserindo um separador entre cada elemento. Veremos listas em mais detalhes na próxima seção.
 
 Vamos aplicar em uma lista de Ns `list_of_Ns = ['NNNNN', 'NNN', 'N', 'NNNNNNNNNNNNNNN', 'NN']` em 'xx' para obter essa string:
+
 ```
 NNNNNxxNNNxxNxxNNNNNNNNNNNNNNNxxNN
 ```
-
 
 O que é o 's' em `s.join(list)` ?
 
@@ -1462,7 +1461,8 @@ O que é a 'list' em `s.join(list)` ?
 > Nós começamos com uma lista e agora temos todos os elementos em uma string com o delimitador adicionado entre cada elemento.
 
 
-Vamos pegar uma lista de valores de expressão e criar uma string delimitada por tab que abrirá bem em uma planilha com cada valor em sua própria coluna:
+Vamos pegar uma lista de valores de expressão gênica (números de ponto flutuante) e criar uma string delimitada por tabulação, que será exibida corretamente em uma planilha, com cada valor em sua própria coluna:
+
 ```python
 >>> expression_values = ['4.73', '7.91', '3.65']
 >>>expression_values
@@ -1471,7 +1471,7 @@ Vamos pegar uma lista de valores de expressão e criar uma string delimitada por
 >>> expression_value_string
 '4.73\t7.91\t3.65'
 ```
-> imprima isso em um arquivo e abra ele em Excel, é lindo!!
+> cole isso em um arquivo de texto e abra ele em Excel, é lindo!!
 
 
 
