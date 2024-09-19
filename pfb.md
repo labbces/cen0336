@@ -1205,7 +1205,7 @@ The length of the DNA sequence: TAGCTATATAAAATCATAAT is 20
 
 #### Alterando o caso da string
 
-Alterando o caso da string é um pouco distinto do que você pode esperar inicialmente. Por exemplo, para diminuir uma string precisamos utilizar um método. Um método é uma função específica para um objeto. Quando nós assumimos uma string a uma variável estamos criando uma instância de um objeto de string. Esse objeto tem uma série de métodos que funcionarão nos dados que estão armazenados no objeto. Lembre-se que `dir()` irá te dizer todos os métodos que estão disponíveis para um objeto. A função `lower()` é um método de string. 
+Alterar o caso de uma string funciona de maneira um pouco diferente do que se pode esperar inicialmente. Por exemplo, para converter uma string para letras minúsculas, precisamos usar um método. Um método é uma função específica para um tipo de objeto. Quando atribuímos uma string a uma variável, estamos criando uma instância de um objeto de string. Esse objeto possui uma série de métodos que podem ser aplicados aos dados armazenados nele. Lembre-se de que a função dir() mostra todos os métodos disponíveis para um objeto. O método lower() é um exemplo de método de string usado para converter o texto em minúsculas.
 
 Vamos criar um novo objeto de string.    
 ```python
@@ -1213,7 +1213,8 @@ dna = "ATGCTTG"
 ```
 > Parece familiar?
 
-Agora que nós temos um objeto de string nós podemos usar os métodos de string. A forma que você utiliza um método consiste em inserir um '.' entre o objeto e o nome do método.
+Agora que temos um objeto do tipo string, podemos utilizar seus métodos. Para aplicar um método, basta inserir um ponto (.) entre o nome do objeto e o nome do método.
+
 ```python
 >>> dna = "ATGCTTG"
 >>> dna.lower()
@@ -1221,7 +1222,8 @@ Agora que nós temos um objeto de string nós podemos usar os métodos de string
 ```
 > o método lower() retorna os conteúdos armazenados na variável 'dna' em letra minúscula. 
 
-Os conteúdos da variável 'dna' não se alteraram. Strings são imutáveis. Se você quiser manter a versão minúscula de uma string, armazene ela em uma nova variável.
+O conteúdo da variável 'dna' não foi alterado, pois strings são imutáveis. Se quiser manter a versão em minúsculas de uma string, será necessário armazená-la em uma nova variável.
+
 ```python
 >>> print(dna)
 ATGCTTG
@@ -1231,15 +1233,16 @@ ATGCTTG
 >>> print(dna_lowercase)
 atgcttg
 ```
-O método de string pode ser guardado dentro de outras funções.
+O método de string pode ser utilizado dentro de outras funções.
+
 ```python
 >>> dna = "ATGCTTG"
 >>> print(dna.lower())
 atgcttg
 ```
-> Os conteúdos de 'dna' são transformados em minúsculos e transportados para a função `print()`.
+O conteúdo de 'dna' é convertido para minúsculas e passado para a função `print()`.
 
-Se você tentar usar um método de string em um objeto que não é uma string você receberá um erro. 
+Se você tentar aplicar um método de string em um objeto que não é uma string, ocorrerá um erro.
 
 ```python
 >>> nt_count = 6
@@ -1248,7 +1251,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AttributeError: 'int' object has no attribute 'lower'
 ```
-> Você obtém um AttributeError quando você usa um método em um tipo de objeto incorreto. Nós recebemos que o objeto int (um int é retornado por `len()`) não tem uma função chamada inferior.
+> Você obtém um AttributeError quando você usa um método em um tipo de objeto incorreto. Nós recebemos que o objeto int (um int é retornado por `len()`) não tem um método chamado lower.
 
 Vamos tornar uma string maiúscula agora.
 
@@ -1259,7 +1262,7 @@ Vamos tornar uma string maiúscula agora.
 >>> print(dna)
 attgct
 ```
-> Os conteúdos de uma variável 'dna' são retornados em maiúsculo. Os conteúdos de 'dna' não foram alterados.
+> O conteúdo da variável 'dna' é retornado em maiúsculo. O conteúdo de 'dna' não foi alterado.
 
 #### Encontrar e contar
 
