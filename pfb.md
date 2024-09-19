@@ -1598,7 +1598,7 @@ __Tipos comuns__
 #### Qual é o ponto?
 
 
-Muito pode ser feito com a função `format()`. Aqui está um último exemplo, mas não a última funcionalidade desta função, vamos arredondar um número de ponto de flutuação para algumas casas decimais, começando com muitos. (o padrão é 6). Note que a função arredonda para a casa decimal mais próxima, mas nem sempre exatamente da forma que você espera por conta da forma que os computadores representam decimais com 1s e 0s.
+Muito pode ser feito com a função `format()`. Aqui está um último exemplo, embora não seja a última funcionalidade desta função: vamos arredondar um número de ponto flutuante para algumas casas decimais, começando com muitas (o padrão é 6). Note que a função arredonda para a casa decimal mais próxima, mas nem sempre da forma esperada, devido à maneira como os computadores representam números decimais usando 1s e 0s.
 
 ```python
 '{:f}'.format(3.141592653589793)
