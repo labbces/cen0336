@@ -988,14 +988,14 @@ ATG
 ATG
 ```
 
-O que acontece se nós colocarmos a variável nas sentenças?  
+O que acontece se nós colocarmos o nome da variável dentro de aspas?  
 ```python
 >>>dna = 'ATG'
 ATG
 >>> print("dna")
 dna
 ```
-> A string literal 'dna' é impressa na tela, não os conteúdos 'ATG'
+> A string literal 'dna' é impressa na tela, não o conteúdo 'ATG'
 
 Vamos ver o que acontece quando nós demos `print()` em duas strings literais como argumentos.  
 ```python
