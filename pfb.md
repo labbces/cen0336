@@ -958,7 +958,7 @@ Notas sobre as aspas:
 
 - Aspas únicas e duplas são equivalentes.  
 - O nome de uma variável dentro das sentenças é apenas o identificador da string, não o valor armazenado dentro da variável. `format()` é útil para interpolação de variáveis em python
-- Sentenças triplas (únicas ou dobradas) são usadas antes e depois de uma string que abrange múltiplas linhas. 
+- Sentenças: Aspas triplas (únicas ou dobradas) são usadas antes e depois de uma string que abrange múltiplas linhas. 
 
 Uso de exemplos das aspas:  
 
