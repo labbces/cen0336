@@ -1054,7 +1054,7 @@ TTT
 
 Vamos olhar os erros típicos que você encontrará quando usar a função `print()`.
 
-O que acontecerá se você esquecer de fechar suas sentenças?
+O que acontecerá se você esquecer de fechar suas aspas?
 ```
 >>> print("GGTCTAC)
   File "<stdin>", line 1
@@ -1062,16 +1062,16 @@ O que acontecerá se você esquecer de fechar suas sentenças?
                   ^
 SyntaxError: EOL while scanning string literal
 ```
-> Nós obtemos um'SyntaxError' se a sentença de encerramento não for usada.
+> Nós obtemos um'SyntaxError' se a aspa de encerramento não for usada.
 
-O que acontecerá se você se esquecer de incluir uma string que você quer imprimir nas sentenças?
+O que acontecerá se você se esquecer de incluir as aspas na hora de imprimit uma string?
 ```python
 >>> print(GGTCTAC)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'GGTCTAC' is not defined
 ```
-> Nós obtemos um 'NameError' quando a string literal não for incluída nas sentenças porque o Python está procurando uma variável com o nome GGTCTAC
+> Nós obtemos um 'NameError' quando a string literal não for incluída dentro das aspas porque o Python está procurando uma variável com o nome GGTCTAC
 
 ```python
 >>> print "boo"
@@ -1121,7 +1121,7 @@ valor1	valor2	valor3
 ```
 > Nós obtemos as três palavras separadas por caracteres tab. Um formato comum para dados é separar colunas com tabs como isso.
 
-Você pode adicionar uma barra invertida antes de qualquer caractere para forçar de ser impresso como um literal. Isso é chamado 'escaping'. Só é realmente útil para imprimir sentenças literais ' e " 
+Você pode adicionar uma barra invertida antes de qualquer caractere para forçar de ser impresso como um literal. Isso é chamado 'escaping'. Só é realmente útil para imprimir aspas literais ' e " 
 
 ```python
 >>> print('esta é uma \'palavra\'')  # se você quiser imprimir um ' dentro: '...'
@@ -1129,15 +1129,17 @@ esta é uma 'palavra'
 >>> print("esta é uma 'palavra'") # talvez mais claro para imprimir um ' dentro "..."
 esta é uma 'palavra'
 ```
-> Em ambos os casos a sentença atual única é impressa na tela 
+> Em ambos os casos as aspas são impressas na tela 
 
-Se você quiser todos caracteres em sua string para permanecer exatamente como são, declare sua string uma string crua literal com 'r' antes da primeira sentença. Isso parece feio, mas funciona.
+Se você quiser todos caracteres em sua string para permanecer exatamente como são, declare sua string uma string crua literal com 'r' antes da primeira aspa. Isso parece feio, mas funciona.
+
 ```python
 >>> line = r"valor1\tvalor2\tvalor3"
 >>> print(line)
 valor1\tvalor2\tvalor3
 ```
-> Nossos caracteres de escape '\t' estão como nós digitamos, eles não são convertidos para caracteres tab de fato.
+
+> Os caracteres de escape \t permanecem exatamente como foram digitados, sem serem convertidos em tabulações reais.
 
 #### Concatenação
 
@@ -1174,7 +1176,7 @@ Você precisa converter os números para strings antes de poder concatená-las
 
 #### Determinar a extensão de uma string
 
-Use a função `len()` para calcular a extensão de uma string. Essa função assume a sequência como um argumento e retorna uma int
+Use a função `len()` para calcular a extensão de uma string. Essa função assume a sequência como um argumento e retorna um int
 
 
 ```python
