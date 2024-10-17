@@ -56,7 +56,7 @@ _Obter todos os genes:_
 8. Exporte todos os resultados para "Arquivo" "TSV" --> GO
 9. Renomeie o arquivo para "alpaca_all_genes.tsv"
 
-_Na mesma janela do Ensembl, siga os passos abaixo para obter genes que foram rotulados com o termo de Gene Ontology "proliferação de células-tronco". Para obter informações adicionais sobre a proliferação de células-tronco, verifique [proliferação de células-tronco](http://purl.obolibrary.org/obo/GO_0072089)_
+_Na mesma janela do Ensembl, siga os passos abaixo para obter genes que foram rotulados com o termo de Gene Ontology "stem cell proliferation". Para obter informações adicionais sobre a proliferação de células-tronco, verifique [proliferação de células-tronco](http://purl.obolibrary.org/obo/GO_0072089)_
 
 10. Clique em "Filtros"
 11. Em "Gene Ontology", marque "Nome do termo Go" e insira "proliferação de células-tronco"
@@ -64,11 +64,11 @@ _Na mesma janela do Ensembl, siga os passos abaixo para obter genes que foram ro
 13. Exporte todos os resultados para "Arquivo" "TSV" --> GO
 14. Renomeie o arquivo para "alpaca_stemcellproliferation_genes.tsv"
 
-_Na mesma janela do Ensembl, siga os passos abaixo para obter genes que foram rotulados com o termo de Gene Ontology "pigmentação". Para obter informações adicionais sobre pigmentação, verifique [pigmentação](http://purl.obolibrary.org/obo/GO_0043473)_
+_Na mesma janela do Ensembl, siga os passos abaixo para obter genes que foram rotulados com o termo de Gene Ontology "pigmentation". Para obter informações adicionais sobre pigmentação, verifique [pigmentação](http://purl.obolibrary.org/obo/GO_0043473)_
 
 
 15. Clique em "Filtros"
-16. Em "Gene Ontology", marque "Nome do termo Go" e insira "pigmentação"
+16. Em "Gene Ontology", marque "Nome do termo Go" e insira "pigmentation"
 17. Clique em Resultados (canto superior esquerdo)
 18. Exporte todos os resultados para "Arquivo" "TSV" --> GO
 19. Renomeie o arquivo para "alpaca_pigmentation_genes.tsv"
