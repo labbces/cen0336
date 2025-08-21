@@ -30,7 +30,7 @@
   - `git push`
   - Visite o site seu repositório GitHub (em github.com) e veja o arquivo do seu repositório local que você acabou de transferir para o seu repositório remoto.
 
-8. Usando seu editor de texto vi crie um arquivo fasta e dê o nome `mysequences.txt`. Se assegure de que ele esteja em seu diretório de arquivos para o conjuntos de problemas.
+8. Usando seu editor de texto nano (ou se sentir corajoso, vi) crie um arquivo fasta e dê o nome `mysequences.txt`. Se assegure de que ele esteja em seu diretório de arquivos para o conjuntos de problemas.
 
 Esse é o formato do arquivo fasta:
 ```
