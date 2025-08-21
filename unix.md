@@ -1023,6 +1023,8 @@ Lembre-se de substituir "your_email@example.com", pelo e-mail que usou para se c
 
 O arquivo ~/.ssh/id_ed25519.pub, é sua chave pública. Copie o conteúdo deste arquivo.
 
+Informacoes adicionais [aqui](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux#generating-a-new-ssh-key).
+
 4. Agora, em seu navegador web, acesse a sua conta do GitHub.
 	
 	A) No seu avatar da click no menu "Settings"
