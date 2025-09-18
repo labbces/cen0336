@@ -2,18 +2,18 @@ Python 4 Problem Set -- Listas e Loops
 ===================
 
 1. Para as próximas tarefas sobre listas, utilize o interpretador:
-  - Crie uma lista com 5 coisas que você gosta.
-  - Utilize a função `print()` para imprimir sua lista.
-  - Utilize a função `print()` para imprimir o elemento do meio.
-  - Agora, substitua o elemento do meio por outro item, como sua música favorita ou um pássaro cantor.
-  - Utilize a mesma instrução de impressão de b. para imprimir sua nova lista. Verifique as diferenças.
-  - Adicione um novo elemento no final. [Leia sobre append()](https://www.tutorialspoint.com/python/list_append.htm).
-  - Adicione um novo elemento no começo. [Leia sobre insert()](https://www.tutorialspoint.com/python/list_insert.htm).
-  - Adicione um novo elemento em algum lugar que não seja no início ou no final.
-  - Remova um elemento do final. [Leia sobre pop()](https://www.tutorialspoint.com/python/list_pop.htm).
-  - Remova um elemento do começo.
-  - Remova um elemento de algum lugar que não seja no início ou no final.
-  - Use join para criar uma string. Junte os elementos com ', '. 
+    - Crie uma lista com 5 coisas que você gosta.
+    - Utilize a função `print()` para imprimir sua lista.
+    - Utilize a função `print()` para imprimir o elemento do meio.
+    - Agora, substitua o elemento do meio por outro item, como sua música favorita ou um pássaro cantor.
+    - Utilize a mesma instrução de impressão de b. para imprimir sua nova lista. Verifique as diferenças.
+    - Adicione um novo elemento no final. [Leia sobre append()](https://www.tutorialspoint.com/python/list_append.htm).
+    - Adicione um novo elemento no começo. [Leia sobre insert()](https://www.tutorialspoint.com/python/list_insert.htm).
+    - Adicione um novo elemento em algum lugar que não seja no início ou no final.
+    - Remova um elemento do final. [Leia sobre pop()](https://www.tutorialspoint.com/python/list_pop.htm).
+    - Remova um elemento do começo.
+    - Remova um elemento de algum lugar que não seja no início ou no final.
+    - Use join para criar uma string. Junte os elementos com ', '. 
 	
 3. Escreva um script que divida uma string em uma lista. No seu script:
 	- Salve a string `sapiens, erectus, neanderthalensis` como uma variável chamada `taxa`.
