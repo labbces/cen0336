@@ -2,7 +2,8 @@ Python 4 Problem Set -- Listas e Loops
 ===================
 
 1. Para as próximas tarefas sobre listas, utilize o interpretador:
-	a.  Crie uma lista com 5 coisas que você gosta.
+	
+    a.  Crie uma lista com 5 coisas que você gosta.
 	b.  Utilize a função `print()` para imprimir sua lista.
 	c.  Utilize a função `print()` para imprimir o elemento do meio.
 	d.  Agora, substitua o elemento do meio por outro item, como sua música favorita ou um pássaro cantor.
