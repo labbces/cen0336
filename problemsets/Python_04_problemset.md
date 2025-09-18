@@ -3,12 +3,12 @@ Python 4 Problem Set -- Listas e Loops
 
 1. Para as próximas tarefas sobre listas, utilize o interpretador:
 	
-    a.  Crie uma lista com 5 coisas que você gosta.
-	b.  Utilize a função `print()` para imprimir sua lista.
-	c.  Utilize a função `print()` para imprimir o elemento do meio.
-	d.  Agora, substitua o elemento do meio por outro item, como sua música favorita ou um pássaro cantor.
-	e.  Utilize a mesma instrução de impressão de b. para imprimir sua nova lista. Verifique as diferenças.   
-	f.  Adicione um novo elemento no final. [Leia sobre append()](https://www.tutorialspoint.com/python/list_append.htm).  
+    1  Crie uma lista com 5 coisas que você gosta.
+   	2.  Utilize a função `print()` para imprimir sua lista.
+   	3.  Utilize a função `print()` para imprimir o elemento do meio.
+   	4.  Agora, substitua o elemento do meio por outro item, como sua música favorita ou um pássaro cantor.
+   	5.  Utilize a mesma instrução de impressão de b. para imprimir sua nova lista. Verifique as diferenças.
+   	6.  Adicione um novo elemento no final. [Leia sobre append()](https://www.tutorialspoint.com/python/list_append.htm).  
 	g.  Adicione um novo elemento no começo. [Leia sobre insert()](https://www.tutorialspoint.com/python/list_insert.htm).  
 	h.  Adicione um novo elemento em algum lugar que não seja no início ou no final.
         i.  Remova um elemento do final. [Leia sobre pop()](https://www.tutorialspoint.com/python/list_pop.htm).  
@@ -16,7 +16,7 @@ Python 4 Problem Set -- Listas e Loops
 	k.  Remova um elemento de algum lugar que não seja no início ou no final. 
 	l.  Use join para criar uma string. Junte os elementos com ', '. 
 	
-2. Escreva um script que divida uma string em uma lista. No seu script:
+3. Escreva um script que divida uma string em uma lista. No seu script:
 	- Salve a string `sapiens, erectus, neanderthalensis` como uma variável chamada `taxa`.
 	- Print `taxa`.
 	- Print `taxa[1]`, o que você obtém?
@@ -29,7 +29,7 @@ Python 4 Problem Set -- Listas e Loops
 	- Ordene a lista em ordem alfabética e print (dica: pesquise a função `sorted()`). 
 	- Ordene a lista pelo comprimento de cada string e print. (A string mais curta deve vir primeiro). [Confira a documentação do argumento key](https://www.programiz.com/python-programming/methods/built-in/sorted).
 
-3. Usando o interpretador Python, investigue a diferença entre essas duas maneiras de copiar uma lista. Cuidado! Uma delas pode NÃO ser o que você espera. 
+4. Usando o interpretador Python, investigue a diferença entre essas duas maneiras de copiar uma lista. Cuidado! Uma delas pode NÃO ser o que você espera. 
    - Método 1:
      - Crie uma lista. Exemplo: `my_list = ['a', 'bb', 'ccc']`
      - Faça uma cópia usando o operador de atribuição `=`:  `list_copy = my_list`
@@ -43,13 +43,13 @@ Python 4 Problem Set -- Listas e Loops
      - Altere a `list_copy2` adicionando um novo elemento usando `append()`   
      - print a lista original novamente `print(my_list2)`   
 
-4. Escreva um script que use um loop `while` para imprimir os números de 1 a 100.
+5. Escreva um script que use um loop `while` para imprimir os números de 1 a 100.
 
-5. Escreva um script que use um loop while para calcular o [fatorial](https://en.wikipedia.org/wiki/Factorial) de 1000. 
+6. Escreva um script que use um loop while para calcular o [fatorial](https://en.wikipedia.org/wiki/Factorial) de 1000. 
 
-6. Itere por cada elemento desta lista usando um loop `for`: [101,2,15,22,95,33,2,27,72,15,52]
+7. Itere por cada elemento desta lista usando um loop `for`: [101,2,15,22,95,33,2,27,72,15,52]
 	- print apenas os valores que são pares (dica: use o operador módulo).   
-7. Ordene os elementos da lista acima e, em seguida, itere por cada elemento usando um loop `for` e:
+8. Ordene os elementos da lista acima e, em seguida, itere por cada elemento usando um loop `for` e:
    - print cada elemento.
    - Calcule duas somas acumulativas, uma de todos os valores pares e outra de todos os valores ímpares.
    - print apenas as duas somas finais. A saída do seu script deve ser:
@@ -59,15 +59,15 @@ Python 4 Problem Set -- Listas e Loops
    Soma dos números ímpares: 286
    ```
    
-8. Escreva um script que use `range()` em um loop `for` para imprimir todos os números de 0 a 99. 
+9. Escreva um script que use `range()` em um loop `for` para imprimir todos os números de 0 a 99. 
       - Modifique seu loop para imprimir todos os números de 1 a 100.
       
-9. Crie um novo script que use a compreensão de lista para fazer o mesmo que o problema 8. (Use `range()` para imprimir todos os números de 1 a 100.)
+10. Crie um novo script que use a compreensão de lista para fazer o mesmo que o problema 8. (Use `range()` para imprimir todos os números de 1 a 100.)
 
-10. Escreva um novo script que receba os valores de início e fim pela linha de comando. Se você chamar seu script assim `count.py 3 10`, ele imprimirá os números de 3 a 10.
+11. Escreva um novo script que receba os valores de início e fim pela linha de comando. Se você chamar seu script assim `count.py 3 10`, ele imprimirá os números de 3 a 10.
       - Modifique seu script para imprimir apenas o número se ele for ímpar.
       
-11. Escreva um novo script para criar uma lista com os seguintes dados `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use um loop `for` para iterar por cada elemento desta lista e:
+12. Escreva um novo script para criar uma lista com os seguintes dados `['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']`. Use um loop `for` para iterar por cada elemento desta lista e:
    - Print cada elemento.
    - Print o comprimento e a sequência, separados por uma guia. A saída deve se parecer com:
    
