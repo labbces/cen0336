@@ -59,7 +59,7 @@ _Obter todos os genes:_
 _Na mesma janela do Ensembl, siga os passos abaixo para obter genes que foram rotulados com o termo de Gene Ontology "stem cell proliferation". Para obter informações adicionais sobre a proliferação de células-tronco, verifique [proliferação de células-tronco](http://purl.obolibrary.org/obo/GO_0072089)_
 
 10. Clique em "Filtros"
-11. Em "Gene Ontology", marque "Nome do termo Go" e insira "proliferação de células-tronco"
+11. Em "Gene Ontology", marque "Nome do termo Go" e insira "stem cell proliferation"
 12. Clique em Resultados (canto superior esquerdo)
 13. Exporte todos os resultados para "Arquivo" "TSV" --> GO
 14. Renomeie o arquivo para "alpaca_stemcellproliferation_genes.tsv"
