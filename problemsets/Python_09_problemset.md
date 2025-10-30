@@ -8,4 +8,4 @@ Python 9 - Exceções - Conjunto de Problemas
    - Se uma entrada não é fornecida
    - Se o arquivo não pode ser aberto
    - Se o arquivo não termina com um '.fasta' ou '.fa' ou '.nt'
-   - Se um nenhum character ARGCN é encontrado na sequência
+   - Se nenhum character ARGCN é encontrado na sequência de proteína
