@@ -133,14 +133,14 @@ Python não permite caracteres como `@`, `$` e `%` dentro do nome de variável. 
  * A primeira letra deve ser minúscula, exceto em nomes de classes. Classes devem começar com letra maiúscula (p.e. `Seq`).
  * Os nomes de variáveis privadas são iniciados com sublinhado (ex. `_private`).
  * Os nomes com dois sublinhados iniciais sofrem *[name mangling](https://realpython.com/ref/glossary/name-mangling/)* quando usados em uma classe (ex. `__private`).
- * Nomes especiais de variáveis definidas pela linguagem começam e terminam com dois travessões (p.e. `__special__`).
+ * Nomes especiais de variáveis definidas pela linguagem começam e terminam com dois sublinhados (p.e. `__special__`).
 
 
 Selecionar bons nomes de variáveis para objetos que você nomeia é muito importante. Não chame suas variáveis de `item` ou `minha_lista` ou `dados` ou `var`, exceto em casos que você esteja trabalhando com trechos de códigos muito simples (a título de testes) ou fazendo algum gráfico. Não dê `x` ou `y` como nome de variáveis. Todos estes nomes não são descritivos para o tipo de informação encontrado naquela variável ou objeto.
 
 Uma escolha ainda pior é dar nomes de variáveis que contêm nomes de genes como `sequencias`. Por que é uma ideia ruim? Pense no que poderia acontecer se você encher seu carro de combustível em um comércio chamado "posto de gasolina" que vendesse limonada em vez de gasolina ou etanol combustível.
 
-Em Ciência da Computação, os nomes devem sempre descrever de forma acurada os objetos aos quais estejam vinculados. Isso reduz a possibilidade de `bugs` no seu código, torna muito mais fácil o seu entendimento se você volta seis meses depois ou para pessoas com as quais compartilha seu código. Embora pensar em bons nomes para variáveis tome um pouco mais de tempo e esforço, isso previne problemas no futuro!
+Em Ciência da Computação, os nomes devem sempre descrever de forma acurada os objetos aos quais estejam vinculados. Isso reduz a possibilidade de `bugs` no seu código, torna muito mais fácil o seu entendimento se você voltar seis meses depois ou para as pessoas com as quais você compartilha seu código. Embora pensar em bons nomes para variáveis tome um pouco mais de tempo e esforço, isso previne problemas no futuro!
 
 #### Palavras reservadas
 
@@ -157,7 +157,7 @@ import keyword
 
 Python considera como um bloco de código linhas adjacentes que apresentam o mesmo nível de indentação. Isso mantém organizadas as linhas de código que são executadas de forma conjunta. Espaçamento e/ou indentação incorretos irão causar erros ou podem fazer com que seu código seja executado de uma forma que você não espera. Ambientes de Desenvolvimento Interativo (IDEs) e editores de texto podem ajudar a indentar códigos corretamente.
 
-O número de espaços na indentação precisa ser consistente, mas este número não é específico. Todas as linhas de código ou sentenças dentro de um bloco precisam ser indentados com o mesmo número. Por exemplo, usando quatro espaços:
+O número de espaços na indentação precisa ser consistente, mas este número não é específico. Todas as linhas de código ou instruções dentro de um bloco precisam ser indentadas com o mesmo número. Por exemplo, usando quatro espaços:
 
 
 ```python
@@ -200,7 +200,7 @@ Linhas em branco são importantes para aumentar a legibilidade do código. Você
 
 Esta é a sua primeira oportunidade de olhar para variáveis e tipos de dados. Cada tipo será discutido em mais detalhes nas seções subsequentes.
 
-O primeiro conceito a ser considerado é que os tipos de dados de Python podem ser ou não mutáveis. Números literais, strings e tuplas não podem ser alterados. Listas, dicionários e sets podem. Da mesma forma, variáveis individuais também podem ser alteradas. Você pode armazenar dados na memória por meio da atribuição de variáveis, o que pode ser feito usando o sinal "=".
+O primeiro conceito a ser considerado é que os tipos de dados de Python podem ser ou não mutáveis. Números, strings e tuplas são imutáveis; listas, dicionários e conjuntos são mutáveis. Variáveis podem ser reatribuídas, independentemente de o objeto ser mutável. Você pode armazenar dados na memória por meio da atribuição de variáveis, o que pode ser feito usando o sinal "=".
 
 #### Números e Strings
 
@@ -227,7 +227,7 @@ mensagem = "Bem-vindo ao interpretador de Python" # isso é uma string
 
 `10`, `2.531` e `"Bem-vindo ao interpretador de Python"` são peças de dados singulares (escalares) e cada um é armazenado em sua própria variável.
 
-Coleções de dados podem também ser armazenadas em tipos de dados especiais, i.e., tuplas, listas, sets, e dicionários. Você deveria sempre tentar armazenar semelhantes com semelhantes, de forma tal que cada elemento da coleção deveria ser do mesmo tipo de dado, como um valor de expressão de RNA-seq ou uma contagem de quantos exons estão em um gene ou uma sequência de leitura. Para o quê você imagina que isso deve ser?
+Coleções de dados podem também ser armazenadas em tipos de dados especiais, i.e., tuplas, listas, sets, e dicionários. Você deveria sempre tentar armazenar semelhantes com semelhantes, de forma tal que cada elemento da coleção deveria ser do mesmo tipo de dado, como um valor de expressão de RNA-seq ou uma contagem de quantos exons estão em um gene ou uma sequência de leitura. Por que você imagina que isso pode ser útil?
 
 #### Listas
 
@@ -279,7 +279,7 @@ Coleções de dados podem também ser armazenadas em tipos de dados especiais, i
 
 - Dicionários são bons para armazenar dados que podem ser representados em uma tabela de duas colunas.
 
-- Eles armazenam coleções de dados em pares de chave/valor, sem ordenação específica. A pesar que desde python 3.7 o dicionário preserva a ordem de inserção, mas definitivamente não é um seqûencia indexada.
+- Eles armazenam coleções de dados em pares de chave/valor, sem ordenação específica. Embora, desde Python 3.7, dicionários preservem a ordem de inserção, eles não são seqûencias indexadas.
 
 - Um dicionário é delimitado por chaves e conjuntos de Chave/Valor separados por vírgula.
 
@@ -462,15 +462,15 @@ Operadores lógicos permitem combinar dois ou mais conjuntos de comparações. V
 
 #### Operadores de filiação   
 
-Você pode testar para ver se o valor é incluído em uma string, tupla ou lista. Você pode também testar que o valor não está incluso na string, tupla ou lista. 
+Você pode testar para ver se o valor é incluído em uma string, tupla ou lista. Você pode também testar se o valor não está presente na string, tupla ou lista. 
 
 | Operador | Descrição                                |
 | -------- | ---------------------------------------- |
 | `in`     | Verdadeiro se o valor é incluso em uma lista, tupla ou string |
 | `not in` | Verdadeiro se o valor é ausente em uma lista, tupla ou string |
 
-Por Exemplo:  
-```python
+Por exemplo:  
+```console
 >>> frutas = ['maca', 'laranja', 'manga', 'tomate']
 >>> 'manga' in frutas
 True
@@ -480,7 +480,7 @@ False
 ```
 
 Outro exemplo:
-```python
+```console
 >>> dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
 >>> 'TCT' in dna
 True
@@ -496,7 +496,7 @@ True
 False
 ```
 
-#### Operador Precedente
+#### Precedência de operadores
 
 Operadores são listados em ordem de precedência. Os maiores listados primeiro. Nem todos operadores listados aqui são mencionados acima. 
 
@@ -511,12 +511,11 @@ Operadores são listados em ordem de precedência. Os maiores listados primeiro.
 | `^` `\|`                                 | Bitwise exclusivo 'OR' e regular 'OR'    |
 | `<=` `<` `>` `>=`                        | Operadores de comparação                 |
 | `==` `!=`                                | Operadores de igualdade                  |
-| `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Operadores de atribuição                 |
 | `is`                                     | Operadores de identidade                 |
 | `is not`                                 | Operador de não identidade               |
 | `in`                                     | Operador de filiação                     |
 | `not in`                                 | Operador de filiação negativa            |
-| `not` `or` `and`                         | Operadores lógicos                       |
+| `not` `and` `or`                         | Operadores lógicos                       |
 
 Nota: Saiba mais a respeito [bitwise operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm). 
 
@@ -525,7 +524,7 @@ Nota: Saiba mais a respeito [bitwise operators](https://www.tutorialspoint.com/p
 
 Vamos voltar um pouco... O que é verdade?  
 
-Tudo é verdade, exceto por (pode ser verificado com a funçao `bool()`):  
+Tudo é verdade, exceto por (pode ser verificado com a função `bool()`):  
 
 
 | expressão               | VERDADEIRO/FALSO |
@@ -559,7 +558,7 @@ O que significa que estes são verdade:
 
 `bool()` é uma função que testará se um valor é verdade.
 
-```python
+```console
 >>> bool(True)
 True
 >>> bool('True')
@@ -612,7 +611,7 @@ if expressão:
   declaração
 ```
 
-Por Exemplo:  
+Por exemplo:  
 ```python
 dna = 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'
 if 'AGC' in dna:
@@ -814,7 +813,7 @@ Estas próximas funções são encontradas no módulo matemático e precisam ser
 | `math.log10(x)`  | O logaritmo de base 10 de x para x > 0 é retornado |
 | `math.modf(x)`   | As partes fracionárias e inteiras de x são retornadas em uma tupla de dois itens |
 | `math.pow(x,y)` | O valor de x criado pelo poder y é retornado |
-| `math.sqrt(x)`   | Retorna a raíz quadrada de x para x >= 0   |
+| `math.sqrt(x)`   | Retorna a raiz quadrada de x para x >= 0   |
 
 
 ```python
@@ -904,7 +903,7 @@ Ele retorna três diferentes valores dependendo do x e do y
 
 Na próxima seção, nós iremos aprender sobre strings, tuplas, e listas. Todos estes são exemplos de sequências em python. uma sequência de caracteres `'ACGTGA'`, uma tupla `(0.23, 9.74, -8.17, 3.24, 0.16)`, e uma lista `['dog', 'cat', 'bird']` são sequências de diferentes tipos de dados. Veremos mais detalhes em breve.
 
-Em Python, um tipo de objeto consegue operações que pertencem àquele tipo. Sequências têm operações sequenciais então as strings também podem usar operações sequenciais. Strings também possuem suas próprias operações específicas.
+Em Python, cada tipo de objeto tem operações próprias. Sequências têm operações sequenciais então as strings também podem usar operações sequenciais. Strings também possuem suas próprias operações específicas.
 
 Você pode perguntar qual a extensão de qualquer sequência
 
@@ -1076,7 +1075,7 @@ NameError: name 'GGTCTAC' is not defined
               ^
 SyntaxError: Missing parentheses in call to 'print'
 ```
-Em python2, o comando era `print`, mas isso mudou para `print()` em python3, então não se esqueça dos parênteses!
+No Python 2, `print` era uma instrução; no Python 3, print() é uma função; então não se esqueça dos parênteses!
 
 #### Caracteres especiais e de escape
 
@@ -1090,8 +1089,8 @@ Como você incluiria uma nova linha, retorno de transporte, ou tab em sua string
 
 
 Vamos incluir alguns caracteres de escape em suas strings e funções `print()`.
-```python
->>> string_with_newline = 'esta string possuí uma quebra de linha\nesta é a segunda linha'
+```console
+>>> string_with_newline = 'esta string possui uma quebra de linha\nesta é a segunda linha'
 >>> print(string_with_newline)
 esta string possuí uma quebra de linha
 esta é a segunda linha
@@ -1101,8 +1100,8 @@ esta é a segunda linha
 `print()` adiciona espaços entre argumentos e uma nova linha ao final. Você pode mudar isso com `sep=` e `end=`. Aqui está um exemplo:
 `print('uma linha', 'segunda linha' , 'terceira linha', sep='\n', end = '')`
 
-Uma forma mais limpa para fazer isso é expressar uma string de múltiplas linhas inclusa em aspas triplas (""").
-```python
+Uma forma mais limpa para fazer isso é expressar uma string de múltiplas linhas incluída entre aspas triplas (""").
+```console
 >>> print("""esta string possuí uma quebra de linha
 ... esta é a segunda linha""")
 esta string possuí uma quebra de linha
@@ -1115,9 +1114,9 @@ Vamos imprimir um caractere tab (\t).
 >>> print(line)
 valor1	valor2	valor3
 ```
-> Nós obtemos as três palavras separadas por caracteres tab. Um formato comum para dados é separar colunas com tabs como isso.
+> Nós obtemos as três palavras separadas por caracteres tab. Um formato comum para dados é separar colunas com tabulações dessa forma.
 
-Você pode adicionar uma barra invertida antes de qualquer caractere para forçar de ser impresso como um literal. Isso é chamado 'escaping'. Só é realmente útil para imprimir aspas literais ' e " 
+Você pode adicionar uma barra invertida antes de qualquer caractere para forçar que ele seja interpretado como literal. Isso é chamado 'escaping'. Só é realmente útil para imprimir aspas literais ' e " 
 
 ```python
 >>> print('esta é uma \'palavra\'')  # se você quiser imprimir um ' dentro: '...'
@@ -1151,11 +1150,11 @@ TAGCTATATAAAATCATAAT
 ```
 > O operador de concatenação pode ser usado para combinar strings. A nova combinação de strings pode ser armazenada em uma variável. 
 
-#### A diferença entre a string + e o integrador +
+#### A diferença entre + para strings e + para inteiros
 
 O que acontece se você usar `+` com números (estes são inteiros ou ints)?
 
-```python
+```console
 >>> 4+3
 7
 
@@ -1165,7 +1164,7 @@ Para strings, `+` concatena; para inteiros, `+` soma.
 
 Você precisa converter os números para strings antes de poder concatená-las
 
-```python
+```console
 >>> str(4) + str(3)
 '43'
 ```
@@ -1473,7 +1472,7 @@ Vamos pegar uma lista de valores de expressão gênica (números de ponto flutua
 
 ### Formatação de string
 
-Strings podem ser formatadas usando a função `format()`. Bem intuitivo, mas espere até ver os detalhes! Por exemplo, se você quiser incluir strings literais e variáveis em sua declaração de impressão e não quer concatenar ou usar múltiplos argumentos na função `print()` você pode usar formatação de string.  
+Strings podem ser formatadas usando o método `format()`. Isso é bastante intuitivo, mas espere até ver os detalhes! Por exemplo, se você quiser incluir strings literais e variáveis em sua declaração de impressão e não quer concatenar ou usar múltiplos argumentos na função `print()` você pode usar formatação de string.  
 
 ```python
 >>> string = "Esta sequência: {} possui {} nucleotídeos e é encontrada em {}."
@@ -1507,18 +1506,18 @@ Até agora, nós usamos apenas `{}` para mostrar onde inserir o valor de uma var
 
 > Você pode numerar estes, não necessariamente em ordem.
 
-```python
+```console
 >>> '{0}, {1}, {2}'.format('a', 'b', 'c')
 'a, b, c'
 >>> '{2}, {1}, {0}'.format('a', 'b', 'c')
 'c, b, a'
 ```
 
-Para mudar o espaçamento das strings e a forma que os números são formatados, você adiciona `:` e outros caracteres especiais como isso `{:>5}` para corrigir uma string em um campo de cinco caracteres
+Para mudar o espaçamento das strings e a forma que os números são formatados, você adiciona `:` e outros caracteres especiais como isso `{:>5}` para alinhar uma string à direita em um campo de cinco caracteres
 
 Vamos corrigir justificando alguns números.  
 
-```python
+```console
 >>> print( "{:>5}".format(2) )
     2
 >>> print( "{:>5}".format(20) )
@@ -1527,8 +1526,8 @@ Vamos corrigir justificando alguns números.
   200
 ```
 
-E sobre preencher com zeros? Isso significa que o campo de cinco caracteres será preenchido conforme preciso com zeros a esquerda de quaisquer números que você quer apresentar
-```python
+E sobre preencher com zeros? Isso significa que o campo de cinco caracteres será preenchido conforme necessário, com zeros à esquerda de quaisquer números que você quer apresentar
+```console
 >>> print( "{:05}".format(2) )
 00002
 >>> print( "{:05}".format(20) )
@@ -1644,9 +1643,9 @@ Listas são tipos de dados que armazenam uma coleção de dados.
 ( 'Jan' , 'Fev' , 'Mar' , 'Abr' , 'Mai' , 'Jun' , 'Jul' , 'Ago' , 'Set' , 'Out' , 'Nov' , 'Dez' )
 ```
 
-Muitas funções e métodos retornam tuplas: O `math.modf(x)`, por exemplo, retorna as partes fracionais e inteiras de `x` em uma tupla de dois itens. Aqui não existem motivos para mudar a sequência.
+Muitas funções e métodos retornam tuplas: O `math.modf(x)`, por exemplo, retorna uma tupla (parte_fracionária, parte_inteira), ambas do tipo float. Aqui não existem motivos para mudar a sequência.
 
-```python
+```console
 >>> math.modf(2.6)
 (0.6000000000000001, 2.0)
 ```
@@ -1658,7 +1657,7 @@ Muitas funções e métodos retornam tuplas: O `math.modf(x)`, por exemplo, reto
 Para recuperar um valor em uma lista utilize o índice do valor nesse formato list[index]. Isso retornará o valor do índice especificado, começando com 0. 
 
 Aqui está uma lista:  
-```python
+```console
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 ```
 > Existem 3 valores com os índices 0, 1, 2
@@ -1670,7 +1669,7 @@ Aqui está uma lista:
 | 2     | agg   |
 
 Vamos acessar o valor de índice 0. Você vai precisar de um número de índice (`0`) dentro de colchetes desta forma `[0]` . Isso vai após o nome da lista (`codons`)
-```python
+```console
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> codons[0]
 'atg'
@@ -1685,7 +1684,7 @@ atg
 > Cada valor pode ser salvo em uma nova variável para usar posteriormente.
 
 Os valores podem ser recuperados e usados diretamente.
-```python
+```console
 >>> codons = [ 'atg' , 'aaa' , 'agg' ]
 >>> print(codons[0])
 atg
@@ -1992,7 +1991,7 @@ print('Finished the loop')
 
 #### For Loops
 
-Um for loop é um loop que executa o bloco de códigos for para qualquer membro de uma sequência, por exemplo os elementos de uma lista ou as letras de uma string.
+Um laço `for` executa o bloco de código para cada elemento de uma sequência, por exemplo os elementos de uma lista ou as letras de uma string.
 
 #### Sintaxe do For Loop
 
@@ -2023,7 +2022,7 @@ três
 quatro
 ```
 
-Esse próximo exemplo é utilizando um for loop para iterar em uma string. Lembre-se que uma string é uma sequência como uma lista. Cada caractere possui uma posição. Olhe novamente em "Extraindo uma substring, ou Recortando" na seção [Strings](#strings) para ver outras formas em que strings podem ser tratadas como listas.
+O próximo exemplo usa um laço `for` para iterar em uma string. Lembre-se que uma string é uma sequência como uma lista. Cada caractere possui uma posição. Olhe novamente em "Extraindo uma substring, ou Recortando" na seção [Strings](#strings) para ver outras formas em que strings podem ser tratadas como listas.
 
 Código:
 ```python
@@ -2218,7 +2217,7 @@ atg
 aaa
 agg
 ```
-> Isso é bom se você tem uma lista muito larga que você não deseja manter na memória. Um iterador permite que você vá através de cada elemento mas sem manter a lista completa na memória. Sem iteradores toda a lista permanece na memória.
+> Isso é bom se você tem uma lista muito longa que você não deseja manter na memória. Um iterador é útil para percorrer dados sem materializar todos os valores de uma vez. Sem iteradores toda a lista permanece na memória.
 
 
 #### Compreensão de lista
@@ -2525,7 +2524,7 @@ for gene_key in sorted(genes): # python permite que você use atalhos em um "for
                                # para iterar sobre as chaves
   print(gene_key, '=>' , genes[gene_key])
 ```
-> Isso imprimirá as chaves na mesma ordem toda vez que você executar seu script. Dicionários são desordenados, então sem ordenação, você obterá uma ordem diferente cada vez que executar o script, o que pode ser confuso.
+> Isso imprimirá as chaves na mesma ordem toda vez que você executar seu script. Dicionários preservam a ordem de inserção no Python 3.7 ou posterior. Use `sorted()` apenas quando precisar de uma ordem explícita, como a alfabética.
 
 #### Função do dicionário
 
@@ -2726,7 +2725,7 @@ print('nt count:', nt_count)
 ```
 
 
-Output:  
+Saída:  
 
 
 ```
@@ -2748,7 +2747,7 @@ nt count: {'G': 20, 'T': 21, 'A': 13, 'C': 16, 'N': 1}
 ### I/O e Arquivos
 
 
-I/O significa input/output. O "in" e "out" referem-se a obter dados dentro e fora do seu script. Pode ser um pouco surpreendente no início, mas escrever na tela, ler do teclado, ler de um arquivo e escrever em um arquivo são todos exemplos de I/O.
+I/O significa entrada/saída (*input/output*): receber dados e enviá-los para fora do programa. Pode ser um pouco surpreendente no início, mas escrever na tela, ler do teclado, ler de um arquivo e escrever em um arquivo são todos exemplos de I/O.
 
 
 #### Escrevendo na tela
@@ -2827,7 +2826,7 @@ for linha in arquivo: # Magia do Python: lê uma linha do arquivo
   print(linha)
 ```
 
-Output:
+Saída:
 ```
 $ python3 file_for.py
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
@@ -2850,7 +2849,7 @@ for linha in arquivo_objeto:
 ```
 > `rstrip()` sem nenhum parâmetro retorna uma string com espaços em branco removidos do final.
 
-Output:
+Saída:
 ```
 $ python3 file_for_rstrip.py
 ACAAAATACGTTTTGTAAATGTTGTGCTGTTAACACTGCAAATAAACTTGGTAGCAAACACTTCCAAAAG
@@ -2894,7 +2893,7 @@ fo.close()
 print("Escrito no arquivo 'writing.txt'") # é legal informar ao usuário que você escreveu um arquivo
 ```
 
-Output:
+Saída:
 ```
 $ python3 file_write.py
 Escrito no arquivo 'writing.txt'
@@ -2924,7 +2923,7 @@ with open("seq.nt.txt", "r") as seq_read, open("nt.counts.txt", "w") as seq_writ
 print("Escrito 'nt.counts.txt'")
 ```
 
-Output:
+Saída:
 ```
 $ python3 file_read_write.py
 $ cat nt.counts.txt
@@ -2966,7 +2965,7 @@ with open("sequence_data.txt", "r") as seq_read:
 print(genes)
 ```
 
-Output:
+Saída:
 ```
 {'TP53': 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTC', 'BRCA1': 'GTACCTTGATTTCGTATTCTGAGAGGCTGCTGCTTAGCGGTAGCCCCTTGGTTTCCGTGGCAACGGAAAA'}
 ```
@@ -3438,7 +3437,7 @@ TCTAATTCCTCATTAGTAATAAGTAAAATGTTTATTGTTGTAGCTCTGGATATTATCCGGTTTCCAAAGACAGTCTTCTA
 
 #### Subpadrões e Ganância
 
-Por padrão, as expressões regulares são "gananciosas". Elas tentam corresponder o máximo possível. Use o quantificador '?' para tornar a correspondência não gananciosa. A correspondência não gananciosa é chamada de 'preguiçosa'
+Por padrão, as expressões regulares são "gananciosas". Elas tentam corresponder o máximo possível. Use o quantificador '?' para tornar a correspondência não gananciosa. A correspondência não gananciosa é chamada de "preguiçosa"
 
 ```python
 >>> str = 'The fox ate my box of doughnuts'
