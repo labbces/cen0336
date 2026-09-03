@@ -607,7 +607,7 @@ Declarações de controle são usadas para direcionar o fluxo do seu código e c
 **if**
 
 ```python
-expressão if :
+if expressão:
   declaração
   declaração
 ```
@@ -919,7 +919,7 @@ Você pode perguntar qual a extensão de qualquer sequência
 
 Você pode também usar funções de strings específicas, mas não em listas e vice-versa. Nós vamos aprender mais sobre isso posteriormente. `rstrip()` é um método de string ou função. Você obtém um erro se você tentar usar isso em uma lista.
 
-```python
+```console
 >>> 'ACGTGA'.rstrip('A')
 'ACGTG'
 >>> ['dog', 'cat', 'bird'].rstrip()
@@ -932,7 +932,7 @@ AttributeError: 'list' object has no attribute 'rstrip'
 
 Como descobrir quais funções servem com um objeto? Existe uma função prática `dir()`. Como um exemplo quais funções você pode acionar em sua string `'ACGTGA'`?
 
-```python
+```console
 >>> dir('ACGTGA')
 ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 ```
@@ -972,13 +972,13 @@ E assim vai.
 Nós vimos exemplos de `print()` antes. Vamos conversar sobre isso um pouco mais. `print()` é uma função que assume um ou mais argumentos separados por vírgulas.
 
 Vamos usar a função `print()` para imprimir uma string.  
-```python
+```console
 >>>print("ATG")  
 ATG
 ```
 
 Vamos atribuir uma string a uma variável e imprimir a variável.
-```python
+```console
 >>>dna = 'ATG'
 ATG
 >>> print(dna)
@@ -986,7 +986,7 @@ ATG
 ```
 
 O que acontece se nós colocarmos o nome da variável dentro de aspas?  
-```python
+```console
 >>>dna = 'ATG'
 ATG
 >>> print("dna")
@@ -995,30 +995,29 @@ dna
 > A string literal 'dna' é impressa na tela, não o conteúdo 'ATG'
 
 Vamos ver o que acontece quando nós demos `print()` em duas strings literais como argumentos.  
-```python
+```console
 >>> print("ATG","GGTCTAC")
 ATG GGTCTAC
 ```
 > Nós conseguimos as duas strings literais impressas na tela separadas por um espaço
 
 E se você não quiser suas strings separadas por um espaço? use o operador concatenação para concatenar as duas strings antes ou dentro da função `print()`. 
-```python
+```console
 >>> print("ATG"+"GGTCTAC")
 ATGGGTCTAC
 >>> combined_string = "ATG"+"GGTCTAC"
-ATGGGTCTAC
 >>> print(combined_string)
 ATGGGTCTAC
 ```
 > Nós conseguimos duas strings impressas na tela sem ser separadas por um espaço.
 > Você pode também usar isso
-```python
+```console
 >>> print('ATG','GGTCTAC',sep='')
 ATGGGTCTAC
 ```
 
 Agora, vamos imprimir uma variável e uma string literal.
-```python
+```console
 >>>dna = 'ATG'
 ATG
 >>> print(dna,'GGTCTAC')
@@ -1027,7 +1026,7 @@ ATG GGTCTAC
 > Nós conseguimos o valor da variável e a string literal impressa na tela separada por um espaço
 
 Como poderíamos imprimir os dois sem um espaço?
-```python
+```console
 >>>dna = 'ATG'
 ATG
 >>> print(dna + 'GGTCTAC')
@@ -1035,7 +1034,7 @@ ATGGGTCTAC
 ```
 
 Algo para se pensar sobre: valores de variáveis são variáveis. Em outras palavras, eles são mutáveis e alteráveis.  
-```python
+```console
 >>>dna = 'ATG'
 ATG
 >>> print(dna)
@@ -1052,17 +1051,17 @@ TTT
 Vamos olhar os erros típicos que você encontrará quando usar a função `print()`.
 
 O que acontecerá se você esquecer de fechar suas aspas?
-```
+```console
 >>> print("GGTCTAC)
   File "<stdin>", line 1
     print("GGTCTAC)
-                  ^
-SyntaxError: EOL while scanning string literal
+          ^
+SyntaxError: unterminated string literal (detected at line 1)
 ```
-> Nós obtemos um'SyntaxError' se a aspa de encerramento não for usada.
+> Nós obtemos um 'SyntaxError' se a aspa de encerramento não for usada.
 
-O que acontecerá se você se esquecer de incluir as aspas na hora de imprimit uma string?
-```python
+O que acontecerá se você se esquecer de incluir as aspas na hora de imprimir uma string?
+```console
 >>> print(GGTCTAC)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
