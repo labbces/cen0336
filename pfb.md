@@ -124,7 +124,7 @@ Olá, turma 2024!
 
 #### Nomes de variável em Python
 
-Um nome de variável em Python é o nome usado para identificar uma variável, função, classe, módulo ou outro objeto. Um nome de variável inicia com uma letra, de `A` a `Z` ou de `a` a `z`, ou então com um travessão (`_`), seguido de zero ou mais letras, travessões e dígitos (`0` a `9`).
+Um nome de variável em Python é o nome usado para identificar uma variável, função, classe, módulo ou outro objeto. Um nome de variável inicia com uma letra, de `A` a `Z` ou de `a` a `z`, ou então com um sublinhado (`_`), seguido de zero ou mais letras, travessões e dígitos (`0` a `9`).
 
 Python não permite caracteres como `@`, `$` e `%` dentro do nome de variável. Python é uma linguagem "sensível a minúsculas e maiúsculas" (muitas vezes referido com o anglicismo "case sentitive"). Portanto, `seq_id` e `seq_ID` são dois nomes diferentes de variável em Python.
 
@@ -140,24 +140,17 @@ Selecionar bons nomes de variáveis para objetos que você nomeia é muito impor
 
 Uma escolha ainda pior é dar nomes de variáveis que contêm nomes de genes como `sequencias`. Por que é uma ideia ruim? Pense no que poderia acontecer se você encher seu carro de combustível em um comércio chamado "posto de gasolina" que vendesse limonada em vez de gasolina ou etanol combustível.
 
-Em Ciência da Computação, os nomes devem sempre descrever de forma acurada os objetos aos quais estejam vinculados. Isso reduz a possibilidade de `bugs` no seu código, torna muito mais fácil o seu entendimento se você volta ao seis meses depois ou por pessoas com as quais compartilha seu código. Embora pensar em bons nomes para variáveis tome um pouco mais de tempo e esforço, isso previne problemas no futuro!
+Em Ciência da Computação, os nomes devem sempre descrever de forma acurada os objetos aos quais estejam vinculados. Isso reduz a possibilidade de `bugs` no seu código, torna muito mais fácil o seu entendimento se você volta seis meses depois ou para pessoas com as quais compartilha seu código. Embora pensar em bons nomes para variáveis tome um pouco mais de tempo e esforço, isso previne problemas no futuro!
 
 #### Palavras reservadas
 
 A lista a seguir compreende as palavras reservadas de Python. Elas são palavras especiais que já têm um propósito em Python e, portanto, não podem ser usadas como nomes de variáveis.
 
-```
-and         exec        not
-as          finally     or
-assert      for         pass
-break       from        print
-class       global      raise
-continue    if          return
-def         import      try
-del         in          while
-elif        is          with
-else        lambda      yield
-except      list        hash
+```console
+import keyword
+>>> keyword.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+>>> 
 ```
 
 #### Linhas e indentação
@@ -234,7 +227,7 @@ mensagem = "Bem-vindo ao interpretador de Python" # isso é uma string
 
 `10`, `2.531` e `"Bem-vindo ao interpretador de Python"` são peças de dados singulares (escalares) e cada um é armazenado em sua própria variável.
 
-Coleções de dados podem também ser armazenados em tipos de dados especiais, i.e., tuplas, listas, sets, e dicionários. Você deveria sempre tentar armazenar semelhantes com semelhantes, de forma tal que cada elemento da coleção deveria ser do mesmo tipo de dado, como um valor de expressão de RNA-seq ou uma contagem de quantos exons estão em um gene ou uma sequência de leitura. Para o quê você imagina que isso deve ser?
+Coleções de dados podem também ser armazenadas em tipos de dados especiais, i.e., tuplas, listas, sets, e dicionários. Você deveria sempre tentar armazenar semelhantes com semelhantes, de forma tal que cada elemento da coleção deveria ser do mesmo tipo de dado, como um valor de expressão de RNA-seq ou uma contagem de quantos exons estão em um gene ou uma sequência de leitura. Para o quê você imagina que isso deve ser?
 
 #### Listas
 
@@ -286,7 +279,7 @@ Coleções de dados podem também ser armazenados em tipos de dados especiais, i
 
 - Dicionários são bons para armazenar dados que podem ser representados em uma tabela de duas colunas.
 
-- Eles armazenam coleções de dados em pares de chave/valor, sem ordenação específica.
+- Eles armazenam coleções de dados em pares de chave/valor, sem ordenação específica. A pesar que desde python 3.7 o dicionário preserva a ordem de inserção, mas definitivamente não é um seqûencia indexada.
 
 - Um dicionário é delimitado por chaves e conjuntos de Chave/Valor separados por vírgula.
 
@@ -380,7 +373,7 @@ Nós cobriremos `dir()` em mais detalhes mais adiante.
 
 ### Operadores
 
-Um operador em uma linguagem de programação é um símbolo que faz o cumpridor ou intérprete performar operações matemáticas, relativas ou lógicas e produzir um resultado. Aqui explicaremos o conceito de operadores. 
+Um operador em uma linguagem de programação é um símbolo que instrui o interpretador a realizar operações aritméticas, relacionais ou lógicas e produzir um resultado. Aqui explicaremos o conceito de operadores. 
 
 #### Operadores aritméticos  
 
@@ -433,7 +426,7 @@ Nós usamos operadores de atribuição para atribuir valores para variáveis. Vo
 | `/=`     | `result = result / 2`  | `result = 3 ; result /= 2`  | 1.5                 |
 | `%=`     | `result = result % 2`  | `result = 3 ; result %= 2`  | 1                   |
 | `**=`    | `result = result ** 2` | `result = 3 ; result **= 2` | 9                   |
-| `//=`    | `result = result // 2` | `result = 3 ; result //= 3` | 1                   |
+| `//=`    | `result = result // 2` | `result = 3 ; result //= 2` | 1                   |
 
 
 
@@ -517,7 +510,7 @@ Operadores são listados em ordem de precedência. Os maiores listados primeiro.
 | `&`                                      | Deslocamento binário 'AND'                       |
 | `^` `\|`                                 | Bitwise exclusivo 'OR' e regular 'OR'    |
 | `<=` `<` `>` `>=`                        | Operadores de comparação                 |
-| `<>` `==` `!=`                           | Operadores de igualdade ('<>' obsoleto no python 3)                  |
+| `==` `!=`                                | Operadores de igualdade                  |
 | `=` `%=` `/=` `//=` `-=` `+=` `*=` `**=` | Operadores de atribuição                 |
 | `is`                                     | Operadores de identidade                 |
 | `is not`                                 | Operador de não identidade               |
@@ -532,7 +525,7 @@ Nota: Saiba mais a respeito [bitwise operators](https://www.tutorialspoint.com/p
 
 Vamos voltar um pouco... O que é verdade?  
 
-Tudo é verdade, exceto por:  
+Tudo é verdade, exceto por (pode ser verificado com a funçao `bool()`):  
 
 
 | expressão               | VERDADEIRO/FALSO |
@@ -540,7 +533,11 @@ Tudo é verdade, exceto por:
 | `0`                     | FALSO      |
 | `None`                  | FALSO      |
 | `False`                 | FALSO      |
-| `''` (string vazia)      | FALSO      |
+| `0.0`                   | FALSO      |
+| `0j`                    | FALSO      |
+| `set()`                 | FALSO      |
+| `range(0)`              | FALSO      |
+| `''` (string vazia)     | FALSO      |
 | `[]` (lista vazia)      | FALSO      |
 | `()` (tupla vazia)      | FALSO      |
 | `{}` (dicionário vazio) | FALSO      |
