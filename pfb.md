@@ -50,7 +50,7 @@ Nota: '$' indica o prompt de comando. Lembre-se do Unix 1 que cada computador te
 
 Primeiros comandos em Python:
 
-```python
+```console
 >>> print("Olá, turma 2024!")
 Olá, turma 2024!
 ```
