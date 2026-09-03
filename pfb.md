@@ -72,7 +72,7 @@ print("Olá, turma 2024!")
 
 #### Rodando scripts em Python
 
-Digitar o comando `python3` seguido do nome do script faz com que Python execute o código. Lembre-se que nós vimos que podemos também executar o código de forma interativa executando apenas `python3` (ou `python`) na linha de comando.
+Digitar o comando `python3` seguido do nome do script faz com que Python execute o código. Lembre-se de que vimos que podemos também executar o código de forma interativa executando apenas `python3` (ou `python`) na linha de comando.
 
 Execute o script desta forma (% representa o prompt):
 
@@ -88,7 +88,7 @@ Olá, turma 2024!
 
 #### Uma forma mais rápida/melhor de rodar scripts em Python
 
-Se você tornar script em um executável, você pode executá-lo sem precisar digitar `python3` antes. Use o comando `chmod` para alterar as permissões do script desta forma:
+Se você tornar o script em um executável, você pode executá-lo sem precisar digitar `python3` antes. Use o comando `chmod` para alterar as permissões do script desta forma:
 
 `chmod +x ola.py`
 
@@ -99,9 +99,9 @@ Você pode verificar as permissões assim:
 -rwxr-xr-x  1 sprochnik  staff  60 Oct 16 14:29 ola.py
 ```
 
-Os primeiros 10 caracteres que aparecerem na tela possuem significados especiais. O primeiro (`-`) diz a você qual tipo de arquivo `ola.py` é. `-` significa um arquivo normal, 'd' um diretório, '1' um link. Os próximos nove caracteres aparecem em três sets de três. O primeiro set se refere às suas permissões, o segundo às permissões do grupo, e o último de quaisquer outros. Cada set de três caracteres mostra em ordem 'rwx' para leitura, escrita, execução. Se alguém não tem uma permissão, um `-` é mostrado ao invés de uma letra. Os três caracteres 'x' significam que qualquer um pode executar ou rodar o script.  
+Os primeiros 10 caracteres que aparecerem na tela possuem significados especiais. O primeiro (`-`) diz a você qual tipo de arquivo `ola.py` é. `-` significa um arquivo normal, 'd' um diretório, 'l' um link. Os nove caracteres seguintes aparecem em três conjuntos de três. O primeiro set se refere às suas permissões, o segundo às permissões do grupo, e o último de quaisquer outros. Cada set de três caracteres mostra em ordem 'rwx' para leitura, escrita, execução. Se alguém não tem uma permissão, um `-` é mostrado ao invés de uma letra. Os três caracteres 'x' significam que qualquer um pode executar ou rodar o script.  
 
-Nós também precisamos adicionar uma linha no começo do script que pede para o python3 interpretar o script. Essa linha começa com `#`, então aparece como um comentário para o python. O '!' é importante como o espaço entre `env` e `python3`. O programa `/usr/bin/env` procura por onde `python3` está instalado e roda o script com `python3`. Os detalhes podem parecer um pouco complexos, mas você pode apenas copiar e colar essa linha 'mágica'.
+Nós também precisamos adicionar uma linha no começo do script que indica que o python3 deve interpretar o script. Essa linha começa com `#`, então aparece como um comentário para o Python. O '!' é importante como o espaço entre `env` e `python3`. O programa `/usr/bin/env` procura por onde `python3` está instalado e roda o script com `python3`. Os detalhes podem parecer um pouco complexos, mas você pode apenas copiar e colar essa linha 'mágica'.
 
 Esse arquivo ola.py agora se parece com isso
 
@@ -124,15 +124,15 @@ Olá, turma 2024!
 
 #### Nomes de variável em Python
 
-Um nome de variável em Python é o nome usado para identificar uma variável, função, classe, módulo ou outro objeto. Um nome de variável inicia com uma letra, de `A` a `Z` ou de `a` a `z`, ou então com um sublinhado (`_`), seguido de zero ou mais letras, travessões e dígitos (`0` a `9`).
+Um nome de variável em Python é o nome usado para identificar uma variável, função, classe, módulo ou outro objeto. Um nome de variável inicia com uma letra, de `A` a `Z` ou de `a` a `z`, ou então com um sublinhado (`_`), seguido de zero ou mais letras, sublinhados e dígitos (`0` a `9`).
 
-Python não permite caracteres como `@`, `$` e `%` dentro do nome de variável. Python é uma linguagem "sensível a minúsculas e maiúsculas" (muitas vezes referido com o anglicismo "case sentitive"). Portanto, `seq_id` e `seq_ID` são dois nomes diferentes de variável em Python.
+Python não permite caracteres como `@`, `$` e `%` dentro do nome de variável. Python é uma linguagem "sensível a minúsculas e maiúsculas" (muitas vezes referido com o anglicismo "case-sentitive"). Portanto, `seq_id` e `seq_ID` são dois nomes diferentes de variável em Python.
 
 #### Convenções para nomeação de nomes de variável em Python
 
  * A primeira letra deve ser minúscula, exceto em nomes de classes. Classes devem começar com letra maiúscula (p.e. `Seq`).
- * Os nomes de variáveis privadas são iniciadas com sublinhado (ex. `_private`).
- * Os nomes de variáveis privadas fortes (verdadeiras) são iniciadas com dois sublinhados (ex. `__private`).
+ * Os nomes de variáveis privadas são iniciados com sublinhado (ex. `_private`).
+ * Os nomes com dois sublinhados iniciais sofrem *[name mangling](https://realpython.com/ref/glossary/name-mangling/)* quando usados em uma classe (ex. `__private`).
  * Nomes especiais de variáveis definidas pela linguagem começam e terminam com dois travessões (p.e. `__special__`).
 
 
@@ -917,7 +917,7 @@ Você pode perguntar qual a extensão de qualquer sequência
 3
 ```
 
-Você pode também usar funções de strings específicas, mas não em listas e vice-versa. Nós vamos aprender mais sobre isso posteriormente. `rstrip()` é um método de string ou função. Você obtém um erro se você tentar usar isso em uma lista.
+Você pode também usar funções específicas de strings, mas não em listas e vice-versa. Nós vamos aprender mais sobre isso posteriormente. `rstrip()` é um método de string ou função. Você obtém um erro se você tentar usar isso em uma lista.
 
 ```console
 >>> 'ACGTGA'.rstrip('A')
@@ -947,7 +947,7 @@ Você pode chamar `dir()` em qualquer objeto, mais comumente, você usará isso 
 
 #### Aspas  
 
-- Única (')  
+- Simples (')  
 - Dupla (")   
 - Tripla (''' or """)   
 
@@ -955,7 +955,7 @@ Notas sobre as aspas:
 
 - Aspas únicas e duplas são equivalentes.  
 - O nome de uma variável dentro das sentenças é apenas o identificador da string, não o valor armazenado dentro da variável. `format()` é útil para interpolação de variáveis em python
-- Sentenças: Aspas triplas (únicas ou dobradas) são usadas antes e depois de uma string que abrange múltiplas linhas. 
+- Sentenças: Aspas triplas (simples ou duplas) são usadas antes e depois de uma string que abrange múltiplas linhas. 
 
 Uso de exemplos das aspas:  
 
