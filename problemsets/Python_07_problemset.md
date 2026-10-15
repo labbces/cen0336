@@ -72,3 +72,110 @@ AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
       - o número de fragmentos
       - os fragmentos em sua ordem natural (não ordenada)
       - os fragmentos em ordem ordenada (do maior para o menor)
+
+11. Escreva um programa em Python para validar identificadores no formato EXP2026_B03_P12, composto pelo prefixo EXP, um ano com quatro dígitos, _B, um bloco com dois dígitos, _P e uma parcela com dois dígitos. Não aceite espaços ou caracteres adicionais.
+
+A entrada de dados é a lista:
+
+```python
+identificadores = [
+    "EXP2026_B03_P12", "EXP2026_B3_P12", "EXP2026_B03_P2", "exp2026_B03_P12", "EXP2026_B03_P12_extra"
+]
+```
+
+A saida esperada é a seguinte:
+
+```
+EXP2026_B03_P12       -> Válido
+EXP2026_B3_P12        -> Inválido
+EXP2026_B03_P2        -> Inválido
+exp2026_B03_P12       -> Inválido
+EXP2026_B03_P12_extra -> Inválido
+```
+
+12. Escreva um programa em Python que extraia o identificador de cada amostra e seu valor de pH do [texto](../files/pH.txt) fornecido. Os identificadores são formados por `S` seguido de dois dígitos. Aceite valores inteiros ou com uma parte decimal separada por vírgula ou ponto. Preserve a representação original dos valores e ignore os registros sem resultado numérico.
+
+A saida esperada é a seguinte:
+
+```python
+[('S01', '5,8'), ('S02', '6.2'), ('S03', '7')]
+```
+
+13. Escreva um programa em Python que leia, linha por linha, o arquivo [parcelas_npk_1000.txt](../files/parcelas_npk_1000.txt). Cada linha representa uma parcela fictícia e contém suas coordenadas geográficas, uma formulação NPK e a cultura plantada. Os nomes das culturas apresentam variações de escrita, e algumas formulações têm formato inválido. O programa deve reconhecer e padronizar os nomes das culturas com expressões regulares, selecionar apenas as formulações NPK válidas e contar quantas parcelas utilizam cada formulação em cada cultura.
+
+O arquivo possui exatamente 1.000 linhas de dados, sem cabeçalho, codificadas em UTF-8. Cada linha contém três colunas separadas por tabulação `(\t)`.
+
+| Coluna | Conteúdo | Exemplo |
+| --- | --- | --- |
+| 1 | Coordenadas na ordem latitude,longitude, em graus decimais | -22.700000,-47.600000 | 
+| 2 | Formulação NPK, cuja validade deve ser verificada | 04-14-08 | 
+| 3 | Nome da cultura, com possíveis variações de escrita | cana-de-açúcar | 
+
+A vírgula separa latitude e longitude dentro da primeira coluna; o ponto é o separador decimal. As coordenadas devem ser lidas como uma única coluna. As colunas estão separadas por tabulação. Os nomes de algumas culturas contêm espaços.
+
+Os nomes das culturas tem qeu ser padronizados, para ficar: soja, cana e milho. As expressões regulares devem ignorar diferenças entre maiúsculas e minúsculas. Aceite também espaços repetidos entre palavras e remova espaços nas extremidades de cada campo antes da verificação. A palavra açúcar pode aparecer com ou sem acentos. 
+
+A seguinte table mostra as formas de nomes de cultura aceitas.
+
+| Categoria padronizada | Formas aceitas |
+|---|---|
+| `soja` | `soja`, `soja comum` e `Glycine max` |
+| `cana` | `cana`, `cana de açúcar`, `cana-de-açúcar`, `cana de acucar` e `cana-de-acucar` |
+| `milho` | `milho`, `milho comum` e `Zea mays` |
+
+Uma formulação NPK é válida neste exercício se, após a remoção de espaços nas extremidades, contiver exatamente três grupos de dois dígitos de 0 a 9, separados por hífens.
+
+Formato da tabela de saída esperada:
+
+| Formulação NPK | Soja | Cana | Milho | Total |
+| 04-14-08 | 2| 0 | 0 | 2 |
+| 20-05-20 | 0| 1 | 1 | 2 |
+| Total válido | 2 | 1 | 1 | 4 |
+
+14. Escreva um programa em Python que leia o arquivo [umidade_solo.txt](../files/umidade_solo.txt) linha por linha. Use expressões regulares para verificar o formato dos registros e extrair os dados. Utilize estruturas condicionais if, elif e else para tratar registros inválidos e classificar os valores válidos.
+
+Conteúdo do arquivo umidade_solo.txt:
+
+```
+# data;talhao;umidade
+2026-10-01;T01;umidade=18,5%
+2026-10-01;T02;umidade=27.0%
+
+2026-10-01;T03;umidade=38%
+2026-10-01;T04;umidade=110%
+2026-10-01;T05;umidade=sem_dado
+2026-10-01;T6;umidade=24%
+2026-10-01;T07;umidade=20%
+2026-10-01;T08;umidade=35%
+```
+Requisitos:
+
+- Abra o arquivo em modo de leitura com codificação UTF-8 e percorra-o com um laço for, sem utilizar read() ou readlines(). Mantenha o número original de cada linha.
+- Ignore linhas vazias e linhas cujo primeiro caractere, após remover espaços das extremidades, seja #.
+- Utilize uma expressão regular para verificar a linha inteira e extrair três campos: data no formato AAAA-MM-DD, talhão formado por T seguido de exatamente dois dígitos e umidade indicada por umidade=, um número e %. Aceite números inteiros ou decimais com vírgula ou ponto. Não aceite espaços internos nem texto adicional.
+- Se a linha não corresponder ao formato, exiba seu número e a mensagem ERRO: formato inválido. Continue processando as demais linhas.
+- Se o formato estiver correto, converta a umidade para float, substituindo a vírgula decimal por ponto quando necessário. Valores acima de 100 devem gerar a mensagem ERRO: umidade fora do intervalo de 0 a 100% e não devem ser classificados. Para este exercício, o formato numérico não aceita sinais; números negativos são, portanto, erros de formato.
+- Para valores válidos entre 0 e 100, utilize if, elif e else para atribuir uma das seguintes categorias:
+   - Menor que 20: ABAIXO_DA_FAIXA.
+   - De 20 a 35, incluindo ambos os limites: DENTRO_DA_FAIXA.
+   - Maior que 35: ACIMA_DA_FAIXA.
+- Exiba o número da linha, a data, o talhão, a umidade com uma casa decimal e a categoria. Ao final, informe quantos registros foram válidos, quantos foram inválidos e quantos pertencem a cada categoria. Não conte comentários ou linhas vazias como registros.
+
+Saída esperada:
+
+```
+Linha 2 | 2026-10-01 | T01 | 18.5% | ABAIXO_DA_FAIXA
+Linha 3 | 2026-10-01 | T02 | 27.0% | DENTRO_DA_FAIXA
+Linha 5 | 2026-10-01 | T03 | 38.0% | ACIMA_DA_FAIXA
+Linha 6 | ERRO: umidade fora do intervalo de 0 a 100%
+Linha 7 | ERRO: formato inválido
+Linha 8 | ERRO: formato inválido
+Linha 9 | 2026-10-01 | T07 | 20.0% | DENTRO_DA_FAIXA
+Linha 10 | 2026-10-01 | T08 | 35.0% | DENTRO_DA_FAIXA
+
+Registros válidos: 5
+Registros inválidos: 3
+Abaixo da faixa: 1
+Dentro da faixa: 3
+Acima da faixa: 1
+```

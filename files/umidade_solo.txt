@@ -1,0 +1,10 @@
+# data;talhao;umidade
+2026-10-01;T01;umidade=18,5%
+2026-10-01;T02;umidade=27.0%
+
+2026-10-01;T03;umidade=38%
+2026-10-01;T04;umidade=110%
+2026-10-01;T05;umidade=sem_dado
+2026-10-01;T6;umidade=24%
+2026-10-01;T07;umidade=20%
+2026-10-01;T08;umidade=35%

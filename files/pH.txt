@@ -1,0 +1,4 @@
+Amostra S01: pH = 5,8;
+Amostra S02: pH=6.2;
+Amostra S03: pH = 7;
+Amostra S04: pH = não determinado;
