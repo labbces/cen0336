@@ -115,7 +115,7 @@ A vírgula separa latitude e longitude dentro da primeira coluna; o ponto é o s
 
 Os nomes das culturas tem qeu ser padronizados, para ficar: soja, cana e milho. As expressões regulares devem ignorar diferenças entre maiúsculas e minúsculas. Aceite também espaços repetidos entre palavras e remova espaços nas extremidades de cada campo antes da verificação. A palavra açúcar pode aparecer com ou sem acentos. 
 
-A seguinte table mostra as formas de nomes de cultura aceitas.
+A seguinte tabela mostra as formas de nomes de cultura aceitas.
 
 | Categoria padronizada | Formas aceitas |
 |---|---|
