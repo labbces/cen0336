@@ -3100,7 +3100,7 @@ O padrão é composto por átomos. Cada átomo representa **UM** caractere.
 | Átomo                              | Descrição                              |
 | ---------------------------------- | ---------------------------------------- |
 | a-z, A-Z, 0-9 e algumas pontuações | São caracteres comuns que correspondem a si mesmos |
-| "."                                | O ponto, ou período. Isso corresponde a qualquer caractere único, exceto a nova linha. |
+| "."                                | O ponto. Corresponde a qualquer caractere único, exceto a nova linha. |
 
 
 #### Classes de Caracteres
